@@ -16,6 +16,7 @@ Every module builds from the ground up along a linear axiomatic progression:
    - [`Aim/Logic/Equality.lean`](Aim/Logic/Equality.lean) — Identity and Leibniz substitution axioms ($x = y \to P(x) \to P(y)$).
    - [`Aim/Logic/Choice.lean`](Aim/Logic/Choice.lean) — Axiom of Choice and definite description.
    - [`Aim/Logic/Logic.lean`](Aim/Logic/Logic.lean) — Aggregator.
+   - [`Aim/Logic/READINGS.MD`](Aim/Logic/READINGS.MD) — Reading-first study guide (source-linked Enderton, Tarski, Buss, Mileti, and other Logic sources; exercises, notes, and mastery checkpoints).
 3. **Set Theory** (`namespace aim.set`)
    - [`Aim/Set/Axioms.lean`](Aim/Set/Axioms.lean) — Extensionality, Empty Set, Pairing, Comprehension, Union, Power Set, Infinity.
    - [`Aim/Set/Operations.lean`](Aim/Set/Operations.lean) — $\subseteq, \cup, \cap, \setminus$, complement, indexed families.
