@@ -9,4 +9,5 @@ package AdventuresInMathematics where
 
 @[default_target]
 lean_lib AdventuresInMathematics where
-  roots := #[`AdventuresInMathematics]
+  roots := #[`Aim, `AdventuresInMathematics]
+
