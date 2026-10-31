@@ -11,10 +11,10 @@ Variables (`A, B, C`), logical connectives, formula syntax trees, and string par
 
 namespace aim.logic
 
-
-
-
-
+/-
+STUDY HOLD — earlier exploratory syntax definitions are deliberately inactive.
+Preserved verbatim for later comparison with definitions developed from
+Enderton, Tarski, and accompanying exercises. No new implementation yet.
 inductive TruthValue where
   | false : TruthValue
   | true : TruthValue
@@ -145,4 +145,7 @@ def myFormula : Formula := ¬A ∧ B ∧ B ∧ B
 -- only fintely many
 
 -- Formal System
+
+-/
+
 end aim.logic
