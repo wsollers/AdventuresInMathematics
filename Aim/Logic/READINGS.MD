@@ -24,6 +24,7 @@
 | Reading | Sections (printed pages) | What to learn |
 |---|---|---|
 | [Enderton — *A Mathematical Introduction to Logic*, 2nd ed.](https://drive.google.com/file/d/1F6Qas73DDhcLVogF0uXLcYOZT8M0co0i/view) | Ch. 1 **§1.0**, pp. **11–13** | Why formal languages require a defined alphabet and formation rules. |
+| [Manin — *A Course in Mathematical Logic for Mathematicians*, 2nd ed.](https://drive.google.com/file/d/1kc9mCGvxPDVEbC9pKorxvAxamz9D0XQc/view?usp=drivesdk) | Part I, Ch. I **§1.1**, pp. **3–4**; **§§2.1–2.3**, pp. **5–7** | Alphabet as an abstract set; expressions as finite sequences; syntax and semantics described in a metalanguage; terms and formulas as least recursively generated classes. Read the formation machinery now, but defer the equality-bearing examples. |
 | [Tarski — *Introduction to Logic and to the Methodology of the Deductive Sciences*, 4th ed.](https://drive.google.com/file/d/1o98AJ7PAh5KMmiSim79q_dmaxvEVYQb9/view) | Ch. I **§§1–2**, pp. **3–6** | Constants vs variables; sentential vs designatory functions; formulas vs sentences. |
 | [Enderton](https://drive.google.com/file/d/1F6Qas73DDhcLVogF0uXLcYOZT8M0co0i/view) | Ch. 1 **§1.1**, pp. **13–19** | Sentence symbols, connective symbols, the smallest class of WFFs, and construction sequences. |
 | [Buss — *Introduction to Mathematical Logic*, Draft B.2.e](https://drive.google.com/file/d/1nQiKMjqVSxgo5VnvYltZ-iBtW1c8S3fc/view) | Ch. I **§I.2**, pp. **9–11** | Independent inductive definition of propositional syntax, strict parentheses, and abbreviations. |
@@ -39,6 +40,7 @@
 | Reading | Sections (printed pages) | Distinct contribution |
 |---|---|---|
 | [Enderton](https://drive.google.com/file/d/1F6Qas73DDhcLVogF0uXLcYOZT8M0co0i/view) | Ch. 1 **§1.3**, from p. **29**, and **§1.4**, from p. **34** | Parsing algorithms; induction and recursion based on expression construction. |
+| [Manin](https://drive.google.com/file/d/1kc9mCGvxPDVEbC9pKorxvAxamz9D0XQc/view?usp=drivesdk) | Part I, Ch. II **§§1.1–1.4**, pp. **19–22** | Finite sequences, concatenation, occurrences and substitution, parentheses matching, and the Unique Reading Lemma. Stop before §§1.5–1.6 on bound variables and substitution hygiene. |
 | [Mileti — *A Mathematical Introduction to Mathematical Logic*](https://drive.google.com/file/d/1lUVqhX1pdIei1BSpOodirPds49ViJvzY/view) | Ch. 1 **§§1.2–1.3**, pp. **8–14**; Ch. 2 **§§2.2–2.5**, pp. **17–35**; Ch. 3 **§3.1**, from p. **39** | **Highest-value supplement:** generating systems, step induction, **freeness**, step recursion, comparison of syntax conventions. |
 | [Mundici — *Logic: A Brief Course*](https://drive.google.com/file/d/1fwzF-FxnnHPyD-AtcC0aDvIVH_Q7Zu0w/view) | Ch. **7**, **§§7.1–7.2**, pp. **35–38** | Explicit discussion of unambiguous syntax. |
 | [Buss](https://drive.google.com/file/d/1nQiKMjqVSxgo5VnvYltZ-iBtW1c8S3fc/view) | Ch. I **§I.9**, from p. **33** | Proofs by induction on syntactically built objects. |
@@ -87,7 +89,7 @@
 |---|---|---|
 | [Mileti](https://drive.google.com/file/d/1lUVqhX1pdIei1BSpOodirPds49ViJvzY/view) | Ch. 2 §§2.2–2.5 | **Top supplement now:** generation, freeness and recursive definitions; directly addresses why WFF construction and evaluation work. |
 | [Mundici](https://drive.google.com/file/d/1fwzF-FxnnHPyD-AtcC0aDvIVH_Q7Zu0w/view) | Ch. 7 §§7.1–7.2; later Ch. 12 | Syntax unambiguity and a later first-order syntax comparison. |
-| [Manin — *A Course in Mathematical Logic for Mathematicians*, 2nd ed.](https://drive.google.com/file/d/1hGWZTAf_MEjVMib0jaAYES9qReKgxznw/view) | Part I Ch. I §§1–3 (pp. 3–15); Ch. II §1 (p. 19) | A separate **Unique Reading Lemma**, with a more advanced mathematical treatment of formal languages. |
+| [Manin — *A Course in Mathematical Logic for Mathematicians*, 2nd ed.](https://drive.google.com/file/d/1kc9mCGvxPDVEbC9pKorxvAxamz9D0XQc/view?usp=drivesdk) | Now: Part I, Ch. I §§1.1, 2.1–2.3 (pp. 3–7) and Ch. II §§1.1–1.4 (pp. 19–22); later §§1.5–1.6 | Advanced parallel treatment of alphabet, finite expressions, recursive formation, and **Unique Reading**; later extends this to free/bound variables and substitution hygiene. |
 | [Kossak — *Mathematical Logic: On Numbers, Sets, Structures, and Symmetry*](https://drive.google.com/file/d/1MlvdUCrnzl3-UwJIH1jmvaVCzxAwFsED/view) | Ch. 1 §§1.1.1, 1.2 (pp. 6, 8) | Why choose a vocabulary, and how syntactic descriptions relate to mathematical structures. |
 | [Bergmann, Moor & Nelson — *The Logic Book*, 6th ed.](https://drive.google.com/file/d/1v2GWUVm4HIf_HMrEsDbndtziTHNuxla9/view) | Ch. 2 §2.1 (p. 15); later Ch. 7 §7.2 (p. 268) | Syntax-first presentation and additional symbolization practice. |
 | [Moerdijk & van Oosten — *Sets, Models and Proofs*](https://drive.google.com/file/d/14GJreSCwRcCnsrxVM76I98S08YW2HiDf/view) | Ch. 2 §2.2 (p. 44) | Compact definition of a signature with arities; note that this presentation already includes equality, unlike our first-pass FOL. |
