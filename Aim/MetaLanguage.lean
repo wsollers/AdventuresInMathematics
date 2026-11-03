@@ -14,42 +14,49 @@ describe it. Enderton fixes his metalanguage in Chapter 0, "Useful Facts about
 Sets". This module is the Lean counterpart of Chapter 0: everything here is
 *assumed* machinery, not a construction under study.
 
+## The two-tier rule
+
+| | Metalanguage (this module) | Object-level build-out |
+|---|---|---|
+| Where | `Logic`, `ProofTheory`, `ModelTheory` only | `Set`, `Number`, `Algebra`, `Topology`, `Analysis` |
+| ℕ | Lean's `Nat` | Peano axioms + one construction, nothing skipped |
+| Sequences | Lean's `List` | whatever the object theory builds |
+| Sets | predicates `α → Prop` | set theory: axioms + one development |
+| `=` | Lean's `Eq` | the `=` symbol of first-order logic, with its axioms |
+| Automation | anything, e.g. `omega`, `simp`, `decide` | only what the construction has earned |
+
+In the metalanguage we **lean on Lean**: built-in types and their library
+lemmas are tools, as Enderton's Chapter 0 is a toolkit. Rebuilding them here
+would teach nothing that the object-level build-out does not teach properly.
+
+In the object-level build-out, axioms are the **fields of a `structure`**
+(e.g. a `PeanoSystem`), never Lean `axiom` declarations, so Lean's trusted base
+never grows; one implementation is then proved to satisfy them.
+
+## Import rule
+
+* Only `Aim.Logic`, `Aim.ProofTheory` and `Aim.ModelTheory` (and the root
+  aggregator `Aim`) may import `Aim.MetaLanguage`.
+* The object-level layers must not import it, and must not use `Nat`, `List`
+  or a library `Set`, except in one **bridge file** per subject, which proves
+  the construction agrees with the built-in (e.g. Peano ℕ ≅ `Nat`).
+
+This keeps the object-level build-out buildable from its own axioms alone.
+
 ## Trusted host
 
-Lean's kernel and core logic are the trusted host, used without apology:
-`Prop`, `=`, `∧`, `∨`, `¬`, `→`, `↔`, `∀`, `∃`, `True`, `False`, and the
-inductive-type mechanism itself.
-
-Core *types* allowed in metalanguage code (extend this list deliberately, and
-note why):
-
-* `Bool`, `Option`, `Prod`, `Sum`, `Unit`, `Empty`
-* `DecidableEq` and `Decidable`, for computable comparison of symbols
-
-Core types **not** used, because the project constructs their mathematics
-itself: `Nat`, `Int`, `List`, `Array`, `String` (as mathematics), `Fin`.
+Lean's kernel and core logic: `Prop`, `=`, `∧`, `∨`, `¬`, `→`, `↔`, `∀`, `∃`,
+`True`, `False`, and the inductive-type mechanism. Classical excluded middle
+and choice are allowed when stated.
 
 ## Planned contents
 
-Each item is something §1.1 already used informally.
+Lazily: an item is added when a proof first needs it.
 
-* `MetaLanguage/Nat.lean`: `MetaNat`, with addition, `<` and `≤`, and
-  **strong induction** proved as a theorem.
-* `MetaLanguage/Seq.lean`: finite sequences, with `append`, `length`, indexed
-  access and the last entry; the monoid laws; `count` and `count_append`
-  (counts add under concatenation).
 * `MetaLanguage/Pred.lean`: sets as predicates `α → Prop`; membership, `⊆`,
-  set equality, and closure under one- and two-place operations.
-
-## Rule of use
-
-`MetaLanguage` is for metatheoretic use only. In particular `Aim.Number`
-constructs ℕ as mathematics under study and must not use `MetaNat` in its
-place. The two meet in exactly one bridge theorem, `MetaNat ≅ ℕ`, which
-lives in the `Number` layer.
-
-Imports run one way: `MetaLanguage` imports `Common`; `Common` imports no
-mathematics.
+  set equality, closure under one- and two-place operations (Enderton p. 18).
+* Helpers over `List` that the logic layers need, e.g. counting occurrences
+  and its behaviour under `++` (used for Enderton's parenthesis count).
 -/
 
 namespace aim.meta

@@ -17,7 +17,7 @@
 3. Understand formation rules, *least closure*, construction sequences, structural induction, recursion, parsing, and unique readability.
 4. Study propositional logic (PL), then first-order logic **without equality**, then FOL with explicit identity/equality as a separate extension. Second-order logic with equality is deferred.
 5. Use a **shared formula representation** later for parsing, proof theory, and model-theoretic evaluation; do not implement it before studying its mathematics.
-6. Distinguish object-language mathematics from the Lean metalanguage. Do not use built-in `Nat`, `List`, `Set`, etc. to skip constructions we intend to understand. Lean's kernel/type theory remains the explicitly documented trusted host. Classical excluded middle and choice are allowed when stated.
+6. Distinguish object-language mathematics from the Lean metalanguage. **In the metalanguage, lean on Lean:** Lean's `Nat`, `List`, `Eq` and predicates `α → Prop` are used freely, and only inside the logic layers (`Logic`, `ProofTheory`, `ModelTheory`), through `Aim.MetaLanguage`. **In the object-level build-out** (`Set`, `Number`, `Algebra`, `Topology`, `Analysis`) nothing is skipped: ℕ, sets and equality get real axioms, stated as fields of a `structure` (never Lean `axiom`), and one implementation proved to satisfy them; built-in `Nat`, `List` and `Set` are not used there, except in a single bridge file per subject. Lean's kernel/type theory remains the explicitly documented trusted host. Classical excluded middle and choice are allowed when stated.
 
 ## Unit A — START HERE: Formal languages, symbols, and well-formed formulas
 
