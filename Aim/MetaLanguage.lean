@@ -2,6 +2,7 @@
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
 import Aim.Common.Common
+import Aim.MetaLanguage.Eq
 
 /-!
 # The Metalanguage
@@ -52,6 +53,9 @@ and choice are allowed when stated.
 ## Planned contents
 
 Lazily: an item is added when a proof first needs it.
+
+* `MetaLanguage/Eq.lean` (present): metalanguage equality as an exercise;
+  `MetaEq`, substitution, Leibniz equality, bridges to Lean's `=`.
 
 * `MetaLanguage/Pred.lean`: sets as predicates `α → Prop`; membership, `⊆`,
   set equality, closure under one- and two-place operations (Enderton p. 18).
