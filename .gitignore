@@ -1,8 +1,42 @@
+# --- Lean / Lake build output ---
 /.lake/
 /build/
 *.olean
 *.ilean
 *.c
 *.trace
-.DS_Store
 
+# --- LaTeX build output (book/, notes) ---
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+/book/build/
+/book/print/
+/book/web/
+
+# --- Python tooling ---
+__pycache__/
+*.py[cod]
+.venv/
+
+# --- Editors ---
+*.swp
+*~
+.idea/
+
+# --- OS clutter ---
+.DS_Store
+Thumbs.db
+desktop.ini
