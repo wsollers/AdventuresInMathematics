@@ -8,44 +8,7 @@
 % with wording-only fixes ("sentence" -> "sentence symbol").
 % =========================================================
 \documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amssymb,amsthm}
-\usepackage{booktabs,enumitem}
-\usepackage[most]{tcolorbox}
-\usepackage[hidelinks]{hyperref}
-
-% ---- blueprint-compatible macros (no-ops outside leanblueprint) ----
-\providecommand{\uses}[1]{}
-\providecommand{\lean}[1]{}
-\providecommand{\leanok}{}
-
-% ---- node fields ----
-\newcommand{\source}[1]{\par\smallskip\noindent\textit{Source.} #1\par}
-\newcommand{\motivation}[1]{\par\smallskip\noindent\textit{Motivation.} #1\par}
-\newenvironment{quantified}{\par\smallskip\noindent\textit{Quantified form.}\par\begin{center}\begin{minipage}{0.9\linewidth}}{\end{minipage}\end{center}}
-\newtcolorbox{pendingbox}{colback=yellow!8,colframe=orange!70!black,
-  boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt,fontupper=\small}
-\newcommand{\pending}[1]{\ifvmode\leavevmode\fi\par\begin{pendingbox}\textbf{To write:} #1\end{pendingbox}}
-
-% ---- notation ----
-\newcommand{\WFF}{\mathsf{WFF}}
-\newcommand{\Expr}{\mathsf{Expr}}
-\newcommand{\Sym}{\mathcal{S}}      % sentence symbols
-\newcommand{\E}[1]{\mathcal{E}_{#1}} % formula-building operations
-\newcommand{\seq}[1]{\langle #1\rangle}
-
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{assumption}[definition]{Assumption}
-\newtheorem{convention}[definition]{Convention}
-\newtheorem{example}[definition]{Example}
-\theoremstyle{plain}
-\newtheorem{theorem}[definition]{Theorem}
-\newtheorem{proposition}[definition]{Proposition}
-\newtheorem{lemma}[definition]{Lemma}
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{question}{Study question}
+\usepackage{../aim-notes}
 
 \title{Enderton \S1.1: The Language of Sentential Logic}
 \author{William Sollers}
