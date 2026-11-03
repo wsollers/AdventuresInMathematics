@@ -2,6 +2,7 @@
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
 import Aim.Common.Common
+import Aim.MetaLanguage
 import Aim.Logic.Logic
 import Aim.Set.Set
 import Aim.Algebra.Algebra

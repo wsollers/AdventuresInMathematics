@@ -1,0 +1,17 @@
+# Line endings: LF in the repository and in every working copy, on every OS.
+# Lean, Lake and LaTeX all expect LF; this overrides each machine's
+# core.autocrlf setting so a Windows checkout cannot reintroduce CRLF.
+* text=auto eol=lf
+
+# Windows-only scripts keep CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary files: never touch.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
+*.zip  binary

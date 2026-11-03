@@ -1,0 +1,473 @@
+% =========================================================
+% Enderton, A Mathematical Introduction to Logic, 2nd ed.
+% Section 1.1 -- The Language of Sentential Logic
+% Notes by William Sollers, typeset in the AIM node format.
+%
+% Slots marked \pending{...} are items from the review that
+% are yours to write. Everything else is your notes as written,
+% with wording-only fixes ("sentence" -> "sentence symbol").
+% =========================================================
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% ---- blueprint-compatible macros (no-ops outside leanblueprint) ----
+\providecommand{\uses}[1]{}
+\providecommand{\lean}[1]{}
+\providecommand{\leanok}{}
+
+% ---- node fields ----
+\newcommand{\source}[1]{\par\smallskip\noindent\textit{Source.} #1\par}
+\newcommand{\motivation}[1]{\par\smallskip\noindent\textit{Motivation.} #1\par}
+\newenvironment{quantified}{\par\smallskip\noindent\textit{Quantified form.}\par\begin{center}\begin{minipage}{0.9\linewidth}}{\end{minipage}\end{center}}
+\newtcolorbox{pendingbox}{colback=yellow!8,colframe=orange!70!black,
+  boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt,fontupper=\small}
+\newcommand{\pending}[1]{\ifvmode\leavevmode\fi\par\begin{pendingbox}\textbf{To write:} #1\end{pendingbox}}
+
+% ---- notation ----
+\newcommand{\WFF}{\mathsf{WFF}}
+\newcommand{\Expr}{\mathsf{Expr}}
+\newcommand{\Sym}{\mathcal{S}}      % sentence symbols
+\newcommand{\E}[1]{\mathcal{E}_{#1}} % formula-building operations
+\newcommand{\seq}[1]{\langle #1\rangle}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{convention}[definition]{Convention}
+\newtheorem{example}[definition]{Example}
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{lemma}[definition]{Lemma}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{question}{Study question}
+
+\title{Enderton \S1.1: The Language of Sentential Logic}
+\author{William Sollers}
+\date{Notes, draft 2}
+
+\begin{document}
+\maketitle
+
+% ---------------------------------------------------------
+\section{Object language and metalanguage}\label{sec:languages}
+
+\begin{definition}[Object language]\label{def:object-language}
+\source{Manin, Part I \S1.1; Tarski, Ch.~I.}
+\pending{Your definition: what the object language is, what it consists of,
+and that it is studied rather than used. Include an example and a
+non-example.}
+\end{definition}
+
+\begin{definition}[Metalanguage]\label{def:metalanguage}
+\uses{def:object-language}
+\source{Manin, Part I \S1.1; Tarski, Ch.~I.}
+\pending{Your definition: the language used to describe the object language,
+and what lives only here --- metavariables such as $\alpha,\beta$, the
+quantifiers of Chapter~1, claims such as ``$\alpha$ is a wff''. Include an
+example and a non-example.}
+\end{definition}
+
+\begin{remark}[Lean]
+\pending{One line: which of the two Lean plays, and which an inductive
+\texttt{Formula} type plays.}
+\end{remark}
+
+% ---------------------------------------------------------
+\section{Symbols}
+
+\begin{definition}[Symbols of the sentential language]\label{def:symbols-sentential}
+\source{Enderton \S1.1.}
+The symbols are:
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+Symbol & Name & Kind & Arity \\
+\midrule
+$($ & left parenthesis & punctuation (logical) & --- \\
+$)$ & right parenthesis & punctuation (logical) & --- \\
+$\neg$ & negation & connective (logical) & 1 \\
+$\land$ & conjunction & connective (logical) & 2 \\
+$\lor$ & disjunction & connective (logical) & 2 \\
+$\to$ & conditional & connective (logical) & 2 \\
+$\leftrightarrow$ & biconditional & connective (logical) & 2 \\
+$A_1, A_2, \dots$ & sentence symbols & parameter (nonlogical) & 0 (our convention) \\
+\bottomrule
+\end{tabular}
+\end{center}
+The \emph{sentential connectives} are $\neg,\land,\lor,\to,\leftrightarrow$.
+The \emph{logical symbols} are the parentheses and the connectives.
+The \emph{parameters} (nonlogical symbols) are the sentence symbols. There are
+infinitely many sentence symbols.
+\end{definition}
+
+\begin{quantified}
+\pending{Test 7 (structure): write the signature of a sentential language,
+its components and their types.}
+\end{quantified}
+
+\begin{convention}[Ours, not Enderton's]
+We record sentence symbols as having arity $0$. Parentheses have no arity:
+they are punctuation, not operations.
+\end{convention}
+
+\begin{assumption}[Distinctness]\label{asm:symbols-distinct}
+\source{Enderton \S1.1.}
+The symbols listed are pairwise distinct; for example, $A_3 \neq\ \leftrightarrow$.
+\end{assumption}
+
+\begin{assumption}[No symbol is a sequence of others]\label{asm:no-symbol-is-sequence}
+\source{Enderton \S1.1.}
+No symbol is a finite sequence of two or more symbols; for example,
+$A_3 \neq \seq{\neg, A_4, (\,}$.
+\end{assumption}
+
+\begin{example}[Why symbols must be atomic: \texttt{A1} inside \texttt{A11}]
+\label{ex:atomic-symbols}
+\uses{asm:no-symbol-is-sequence}
+Suppose sentence symbols were written as strings of characters, so that
+$A_1$ is the string \texttt{A1} and $A_{11}$ is the string \texttt{A11}.
+Then \texttt{A1} occurs inside \texttt{A11}, and replacing every occurrence of
+\texttt{A1} by \texttt{B} would turn the expression \texttt{(A1 -> A11)} into
+\texttt{(B -> B1)}: the replacement corrupts $A_{11}$, which never contained
+$A_1$ as a symbol.
+
+Under Assumption~\ref{asm:no-symbol-is-sequence}, $A_{11}$ is a single atomic
+symbol, not a sequence with $A_1$ as a part. An occurrence of $A_1$ in an
+expression is therefore an entry of the sequence equal to $A_1$, and
+replacing occurrences of $A_1$ cannot touch $A_{11}$.
+\end{example}
+
+\begin{remark}
+This matters for \emph{substitution} (replacing every occurrence of a
+sentence symbol in a wff by a wff), which comes later. It is unrelated to
+\emph{concatenation}, e.g.\ $(\alpha\to\beta)=\E{\to}(\alpha,\beta)$, which
+places whole expressions into a fixed pattern and replaces nothing.
+\end{remark}
+
+\begin{proposition}[Unique decomposition of expressions]\label{prop:unique-decomposition}
+\uses{asm:no-symbol-is-sequence}
+\source{Enderton \S1.1.}
+A finite sequence of symbols can be decomposed in only one way.
+\end{proposition}
+
+\begin{quantified}
+If $\seq{a_1,\dots,a_m} = \seq{b_1,\dots,b_n}$, then $m=n$ and $a_i=b_i$ for each $i$.
+\pending{Missing hypothesis from the review: add the condition on the
+$a_i$ and $b_j$ without which this is false.}
+\end{quantified}
+
+\begin{question}
+Why is this not immediate from equality of tuples? Look at how Enderton
+defines $n$-tuples in Chapter~0.
+\end{question}
+
+% ---------------------------------------------------------
+\section{Expressions}
+
+\begin{definition}[Expression]\label{def:expression}
+\uses{def:symbols-sentential}
+\source{Enderton \S1.1.}
+An \emph{expression} is a finite sequence of symbols. We write $\Expr$ for
+the set of expressions.
+\end{definition}
+
+\begin{convention}[Notation for expressions]
+We \emph{denote} an expression by writing the names of its symbols side by
+side. For example, $(\neg A_1)$ denotes $\seq{(\,,\neg,A_1,\,)}$. If
+$\alpha$ and $\beta$ denote expressions, $(\alpha\to\beta)$ denotes their
+concatenation with the symbols shown.
+\end{convention}
+
+\begin{example}
+Let $\alpha = (\neg A_1)$ and $\beta = A_2$. Then
+$(\alpha\to\beta) = ((\neg A_1)\to A_2)$.
+\end{example}
+
+\begin{example}[Non-example of a formula]
+The expression $((\to A_3$ is an expression but is nonsense; a logic must
+exclude such expressions.
+\end{example}
+
+\begin{remark}[Translation]
+An English sentence such as ``Roses are red'' is presumably true or false.
+Its translation is a sentence symbol, or for a compound sentence an
+expression; truth values enter only in \S1.2.
+\end{remark}
+
+% ---------------------------------------------------------
+\section{Well-formed formulas, informally}
+
+\begin{definition}[Formula-building operations]\label{def:formula-building}
+\uses{def:expression}
+\source{Enderton \S1.1.}
+For expressions $\alpha,\beta$:
+\begin{align*}
+\E{\neg}(\alpha) &= (\neg\alpha), &
+\E{\land}(\alpha,\beta) &= (\alpha\land\beta), &
+\E{\lor}(\alpha,\beta) &= (\alpha\lor\beta),\\
+\E{\to}(\alpha,\beta) &= (\alpha\to\beta), &
+\E{\leftrightarrow}(\alpha,\beta) &= (\alpha\leftrightarrow\beta).
+\end{align*}
+\end{definition}
+
+\begin{definition}[Well-formed formula, informal]\label{def:wff-informal}
+\uses{def:formula-building}
+\source{Enderton \S1.1.}
+\begin{enumerate}[label=(\alph*)]
+\item Every sentence symbol is a wff.
+\item If $\alpha$ and $\beta$ are wffs, then so are
+  \pending{the five expressions produced by the formula-building operations.}
+\item No expression is a wff unless it is compelled to be one by (a) and (b).
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Clause (c) is not yet rigorous. Section~\ref{sec:rigorous} makes it so.
+A wff can also be pictured as a tree, e.g.\ $A_1$, $A_2$ under $\land$
+giving $(A_1\land A_2)$; Enderton gives the rules for trees later (\S1.3).
+\end{remark}
+
+% ---------------------------------------------------------
+\section{Making clause (c) rigorous}\label{sec:rigorous}
+
+\begin{definition}[Construction sequence]\label{def:construction-sequence}
+\uses{def:formula-building}
+\source{Enderton \S1.1.}
+A \emph{construction sequence} is a finite sequence
+$\seq{\varepsilon_1,\dots,\varepsilon_n}$ of expressions such that for each
+$i\le n$ at least one of the following holds:
+\begin{enumerate}[label=(\roman*)]
+\item $\varepsilon_i$ is a sentence symbol;
+\item $\varepsilon_i = \E{\neg}(\varepsilon_j)$ for some $j<i$;
+\item $\varepsilon_i = \E{\square}(\varepsilon_j,\varepsilon_k)$ for some
+  $j<i$, $k<i$, where $\square$ is one of $\land,\lor,\to,\leftrightarrow$.
+\end{enumerate}
+\end{definition}
+
+\begin{quantified}
+\pending{Test 6 (predicate): ``$\seq{\varepsilon_1,\dots,\varepsilon_n}$ is a
+construction sequence'' $\iff$ \dots}
+\end{quantified}
+
+\begin{remark}[Duplicates and unused entries]
+A construction sequence may contain repeated entries and entries that are
+not used to build the last one, so a wff has many construction sequences.
+\pending{Two examples that satisfy (i)--(iii): one with a duplicate, one
+with an unused entry. Check $\varepsilon_1$ first.}
+\end{remark}
+
+\begin{remark}[Our generalization]
+One could allow connectives of any arity $n$, with clause (iii) reading
+$\varepsilon_i=\E{\square}(\varepsilon_{j_1},\dots,\varepsilon_{j_n})$ with
+every $j_r<i$. Whether an $n$-ary connective can be expressed by binary ones
+is a semantic question, deferred to \S1.5.
+\end{remark}
+
+\begin{definition}[Wff, bottom-up]\label{def:wff-bottom-up}
+\uses{def:construction-sequence}
+\source{Enderton \S1.1.}
+An expression $\alpha$ is a wff if
+\pending{Test 4 (quantifier): which quantifier on construction sequences?
+Not ``the''.}
+\end{definition}
+
+\begin{definition}[Closed set]\label{def:closed}
+\uses{def:formula-building}
+\source{Enderton \S1.1, p.~18.}
+\pending{Test 6 (predicate): ``$S$ is closed under the formula-building
+operations'' $\iff$ \dots\ (all five operations, negation included).}
+\end{definition}
+
+\begin{remark}[Looking ahead to \S1.4]
+Enderton's \S1.1 characterizes wffs bottom-up only
+(Definition~\ref{def:wff-bottom-up}). In \S1.4 he gives a second
+definition ``from the top down'', as the intersection of all
+\emph{inductive} sets, and proves the two agree; construction sequences are
+the ``bottom up'' one. Those nodes belong to the \S1.4 notes.
+\end{remark}
+
+% ---------------------------------------------------------
+\section{Induction}
+
+\begin{theorem}[Induction principle]\label{thm:induction-principle}
+\uses{def:wff-bottom-up, def:closed}
+\source{Enderton \S1.1, p.~18.}
+If $S$ is a set of wffs containing all the sentence symbols and closed under
+the formula-building operations, then $S$ is the set of all wffs.
+\end{theorem}
+
+\begin{quantified}
+\pending{Test 1: the quantifier over $S$, with its domain named.}
+\end{quantified}
+
+\begin{remark}[Proof structure]
+The conclusion is a set equality, $S=\WFF$. One inclusion is free:
+$S\subseteq\WFF$ is a hypothesis. So the work is $\WFF\subseteq S$: take an
+arbitrary wff $\alpha$ and show $\alpha\in S$.
+
+The only handle on an arbitrary wff is the bottom-up definition: some
+construction sequence ends with $\alpha$. Walk along that sequence by strong
+induction, showing every entry lies in $S$; the last entry is $\alpha$.
+
+The induction has the shape of the definition of a construction sequence.
+The first entry has nothing before it, so it can only be a sentence symbol:
+sentence symbols must appear before anything is built from them. Every
+later entry is either a sentence symbol, in $S$ by hypothesis, or is built
+from earlier entries by a formula-building operation, in $S$ by the
+inductive hypothesis and closure.
+\end{remark}
+
+\begin{proof}
+By hypothesis $S\subseteq\WFF$, so it suffices to show $\WFF\subseteq S$.
+Let $\alpha$ be an arbitrary wff; we show $\alpha\in S$.
+
+Since $\alpha$ is a wff, there is a construction sequence
+$\seq{\beta_1,\dots,\beta_n}$ with $\beta_n=\alpha$
+(Definition~\ref{def:wff-bottom-up}). We prove by strong induction on
+$k\in\{1,\dots,n\}$ that $\beta_k\in S$.
+
+\emph{Base case, $k=1$.} There are no entries before $\beta_1$, so clauses
+(ii) and (iii) of Definition~\ref{def:construction-sequence} cannot hold;
+hence $\beta_1$ is a sentence symbol. Since $S$ contains every sentence
+symbol, $\beta_1\in S$.
+
+\emph{Inductive case, $k>1$.} Assume $\beta_i\in S$ for all $i<k$. By
+Definition~\ref{def:construction-sequence}, at least one of the following
+holds for $\beta_k$:
+\begin{enumerate}[label=(\roman*)]
+\item $\beta_k$ is a sentence symbol. Then $\beta_k\in S$ by hypothesis.
+\item $\beta_k=\E{\neg}(\beta_j)$ for some $j<k$. By the inductive
+  hypothesis $\beta_j\in S$, and $S$ is closed under $\E{\neg}$, so
+  $\beta_k\in S$.
+\item $\beta_k=\E{\square}(\beta_j,\beta_l)$ for some $j<k$, $l<k$ and some
+  binary connective $\square\in\{\land,\lor,\to,\leftrightarrow\}$. By the
+  inductive hypothesis $\beta_j,\beta_l\in S$, and $S$ is closed under
+  $\E{\square}$, so $\beta_k\in S$.
+\end{enumerate}
+In every case $\beta_k\in S$. By strong induction, $\beta_k\in S$ for all
+$k\le n$; in particular $\alpha=\beta_n\in S$.
+
+Since $\alpha$ was arbitrary, $\WFF\subseteq S$, and with
+$S\subseteq\WFF$ we conclude $S=\WFF$.
+\end{proof}
+
+\begin{remark}[Idea]
+A wff is the last line of a construction sequence, and $S$ absorbs every
+line in turn.
+\end{remark}
+
+\begin{definition}[Parenthesis counts]\label{def:paren-counts}
+\uses{def:expression}
+For an expression $\varepsilon$, let $l(\varepsilon)$ be the number of
+occurrences of the symbol ``$($'' in $\varepsilon$, and $r(\varepsilon)$ the
+number of occurrences of ``$)$''. In particular $l(()=1$, $r())=1$, and
+$l(s)=r(s)=0$ for every other symbol $s$.
+\end{definition}
+
+\begin{remark}
+$l$ and $r$ are functions $\Expr\to\mathbb{N}$, not counters: every
+expression already has a value, and proofs compute those values rather than
+incrementing anything.
+\end{remark}
+
+\begin{lemma}[Counts add under concatenation]\label{lem:counts-additive}
+\uses{def:paren-counts}
+For all expressions $\varepsilon,\delta$:
+$l(\varepsilon\delta)=l(\varepsilon)+l(\delta)$ and
+$r(\varepsilon\delta)=r(\varepsilon)+r(\delta)$.
+\end{lemma}
+
+\begin{proof}
+\pending{Your proof (short: occurrences in $\varepsilon\delta$ are the
+occurrences in $\varepsilon$ together with those in $\delta$).}
+\end{proof}
+
+\begin{remark}[Structure]
+With concatenation, $\Expr$ is a monoid whose identity is the empty sequence;
+it is the free monoid on the symbols. The lemma says $l$ and $r$ are monoid
+homomorphisms $(\Expr,\,\cdot\,,\langle\rangle)\to(\mathbb{N},+,0)$, so each
+is determined by its values on single symbols.
+\end{remark}
+
+\begin{theorem}[Unbalanced parentheses]\label{thm:unbalanced-parens}
+\uses{def:wff-bottom-up, lem:counts-additive}
+\source{Enderton \S1.1, p.~18 (stated there as an Example).}
+Any expression with more left parentheses than right parentheses is not a wff.
+\end{theorem}
+
+\begin{quantified}
+\pending{Test 5: make the hidden $\forall$ explicit.}
+\end{quantified}
+
+\begin{remark}[Proof structure]
+Prove something stronger: \emph{every} wff is balanced,
+$l(\alpha)=r(\alpha)$. The formation rules force this, because each one
+wraps balanced inputs in exactly one ``$($'' and one ``$)$''. Make that
+precise by strong induction along a construction sequence of an arbitrary
+wff. The theorem is then the contrapositive.
+\end{remark}
+
+\begin{proof}
+Let $\alpha$ be a wff. By Definition~\ref{def:wff-bottom-up} there is a
+construction sequence $\seq{\beta_1,\dots,\beta_n}$ with $\beta_n=\alpha$.
+We show by strong induction on $k\in\{1,\dots,n\}$ that
+$l(\beta_k)=r(\beta_k)$.
+
+\emph{Base case, $k=1$.} As in the proof of
+Theorem~\ref{thm:induction-principle}, $\beta_1$ is a sentence symbol, so
+$l(\beta_1)=0=r(\beta_1)$.
+
+\emph{Inductive case, $k>1$.} Assume $l(\beta_i)=r(\beta_i)$ for all $i<k$.
+By Definition~\ref{def:construction-sequence}, one of the following holds.
+\begin{enumerate}[label=(\roman*)]
+\item $\beta_k$ is a sentence symbol. Then $l(\beta_k)=0=r(\beta_k)$.
+\item $\beta_k=\E{\neg}(\beta_j)=(\neg\beta_j)$ for some $j<k$. By
+  Lemma~\ref{lem:counts-additive},
+  \[
+  l(\beta_k)=1+0+l(\beta_j)+0,\qquad r(\beta_k)=0+0+r(\beta_j)+1,
+  \]
+  and $l(\beta_j)=r(\beta_j)$ by the inductive hypothesis, so
+  $l(\beta_k)=r(\beta_k)$.
+\item $\beta_k=\E{\square}(\beta_j,\beta_m)=(\beta_j\,\square\,\beta_m)$ for
+  some $j,m<k$ and binary connective $\square$. By
+  Lemma~\ref{lem:counts-additive},
+  \[
+  l(\beta_k)=1+l(\beta_j)+0+l(\beta_m)+0,\qquad
+  r(\beta_k)=0+r(\beta_j)+0+r(\beta_m)+1,
+  \]
+  and $l(\beta_j)=r(\beta_j)$, $l(\beta_m)=r(\beta_m)$ by the inductive
+  hypothesis, so $l(\beta_k)=r(\beta_k)$.
+\end{enumerate}
+By strong induction $l(\beta_k)=r(\beta_k)$ for all $k\le n$; in particular
+$l(\alpha)=r(\alpha)$.
+
+So every wff has $l=r$. An expression with $l>r$ therefore is not a wff.
+\end{proof}
+
+\begin{remark}[Alternative proof via the induction principle]
+\uses{thm:induction-principle}
+Let $S=\{\alpha\in\WFF : l(\alpha)=r(\alpha)\}$. Then $S\subseteq\WFF$ by
+definition, and every sentence symbol is in $S$. If $\alpha,\beta\in S$,
+the computations in cases (ii) and (iii) above show $(\neg\alpha)\in S$ and
+$(\alpha\,\square\,\beta)\in S$, so $S$ is closed under the five
+operations. By Theorem~\ref{thm:induction-principle}, $S=\WFF$. The
+construction sequence is not mentioned: the strong induction along it was
+done once, inside the proof of the induction principle.
+\end{remark}
+
+\begin{remark}
+The proof shows more than the statement: no wff has more \emph{right}
+parentheses than left either. Any mismatch rules an expression out.
+\end{remark}
+
+\begin{question}
+Is the converse true? If not, give a counterexample.
+\end{question}
+
+\end{document}
