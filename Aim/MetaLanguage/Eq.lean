@@ -35,7 +35,9 @@ namespace MetaEq
 variable {α β : Sort u} {a b c : α}
 
 /-- Substitution, for *every* property `P`. Comes from the eliminator. -/
-theorem subst {P : α → Prop} (h : MetaEq a b) (ha : P a) : P b := sorry
+theorem subst {P : α → Prop} (h : MetaEq a b) (ha : P a) : P b := by
+  cases h
+  exact ha
 
 theorem symm (h : MetaEq a b) : MetaEq b a := sorry
 theorem trans (h₁ : MetaEq a b) (h₂ : MetaEq b c) : MetaEq a c := sorry
