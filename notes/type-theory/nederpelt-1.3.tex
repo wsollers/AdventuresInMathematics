@@ -1,0 +1,212 @@
+% =========================================================
+% Nederpelt & Geuvers, Type Theory and Formal Proof (2014)
+% Section 1.3 -- Lambda-terms
+% Notes by William Sollers, typeset in the AIM node format.
+%
+% Page numbers: printed page = PDF page - 29.
+% Slots marked \pending{...} are yours to write.
+% =========================================================
+\documentclass[11pt]{article}
+\usepackage{../aim-notes}
+
+\newcommand{\Lam}{\Lambda}
+\newcommand{\Var}{V}
+
+\title{Nederpelt \& Geuvers \S1.3: Lambda-terms}
+\author{William Sollers}
+\date{Notes, draft 1}
+
+\begin{document}
+\maketitle
+
+% ---------------------------------------------------------
+\section{The set of $\lambda$-terms}
+
+\begin{assumption}[Variables]\label{ass:variables}
+\source{N\&G \S1.3, p.~4 (PDF p.~33).}
+There is an infinite set $\Var = \{x, y, z, \dots\}$ of variables.
+\end{assumption}
+
+\begin{remark}[Open]
+The book does not say whether $\Var$ is countable; the listing suggests it.
+\textbf{Verify} against the page before relying on it.
+\end{remark}
+
+\begin{definition}[The set $\Lam$ of all $\lambda$-terms]\label{def:lambda-terms}
+\uses{ass:variables}
+\source{N\&G Definition~1.3.2, p.~4 (PDF p.~33).}
+\begin{enumerate}[label=(\arabic*)]
+  \item (Variable) If $u \in \Var$, then $u \in \Lam$.
+  \item (Application) If $M, N \in \Lam$, then $(M N) \in \Lam$.
+  \item (Abstraction) If $u \in \Var$ and $M \in \Lam$, then
+        $(\lambda u \,.\, M) \in \Lam$.
+\end{enumerate}
+The definition is \emph{inductive}: (1), (2) and (3) are the only ways to
+construct elements of $\Lam$ (p.~4).
+\end{definition}
+
+\motivation{\pending{From \S1.2: functions as abstraction and application.}}
+
+\begin{quantified}
+\pending{Test 2 (least set): the intersection form. Name the domain the
+outer quantifier ranges over. Then its negation: when is a string
+\emph{not} in $\Lam$?}
+\end{quantified}
+
+% ---------------------------------------------------------
+\section{Where finiteness comes from}\label{sec:finiteness}
+
+\begin{remark}[Inductive definitions: the pattern]\label{rem:inductive-pattern}
+\uses{def:lambda-terms}
+\source{Explanatory; general treatment in Enderton \S1.4 (Induction and
+Recursion), pp.~34--44. Construction sequences first appear in Enderton
+\S1.1.}
+
+\paragraph{The pattern.} An inductive definition has three parts:
+\begin{enumerate}[label=(\roman*)]
+  \item a \emph{base}: a set of starting objects;
+  \item \emph{rules}: finitely many operations, each taking finitely many
+        objects and producing a new one;
+  \item a \emph{closure clause}: nothing else is in the set.
+\end{enumerate}
+For $\Lam$: the base is $\Var$; the rules are application (two inputs) and
+abstraction (a variable and one term); the closure clause is the sentence
+after Definition~1.3.2. The same pattern defines $\mathbb{N}$ (base $0$, rule
+successor), Enderton's $\WFF$ (base sentence symbols, rules the connectives),
+derivations, typing derivations, and every Lean \texttt{inductive} type.
+
+\paragraph{The rules recurse.} Rules (2) and (3) are recursive because they
+refer to $\Lam$ itself: they take terms in and produce terms. There is no
+separate recursion clause; the self-reference is the recursion.
+
+\paragraph{The process never stops.} The rules apply again and again:
+$(MN)$, $((MN)(MN))$, \dots{} are all terms. Arranged in stages,
+\[
+  \Lam_0 = \Var, \qquad
+  \Lam_{n+1} = \Lam_n \cup \{(MN) : M,N \in \Lam_n\}
+               \cup \{(\lambda u.M) : u \in \Var,\ M \in \Lam_n\},
+  \qquad
+  \Lam = \bigcup_{n} \Lam_n .
+\]
+\begin{center}
+\fbox{There is no fixed bound on term size, but each individual term is
+finite.}
+\end{center}
+Two separate facts, as in $\mathbb{N}$:
+\begin{itemize}
+  \item \emph{No largest element.} A term at stage $n$ has a larger one at
+        stage $n+1$.
+  \item \emph{No infinite element.} An endless expression such as
+        $\lambda x.\lambda x.\lambda x.\cdots$ is not a member. This is not a
+        limit on what can be chosen; the object is not in the set.
+\end{itemize}
+$\mathbb{N}$ has no largest number, and $\infty$ is not a number.
+
+\paragraph{Where finiteness is enforced.} The closure clause is informal
+(``the only ways to \emph{construct}''); the finiteness hides in the word
+\emph{construct}. It is made precise in one of two ways, which define the
+same set (Enderton \S1.4):
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Reading & Definition & Finiteness \\
+\midrule
+Bottom-up & last entry of a finite construction sequence & in the definition \\
+Top-down & intersection of all sets closed under (1)--(3) & a theorem \\
+\bottomrule
+\end{tabular}
+\end{center}
+In the top-down reading three ingredients enforce finiteness: leastness, a
+base of finite objects, and \emph{finitary} rules. The set of finite strings
+is closed under the rules, and the least closed set lies inside every closed
+set. A rule with infinitely many inputs would let infinite terms in.
+
+\paragraph{Dual.} Taking the \emph{greatest} set consistent with the rules
+instead (a coinductive definition) would admit infinite terms. ``Least'' is
+exactly the choice that excludes them. Lean's \texttt{inductive} always means
+the least.
+
+\paragraph{Inductive, recursive, induction.}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Notion & Does & Example \\
+\midrule
+Inductive definition & defines a set & $\Lam$ (Def.~1.3.2) \\
+Recursive definition & defines a function on it, by cases on the rules
+  & $\mathrm{Sub}$ (Def.~1.3.5) \\
+Proof by induction & proves a property of every element, by cases
+  & Lemma~1.3.6 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Both of the last two rest on leastness: every element came from some rule.
+Recursion needs one more hypothesis, \emph{free generation} (unique
+readability): each term has exactly one last construction step. In Lean, one
+object, the recursor, provides both recursion and induction.
+\end{remark}
+
+\begin{definition}[Construction sequence for $\Lam$]\label{def:construction-sequence-lambda}
+\uses{ass:variables}
+\source{Not in N\&G; Enderton's pattern (\S1.1, \S1.4) applied to $\Lam$.}
+Let $A = \Var \cup \{(,\,),\,\lambda,\,.\}$, with $\frown$ for
+concatenation of strings over $A$. A \emph{construction sequence} is a finite
+sequence $\seq{t_0,\dots,t_n}$ of strings over $A$ such that for each
+$i \le n$ at least one holds:
+\begin{enumerate}[label=(\arabic*)]
+  \item $t_i \in \Var$;
+  \item $t_i = (\frown t_j \frown t_k \frown)$ for some $j,k < i$;
+  \item $t_i = (\frown \lambda \frown u \frown . \frown t_j \frown)$ for some
+        $u \in \Var$ and $j < i$.
+\end{enumerate}
+A string $t$ is \emph{constructible} if it is the last entry of some
+construction sequence; $\Lam_*$ is the set of constructible strings.
+\end{definition}
+
+\begin{quantified}
+\[
+\begin{aligned}
+t \in \Lam_* \iff \exists n\, \exists \seq{t_0,\dots,t_n}
+\Bigl[\, & t_n = t \;\land\; \forall i \le n \bigl( t_i \in \Var \\
+& \lor\; \exists j,k < i.\ t_i = (t_j t_k) \\
+& \lor\; \exists u \in \Var\, \exists j < i.\ t_i = (\lambda u.\, t_j)
+\bigr) \Bigr]
+\end{aligned}
+\]
+Finiteness is explicit twice: in $\exists n$, and in $j,k < i$.
+\end{quantified}
+
+\begin{theorem}[Every $\lambda$-term is finite]\label{thm:lambda-terms-finite}
+\uses{def:lambda-terms, rem:inductive-pattern}
+\source{Explanatory; pattern from Enderton \S1.4.}
+Every element of $\Lam$ is a finite string over $A$.
+\end{theorem}
+
+\begin{remark}[Proof structure]
+Let $F$ be the set of finite strings over $A$. Check $F$ satisfies
+(1)--(3); then leastness gives $\Lam \subseteq F$.
+\end{remark}
+
+\begin{proof}
+\pending{Your proof.}
+\end{proof}
+
+\begin{remark}[Gaps]
+\begin{itemize}
+  \item N\&G assume, without proof, that the top-down and bottom-up readings
+        agree. Proof: Enderton \S1.4. \pending{Your proof, in the Enderton
+        notes.}
+  \item N\&G define $\mathrm{Sub}$ by recursion on $\Lam$ without stating
+        unique readability. \textbf{Verify} whether it is stated anywhere in
+        Ch.~1.
+\end{itemize}
+\end{remark}
+
+\begin{remark}[Lean]
+\pending{After Enderton \S1.4: the general node (universe, base, operations;
+$C^* = C_*$; induction) proposed for \texttt{Aim/MetaLanguage}, with $\Lam$,
+$\WFF$ and $\mathbb{N}$ as instances; then the bridge showing a Lean
+\texttt{inductive} gives the same set.}
+\end{remark}
+
+\end{document}
