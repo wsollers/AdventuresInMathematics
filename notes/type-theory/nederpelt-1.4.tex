@@ -1,0 +1,41 @@
+% =========================================================
+% Nederpelt & Geuvers, Type Theory and Formal Proof (2014)
+% Section 1.4 -- Free and bound variables
+% Notes by William Sollers, typeset in the AIM node format.
+%
+% Page numbers: printed page = PDF page - 29.
+% Slots marked \pending{...} are yours to write.
+% =========================================================
+\documentclass[11pt]{article}
+\usepackage{../aim-notes}
+\newcommand{\Lam}{\Lambda}
+
+\title{Nederpelt \& Geuvers \S1.4: Free and bound variables}
+\author{William Sollers}
+\date{Notes, draft 1 (in progress)}
+
+\begin{document}
+\maketitle
+
+\begin{remark}[Three kinds of occurrence]\label{rem:occurrences}
+\source{N\&G \S1.4 (\textbf{verify} page).}
+Variable occurrences in $\lambda$-terms divide into three categories:
+\begin{enumerate}[label=(\roman*)]
+  \item free occurrences;
+  \item bound occurrences;
+  \item binding occurrences.
+\end{enumerate}
+\end{remark}
+
+\begin{example}
+\pending{One term with all three kinds, each occurrence labelled. Then the
+same variable occurring both free and bound.}
+\end{example}
+
+\begin{definition}[Free variables]\label{def:fv}
+\pending{N\&G's $\mathrm{FV}$, by recursion on $\Lam$, with its source line.
+Compare with $\mathrm{Sub}$ (Def.~1.3.5): same three cases, what differs in
+the abstraction case?}
+\end{definition}
+
+\end{document}

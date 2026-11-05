@@ -1,0 +1,182 @@
+% =========================================================
+% Nederpelt & Geuvers, Type Theory and Formal Proof (2014)
+% Sections 1.1--1.2 -- Input-output behaviour; the essence of functions
+% Notes by William Sollers, typeset in the AIM node format.
+%
+% Page numbers: printed page = PDF page - 29.
+% Fixes from corrections.md (items 1--7) are applied; the
+% handwritten originals are unchanged.
+% Slots marked \pending{...} are yours to write.
+% =========================================================
+\documentclass[11pt]{article}
+\usepackage{../aim-notes}
+
+\newcommand{\bred}{\to_\beta}
+
+\title{Nederpelt \& Geuvers \S\S1.1--1.2: Functions, informally}
+\author{William Sollers}
+\date{Notes, draft 1}
+
+\begin{document}
+\maketitle
+
+\begin{remark}[Status of these sections]
+Everything here is \emph{informal}. Sections~1.1--1.2 motivate the
+formal definitions that follow: $\Lambda$ (Def.~1.3.2), substitution
+(\S1.6), and $\beta$-reduction (Def.~1.8.1). Each item below points
+forward to its formal version.
+\end{remark}
+
+% ---------------------------------------------------------
+\section{Input-output behaviour of functions (\S1.1)}
+
+\begin{remark}[Functions compute]
+\source{N\&G \S1.1, p.~1 (PDF p.~30), \textbf{verify} page.}
+\begin{itemize}
+  \item Input values are used to calculate output values.
+  \item Variables in the input act as arbitrary (abstract) values.
+  \item Concrete values replace the abstract values in order to compute.
+\end{itemize}
+\end{remark}
+
+\begin{convention}[$\lambda$-notation]\label{conv:lambda-notation}
+\source{N\&G \S1.1, p.~1.}
+$\lambda x.\, x^2+1$ means $x \mapsto x^2+1$: ``the function mapping $x$
+to $x^2+1$''.
+\end{convention}
+
+\begin{remark}[What the $\lambda$-calculus is]
+\source{N\&G \S1.1, p.~1.}
+The \emph{$\lambda$-calculus} is a formalisation of the basic aspects of
+functions, in particular their construction and use. (This is a
+description, not a definition; correction~1.)
+\end{remark}
+
+% ---------------------------------------------------------
+\section{The essence of functions (\S1.2)}
+
+\begin{remark}[Two construction principles, one evaluation rule]
+\source{N\&G \S1.2, \textbf{verify} page.}
+Construction: abstraction and application. Evaluation: $\beta$-reduction.
+\end{remark}
+
+\begin{definition}[Abstraction, informal]\label{def:abstraction-informal}
+\source{N\&G \S1.2.}
+From an expression $M$ and a variable $x$ we construct a new expression
+$\lambda x.\, M$, called the \emph{abstraction of $x$ over $M$}.
+Formal version: Def.~1.3.2(3).
+\end{definition}
+
+\begin{definition}[Application, informal]\label{def:application-informal}
+\source{N\&G \S1.2.}
+From expressions $M$ and $N$ we construct the expression $MN$, called the
+\emph{application of $M$ to $N$}. Parentheses are added where necessary.
+Formal version: Def.~1.3.2(2).
+\end{definition}
+
+\begin{example}
+\begin{itemize}
+  \item Application of $\lambda x.x$ to $\lambda y.y$ yields
+        $(\lambda x.x)(\lambda y.y)$.
+  \item Application of $f$ to $c$ yields $fc$, also written $f(c)$.
+\end{itemize}
+\end{example}
+
+\begin{remark}[Meaningless expressions]
+The construction principles also allow expressions with no evident meaning,
+such as $xx$ (self-application). Ignored for now.
+\end{remark}
+
+\begin{remark}[Understanding: a function versus its output]
+``Square'' is $\lambda x.\, x^2$ over $\mathbb{N}$, the map
+$x \in \mathbb{N} \mapsto x^2 \in \mathbb{N}$. ``Square'' is not $x^2$:
+$x^2$ is the abstract output value; ``square'' is the name of the function.
+\end{remark}
+
+\begin{remark}[Piecewise functions]
+$\lambda$-notation is awkward for functions such as
+$x \mapsto \begin{cases} x & x \ge 0\\ -x & x<0 \end{cases}$.
+\textbf{Verify} whether this is N\&G's remark or your own (correction~4).
+\end{remark}
+
+% ---------------------------------------------------------
+\subsection{Evaluation: $\beta$-reduction}
+
+\begin{definition}[Substitution, informal]\label{def:subst-informal}
+\source{N\&G \S1.2.}
+$M[x := N]$ is $M$ with $N$ substituted for the \emph{free} occurrences of
+$x$ (correction~2). Formal version: \S1.6.
+\end{definition}
+
+\begin{definition}[$\beta$-reduction, informal]\label{def:beta-informal}
+\uses{def:subst-informal}
+\source{N\&G \S1.2.}
+$\beta$-reduction is the formalisation of the process of evaluating a
+function. An expression of the form $(\lambda x.\, M)N$ can be rewritten to
+$M[x := N]$; this is the \emph{$\beta$-reduction} of $(\lambda x.\, M)N$ to
+$M[x:=N]$, written $(\lambda x.\, M)N \bred M[x:=N]$.
+Formal version: Def.~1.8.1.
+\end{definition}
+
+\begin{example}\label{ex:beta-informal}
+\uses{def:beta-informal}
+One $\beta$-step, then evaluate the substitution (correction~3):
+\begin{enumerate}[label=(\roman*)]
+  \item $(\lambda y.\,5)(3) \bred 5[y:=3] \equiv 5$: replace $y$ by $3$ in
+        the expression ``$5$''.
+  \item $(\lambda x.\,x)(\lambda y.\,y) \bred x[x:=\lambda y.y] \equiv
+        \lambda y.\,y$: replace $x$ by $\lambda y.y$ in ``$x$''.
+  \item $(\lambda x.\,x^2+1)(3) \bred (x^2+1)[x:=3] \equiv 3^2+1$: replace
+        $x$ by $3$ in ``$x^2+1$''.
+\end{enumerate}
+\end{example}
+
+\begin{remark}[Compatibility, informal]\label{rem:compatibility-informal}
+\uses{def:beta-informal}
+\source{N\&G \S1.2, Example~1.2.4, p.~4 (\textbf{verify} number).}
+Reduction is also possible on suitable \emph{parts} of expressions: when
+$(\lambda x.\, M)N$ is a subexpression, it may be rewritten to $M[x:=N]$,
+provided the rest of the expression is left unchanged. The rules describing
+how reduction extends from subexpressions to bigger ones are the
+\emph{compatibility rules}. Formal version: Def.~1.8.1.
+\end{remark}
+
+\begin{quantified}
+Informally, for all expressions $M, N, L$ and every variable $x$:
+\[
+M \bred N \;\Longrightarrow\;
+ML \bred NL,\quad LM \bred LN,\quad \lambda x.M \bred \lambda x.N .
+\]
+\pending{Compare with Def.~1.8.1 when you get there: which clauses does it
+have, and is anything added or dropped?}
+\end{quantified}
+
+\begin{example}
+By compatibility, $\lambda z.\,((\lambda x.x)(\lambda y.y)) \bred
+\lambda z.\,(\lambda y.y)$. The result is the map $z \mapsto (y \mapsto y)$:
+a function taking any input $z$ and returning the function $y \mapsto y$.
+\end{example}
+
+% ---------------------------------------------------------
+\subsection{Functions of several variables}
+
+\begin{remark}[Currying]\label{rem:currying}
+\source{N\&G \S1.2, \textbf{verify} page.}
+$\lambda$ binds exactly one variable. A function of two variables,
+$f(x,y)$, takes an ordered pair; $\lambda$-notation instead takes the
+arguments one after another. The two-argument function $(x,y) \mapsto M$
+becomes
+\[
+  \lambda x.\, (\lambda y.\, M),
+\]
+called its \emph{Curried version} (correction~7). The form
+$\lambda(x,y).M$ is not a $\lambda$-term (correction~6).
+\end{remark}
+
+\begin{remark}[Lean]
+Lean's \texttt{fun x y => M} is notation for
+\texttt{fun x => fun y => M}: Lean functions are Curried in exactly this
+sense.
+\end{remark}
+
+\end{document}

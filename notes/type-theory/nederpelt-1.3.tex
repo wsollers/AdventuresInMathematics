@@ -14,7 +14,7 @@
 
 \title{Nederpelt \& Geuvers \S1.3: Lambda-terms}
 \author{William Sollers}
-\date{Notes, draft 1}
+\date{Notes, draft 2}
 
 \begin{document}
 \maketitle
@@ -50,8 +50,28 @@ construct elements of $\Lam$ (p.~4).
 \begin{quantified}
 \pending{Test 2 (least set): the intersection form. Name the domain the
 outer quantifier ranges over. Then its negation: when is a string
-\emph{not} in $\Lam$?}
+\emph{not} in $\Lam$? Instantiate Definition~\ref{def:inductive-general}
+(see correction~11 for how abstraction fits).}
 \end{quantified}
+
+\begin{convention}[Abstract syntax]\label{conv:abstract-grammar}
+\uses{def:lambda-terms}
+\source{N\&G \S1.3, p.~4 (\textbf{verify} number and page).}
+$\Lam = \Var \mid (\Lam\Lam) \mid (\lambda \Var.\Lam)$.
+\end{convention}
+
+\begin{convention}[Syntactic identity]\label{conv:syntactic-identity}
+\uses{def:lambda-terms}
+\source{N\&G \S1.3 (\textbf{verify} number and page).}
+Syntactic identity of $\lambda$-terms is written $\equiv$. For example,
+$(xy) \equiv (xy)$ and $(xy) \not\equiv (yx)$.
+\end{convention}
+
+\begin{remark}
+$\equiv$ is a metalanguage relation: identity of strings, Lean's
+\texttt{Eq} on the inductive type of terms (CONVENTIONS \S7). Compare
+\texttt{MetaEq} in \texttt{Aim/MetaLanguage/Eq.lean}.
+\end{remark}
 
 % ---------------------------------------------------------
 \section{Where finiteness comes from}\label{sec:finiteness}
@@ -146,6 +166,36 @@ readability): each term has exactly one last construction step. In Lean, one
 object, the recursor, provides both recursion and induction.
 \end{remark}
 
+\begin{definition}[Inductive definition]\label{def:inductive-general}
+\source{Enderton \S1.4, p.~34ff.\ (correction~9: Enderton's framework,
+not N\&G's).}
+Fix
+\begin{enumerate}[label=(\roman*)]
+  \item a set $U$, the \emph{universe};
+  \item a set $B \subseteq U$, the \emph{base};
+  \item a set $F$ of operations, each $f \in F$ a function
+        $f\colon U^n \to U$ for some $n \ge 1$, its \emph{arity}.
+\end{enumerate}
+A set $S \subseteq U$ is \emph{closed} (under $B$ and $F$) if $B \subseteq S$
+and for every $f \in F$ of arity $n$ and all $x_1,\dots,x_n \in S$,
+$f(x_1,\dots,x_n) \in S$. The set \emph{inductively defined} by $B$ and $F$
+is
+\[
+  C = \bigcap \{\, S \subseteq U : S \text{ is closed} \,\}.
+\]
+\end{definition}
+
+\begin{quantified}
+\[
+x \in C \iff \forall S \subseteq U\,\bigl(S \text{ closed} \to x \in S\bigr)
+\]
+\end{quantified}
+
+\begin{remark}
+\pending{Why the family is nonempty (correction~10): which set is always
+closed?}
+\end{remark}
+
 \begin{definition}[Construction sequence for $\Lam$]\label{def:construction-sequence-lambda}
 \uses{ass:variables}
 \source{Not in N\&G; Enderton's pattern (\S1.1, \S1.4) applied to $\Lam$.}
@@ -201,6 +251,75 @@ Let $F$ be the set of finite strings over $A$. Check $F$ satisfies
         Ch.~1.
 \end{itemize}
 \end{remark}
+
+% ---------------------------------------------------------
+\section{Subterms}
+
+\begin{definition}[Multiset of subterms]\label{def:sub}
+\uses{def:lambda-terms}
+\source{N\&G Definition~1.3.5 (\textbf{verify} page).}
+The multiset $\mathrm{Sub}(M)$ of subterms of $M$ is defined by recursion
+on $M$:
+\begin{enumerate}[label=(\arabic*)]
+  \item (Basis) $\mathrm{Sub}(x) = \{x\}$ for each $x \in \Var$;
+  \item (Application) $\mathrm{Sub}((MN)) = \mathrm{Sub}(M) \cup
+        \mathrm{Sub}(N) \cup \{(MN)\}$;
+  \item (Abstraction) $\mathrm{Sub}((\lambda x.M)) = \mathrm{Sub}(M) \cup
+        \{(\lambda x.M)\}$.
+\end{enumerate}
+Here $\cup$ is \emph{multiset} union: a subterm may occur more than once
+(correction~12). We call $L$ a \emph{subterm} of $M$ if
+$L \in \mathrm{Sub}(M)$, i.e.\ $L$ occurs in $\mathrm{Sub}(M)$ at least once.
+\end{definition}
+
+\begin{example}
+\pending{Compute $\mathrm{Sub}((xx))$ and say which element occurs twice.
+Then a near miss: a string that occurs inside $M$ as a substring but is not
+a subterm of $M$.}
+\end{example}
+
+\begin{remark}
+$\mathrm{Sub}$ is the \emph{recursive definition} row of the table in
+Remark~``Inductive definitions: the pattern''. That it is well defined
+needs unique readability (see Gaps).
+\end{remark}
+
+\begin{lemma}[Properties of $\mathrm{Sub}$]\label{lem:sub-properties}
+\uses{def:sub}
+\source{N\&G Lemma~1.3.6.}
+\begin{enumerate}[label=(\arabic*)]
+  \item (Reflexivity) For all $\lambda$-terms $M$, $M \in \mathrm{Sub}(M)$.
+  \item (Transitivity) If $L \in \mathrm{Sub}(M)$ and
+        $M \in \mathrm{Sub}(N)$, then $L \in \mathrm{Sub}(N)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{quantified}
+(correction~13)
+\begin{align*}
+&\forall M \in \Lam\ \bigl(M \in \mathrm{Sub}(M)\bigr)\\
+&\forall L, M, N \in \Lam\ \bigl(L \in \mathrm{Sub}(M) \land
+  M \in \mathrm{Sub}(N) \to L \in \mathrm{Sub}(N)\bigr)
+\end{align*}
+\end{quantified}
+
+\begin{proof}
+\pending{Your proofs. For each part: which variable do you induct on, and
+what are the three cases?}
+\end{proof}
+
+\begin{definition}[Proper subterm]\label{def:proper-subterm}
+\uses{def:sub, conv:syntactic-identity}
+\source{N\&G \S1.3, Definition~1.3.7 (\textbf{verify} number).}
+$L$ is a \emph{proper subterm} of $M$ if $L$ is a subterm of $M$ and
+$L \not\equiv M$ (correction~14).
+\end{definition}
+
+\begin{quantified}
+\pending{Predicate reading (test 6), and the remark that the relation
+``is a proper subterm of'' is irreflexive (correction~15). Is it also
+transitive?}
+\end{quantified}
 
 \begin{remark}[Lean]
 \pending{After Enderton \S1.4: the general node (universe, base, operations;
