@@ -39,17 +39,46 @@ theorem subst {P : α → Prop} (h : MetaEq a b) (ha : P a) : P b := by
   cases h
   exact ha
 
-theorem symm (h : MetaEq a b) : MetaEq b a := sorry
-theorem trans (h₁ : MetaEq a b) (h₂ : MetaEq b c) : MetaEq a c := sorry
-theorem congrArg (f : α → β) (h : MetaEq a b) : MetaEq (f a) (f b) := sorry
+theorem symm (h : MetaEq a b) : MetaEq b a :=
+  match h with
+    | .refl _ => .refl a
+
+theorem trans (h₁ : MetaEq a b) (h₂ : MetaEq b c) : MetaEq a c :=
+  match h₁, h₂ with
+    | .refl _, .refl _ => .refl a
+
+theorem congrArg (f : α → β) (h : MetaEq a b) : MetaEq (f a) (f b) :=
+  match h with
+    | .refl _ => .refl (f a)
+
 end MetaEq
 
 /-- The bridge: our equality is Lean's equality. -/
-theorem metaEq_iff_eq {α : Sort u} {a b : α} : MetaEq a b ↔ a = b := sorry
+theorem metaEq_iff_eq {α : Sort u} {a b : α} : MetaEq a b ↔ a = b := by
+  constructor
+  · intro h
+    cases h
+    rfl
+  · intro h
+    rw [h]
+    exact MetaEq.refl b
 
 /-- Leibniz equality: indiscernible by every property. -/
 def LeibEq {α : Sort u} (a b : α) : Prop := ∀ P : α → Prop, P a → P b
 
-theorem leibEq_iff_eq {α : Sort u} {a b : α} : LeibEq a b ↔ a = b := sorry
+theorem leibEq_iff_eq {α : Sort u} {a b : α} : LeibEq a b ↔ a = b := by
+  constructor
+  · -- LeibEq a b → a = b
+    intro hab
+    unfold LeibEq at hab
+    have heq : a = b := hab (fun x => a = x) rfl
+    exact heq
+  · -- a = b → LeibEq a b
+    intro hab
+    unfold LeibEq
+    intro P ha
+    have hpb : P b := congrArg P hab ▸ ha
+    exact hpb
+
 
 end aim.meta
