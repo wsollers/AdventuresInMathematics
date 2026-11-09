@@ -25,6 +25,7 @@
 /book/build/
 /book/print/
 /book/web/
+/tmp/
 
 # --- Python tooling ---
 __pycache__/
