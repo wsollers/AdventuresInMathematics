@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.ModelTheory.Structure
-
 /-!
 # Tarski's Truth Definition and Satisfaction ($\mathfrak{M} \models \varphi$)
 
@@ -13,4 +11,3 @@ semantic entailment ($\Gamma \models \varphi$), elementary equivalence, and Soun
 namespace aim.modeltheory
 
 end aim.modeltheory
-

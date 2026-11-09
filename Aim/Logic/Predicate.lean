@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Logic.Sentential
-
 /-!
 # First-Order Predicate Logic
 
@@ -13,4 +11,3 @@ and quantifier duality laws.
 namespace aim.logic
 
 end aim.logic
-

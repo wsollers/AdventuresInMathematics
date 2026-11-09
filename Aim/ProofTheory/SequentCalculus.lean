@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.ProofTheory.NaturalDeduction
-
 /-!
 # Gentzen's Sequent Calculus ($\mathsf{LJ}$ and $\mathsf{LK}$)
 
@@ -13,4 +11,3 @@ logical left/right rules, the Cut rule, and Gentzen's Hauptsatz (Cut-Elimination
 namespace aim.prooftheory
 
 end aim.prooftheory
-

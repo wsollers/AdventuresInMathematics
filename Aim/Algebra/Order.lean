@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Set.Set
-
 /-!
 # Order Axioms and Lattice Structures
 
@@ -13,4 +11,3 @@ least upper bounds (Supremum), greatest lower bounds (Infimum), and completeness
 namespace aim.algebra
 
 end aim.algebra
-

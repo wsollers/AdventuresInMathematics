@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Topology.TopologicalSpace
-
 /-!
 # Continuous Maps and Homeomorphisms
 
@@ -13,4 +11,3 @@ subspace topology, and product topology.
 namespace aim.topology
 
 end aim.topology
-

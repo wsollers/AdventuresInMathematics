@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Analysis.Derivative
-
 /-!
 # Riemann and Darboux Integration
 
@@ -14,4 +12,3 @@ and the Fundamental Theorem of Calculus (Parts I and II).
 namespace aim.analysis
 
 end aim.analysis
-

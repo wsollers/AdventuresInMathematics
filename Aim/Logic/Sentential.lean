@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Logic.Valuation
-
 /-!
 # Sentential (Propositional) Logic
 
@@ -13,4 +11,3 @@ Modus Ponens, De Morgan's laws, and classical tautologies ($\vdash \varphi$).
 namespace aim.logic
 
 end aim.logic
-

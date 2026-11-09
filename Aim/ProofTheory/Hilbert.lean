@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.ProofTheory.Syntax
-
 /-!
 # Hilbert-Style Axiomatic Calculus
 
@@ -12,4 +10,3 @@ Axiom schemas, Modus Ponens, Universal Generalization, and the Deduction Theorem
 namespace aim.prooftheory
 
 end aim.prooftheory
-

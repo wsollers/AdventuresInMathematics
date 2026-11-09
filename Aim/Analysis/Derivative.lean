@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Analysis.Limits
-
 /-!
 # Differentiation
 
@@ -14,4 +12,3 @@ L'Hôpital's Rule, and Taylor's Theorem.
 namespace aim.analysis
 
 end aim.analysis
-

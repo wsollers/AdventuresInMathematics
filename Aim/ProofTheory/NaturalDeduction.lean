@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.ProofTheory.Syntax
-
 /-!
 # Gentzen's Natural Deduction ($\mathsf{NJ}$ and $\mathsf{NK}$)
 
@@ -13,4 +11,3 @@ and proof normalization.
 namespace aim.prooftheory
 
 end aim.prooftheory
-

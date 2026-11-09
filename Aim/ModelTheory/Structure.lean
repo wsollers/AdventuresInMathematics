@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.ModelTheory.Language
-
 /-!
 # First-Order Structures and Homomorphisms
 
@@ -13,4 +11,3 @@ homomorphisms, embeddings, and isomorphisms.
 namespace aim.modeltheory
 
 end aim.modeltheory
-

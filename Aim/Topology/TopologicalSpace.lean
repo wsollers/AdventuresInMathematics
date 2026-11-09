@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Topology.MetricSpace
-
 /-!
 # Topological Spaces
 
@@ -13,4 +11,3 @@ interior, closure, boundary, limit points, and Hausdorff ($T_2$) separation.
 namespace aim.topology
 
 end aim.topology
-

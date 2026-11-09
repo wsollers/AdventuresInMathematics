@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Topology.Compactness
-
 /-!
 # Connectedness and Path-Connectedness
 
@@ -13,4 +11,3 @@ continuous images of connected spaces, and path-connectedness.
 namespace aim.topology
 
 end aim.topology
-

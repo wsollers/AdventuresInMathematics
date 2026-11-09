@@ -1,7 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Analysis.Series
 
 /-!
 # Functional Limits and Continuity on $\mathbb{R}$
@@ -14,4 +13,3 @@ Extreme Value Theorem (EVT), and uniform continuity.
 namespace aim.analysis
 
 end aim.analysis
-

@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.ModelTheory.Satisfaction
-
 /-!
 # Completeness and Compactness Theorems
 
@@ -14,4 +12,3 @@ and the Compactness Theorem.
 namespace aim.modeltheory
 
 end aim.modeltheory
-

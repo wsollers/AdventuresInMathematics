@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Logic.Predicate
-
 /-!
 # Identity and Equality Axioms
 
@@ -13,4 +11,3 @@ Reflexivity ($x = x$), symmetry, transitivity, and Leibniz's Law of Substitution
 namespace aim.logic
 
 end aim.logic
-

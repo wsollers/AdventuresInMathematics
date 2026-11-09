@@ -1,9 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Number.Peano
-import Aim.Algebra.Structures
-
 /-!
 # The Integers ($\mathbb{Z}$)
 
@@ -14,4 +11,3 @@ and proof that $\mathbb{Z}$ satisfies the Ordered Commutative Ring and Integral 
 namespace aim.number
 
 end aim.number
-

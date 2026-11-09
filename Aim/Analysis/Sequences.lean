@@ -1,7 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Topology.Topology
 
 /-!
 # Real Sequences and Convergence
@@ -14,4 +13,3 @@ $\limsup$/$\liminf$, and the Cauchy Criterion on $\mathbb{R}$.
 namespace aim.analysis
 
 end aim.analysis
-

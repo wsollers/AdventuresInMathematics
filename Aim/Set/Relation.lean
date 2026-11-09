@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Set.Operations
-
 /-!
 # Relations, Equivalence Classes, and Quotients
 
@@ -13,4 +11,3 @@ equivalence relations, partitions, and quotient constructions.
 namespace aim.set
 
 end aim.set
-

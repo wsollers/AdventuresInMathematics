@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Analysis.Sequences
-
 /-!
 # Infinite Series
 
@@ -14,4 +12,3 @@ and Alternating Series Test.
 namespace aim.analysis
 
 end aim.analysis
-

@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Algebra.Order
-
 /-!
 # Algebraic Structures and Field Axioms
 
@@ -14,4 +12,3 @@ Ordered Fields, and Complete Ordered Fields.
 namespace aim.algebra
 
 end aim.algebra
-

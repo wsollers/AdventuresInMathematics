@@ -1,8 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Logic.Logic
-
 /-!
 # Set Theory Axioms
 
@@ -13,4 +11,3 @@ Comprehension/Specification, Union, Power Set, and Infinity.
 namespace aim.set
 
 end aim.set
-

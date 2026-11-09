@@ -1,9 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Number.Int
-import Aim.Algebra.Structures
-
 /-!
 # The Rational Numbers ($\mathbb{Q}$)
 
@@ -14,4 +11,3 @@ and proof that $\mathbb{Q}$ satisfies the Ordered Field axioms.
 namespace aim.number
 
 end aim.number
-
