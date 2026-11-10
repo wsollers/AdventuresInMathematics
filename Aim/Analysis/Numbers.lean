@@ -209,6 +209,7 @@ theorem max_comm {X : Type u} [LE X] [LEDecidable X]
     [IsLETotal X] [IsLEAntisymm X] (a b : X) : max a b = max b a := by
   sorry
 
+
 -- needs the field/order interaction
 theorem abs_add_le {F : Type u} [OrderedField F] (x y : F) :
     abs (x + y) ≤ abs x + abs y := by
@@ -266,8 +267,35 @@ structure Distance (X : Type u) (R : Type v) [Zero R] [LE R] where
 
 
 
+-- | `add_zero` | `x + 0 = x` | `zero_add` (ax) | Z a |
+theorem add_zero {R : Type u}
+  [Zero R] [Add R] [IsZeroAdd R] [IsAddComm R] (x : R) : x + 0 = x := by
+  rw [IsAddComm.add_comm x]
+  rw [IsZeroAdd.zero_add]
 
+--zero_unique	(∀ x, x + z = x) → z = 0	(∀ x, z + x = x) → z = 0	Z a.1°
+theorem zero_unique {R : Type u}
+  [Add R] [Zero R] [IsZeroAdd R] [IsAddComm R] (z : R) : (∀ x, z + x = x) → z = 0 := by
+  intro h
+  have hx0 := h 0
+  rw [add_zero] at hx0
+  exact hx0
 
+--neg_add	-x + x = 0	add_neg (ax)
+theorem neg_add {R : Type u} [Neg R] [Add R] [Zero R] [IsAddComm R] [IsAddNeg R] (x : R) : -x + x = (0 : R) := by
+  rw [IsAddComm.add_comm  (-x)]
+  rw [IsAddNeg.add_neg]
+
+-- neg_unique	x + y = 0 → y = -x	y + x = 0 → y = -x
+theorem neg_unique {R : Type u} [Add R] [Zero R] [Neg R] [Inv R] [IsAddComm R] [IsAddNeg R]
+  (x y : R) : x + y = 0 → y = -x := by
+  intro h
+  rw [IsAddComm.add_comm] at h
+  have hxn := IsAddNeg.add_(-x)
+  --rw [Add.add  hxinv] at h
+  --rw [IsAddNeg.add_neg x] at h
+
+  sorry
 
 
 
