@@ -102,6 +102,40 @@ instance {X : Type u} [Mul X] [IsMulComm X] :
     Std.Commutative ((· * ·) : X → X → X) :=
   ⟨IsMulComm.mul_comm⟩
 
+-- 4. Algebraic and Order Hierarchy
+
+/-- A field, presented independently of Mathlib's hierarchy.
+
+The data parents (`Zero`, `One`, …) come first so that the `Prop` mixin
+parents can find the instances they need. -/
+class Field (F : Type u)
+    extends Zero F, One F, Add F, Mul F, Neg F, Inv F,
+      IsZeroNeOne F,
+      IsAddAssoc F, IsAddComm F, IsZeroAdd F, IsAddNeg F,
+      IsMulAssoc F, IsMulComm F, IsOneMul F, IsMulInvCancel F,
+      IsMulAdd F
+
+/-- Every field is nonempty, witnessed by zero. -/
+instance {F : Type u} [Field F] : Nonempty F :=
+  ⟨0⟩
+
+/-- Subtraction, defined as addition of the negation. -/
+instance {F : Type u} [Field F] : Sub F :=
+  ⟨fun a b => a + -b⟩
+
+/-- Division, defined as multiplication by the inverse. -/
+instance {F : Type u} [Field F] : Div F :=
+  ⟨fun a b => a * b⁻¹⟩
+
+theorem sub_eq_add_neg {F : Type u} [Field F] (a b : F) :
+    a - b = a + -b :=
+  rfl
+
+theorem div_eq_mul_inv {F : Type u} [Field F] (a b : F) :
+    a / b = a * b⁻¹ :=
+  rfl
+
+
 -- 2. Order Property Classes
 
 /-- Reflexivity of the non-strict order. -/
@@ -146,45 +180,39 @@ def RNeg (R : Type u) [Zero R] [LT R] : Type u :=
 def RNonneg (R : Type u) [Zero R] [LE R] : Type u :=
   { x : R // 0 ≤ x }
 
--- 4. Algebraic and Order Hierarchy
+/-- The order `≤` is decidable. Data, not a `Prop`: it is what `if` branches on. -/
+class LEDecidable (X : Type u) [LE X] where
+  decLE : ∀ a b : X, Decidable (a ≤ b)
 
-/-- A field, presented independently of Mathlib's hierarchy.
-
-The data parents (`Zero`, `One`, …) come first so that the `Prop` mixin
-parents can find the instances they need. -/
-class Field (F : Type u)
-    extends Zero F, One F, Add F, Mul F, Neg F, Inv F,
-      IsZeroNeOne F,
-      IsAddAssoc F, IsAddComm F, IsZeroAdd F, IsAddNeg F,
-      IsMulAssoc F, IsMulComm F, IsOneMul F, IsMulInvCancel F,
-      IsMulAdd F
-
-/-- Every field is nonempty, witnessed by zero. -/
-instance {F : Type u} [Field F] : Nonempty F :=
-  ⟨0⟩
-
-/-- Subtraction, defined as addition of the negation. -/
-instance {F : Type u} [Field F] : Sub F :=
-  ⟨fun a b => a + -b⟩
-
-/-- Division, defined as multiplication by the inverse. -/
-instance {F : Type u} [Field F] : Div F :=
-  ⟨fun a b => a * b⁻¹⟩
-
-theorem sub_eq_add_neg {F : Type u} [Field F] (a b : F) :
-    a - b = a + -b :=
-  rfl
-
-theorem div_eq_mul_inv {F : Type u} [Field F] (a b : F) :
-    a / b = a * b⁻¹ :=
-  rfl
+instance {X : Type u} [LE X] [LEDecidable X] (a b : X) : Decidable (a ≤ b) :=
+  LEDecidable.decLE a b
 
 /-- A field equipped with a compatible linear order. -/
 class OrderedField (F : Type u)
     extends Field F, LE F, LT F,
       IsLERefl F, IsLETrans F, IsLEAntisymm F, IsLETotal F,
-      IsLTIffLENotLE F,
+      IsLTIffLENotLE F, LEDecidable F,
       IsAddLEAddRight F, IsMulPos F
+
+instance {X : Type u} [LE X] [LEDecidable X] : Max X :=
+  ⟨fun a b => if a ≤ b then b else a⟩
+
+instance {X : Type u} [LE X] [LEDecidable X] : Min X :=
+  ⟨fun a b => if a ≤ b then a else b⟩
+
+/-- Absolute value: `|x| = max x (-x)`. -/
+def abs {F : Type u} [OrderedField F] (x : F) : F :=
+  max x (-x)
+
+-- needs only decidability + totality + antisymmetry, nothing algebraic
+theorem max_comm {X : Type u} [LE X] [LEDecidable X]
+    [IsLETotal X] [IsLEAntisymm X] (a b : X) : max a b = max b a := by
+  sorry
+
+-- needs the field/order interaction
+theorem abs_add_le {F : Type u} [OrderedField F] (x y : F) :
+    abs (x + y) ≤ abs x + abs y := by
+  sorry
 
 /-- `a` is an upper bound for `s`. -/
 def IsUpperBound {F : Type u} [LE F] (s : F → Prop) (a : F) : Prop :=
@@ -232,6 +260,28 @@ structure Distance (X : Type u) (R : Type v) [Zero R] [LE R] where
   dist : X → X → R
   dist_nonneg : ∀ x y : X, 0 ≤ dist x y
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- 6. Smoke Tests
 
 /-- The mixin projections are found through `extends`. -/
@@ -248,5 +298,31 @@ theorem field_ac_smoke_test {F : Type u} [Field F] (a b c : F) :
 theorem ordered_field_smoke_test {F : Type u} [OrderedField F] (a : F) :
     a ≤ a :=
   IsLERefl.le_refl a
+
+/-- The decidability of `≤` is found through `OrderedField`. -/
+example {F : Type u} [OrderedField F] (a b : F) : Decidable (a ≤ b) :=
+  inferInstance
+
+/-- `max` (via core's `Max` class) unfolds to the expected `if`. -/
+theorem max_smoke_test {F : Type u} [OrderedField F] (a b : F) :
+    max a b = if a ≤ b then b else a :=
+  rfl
+
+/-- `abs` is defined through `max`. -/
+theorem abs_smoke_test {F : Type u} [OrderedField F] (x : F) :
+    abs x = max x (-x) :=
+  rfl
+
+/-- The negative branch of `abs` is reachable with core's `if_pos`. -/
+theorem abs_branch_pos_smoke_test {F : Type u} [OrderedField F] (x : F)
+    (h : x ≤ -x) : abs x = -x := by
+  show (if x ≤ -x then -x else x) = -x
+  exact if_pos h
+
+/-- The positive branch of `abs` is reachable with core's `if_neg`. -/
+theorem abs_branch_neg_smoke_test {F : Type u} [OrderedField F] (x : F)
+    (h : ¬ x ≤ -x) : abs x = x := by
+  show (if x ≤ -x then -x else x) = x
+  exact if_neg h
 
 end aim.analysis
