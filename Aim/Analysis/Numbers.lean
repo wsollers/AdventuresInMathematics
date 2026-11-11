@@ -387,16 +387,9 @@ lemma neg_eq_iff_eq_neg {R : Type}
     exact h2.symm
   . -- <-
     intro h
-    have h2 : x + (-x) = (-y) + (-x) := congrArg (· + (-x)) h
-    rw [IsAddNeg.add_neg] at h2
-    have h2 : 0 + y = (-y) + -x + y := congrArg (· + y) h2
-    rw [IsZeroAdd.zero_add] at h2
-    rw [<-IsAddComm.add_comm (-x) (-y)]  at h2
-    rw [IsAddAssoc.add_assoc] at h2
-    rw [<-IsAddComm.add_comm y (-y)]  at h2
-    rw [IsAddNeg.add_neg] at h2
-    rw [add_zero] at h2
-    exact h2.symm
+    have h2 : -x = -(-y) := congrArg (- ·) h
+    rw [neg_neg] at h2
+    exact h2
 
 
 
