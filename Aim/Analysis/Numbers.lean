@@ -478,6 +478,95 @@ lemma sub_sub {R : Type u}
   rw [add_neg_eq_sub x (y + z)] at h3
   exact h3
 
+--| `proposition` | `one_unique` | `(∀ x, x * e = x) → e = 1` | left version | Z b.1° |
+proposition one_unique {R : Type u}
+  [One R] [Mul R] [IsOneMul R]
+  (e : R) : (∀ x, x * e = x) → e = 1 := by
+  intro h
+  have hx1 := h 1
+  rw [IsOneMul.one_mul] at hx1
+  exact hx1
+
+--| `corollary` | `inv_mul_cancel` | `x ≠ 0 → x⁻¹ * x = 1` | `mul_inv_cancel` (ax) | — |
+corollary inv_mul_cancel {R : Type u}
+  [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R]
+  (x : R) : x ≠ 0 → x⁻¹ * x = 1 := by
+  intro hne0
+  rw [IsMulComm.mul_comm]
+  rw [IsMulInvCancel.mul_inv_cancel]
+  exact hne0
+
+corollary mul_one {R : Type u}
+  [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
+  (x : R) : x * 1 = x := by
+  rw [IsMulComm.mul_comm x]
+  rw [IsOneMul.one_mul]
+
+
+--| `proposition` | `inv_unique` | `x ≠ 0 → x * y = 1 → y = x⁻¹` | `y * x = 1 → y = x⁻¹` | Z b.2° |
+proposition inv_unique {R : Type u}
+  [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
+  (x y : R) : x ≠ 0 → x * y = 1 → y = x⁻¹ := by
+  intro hne0
+  intro hxy
+  have h2 : x⁻¹ * (x * y) = x⁻¹ * 1 := congrArg (x⁻¹ * ·) hxy
+  rw [<-IsMulAssoc.mul_assoc] at h2
+  rw [inv_mul_cancel x hne0] at h2
+  rw [IsOneMul.one_mul] at h2
+  rw [mul_one] at h2
+  exact h2
+
+--| `proposition` | `mul_left_cancel` | `x ≠ 0 → x * y = x * z → y = z` | `mul_right_cancel` | Z b.3° |
+proposition mul_left_cancel {R : Type u}
+  [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
+  (x y z : R) : x ≠ 0 → x * y = x * z → y = z := by
+  intro hxne0
+  intro hxy
+  have h2 : x⁻¹ * (x * y) = x⁻¹ * (x * z) := congrArg (x⁻¹ * ·) hxy
+  rw [<-IsMulAssoc.mul_assoc] at h2
+  rw [inv_mul_cancel x hxne0] at h2
+  rw [IsOneMul.one_mul] at h2
+  rw [<-IsMulAssoc.mul_assoc] at h2
+  rw [IsMulComm.mul_comm] at h2
+  rw [inv_mul_cancel x hxne0] at h2
+  rw [mul_one] at h2
+  exact h2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
