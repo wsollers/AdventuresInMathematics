@@ -423,18 +423,65 @@ lemma sub_eq_zero_iff {R : Type u}
     rw [IsSubEqAddNeg.sub_eq_add_neg]
     exact h2
 
+--| `lemma` | `neg_add_rev` | `-(x + y) = -y + -x` | `neg_add' : -(x + y) = -x + -y` | — |
+lemma neg_add_rev {R : Type u}
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  (x y : R) : -(x + y) = -y + -x := by
+  have h : (x + y) + -(x + y) = 0 := IsAddNeg.add_neg (x + y)
+  have h2 := congrArg ((-y + -x) + ·) h             --Smarter use of congrArg
+  rw [<- IsAddAssoc.add_assoc] at h2
+  rw [<- IsAddAssoc.add_assoc (-y + -x) x y] at h2
+  rw [IsAddAssoc.add_assoc (-y) (-x) x] at h2
+  rw [neg_add x] at h2
+  rw [add_zero] at h2
+  rw [neg_add y] at h2
+  rw [IsZeroAdd.zero_add] at h2
+  rw [add_zero] at h2
+  exact h2
+
+corollary add_neg_eq_sub {R : Type u}
+  [Add R] [Neg R] [Sub R] [IsSubEqAddNeg R] (a b : R) :
+  a + -b = a - b :=
+  (IsSubEqAddNeg.sub_eq_add_neg a b).symm
+
 -- | `lemma` | `neg_sub` | `-(x - y) = y - x` | — | — |
 lemma neg_sub {R : Type u}
   [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
   (x y : R) : -(x - y) = y - x := by
-
   --rw [<-IsAddComm.add_comm y (-x)]
+  rw [IsSubEqAddNeg.sub_eq_add_neg x y]
+  rw [IsSubEqAddNeg.sub_eq_add_neg y x]
+  rw [neg_add_rev]
+  rw [neg_neg]
+
+-- | `lemma` | `add_sub_cancel_right` | `x + y - y = x` | `sub_add_cancel : x - y + y = x` | — |
+lemma add_sub_cancel_right { R: Type u}
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  (x y : R) : x + y - y = x := by
 
   rw [IsSubEqAddNeg.sub_eq_add_neg]
+  rw [IsAddAssoc.add_assoc]
+  rw [IsAddNeg.add_neg]
+  rw [add_zero]
 
-  rw [<-IsSubEqAddNeg.sub_eq_add_neg]
+-- | `lemma` | `sub_sub` | `x - y - z = x - (y + z)` | `sub_add : x - y + z = x - (y - z)` | — |
+lemma sub_sub {R : Type u}
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  (x y z : R) : x - y - z = x - (y + z) := by
+  have h : x = x := rfl
+  have h2 : x + -y = x + -y := congrArg (· + -y) h
+  have h3 : x + -y + -z = x + (-y + -z) := IsAddAssoc.add_assoc x (-y) (-z)
+  rw [add_neg_eq_sub x y] at h3
+  rw [add_neg_eq_sub (x - y) z] at h3
+  rw [IsAddComm.add_comm (-y) (-z)] at h3
+  rw [<- neg_add_rev y z] at h3
+  rw [add_neg_eq_sub x (y + z)] at h3
+  exact h3
 
-  sorry
+
+
+
+
 
 
 -- 6. Smoke Tests
