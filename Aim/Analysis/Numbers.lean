@@ -395,6 +395,46 @@ lemma neg_eq_iff_eq_neg {R : Type u}
 
 
 
+-- | `corollary` | `sub_self` | `x - x = 0` | — | — |
+corollary sub_self {R : Type u}
+  [Add R] [Neg R] [Sub R]  [Zero R] [IsSubEqAddNeg R] [IsAddNeg R]
+  (x : R) : x - x = (0:R) := by
+  rw [IsSubEqAddNeg.sub_eq_add_neg]
+  rw [IsAddNeg.add_neg]
+
+-- | `lemma` | `sub_eq_zero_iff` | `x - y = 0 ↔ x = y` | `sub_ne_zero_iff` | — |
+lemma sub_eq_zero_iff {R : Type u}
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  (x y : R) : x - y = 0 ↔ x = y := by
+  constructor
+  . -- ->
+    intro h
+    rw [IsSubEqAddNeg.sub_eq_add_neg] at h
+    have h2 : x + -y + y = 0 + y := congrArg (· + y) h
+    rw [IsAddAssoc.add_assoc] at h2
+    rw [neg_add y] at h2
+    rw [IsZeroAdd.zero_add] at h2
+    rw [add_zero] at h2
+    exact h2
+  . -- ->
+    intro h
+    have h2 : x + -y = y + -y := congrArg (· + -y) h
+    rw [IsAddNeg.add_neg] at h2
+    rw [IsSubEqAddNeg.sub_eq_add_neg]
+    exact h2
+
+-- | `lemma` | `neg_sub` | `-(x - y) = y - x` | — | — |
+lemma neg_sub {R : Type u}
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  (x y : R) : -(x - y) = y - x := by
+
+  --rw [<-IsAddComm.add_comm y (-x)]
+
+  rw [IsSubEqAddNeg.sub_eq_add_neg]
+
+  rw [<-IsSubEqAddNeg.sub_eq_add_neg]
+
+  sorry
 
 
 -- 6. Smoke Tests
