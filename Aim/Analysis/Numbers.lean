@@ -1,6 +1,7 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
+import Aim.Common.Common
 
 /-!
 # Numbers in Analysis
@@ -119,6 +120,7 @@ class Field (F : Type u)
 instance {F : Type u} [Field F] : Nonempty F :=
   ⟨0⟩
 
+-- Other Airthmetic on F
 /-- Subtraction, defined as addition of the negation. -/
 instance {F : Type u} [Field F] : Sub F :=
   ⟨fun a b => a + -b⟩
@@ -127,14 +129,24 @@ instance {F : Type u} [Field F] : Sub F :=
 instance {F : Type u} [Field F] : Div F :=
   ⟨fun a b => a * b⁻¹⟩
 
-theorem sub_eq_add_neg {F : Type u} [Field F] (a b : F) :
+/-- Subtraction is addition of the negation. -/
+class IsSubEqAddNeg (X : Type u) [Add X] [Neg X] [Sub X] : Prop where
+  sub_eq_add_neg : ∀ a b : X, a - b = a + -b
+
+/-- Division is multiplication by the inverse. -/
+class IsDivEqMulInv (X : Type u) [Mul X] [Inv X] [Div X] : Prop where
+  div_eq_mul_inv : ∀ a b : X, a / b = a * b⁻¹
+
+lemma sub_eq_add_neg {F : Type u} [Field F] (a b : F) :
     a - b = a + -b :=
   rfl
 
-theorem div_eq_mul_inv {F : Type u} [Field F] (a b : F) :
+lemma div_eq_mul_inv {F : Type u} [Field F] (a b : F) :
     a / b = a * b⁻¹ :=
   rfl
 
+instance {F : Type u} [Field F] : IsSubEqAddNeg F := ⟨fun _ _ => rfl⟩
+instance {F : Type u} [Field F] : IsDivEqMulInv F := ⟨fun _ _ => rfl⟩
 
 -- 2. Order Property Classes
 
@@ -205,7 +217,7 @@ def abs {F : Type u} [OrderedField F] (x : F) : F :=
   max x (-x)
 
 -- needs only decidability + totality + antisymmetry, nothing algebraic
-theorem max_comm {X : Type u} [LE X] [LEDecidable X]
+lemma max_comm {X : Type u} [LE X] [LEDecidable X]
     [IsLETotal X] [IsLEAntisymm X] (a b : X) : max a b = max b a := by
   sorry
 
@@ -268,13 +280,13 @@ structure Distance (X : Type u) (R : Type v) [Zero R] [LE R] where
 
 
 -- | `add_zero` | `x + 0 = x` | `zero_add` (ax) | Z a |
-theorem add_zero {R : Type u}
+corollary add_zero {R : Type u}
   [Zero R] [Add R] [IsZeroAdd R] [IsAddComm R] (x : R) : x + 0 = x := by
   rw [IsAddComm.add_comm x]
   rw [IsZeroAdd.zero_add]
 
 --zero_unique	(∀ x, x + z = x) → z = 0	(∀ x, z + x = x) → z = 0	Z a.1°
-theorem zero_unique {R : Type u}
+proposition zero_unique {R : Type u}
   [Add R] [Zero R] [IsZeroAdd R] [IsAddComm R] (z : R) : (∀ x, z + x = x) → z = 0 := by
   intro h
   have hx0 := h 0
@@ -282,27 +294,101 @@ theorem zero_unique {R : Type u}
   exact hx0
 
 --neg_add	-x + x = 0	add_neg (ax)
-theorem neg_add {R : Type u} [Neg R] [Add R] [Zero R] [IsAddComm R] [IsAddNeg R] (x : R) : -x + x = (0 : R) := by
+corollary neg_add {R : Type u} [Neg R] [Add R] [Zero R] [IsAddComm R] [IsAddNeg R] (x : R) : -x + x = (0 : R) := by
   rw [IsAddComm.add_comm  (-x)]
   rw [IsAddNeg.add_neg]
 
 -- neg_unique	x + y = 0 → y = -x	y + x = 0 → y = -x
-theorem neg_unique {R : Type u} [Add R] [Zero R] [Neg R] [Inv R] [IsAddComm R] [IsAddNeg R]
+proposition neg_unique {R : Type u}
+  [Add R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R]
   (x y : R) : x + y = 0 → y = -x := by
   intro h
   rw [IsAddComm.add_comm] at h
-  have hxn := IsAddNeg.add_(-x)
-  --rw [Add.add  hxinv] at h
-  --rw [IsAddNeg.add_neg x] at h
+  have h2 : y + x + -x = 0 + -x := congrArg (· + -x) h
+  rw [IsAddAssoc.add_assoc ] at h2
+  rw [IsAddNeg.add_neg] at h2
+  rw [IsZeroAdd.zero_add] at h2
+  rw [add_zero] at h2
+  exact h2
 
-  sorry
+-- | `proposition` | `add_left_cancel` | `x + y = x + z → y = z` | `add_right_cancel` | Z a.3° |
+proposition add_left_cancel {R : Type u}
+  [Add R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R]
+  (x y z : R) : x + y = x + z → y = z := by
+  intro h
+  have h2 : x + y + -x = x + z + -x := congrArg (· + -x) h
+  rw [IsAddComm.add_comm x y] at h2
+  rw [IsAddComm.add_comm x z] at h2
+  rw [IsAddAssoc.add_assoc ] at h2
+  rw [IsAddNeg.add_neg] at h2
+  rw [IsAddAssoc.add_assoc ] at h2
+  rw [IsAddNeg.add_neg] at h2
+  rw [add_zero] at h2
+  rw [add_zero] at h2
+  exact h2
+
+-- | `proposition` | `add_eq_iff_eq_sub` | `x + a = b ↔ x = b - a` | `a + x = b ↔ x = b - a` | Z a.3° |
+proposition add_eq_iff_eq_sub {R : Type u}
+  [Add R] [Sub R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R] [IsSubEqAddNeg R]
+  (x a b : R) : x + a = b ↔ x = b - a := by
+  constructor
+  . -- ->
+    intro h
+    have h2 : x + a + -a = b + -a := congrArg (· + -a) h
+    rw [IsAddAssoc.add_assoc] at h2
+    rw [IsAddNeg.add_neg] at h2
+    rw [add_zero] at h2
+    rw [← IsSubEqAddNeg.sub_eq_add_neg] at h2
+    exact h2
+  . -- <-
+    intro h
+    have h2 : x + a = b - a + a := congrArg (· + a) h
+    rw [IsSubEqAddNeg.sub_eq_add_neg] at h2
+    rw [IsAddAssoc.add_assoc] at h2
+    rw [IsAddComm.add_comm (-a) a] at h2
+    rw [IsAddNeg.add_neg] at h2
+    rw [add_zero] at h2
+    exact h2
+
+-- | `corollary` | `neg_neg` | `-(-x) = x` | — | — |
+corollary neg_neg {R : Type u}
+  [Add R] [Sub R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R] [IsSubEqAddNeg R]
+  (x : R) : -(-x) = x := by
+
+  have h : -x + x = 0 := neg_add x
+  have h2 : x = -(-x) := neg_unique (-x) x h
+  exact h2.symm
+
+-- | `corollary` | `neg_zero` | `-0 = 0` | — | — |
+corollary neg_zero {R : Type u}
+  [Add R] [Zero R] [Neg R] [IsZeroAdd R] [IsAddNeg R] :
+  -(0 : R) = 0 := by
+  have h : (0 : R) + -0 = 0 := IsAddNeg.add_neg 0
+  rw [IsZeroAdd.zero_add] at h
+  exact h
 
 
+-- | `lemma` | `neg_eq_iff_eq_neg` | `-x = y ↔ x = -y` | `neg_inj : -x = -y ↔ x = y` | — |
+lemma neg_eq_iff_eq_neg {R : Type}
+  [Add R] [Sub R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R] [IsSubEqAddNeg R]
+  (x y : R) : -x = y ↔ x = -y := by
+  constructor
+  . -- ->
+    intro h
+    have h2 : -x + x = y + x := congrArg (· + x) h
+    rw [IsAddComm.add_comm (-x) x]  at h2
+    rw [IsAddNeg.add_neg] at h2
+    have h2 : 0 + -y = y + x + -y := congrArg (· + -y) h2
+    rw [IsZeroAdd.zero_add] at h2
+    rw [<-IsAddComm.add_comm x y]  at h2
+    rw [IsAddAssoc.add_assoc] at h2
+    rw [IsAddNeg.add_neg] at h2
+    rw [add_zero] at h2
+    exact h2.symm
+  . -- <-
+    intro h
 
-
-
-
-
+    sorry
 
 
 
