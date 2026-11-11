@@ -369,7 +369,7 @@ corollary neg_zero {R : Type u}
 
 
 -- | `lemma` | `neg_eq_iff_eq_neg` | `-x = y ↔ x = -y` | `neg_inj : -x = -y ↔ x = y` | — |
-lemma neg_eq_iff_eq_neg {R : Type}
+lemma neg_eq_iff_eq_neg {R : Type u}
   [Add R] [Sub R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R] [IsSubEqAddNeg R]
   (x y : R) : -x = y ↔ x = -y := by
   constructor
