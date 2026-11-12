@@ -749,11 +749,15 @@ corollary add_mul {R : Type u}
 
 /-- No element is strictly less than itself. -/
 lemma lt_irrefl {F : Type u} [OrderedField F] (a : F) : ¬ a < a := by
-  sorry
+  rw [IsLTIffLENotLE.lt_iff_le_not_le]
+  intro h
+  exact h.2 h.1
+
 
 /-- A strict inequality implies the corresponding non-strict inequality. -/
-lemma le_of_lt {F : Type u} [OrderedField F] {a b : F} (h : a < b) : a ≤ b :=
-  by sorry
+lemma le_of_lt {F : Type u} [OrderedField F] {a b : F} (h : a < b) : a ≤ b := by
+  --XXX Start Here
+  sorry
 
 /-- A strict inequality rules out the reverse non-strict inequality. -/
 lemma not_le_of_lt {F : Type u} [OrderedField F] {a b : F} (h : a < b) : ¬ b ≤ a :=
