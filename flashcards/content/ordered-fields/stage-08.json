@@ -6,7 +6,7 @@
     "topic": "Proof reconstruction",
     "difficulty": "intermediate",
     "front": "Which earlier results support add_zero?",
-    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "back": "Additive commutativity and the left additive identity axiom: $x+0=0+x=x$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -48,7 +48,7 @@
     "topic": "Proof reconstruction",
     "difficulty": "intermediate",
     "front": "Which earlier results support neg_add?",
-    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "back": "Additive commutativity and the right additive inverse axiom: $-x+x=x+(-x)=0$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -90,7 +90,7 @@
     "topic": "Proof reconstruction",
     "difficulty": "intermediate",
     "front": "Which earlier results support mul_one?",
-    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "back": "Multiplicative commutativity and the left multiplicative identity axiom: $x\\cdot1=1\\cdot x=x$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -132,7 +132,7 @@
     "topic": "Proof reconstruction",
     "difficulty": "intermediate",
     "front": "Which earlier results support add_left_cancel?",
-    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "back": "Apply congruence to add $-x$ on both sides, then use associativity, the inverse law, and the additive identity.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -174,7 +174,7 @@
     "topic": "Proof reconstruction",
     "difficulty": "intermediate",
     "front": "Which earlier results support sub_self?",
-    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "back": "Definition of subtraction and the right additive inverse: $x-x=x+(-x)=0$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -216,7 +216,7 @@
     "topic": "Proof reconstruction",
     "difficulty": "intermediate",
     "front": "Which earlier results support mul_zero?",
-    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "back": "Use $0+0=0$, distributivity, and additive cancellation to deduce $a\\cdot0=0$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
