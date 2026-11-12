@@ -1,0 +1,152 @@
+[
+  {
+    "id": "LS-PC-001",
+    "category": "proof-construction",
+    "difficulty": "beginner",
+    "question": "Introduce the assumption of P → P.",
+    "expected_goal": "P → P",
+    "context": "(P : Prop)",
+    "canonical_answer": "intro h\nexact h",
+    "alternative_accepted_answers": [
+      "exact fun h => h"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 300,
+      "anchor": "intro h",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "zero_unique",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-PC-002",
+    "category": "proof-construction",
+    "difficulty": "beginner",
+    "question": "Split P ↔ P and prove both directions.",
+    "expected_goal": "P ↔ P",
+    "context": "(P : Prop)",
+    "canonical_answer": "constructor\n· intro h\n  exact h\n· intro h\n  exact h",
+    "alternative_accepted_answers": [
+      "exact Iff.rfl"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 377,
+      "anchor": "constructor",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "add_eq_iff_eq_sub",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-PC-003",
+    "category": "proof-construction",
+    "difficulty": "beginner",
+    "question": "Specialize a universally quantified hypothesis at zero.",
+    "expected_goal": "P 0",
+    "context": "{R : Type u} [Zero R] (P : R → Prop) (h : ∀ x : R, P x)",
+    "canonical_answer": "exact h 0",
+    "alternative_accepted_answers": [
+      "apply h"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 301,
+      "anchor": "have hx0 := h 0",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "zero_unique",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-PC-004",
+    "category": "proof-construction",
+    "difficulty": "intermediate",
+    "question": "Introduce an intermediate equality using have and close the goal.",
+    "expected_goal": "a = a",
+    "context": "{R : Type u} (a : R)",
+    "canonical_answer": "have h : a = a := by\n  rfl\nexact h",
+    "alternative_accepted_answers": [
+      "have h := Eq.refl a\nexact h"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 558,
+      "anchor": "have h : x = x := rfl",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "sub_sub",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-PC-005",
+    "category": "proof-construction",
+    "difficulty": "intermediate",
+    "question": "Apply the repository's additive identity theorem to a goal.",
+    "expected_goal": "x + 0 = x",
+    "context": "{R : Type u} [Add R] [Zero R] [IsZeroAdd R] [IsAddComm R] (x : R)",
+    "canonical_answer": "exact add_zero x",
+    "alternative_accepted_answers": [
+      "apply add_zero"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 295,
+      "anchor": "rw [add_zero]",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "neg_unique",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-PC-006",
+    "category": "proof-construction",
+    "difficulty": "intermediate",
+    "question": "Prove a ≤ c by applying the repository's transitivity projection.",
+    "expected_goal": "a ≤ c",
+    "context": "{R : Type u} [LE R] [IsLETrans R] (a b c : R) (hab : a ≤ b) (hbc : b ≤ c)",
+    "canonical_answer": "exact IsLETrans.le_trans a b c hab hbc",
+    "alternative_accepted_answers": [
+      "exact IsLETrans.le_trans _ _ _ hab hbc"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 787,
+      "anchor": "IsLETrans.le_trans a b c h1 h2",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "lt_trans",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  }
+]
