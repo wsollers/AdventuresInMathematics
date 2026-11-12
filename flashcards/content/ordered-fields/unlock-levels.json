@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "policy": "manual-unlock",
+  "default_unlocked": [
+    "addition-axioms"
+  ],
+  "levels": [
+    {
+      "id": "addition-axioms",
+      "title": "Additive axioms",
+      "status": "initial",
+      "card_ids": [
+        "aim.orderedfields.03.tex-001",
+        "aim.orderedfields.03.tex-002",
+        "aim.orderedfields.03.tex-003",
+        "aim.orderedfields.03.tex-004"
+      ],
+      "notes": "Begin with the four primitive axioms in Numbers.lean. Written recall is required; left/right are distinguished."
+    },
+    {
+      "id": "addition-derived",
+      "title": "Derived additive identities and inverses",
+      "requires": [
+        "addition-axioms"
+      ],
+      "card_ids": [
+        "aim.orderedfields.06.tex-027",
+        "aim.orderedfields.06.tex-029",
+        "aim.orderedfields.06.tex-028",
+        "aim.orderedfields.06.zero-unique-right",
+        "aim.orderedfields.06.tex-030",
+        "aim.orderedfields.06.neg-unique-left"
+      ],
+      "notes": "Right identity and left inverse are derived results, not additional primitive axioms."
+    }
+  ],
+  "other_card_policy": "All cards not assigned to a manually unlocked level remain unavailable for scheduled review. Add levels incrementally as study progresses. Study-state/unlock event history belongs in private storage, not this public file."
+}
