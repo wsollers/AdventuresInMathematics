@@ -155,7 +155,7 @@ lemma div_eq_mul_inv {F : Type u} [Field F] (a b : F) :
 corollary mul_inv_eq_div {R : Type u}
     [Mul R] [Inv R] [Div R] [IsDivEqMulInv R] (a b : R) :
     a * b⁻¹ = a / b := by
-  sorry
+  rw [IsDivEqMulInv.div_eq_mul_inv]
 
 instance {F : Type u} [Field F] : IsSubEqAddNeg F := ⟨fun _ _ => rfl⟩
 instance {F : Type u} [Field F] : IsDivEqMulInv F := ⟨fun _ _ => rfl⟩
@@ -360,7 +360,15 @@ proposition add_left_cancel {R : Type u}
 proposition add_right_cancel {R : Type u}
   [Add R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R]
   (x y z : R) : y + x = z + x → y = z := by
-  sorry
+  intro h
+  have h2 : y + x + -x = z + x + -x := congrArg (· + -x) h
+  rw [IsAddAssoc.add_assoc] at h2
+  rw [IsAddNeg.add_neg] at h2
+  rw [IsAddAssoc.add_assoc] at h2
+  rw [IsAddNeg.add_neg] at h2
+  rw [add_zero] at h2
+  rw [add_zero] at h2
+  exact h2
 
 -- | `proposition` | `add_eq_iff_eq_sub` | `x + a = b ↔ x = b - a` | `a + x = b ↔ x = b - a` | Z a.3° |
 proposition add_eq_iff_eq_sub {R : Type u}
@@ -756,16 +764,20 @@ lemma lt_irrefl {F : Type u} [OrderedField F] (a : F) : ¬ a < a := by
 
 /-- A strict inequality implies the corresponding non-strict inequality. -/
 lemma le_of_lt {F : Type u} [OrderedField F] {a b : F} (h : a < b) : a ≤ b := by
-  --XXX Start Here
-  sorry
+  rw [IsLTIffLENotLE.lt_iff_le_not_le] at h
+  exact h.1
 
 /-- A strict inequality rules out the reverse non-strict inequality. -/
-lemma not_le_of_lt {F : Type u} [OrderedField F] {a b : F} (h : a < b) : ¬ b ≤ a :=
-  by sorry
+lemma not_le_of_lt {F : Type u} [OrderedField F] {a b : F} (h : a < b) : ¬ b ≤ a := by
+  rw [IsLTIffLENotLE.lt_iff_le_not_le] at h
+  exact h.2
 
 /-- Strict order is asymmetric. -/
-lemma lt_asymm {F : Type u} [OrderedField F] {a b : F} (hab : a < b) : ¬ b < a := by
-  sorry
+lemma lt_asymm {F : Type u} [OrderedField F] {a b : F} (h : a < b) : ¬ b < a := by
+  intro hba
+  have h1 : ¬ b ≤ a := not_le_of_lt h
+  have h2 : b ≤ a   := le_of_lt hba
+  exact h1 h2
 
 /-- Strict order is transitive. -/
 proposition lt_trans {F : Type u} [OrderedField F] {a b c : F}
