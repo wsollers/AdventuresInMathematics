@@ -1,0 +1,59 @@
+name: Build ordered field reference PDF
+
+on:
+  push:
+    paths:
+      - 'output/pdf/ordered_field_reference.tex'
+      - '.github/workflows/build-ordered-field-reference.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ordered-field-reference
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Install LaTeX and PDF validation tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends latexmk texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
+
+      - name: Compile LaTeX
+        run: |
+          mkdir -p tmp/latex
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error \
+            -output-directory=tmp/latex output/pdf/ordered_field_reference.tex
+          test -s tmp/latex/ordered_field_reference.pdf
+          cp tmp/latex/ordered_field_reference.pdf output/pdf/ordered_field_reference.pdf
+          cp tmp/latex/ordered_field_reference.pdf ordered_field_reference.pdf
+
+      - name: Validate generated document
+        run: |
+          pdfinfo ordered_field_reference.pdf
+          test "$(pdfinfo ordered_field_reference.pdf | awk '/^Pages:/ { print $2 }')" -ge 2
+          pdftotext ordered_field_reference.pdf tmp/ordered_field_reference.txt
+          grep -q 'Archimedean Property' tmp/ordered_field_reference.txt
+          grep -q 'Derived Theorems' tmp/ordered_field_reference.txt
+          cmp ordered_field_reference.pdf output/pdf/ordered_field_reference.pdf
+
+      - name: Commit regenerated PDFs to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f ordered_field_reference.pdf output/pdf/ordered_field_reference.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "Build ordered-field axioms and theorems reference PDFs"
+            git push
+          else
+            echo "PDFs are already up to date."
+          fi
