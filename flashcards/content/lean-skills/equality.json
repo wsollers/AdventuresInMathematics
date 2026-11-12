@@ -1,0 +1,177 @@
+[
+  {
+    "id": "LS-EQ-001",
+    "category": "equality",
+    "difficulty": "beginner",
+    "question": "Given h : a = b, prove y + a = y + b using congrArg.",
+    "expected_goal": "y + a = y + b",
+    "context": "{R : Type u} [Add R] (a b y : R) (h : a = b)",
+    "canonical_answer": "exact congrArg (y + ·) h",
+    "alternative_accepted_answers": [
+      "exact congrArg (fun x => y + x) h"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 494,
+      "anchor": "congrArg ((-y + -x) + ·)",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "neg_add_rev",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-EQ-002",
+    "category": "equality",
+    "difficulty": "beginner",
+    "question": "Given h : a = b, prove a + y = b + y using congrArg.",
+    "expected_goal": "a + y = b + y",
+    "context": "{R : Type u} [Add R] (a b y : R) (h : a = b)",
+    "canonical_answer": "exact congrArg (· + y) h",
+    "alternative_accepted_answers": [
+      "exact congrArg (fun x => x + y) h"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 324,
+      "anchor": "congrArg (· + -x)",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "neg_unique",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-EQ-003",
+    "category": "equality",
+    "difficulty": "beginner",
+    "question": "Given h : a = b, prove y * a = y * b using congrArg.",
+    "expected_goal": "y * a = y * b",
+    "context": "{R : Type u} [Mul R] (a b y : R) (h : a = b)",
+    "canonical_answer": "exact congrArg (y * ·) h",
+    "alternative_accepted_answers": [
+      "exact congrArg (fun x => y * x) h"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 610,
+      "anchor": "congrArg (x⁻¹ * ·)",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "mul_left_cancel",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-EQ-004",
+    "category": "equality",
+    "difficulty": "beginner",
+    "question": "Given h : a = b, prove a * y = b * y using congrArg.",
+    "expected_goal": "a * y = b * y",
+    "context": "{R : Type u} [Mul R] (a b y : R) (h : a = b)",
+    "canonical_answer": "exact congrArg (· * y) h",
+    "alternative_accepted_answers": [
+      "exact congrArg (fun x => x * y) h"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 623,
+      "anchor": "congrArg (· * x⁻¹)",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "mul_right_cancel",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-EQ-005",
+    "category": "equality",
+    "difficulty": "beginner",
+    "question": "Reverse h : a = b to prove b = a.",
+    "expected_goal": "b = a",
+    "context": "{R : Type u} (a b : R) (h : a = b)",
+    "canonical_answer": "exact h.symm",
+    "alternative_accepted_answers": [
+      "exact Eq.symm h"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 428,
+      "anchor": "exact h2.symm",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "neg_neg",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-EQ-006",
+    "category": "equality",
+    "difficulty": "beginner",
+    "question": "Prove a = a by reflexivity.",
+    "expected_goal": "a = a",
+    "context": "{R : Type u} (a : R)",
+    "canonical_answer": "rfl",
+    "alternative_accepted_answers": [
+      "exact rfl"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 280,
+      "anchor": "theorem identity",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "identity",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-EQ-007",
+    "category": "equality",
+    "difficulty": "intermediate",
+    "question": "Given h : a = b, negate both sides.",
+    "expected_goal": "-a = -b",
+    "context": "{R : Type u} [Neg R] (a b : R) (h : a = b)",
+    "canonical_answer": "exact congrArg (- ·) h",
+    "alternative_accepted_answers": [
+      "exact congrArg (fun x => -x) h"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 457,
+      "anchor": "congrArg (- ·) h",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "neg_eq_iff_eq_neg",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  }
+]
