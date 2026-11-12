@@ -646,6 +646,198 @@ corollary add_mul {R : Type u}
   (a b c : R) : (a + b) * c = a * c + b * c := by
   sorry
 
+-- 6d. Order
+
+/-- No element is strictly less than itself. -/
+lemma lt_irrefl {F : Type u} [OrderedField F] (a : F) : ¬ a < a := by
+  sorry
+
+/-- A strict inequality implies the corresponding non-strict inequality. -/
+lemma le_of_lt {F : Type u} [OrderedField F] {a b : F} (h : a < b) : a ≤ b :=
+  by sorry
+
+/-- A strict inequality rules out the reverse non-strict inequality. -/
+lemma not_le_of_lt {F : Type u} [OrderedField F] {a b : F} (h : a < b) : ¬ b ≤ a :=
+  by sorry
+
+/-- Strict order is asymmetric. -/
+lemma lt_asymm {F : Type u} [OrderedField F] {a b : F} (hab : a < b) : ¬ b < a := by
+  sorry
+
+/-- Strict order is transitive. -/
+proposition lt_trans {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a < b) (hbc : b < c) : a < c := by
+  sorry
+
+/-- A strict inequality followed by a non-strict one remains strict. -/
+lemma lt_of_lt_of_le {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a < b) (hbc : b ≤ c) : a < c := by
+  sorry
+
+/-- A non-strict inequality followed by a strict one remains strict. -/
+lemma lt_of_le_of_lt {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a ≤ b) (hbc : b < c) : a < c := by
+  sorry
+
+/-- Non-strict order is strict order or equality. -/
+lemma le_iff_lt_or_eq {F : Type u} [OrderedField F] (a b : F) :
+    a ≤ b ↔ a < b ∨ a = b := by
+  sorry
+
+/-- Exactly one of `a < b`, `a = b`, and `b < a` can hold. -/
+theorem lt_trichotomy {F : Type u} [OrderedField F] (a b : F) :
+    a < b ∨ a = b ∨ b < a := by
+  sorry
+
+-- 6e. Order and addition
+
+/-- Adding the same element on the right preserves `≤`. -/
+corollary add_le_add_right {F : Type u} [OrderedField F] {a b : F}
+    (hab : a ≤ b) (c : F) : a + c ≤ b + c :=
+  by sorry
+
+/-- Adding the same element on the left preserves `≤`. -/
+corollary add_le_add_left {F : Type u} [OrderedField F] {a b : F}
+    (hab : a ≤ b) (c : F) : c + a ≤ c + b := by
+  sorry
+
+/-- Adding the same element on the right reflects `≤`. -/
+lemma le_of_add_le_add_right {F : Type u} [OrderedField F] {a b c : F}
+    (h : a + c ≤ b + c) : a ≤ b := by
+  sorry
+
+/-- Adding the same element on the left reflects `≤`. -/
+lemma le_of_add_le_add_left {F : Type u} [OrderedField F] {a b c : F}
+    (h : c + a ≤ c + b) : a ≤ b := by
+  sorry
+
+/-- Adding two non-strict inequalities preserves `≤`. -/
+proposition add_le_add {F : Type u} [OrderedField F] {a b c d : F}
+    (hab : a ≤ b) (hcd : c ≤ d) : a + c ≤ b + d := by
+  sorry
+
+/-- Adding the same element on the right preserves `<`. -/
+proposition add_lt_add_right {F : Type u} [OrderedField F] {a b : F}
+    (hab : a < b) (c : F) : a + c < b + c := by
+  sorry
+
+/-- Adding the same element on the left preserves `<`. -/
+proposition add_lt_add_left {F : Type u} [OrderedField F] {a b : F}
+    (hab : a < b) (c : F) : c + a < c + b := by
+  sorry
+
+/-- Adding the same element on the right reflects `<`. -/
+lemma lt_of_add_lt_add_right {F : Type u} [OrderedField F] {a b c : F}
+    (h : a + c < b + c) : a < b := by
+  sorry
+
+/-- Adding the same element on the left reflects `<`. -/
+lemma lt_of_add_lt_add_left {F : Type u} [OrderedField F] {a b c : F}
+    (h : c + a < c + b) : a < b := by
+  sorry
+
+/-- Adding two strict inequalities preserves `<`. -/
+proposition add_lt_add {F : Type u} [OrderedField F] {a b c d : F}
+    (hab : a < b) (hcd : c < d) : a + c < b + d := by
+  sorry
+
+/-- Subtraction detects non-strict order. -/
+lemma sub_nonneg {F : Type u} [OrderedField F] {a b : F} :
+    0 ≤ a - b ↔ b ≤ a := by
+  sorry
+
+/-- Subtraction detects strict order. -/
+lemma sub_pos {F : Type u} [OrderedField F] {a b : F} :
+    0 < a - b ↔ b < a := by
+  sorry
+
+/-- Negation reverses non-strict order. -/
+lemma neg_le_neg_iff {F : Type u} [OrderedField F] (a b : F) :
+    -a ≤ -b ↔ b ≤ a := by
+  sorry
+
+/-- Negation reverses strict order. -/
+lemma neg_lt_neg_iff {F : Type u} [OrderedField F] (a b : F) :
+    -a < -b ↔ b < a := by
+  sorry
+
+/-- A negative element has a positive negation. -/
+lemma neg_pos_of_neg {F : Type u} [OrderedField F] {a : F} (h : a < 0) : 0 < -a := by
+  sorry
+
+-- 6f. Order and multiplication
+
+/-- Multiplication by zero gives zero. -/
+proposition mul_zero {F : Type u} [Field F] (a : F) : a * 0 = 0 := by
+  sorry
+
+/-- Zero multiplied by any element is zero. -/
+proposition zero_mul {F : Type u} [Field F] (a : F) : 0 * a = 0 := by
+  sorry
+
+/-- A negated left factor negates the product. -/
+lemma neg_mul {F : Type u} [Field F] (a b : F) : (-a) * b = -(a * b) := by
+  sorry
+
+/-- A negated right factor negates the product. -/
+lemma mul_neg {F : Type u} [Field F] (a b : F) : a * (-b) = -(a * b) := by
+  sorry
+
+/-- Multiplication distributes over subtraction on the right. -/
+lemma mul_sub {F : Type u} [Field F] (a b c : F) :
+    a * (b - c) = a * b - a * c := by
+  sorry
+
+/-- Multiplication distributes over subtraction on the left. -/
+lemma sub_mul {F : Type u} [Field F] (a b c : F) :
+    (a - b) * c = a * c - b * c := by
+  sorry
+
+/-- The product of two nonnegative elements is nonnegative. -/
+lemma mul_nonneg {F : Type u} [OrderedField F] {a b : F}
+    (ha : 0 ≤ a) (hb : 0 ≤ b) : 0 ≤ a * b := by
+  sorry
+
+/-- Multiplication by a positive right factor preserves `<`. -/
+proposition mul_lt_mul_of_pos_right {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a < b) (hc : 0 < c) : a * c < b * c := by
+  sorry
+
+/-- Multiplication by a positive left factor preserves `<`. -/
+proposition mul_lt_mul_of_pos_left {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a < b) (hc : 0 < c) : c * a < c * b := by
+  sorry
+
+/-- Multiplication by a nonnegative right factor preserves `≤`. -/
+proposition mul_le_mul_of_nonneg_right {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a ≤ b) (hc : 0 ≤ c) : a * c ≤ b * c := by
+  sorry
+
+/-- Multiplication by a nonnegative left factor preserves `≤`. -/
+proposition mul_le_mul_of_nonneg_left {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a ≤ b) (hc : 0 ≤ c) : c * a ≤ c * b := by
+  sorry
+
+/-- Multiplication by a negative right factor reverses `<`. -/
+proposition mul_lt_mul_of_neg_right {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a < b) (hc : c < 0) : b * c < a * c := by
+  sorry
+
+/-- Multiplication by a negative left factor reverses `<`. -/
+proposition mul_lt_mul_of_neg_left {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a < b) (hc : c < 0) : c * b < c * a := by
+  sorry
+
+/-- Multiplication by a nonpositive right factor reverses `≤`. -/
+proposition mul_le_mul_of_nonpos_right {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a ≤ b) (hc : c ≤ 0) : b * c ≤ a * c := by
+  sorry
+
+/-- Multiplication by a nonpositive left factor reverses `≤`. -/
+proposition mul_le_mul_of_nonpos_left {F : Type u} [OrderedField F] {a b c : F}
+    (hab : a ≤ b) (hc : c ≤ 0) : c * b ≤ c * a := by
+  sorry
+
 
 
 
