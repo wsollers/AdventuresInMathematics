@@ -2396,8 +2396,60 @@
       "prerequisites": []
     },
     {
-      "id": "aim.orderedfields.07.tex-050",
+      "id": "aim.orderedfields.06.zero-unique-right",
       "order": 159,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_unique_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.neg-unique-left",
+      "order": 160,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_unique_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.add-cancel-right",
+      "order": 161,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_right_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.solve-add-left",
+      "order": 162,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_eq_iff_eq_sub_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-050",
+      "order": 163,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2410,7 +2462,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-051",
-      "order": 160,
+      "order": 164,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2423,7 +2475,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-052",
-      "order": 161,
+      "order": 165,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2436,7 +2488,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-053",
-      "order": 162,
+      "order": 166,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2449,7 +2501,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-054",
-      "order": 163,
+      "order": 167,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2462,7 +2514,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-055",
-      "order": 164,
+      "order": 168,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2475,7 +2527,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-056",
-      "order": 165,
+      "order": 169,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2488,7 +2540,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-057",
-      "order": 166,
+      "order": 170,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2501,7 +2553,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-058",
-      "order": 167,
+      "order": 171,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2514,7 +2566,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-059",
-      "order": 168,
+      "order": 172,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2527,7 +2579,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-060",
-      "order": 169,
+      "order": 173,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2540,7 +2592,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-061",
-      "order": 170,
+      "order": 174,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2553,7 +2605,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-062",
-      "order": 171,
+      "order": 175,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2566,7 +2618,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-063",
-      "order": 172,
+      "order": 176,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2579,7 +2631,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-064",
-      "order": 173,
+      "order": 177,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2592,7 +2644,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-065",
-      "order": 174,
+      "order": 178,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2605,7 +2657,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-066",
-      "order": 175,
+      "order": 179,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2618,7 +2670,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-067",
-      "order": 176,
+      "order": 180,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2631,7 +2683,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-068",
-      "order": 177,
+      "order": 181,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2644,7 +2696,7 @@
     },
     {
       "id": "aim.orderedfields.07.tex-069",
-      "order": 178,
+      "order": 182,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2657,7 +2709,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-lt_irrefl",
-      "order": 179,
+      "order": 183,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2670,7 +2722,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-le_of_lt",
-      "order": 180,
+      "order": 184,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2683,7 +2735,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-not_le_of_lt",
-      "order": 181,
+      "order": 185,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2696,7 +2748,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-lt_asymm",
-      "order": 182,
+      "order": 186,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2709,7 +2761,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-lt_trans",
-      "order": 183,
+      "order": 187,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2722,7 +2774,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-lt_of_lt_of_le",
-      "order": 184,
+      "order": 188,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2735,7 +2787,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-lt_of_le_of_lt",
-      "order": 185,
+      "order": 189,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2748,7 +2800,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-le_iff_lt_or_eq",
-      "order": 186,
+      "order": 190,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2761,7 +2813,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-lt_trichotomy",
-      "order": 187,
+      "order": 191,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2774,7 +2826,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-add_le_add_right",
-      "order": 188,
+      "order": 192,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2787,7 +2839,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-add_le_add_left",
-      "order": 189,
+      "order": 193,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2800,7 +2852,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-le_of_add_le_add_right",
-      "order": 190,
+      "order": 194,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2813,7 +2865,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-le_of_add_le_add_left",
-      "order": 191,
+      "order": 195,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2826,7 +2878,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-add_le_add",
-      "order": 192,
+      "order": 196,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2839,7 +2891,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-add_lt_add_right",
-      "order": 193,
+      "order": 197,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2852,7 +2904,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-add_lt_add_left",
-      "order": 194,
+      "order": 198,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2865,7 +2917,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-lt_of_add_lt_add_right",
-      "order": 195,
+      "order": 199,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2878,7 +2930,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-lt_of_add_lt_add_left",
-      "order": 196,
+      "order": 200,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2891,7 +2943,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-add_lt_add",
-      "order": 197,
+      "order": 201,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2904,7 +2956,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-sub_nonneg",
-      "order": 198,
+      "order": 202,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2917,7 +2969,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-sub_pos",
-      "order": 199,
+      "order": 203,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2930,7 +2982,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-neg_le_neg_iff",
-      "order": 200,
+      "order": 204,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2943,7 +2995,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-neg_lt_neg_iff",
-      "order": 201,
+      "order": 205,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2956,7 +3008,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-neg_pos_of_neg",
-      "order": 202,
+      "order": 206,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2969,7 +3021,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-mul_nonneg",
-      "order": 203,
+      "order": 207,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2982,7 +3034,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right",
-      "order": 204,
+      "order": 208,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -2995,7 +3047,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left",
-      "order": 205,
+      "order": 209,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -3008,7 +3060,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right",
-      "order": 206,
+      "order": 210,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -3021,7 +3073,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left",
-      "order": 207,
+      "order": 211,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -3034,7 +3086,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right",
-      "order": 208,
+      "order": 212,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -3047,7 +3099,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left",
-      "order": 209,
+      "order": 213,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -3060,7 +3112,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right",
-      "order": 210,
+      "order": 214,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -3073,7 +3125,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left",
-      "order": 211,
+      "order": 215,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -3086,7 +3138,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-max_comm",
-      "order": 212,
+      "order": 216,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -3099,7 +3151,7 @@
     },
     {
       "id": "aim.orderedfields.07.lean-abs_add_le",
-      "order": 213,
+      "order": 217,
       "stage": 7,
       "topic": "Derived order theorems",
       "type": "theorem",
@@ -3112,7 +3164,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-add_zero",
-      "order": 214,
+      "order": 218,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3127,7 +3179,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-add_zero",
-      "order": 215,
+      "order": 219,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3142,7 +3194,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-neg_add",
-      "order": 216,
+      "order": 220,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3157,7 +3209,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-neg_add",
-      "order": 217,
+      "order": 221,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3172,7 +3224,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-mul_one",
-      "order": 218,
+      "order": 222,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3187,7 +3239,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-mul_one",
-      "order": 219,
+      "order": 223,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3202,7 +3254,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-add_left_cancel",
-      "order": 220,
+      "order": 224,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3217,7 +3269,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-add_left_cancel",
-      "order": 221,
+      "order": 225,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3232,7 +3284,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-sub_self",
-      "order": 222,
+      "order": 226,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3247,7 +3299,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-sub_self",
-      "order": 223,
+      "order": 227,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3262,7 +3314,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-mul_zero",
-      "order": 224,
+      "order": 228,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3277,7 +3329,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-mul_zero",
-      "order": 225,
+      "order": 229,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3292,7 +3344,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-lt_irrefl",
-      "order": 226,
+      "order": 230,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3307,7 +3359,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-lt_irrefl",
-      "order": 227,
+      "order": 231,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3322,7 +3374,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-lt_trans",
-      "order": 228,
+      "order": 232,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3337,7 +3389,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-lt_trans",
-      "order": 229,
+      "order": 233,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3352,7 +3404,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-add_mul",
-      "order": 230,
+      "order": 234,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3367,7 +3419,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-add_mul",
-      "order": 231,
+      "order": 235,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3382,7 +3434,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-inv_mul_cancel",
-      "order": 232,
+      "order": 236,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3397,7 +3449,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-inv_mul_cancel",
-      "order": 233,
+      "order": 237,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3412,7 +3464,7 @@
     },
     {
       "id": "aim.orderedfields.08.dependency-neg_neg",
-      "order": 234,
+      "order": 238,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "dependency",
@@ -3427,7 +3479,7 @@
     },
     {
       "id": "aim.orderedfields.08.proof-neg_neg",
-      "order": 235,
+      "order": 239,
       "stage": 8,
       "topic": "Proof reconstruction",
       "type": "proof",
@@ -3439,58 +3491,6 @@
       "prerequisites": [
         "aim.orderedfields.06.lean-neg_neg"
       ]
-    },
-    {
-      "id": "aim.orderedfields.06.zero-unique-right",
-      "order": 236,
-      "stage": 6,
-      "topic": "Derived algebraic theorems",
-      "type": "theorem",
-      "source": {
-        "tex": "output/pdf/ordered_field_reference.tex",
-        "lean": "Aim/Analysis/Numbers.lean",
-        "declaration": "zero_unique_right"
-      },
-      "prerequisites": []
-    },
-    {
-      "id": "aim.orderedfields.06.neg-unique-left",
-      "order": 237,
-      "stage": 6,
-      "topic": "Derived algebraic theorems",
-      "type": "theorem",
-      "source": {
-        "tex": "output/pdf/ordered_field_reference.tex",
-        "lean": "Aim/Analysis/Numbers.lean",
-        "declaration": "neg_unique_left"
-      },
-      "prerequisites": []
-    },
-    {
-      "id": "aim.orderedfields.06.add-cancel-right",
-      "order": 238,
-      "stage": 6,
-      "topic": "Derived algebraic theorems",
-      "type": "theorem",
-      "source": {
-        "tex": "output/pdf/ordered_field_reference.tex",
-        "lean": "Aim/Analysis/Numbers.lean",
-        "declaration": "add_right_cancel"
-      },
-      "prerequisites": []
-    },
-    {
-      "id": "aim.orderedfields.06.solve-add-left",
-      "order": 239,
-      "stage": 6,
-      "topic": "Derived algebraic theorems",
-      "type": "theorem",
-      "source": {
-        "tex": "output/pdf/ordered_field_reference.tex",
-        "lean": "Aim/Analysis/Numbers.lean",
-        "declaration": "add_eq_iff_eq_sub_left"
-      },
-      "prerequisites": []
     }
   ]
 }
