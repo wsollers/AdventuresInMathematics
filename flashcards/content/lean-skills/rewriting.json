@@ -56,7 +56,7 @@
     "question": "Rewrite h using a local equality g : a = b.",
     "expected_goal": "b + d = b + d",
     "context": "{R : Type u} [Add R] (a b d : R) (g : a = b) (h : a + d = a + d)",
-    "canonical_answer": "rw [g] at h\nexact h",
+    "canonical_answer": "rw [g] at h\nall_goals exact h",
     "alternative_accepted_answers": [],
     "source": {
       "file": "Aim/Analysis/Numbers.lean",
@@ -70,6 +70,6 @@
       "status": "unverified",
       "reason": "Compiler execution pending; do not infer success from authoring"
     },
-    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+    "explanation": "Rewriting h may also close a reflexive goal automatically. all_goals only runs exact h if a goal remains."
   }
 ]
