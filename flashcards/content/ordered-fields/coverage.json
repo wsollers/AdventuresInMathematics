@@ -172,7 +172,8 @@
     {
       "label": "Uniqueness of Zero",
       "card_ids": [
-        "aim.orderedfields.06.tex-028"
+        "aim.orderedfields.06.tex-028",
+        "aim.orderedfields.06.zero-unique-right"
       ]
     },
     {
@@ -184,19 +185,22 @@
     {
       "label": "Uniqueness of Additive Inverse",
       "card_ids": [
-        "aim.orderedfields.06.tex-030"
+        "aim.orderedfields.06.tex-030",
+        "aim.orderedfields.06.neg-unique-left"
       ]
     },
     {
       "label": "Additive Cancellation",
       "card_ids": [
-        "aim.orderedfields.06.tex-031"
+        "aim.orderedfields.06.tex-031",
+        "aim.orderedfields.06.add-cancel-right"
       ]
     },
     {
       "label": "Solve Addition via Subtraction",
       "card_ids": [
-        "aim.orderedfields.06.tex-032"
+        "aim.orderedfields.06.tex-032",
+        "aim.orderedfields.06.solve-add-left"
       ]
     },
     {
@@ -485,7 +489,8 @@
       "declaration": "zero_unique_right",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.06.lean-zero_unique_right"
+        "aim.orderedfields.06.lean-zero_unique_right",
+        "aim.orderedfields.06.zero-unique-right"
       ]
     },
     {
@@ -510,7 +515,8 @@
       "declaration": "neg_unique_left",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.06.lean-neg_unique_left"
+        "aim.orderedfields.06.lean-neg_unique_left",
+        "aim.orderedfields.06.neg-unique-left"
       ]
     },
     {
@@ -529,7 +535,8 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-add_right_cancel",
-        "aim.orderedfields.06.hyp-add_right_cancel"
+        "aim.orderedfields.06.hyp-add_right_cancel",
+        "aim.orderedfields.06.add-cancel-right"
       ]
     },
     {
@@ -544,7 +551,8 @@
       "declaration": "add_eq_iff_eq_sub_left",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left"
+        "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left",
+        "aim.orderedfields.06.solve-add-left"
       ]
     },
     {
