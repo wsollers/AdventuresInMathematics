@@ -671,8 +671,11 @@ lemma div_mul_cancel_right {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [Div R]
   [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
   (x y : R) (hy : y ≠ 0) : x / y * y = x := by
-
-  sorry
+  rw [IsDivEqMulInv.div_eq_mul_inv]
+  rw [IsMulAssoc.mul_assoc]
+  rw [IsMulComm.mul_comm y⁻¹ y]
+  rw [IsMulInvCancel.mul_inv_cancel y hy]
+  rw [mul_one]
 
 -- | `lemma` | `div_mul_cancel_left` | `y ≠ 0 → y * (x / y) = x` | `div_mul_cancel_right` | — |
 lemma div_mul_cancel_left {R : Type u}
@@ -691,20 +694,56 @@ proposition mul_eq_iff_eq_div {R : Type u}
   [Zero R] [One R] [Mul R] [Div R] [Inv R]
   [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
   (a x b : R) : a ≠ 0 → (a * x = b ↔ x = b / a) := by
-  sorry
+  intro hane0
+  constructor
+  . -- .->
+    intro h
+    have h2 : a * x / a = b / a := congrArg (· / a) h
+    rw [IsDivEqMulInv.div_eq_mul_inv] at h2
+    rw [IsMulComm.mul_comm a x] at h2
+    rw [IsMulAssoc.mul_assoc] at h2
+    rw [IsMulInvCancel.mul_inv_cancel a hane0] at h2
+    rw [mul_one] at h2
+    exact h2
+  . -- <-
+    intro h
+    have h2 : a * x = a * (b / a) := congrArg (fun t => a * t) h
+    rw [div_mul_cancel_left b a hane0] at h2
+    exact h2
 
 -- | `proposition` | `mul_eq_iff_eq_div_right` | `a ≠ 0 → (x * a = b ↔ x = b / a)` | `mul_eq_iff_eq_div` | Z b.3° |
 proposition mul_eq_iff_eq_div_right {R : Type u}
-  [Zero R] [One R] [Mul R] [Div R] [Inv R]
+  [Zero R] [One R] [Mul R] [Div R] [Inv R] [IsDivEqMulInv R]
   [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
   (a x b : R) : a ≠ 0 → (x * a = b ↔ x = b / a) := by
-  sorry
+  intro hane0
+  constructor
+  . -- ->
+    intro hxa
+    have h2 : x * a * a⁻¹ = b * a⁻¹ := congrArg (· * a⁻¹) hxa
+    rw [IsMulAssoc.mul_assoc] at h2
+    rw [IsMulInvCancel.mul_inv_cancel a hane0] at h2
+    rw [mul_one] at h2
+    rw [mul_inv_eq_div b a] at h2
+    exact h2
+  . -- <-
+    intro h
+    have h2 : x * a = b / a * a := congrArg (· * a) h
+    rw [IsDivEqMulInv.div_eq_mul_inv b a] at h2
+    rw [IsMulAssoc.mul_assoc] at h2
+    rw [inv_mul_cancel a hane0] at h2
+    rw [mul_one] at h2
+    exact h2
+
 
 -- | `corollary` | `add_mul` | `(a + b) * c = a * c + b * c` | `mul_add` (ax) | — |
 corollary add_mul {R : Type u}
   [Add R] [Mul R] [IsMulComm R] [IsMulAdd R]
   (a b c : R) : (a + b) * c = a * c + b * c := by
-  sorry
+  rw [IsMulComm.mul_comm]
+  rw [IsMulAdd.mul_add]
+  rw [IsMulComm.mul_comm]
+  rw [IsMulComm.mul_comm b c]
 
 -- 6d. Order
 
