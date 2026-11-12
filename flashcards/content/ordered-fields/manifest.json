@@ -207,7 +207,11 @@
         "aim.orderedfields.06.lean-neg_mul",
         "aim.orderedfields.06.lean-mul_neg",
         "aim.orderedfields.06.lean-mul_sub",
-        "aim.orderedfields.06.lean-sub_mul"
+        "aim.orderedfields.06.lean-sub_mul",
+        "aim.orderedfields.06.zero-unique-right",
+        "aim.orderedfields.06.neg-unique-left",
+        "aim.orderedfields.06.add-cancel-right",
+        "aim.orderedfields.06.solve-add-left"
       ]
     },
     {
@@ -854,7 +858,7 @@
       "order": 43,
       "stage": 3,
       "topic": "Field axioms",
-      "type": "axiom",
+      "type": "definition",
       "source": {
         "tex": "output/pdf/ordered_field_reference.tex",
         "lean": "Aim/Analysis/Numbers.lean",
@@ -932,7 +936,7 @@
       "order": 49,
       "stage": 3,
       "topic": "Field axioms",
-      "type": "axiom",
+      "type": "definition",
       "source": {
         "tex": "output/pdf/ordered_field_reference.tex",
         "lean": "Aim/Analysis/Numbers.lean",
@@ -3435,6 +3439,58 @@
       "prerequisites": [
         "aim.orderedfields.06.lean-neg_neg"
       ]
+    },
+    {
+      "id": "aim.orderedfields.06.zero-unique-right",
+      "order": 236,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_unique_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.neg-unique-left",
+      "order": 237,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_unique_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.add-cancel-right",
+      "order": 238,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_right_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.solve-add-left",
+      "order": 239,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_eq_iff_eq_sub_left"
+      },
+      "prerequisites": []
     }
   ]
 }
