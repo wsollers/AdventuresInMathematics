@@ -1,0 +1,27 @@
+[
+  {
+    "id": "LS-TC-001",
+    "category": "typeclasses",
+    "difficulty": "intermediate",
+    "question": "Synthesize Decidable (a ≤ b) from OrderedField.",
+    "expected_goal": "Decidable (a ≤ b)",
+    "context": "{R : Type u} [OrderedField R] (a b : R)",
+    "canonical_answer": "exact inferInstance",
+    "alternative_accepted_answers": [
+      "exact LEDecidable.decLE a b"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 1028,
+      "anchor": "  inferInstance",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "example",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  }
+]
