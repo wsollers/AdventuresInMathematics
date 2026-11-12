@@ -282,7 +282,7 @@ structure Distance (X : Type u) (R : Type v) [Zero R] [LE R] where
 
 /-- Reflexivity of equality as a named theorem (`x = x`). -/
 theorem identity {R : Type u} (x : R) : x = x := by
-  sorry
+  rfl
 
 -- 6b. Addition & Subtraction (Identities, Inverses, Cancellation)
 
@@ -291,6 +291,12 @@ corollary add_zero {R : Type u}
   [Zero R] [Add R] [IsZeroAdd R] [IsAddComm R] (x : R) : x + 0 = x := by
   rw [IsAddComm.add_comm x]
   rw [IsZeroAdd.zero_add]
+
+-- | `zero_add` | `0 + x = x` | `zero_add` (ax) | Z a |
+corollary zero_add {R : Type u}
+  [Zero R] [Add R] [IsZeroAdd R] [IsAddComm R] (x : R) : 0 + x = x := by
+  rw [IsAddComm.add_comm]
+  rw [add_zero]
 
 -- | `zero_unique` (left) | `(∀ x, z + x = x) → z = 0` | `(∀ x, x + z = x) → z = 0` | Z a.1° |
 proposition zero_unique {R : Type u}
@@ -303,7 +309,10 @@ proposition zero_unique {R : Type u}
 -- | `zero_unique_right` | `(∀ x, x + z = x) → z = 0` | `zero_unique` | Z a.1° |
 proposition zero_unique_right {R : Type u}
   [Add R] [Zero R] [IsZeroAdd R] [IsAddComm R] (z : R) : (∀ x, x + z = x) → z = 0 := by
-  sorry
+  intro h
+  have hx0 := h 0
+  rw [zero_add] at hx0
+  exact hx0
 
 -- | `neg_add` | `-x + x = 0` | `add_neg` (ax) | — |
 corollary neg_add {R : Type u} [Neg R] [Add R] [Zero R] [IsAddComm R] [IsAddNeg R] (x : R) : -x + x = (0 : R) := by
@@ -327,7 +336,13 @@ proposition neg_unique {R : Type u}
 proposition neg_unique_left {R : Type u}
   [Add R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R]
   (x y : R) : y + x = 0 → y = -x := by
-  sorry
+  intro h
+  have h2 : y + x + -x = 0 + -x := congrArg (· + -x) h
+  rw [IsAddAssoc.add_assoc] at h2
+  rw [IsAddNeg.add_neg] at h2
+  rw [IsZeroAdd.zero_add] at h2
+  rw [add_zero] at h2
+  exact h2
 
 -- | `proposition` | `add_left_cancel` | `x + y = x + z → y = z` | `add_right_cancel` | Z a.3° |
 proposition add_left_cancel {R : Type u}
@@ -378,7 +393,18 @@ proposition add_eq_iff_eq_sub {R : Type u}
 proposition add_eq_iff_eq_sub_left {R : Type u}
   [Add R] [Sub R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R] [IsSubEqAddNeg R]
   (a x b : R) : a + x = b ↔ x = b - a := by
-  sorry
+  constructor
+  . -- ->
+    intro h
+    rw [IsAddComm.add_comm a x] at h
+    have h2 : x + a + -a = b + -a := congrArg (· + -a) h
+    rw [IsAddAssoc.add_assoc] at h2
+    rw [IsAddNeg.add_neg] at h2
+    rw [add_zero] at h2
+    rw [add_neg_eq_sub] at h2
+  . -- <-
+    intro h
+    sorry
 
 -- | `corollary` | `neg_neg` | `-(-x) = x` | — | — |
 corollary neg_neg {R : Type u}
