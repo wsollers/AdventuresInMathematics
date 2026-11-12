@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lean skills flashcard",
+  "type": "object",
+  "required": [
+    "id",
+    "category",
+    "difficulty",
+    "question",
+    "expected_goal",
+    "context",
+    "canonical_answer",
+    "alternative_accepted_answers",
+    "source",
+    "related_declarations",
+    "prerequisite_skills",
+    "verification"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^LS-[A-Z]+-[0-9]{3}$"
+    },
+    "category": {
+      "type": "string"
+    },
+    "difficulty": {
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "question": {
+      "type": "string",
+      "minLength": 8
+    },
+    "expected_goal": {
+      "type": "string"
+    },
+    "context": {
+      "type": "string"
+    },
+    "canonical_answer": {
+      "type": "string"
+    },
+    "alternative_accepted_answers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "file",
+        "line",
+        "anchor",
+        "blob_sha"
+      ],
+      "properties": {
+        "file": {
+          "const": "Aim/Analysis/Numbers.lean"
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "anchor": {
+          "type": "string"
+        },
+        "blob_sha": {
+          "type": "string"
+        }
+      }
+    },
+    "related_declarations": {
+      "type": "string"
+    },
+    "prerequisite_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "unverified",
+            "verified",
+            "failed"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "explanation": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
