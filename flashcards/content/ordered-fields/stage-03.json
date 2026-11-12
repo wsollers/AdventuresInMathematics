@@ -5,7 +5,7 @@
     "stage": 3,
     "topic": "Field axioms",
     "difficulty": "introductory",
-    "front": "State: Addition is Associative.",
+    "front": "State the axiom of additive associativity.",
     "back": "For all $a, b, c \\in F,\\; (a + b) + c = a + (b + c)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
@@ -15,7 +15,8 @@
     "prerequisites": [],
     "tags": [
       "axiom",
-      "ordered-fields"
+      "addition",
+      "field"
     ]
   },
   {
@@ -24,7 +25,7 @@
     "stage": 3,
     "topic": "Field axioms",
     "difficulty": "introductory",
-    "front": "State: Addition is Commutative.",
+    "front": "State the axiom of additive commutativity.",
     "back": "For all $a, b \\in F,\\; a + b = b + a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
@@ -34,7 +35,8 @@
     "prerequisites": [],
     "tags": [
       "axiom",
-      "ordered-fields"
+      "addition",
+      "field"
     ]
   },
   {
@@ -43,7 +45,7 @@
     "stage": 3,
     "topic": "Field axioms",
     "difficulty": "introductory",
-    "front": "State: Left Additive Identity ($0$).",
+    "front": "State the left additive identity axiom.",
     "back": "For all $a \\in F,\\; 0 + a = a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
@@ -53,7 +55,8 @@
     "prerequisites": [],
     "tags": [
       "axiom",
-      "ordered-fields"
+      "addition",
+      "field"
     ]
   },
   {
@@ -62,7 +65,7 @@
     "stage": 3,
     "topic": "Field axioms",
     "difficulty": "introductory",
-    "front": "State: Right Additive Inverse ($-a$).",
+    "front": "State the right additive inverse axiom.",
     "back": "For all $a \\in F,\\; a + (-a) = 0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
@@ -72,16 +75,17 @@
     "prerequisites": [],
     "tags": [
       "axiom",
-      "ordered-fields"
+      "addition",
+      "field"
     ]
   },
   {
     "id": "aim.orderedfields.03.tex-005",
-    "type": "axiom",
+    "type": "definition",
     "stage": 3,
     "topic": "Field axioms",
     "difficulty": "introductory",
-    "front": "State: Subtraction Definition.",
+    "front": "State the definition of subtraction.",
     "back": "For all $a, b \\in F,\\; a - b = a + (-b)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
@@ -90,8 +94,9 @@
     },
     "prerequisites": [],
     "tags": [
-      "axiom",
-      "ordered-fields"
+      "definition",
+      "subtraction",
+      "field"
     ]
   },
   {
@@ -191,12 +196,12 @@
   },
   {
     "id": "aim.orderedfields.03.tex-010",
-    "type": "axiom",
+    "type": "definition",
     "stage": 3,
     "topic": "Field axioms",
     "difficulty": "introductory",
-    "front": "State: Division Definition.",
-    "back": "For all $a, b \\in F,\\; a / b = a \\cdot b^{-1}$ \\; (reverse: )",
+    "front": "State the definition of division.",
+    "back": "For all $a,b\\in F$, $a/b=a\\cdot b^{-1}$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -204,8 +209,9 @@
     },
     "prerequisites": [],
     "tags": [
-      "axiom",
-      "ordered-fields"
+      "definition",
+      "division",
+      "field"
     ]
   },
   {
