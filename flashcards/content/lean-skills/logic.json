@@ -1,0 +1,77 @@
+[
+  {
+    "id": "LS-LOG-001",
+    "category": "logic",
+    "difficulty": "intermediate",
+    "question": "Extract the left conjunct from h : P ∧ Q.",
+    "expected_goal": "P",
+    "context": "(P Q : Prop) (h : P ∧ Q)",
+    "canonical_answer": "exact h.1",
+    "alternative_accepted_answers": [
+      "exact h.left"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 768,
+      "anchor": "exact h.1",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "le_of_lt",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-LOG-002",
+    "category": "logic",
+    "difficulty": "intermediate",
+    "question": "Extract the right conjunct from h : P ∧ Q.",
+    "expected_goal": "Q",
+    "context": "(P Q : Prop) (h : P ∧ Q)",
+    "canonical_answer": "exact h.2",
+    "alternative_accepted_answers": [
+      "exact h.right"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 762,
+      "anchor": "exact h.2",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "not_le_of_lt",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-LOG-003",
+    "category": "logic",
+    "difficulty": "intermediate",
+    "question": "Apply a negated proposition to obtain False.",
+    "expected_goal": "False",
+    "context": "(P : Prop) (hn : ¬ P) (hp : P)",
+    "canonical_answer": "exact hn hp",
+    "alternative_accepted_answers": [
+      "exact absurd hp hn"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 780,
+      "anchor": "exact h1 h2",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "lt_asymm",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  }
+]
