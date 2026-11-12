@@ -464,7 +464,7 @@
       "declaration": "add_zero",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-027",
+        "aim.orderedfields.06.tex-027",
         "aim.orderedfields.06.lean-add_zero",
         "aim.orderedfields.08.dependency-add_zero",
         "aim.orderedfields.08.proof-add_zero"
@@ -481,7 +481,7 @@
       "declaration": "zero_unique",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-028",
+        "aim.orderedfields.06.tex-028",
         "aim.orderedfields.06.lean-zero_unique"
       ]
     },
@@ -497,7 +497,7 @@
       "declaration": "neg_add",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-029",
+        "aim.orderedfields.06.tex-029",
         "aim.orderedfields.06.lean-neg_add",
         "aim.orderedfields.08.dependency-neg_add",
         "aim.orderedfields.08.proof-neg_add"
@@ -507,7 +507,7 @@
       "declaration": "neg_unique",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-030",
+        "aim.orderedfields.06.tex-030",
         "aim.orderedfields.06.lean-neg_unique"
       ]
     },
@@ -523,7 +523,7 @@
       "declaration": "add_left_cancel",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-031",
+        "aim.orderedfields.06.tex-031",
         "aim.orderedfields.06.lean-add_left_cancel",
         "aim.orderedfields.06.hyp-add_left_cancel",
         "aim.orderedfields.08.dependency-add_left_cancel",
@@ -543,7 +543,7 @@
       "declaration": "add_eq_iff_eq_sub",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-032",
+        "aim.orderedfields.06.tex-032",
         "aim.orderedfields.06.lean-add_eq_iff_eq_sub"
       ]
     },
@@ -559,7 +559,7 @@
       "declaration": "neg_neg",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-033",
+        "aim.orderedfields.06.tex-033",
         "aim.orderedfields.06.lean-neg_neg",
         "aim.orderedfields.08.dependency-neg_neg",
         "aim.orderedfields.08.proof-neg_neg"
@@ -576,7 +576,7 @@
       "declaration": "neg_eq_iff_eq_neg",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-034",
+        "aim.orderedfields.06.tex-034",
         "aim.orderedfields.06.lean-neg_eq_iff_eq_neg"
       ]
     },
@@ -584,7 +584,7 @@
       "declaration": "sub_self",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-035",
+        "aim.orderedfields.06.tex-035",
         "aim.orderedfields.06.lean-sub_self",
         "aim.orderedfields.08.dependency-sub_self",
         "aim.orderedfields.08.proof-sub_self"
@@ -601,7 +601,7 @@
       "declaration": "neg_add_rev",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-036",
+        "aim.orderedfields.06.tex-036",
         "aim.orderedfields.06.lean-neg_add_rev"
       ]
     },
@@ -648,7 +648,7 @@
       "declaration": "sub_sub",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-038",
+        "aim.orderedfields.06.tex-038",
         "aim.orderedfields.06.lean-sub_sub"
       ]
     },
@@ -656,7 +656,7 @@
       "declaration": "mul_one",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-039",
+        "aim.orderedfields.06.tex-039",
         "aim.orderedfields.06.lean-mul_one",
         "aim.orderedfields.08.dependency-mul_one",
         "aim.orderedfields.08.proof-mul_one"
@@ -666,7 +666,7 @@
       "declaration": "one_unique",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-040",
+        "aim.orderedfields.06.tex-040",
         "aim.orderedfields.06.lean-one_unique"
       ]
     },
@@ -681,7 +681,7 @@
       "declaration": "inv_mul_cancel",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-041",
+        "aim.orderedfields.06.tex-041",
         "aim.orderedfields.06.lean-inv_mul_cancel",
         "aim.orderedfields.06.hyp-inv_mul_cancel",
         "aim.orderedfields.08.dependency-inv_mul_cancel",
@@ -692,7 +692,7 @@
       "declaration": "inv_unique",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-042",
+        "aim.orderedfields.06.tex-042",
         "aim.orderedfields.06.lean-inv_unique",
         "aim.orderedfields.06.hyp-inv_unique"
       ]
@@ -709,7 +709,7 @@
       "declaration": "mul_left_cancel",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-043",
+        "aim.orderedfields.06.tex-043",
         "aim.orderedfields.06.lean-mul_left_cancel",
         "aim.orderedfields.06.hyp-mul_left_cancel"
       ]
@@ -758,7 +758,7 @@
       "declaration": "mul_eq_iff_eq_div",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-045",
+        "aim.orderedfields.06.tex-045",
         "aim.orderedfields.06.lean-mul_eq_iff_eq_div",
         "aim.orderedfields.06.hyp-mul_eq_iff_eq_div"
       ]
@@ -775,7 +775,7 @@
       "declaration": "add_mul",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.05.tex-046",
+        "aim.orderedfields.06.tex-046",
         "aim.orderedfields.06.lean-add_mul",
         "aim.orderedfields.08.dependency-add_mul",
         "aim.orderedfields.08.proof-add_mul"
@@ -973,7 +973,7 @@
       "declaration": "mul_zero",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.05.tex-047",
+        "aim.orderedfields.06.tex-047",
         "aim.orderedfields.06.lean-mul_zero",
         "aim.orderedfields.08.dependency-mul_zero",
         "aim.orderedfields.08.proof-mul_zero"
@@ -990,7 +990,7 @@
       "declaration": "neg_mul",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.05.tex-048",
+        "aim.orderedfields.06.tex-048",
         "aim.orderedfields.06.lean-neg_mul"
       ]
     },
@@ -1005,7 +1005,7 @@
       "declaration": "mul_sub",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.05.tex-049",
+        "aim.orderedfields.06.tex-049",
         "aim.orderedfields.06.lean-mul_sub"
       ]
     },
