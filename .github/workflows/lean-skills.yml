@@ -1,0 +1,37 @@
+name: Verify Lean skills cards
+on:
+  push:
+    paths:
+      - 'flashcards/content/lean-skills/**'
+      - 'flashcards/tools/verify_lean_skills.py'
+      - 'Aim/Analysis/Numbers.lean'
+      - 'lean-toolchain'
+      - '.github/workflows/lean-skills.yml'
+  pull_request:
+    paths:
+      - 'flashcards/content/lean-skills/**'
+      - 'flashcards/tools/verify_lean_skills.py'
+      - 'Aim/Analysis/Numbers.lean'
+      - 'lean-toolchain'
+      - '.github/workflows/lean-skills.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lean toolchain and build dependencies
+        uses: leanprover/lean-action@v1
+        with:
+          build: false
+          test: false
+      - name: Compile every card and accepted alternative
+        run: python3 flashcards/tools/verify_lean_skills.py
+      - name: Archive compiler diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lean-skills-verification
+          path: flashcards/reports/numbers-lean-skills-verification.json
+          if-no-files-found: ignore
