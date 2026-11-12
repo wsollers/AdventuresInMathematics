@@ -532,6 +532,22 @@ proposition mul_left_cancel {R : Type u}
   rw [mul_one] at h2
   exact h2
 
+--| `proposition` | `mul_eq_iff_eq_div` | `a ≠ 0 → (a * x = b ↔ x = b / a)` | `x * a = b ↔ x = b / a` | Z b.3° |
+proposition mul_eq_iff_eq_div {R : Type u}
+  [Zero R] [One R] [Mul R] [Div R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
+  (a x b : R) : a ≠ 0 → (a * x = b ↔ x = b / a) := by
+  intro hane0
+  constructor
+  . -- ->
+    intro hmp
+    rw [Div.div a b] at hmp
+    sorry
+  . -- <-
+    intro hmpr
+    sorry
+
+
+
 
 
 
