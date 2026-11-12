@@ -31,7 +31,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\footnotesize\sffamily\textbf{\color{navy}Adventures in Mathematics} \;|\; \texttt{Aim.Analysis.Numbers} Reference Card}
-\rhead{\footnotesize\sffamily\color{muted}Page \thepage\ of 2}
+\rhead{\footnotesize\sffamily\color{muted}Page \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\headrule}{\hbox to\headwidth{\color{rulecol}\leaders\hrule height \headrulewidth\hfill}}
 
@@ -64,14 +64,14 @@
 % PAGE 1: AXIOMS OF AN ORDERED FIELD
 % ============================================================================
 \begin{center}
-  {\Large\sffamily\bfseries\color{navy} Page 1: Axioms of an Ordered Field (\texttt{Field} \& \texttt{OrderedField})}\\[1pt]
+  {\Large\sffamily\bfseries\color{navy} Axioms of an Ordered Field (\texttt{Field} \& \texttt{OrderedField})}\\[1pt]
   {\footnotesize\sffamily\color{muted} Carrier $F : \texttt{Type } u$ with primitives $0, 1 \in F$, operations $+, \cdot, -, {}^{-1}$, and relations $\le, <$. Derived operations: $a - b := a + (-b)$ and $a / b := a \cdot b^{-1}$.}
 \end{center}
 \vspace{-2pt}
 
 \begin{axbox}[title={I. Addition Axioms (Additive Abelian Group on $F$)}]{navy}
 \footnotesize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Addition is Associative} & For all $a, b, c \in F,\quad (a + b) + c = a + (b + c)$ & \lean{IsAddAssoc.add\_assoc} \\
 \textbf{Addition is Commutative} & For all $a, b \in F,\quad a + b = b + a$ & \lean{IsAddComm.add\_comm} \\
 \textbf{Left Additive Identity ($0$)} & For all $a \in F,\quad 0 + a = a$ & \lean{IsZeroAdd.zero\_add} \\
@@ -82,7 +82,7 @@
 
 \begin{axbox}[title={II. Multiplication Axioms (Multiplicative Abelian Group on $F \setminus \{0\}$)}]{blue}
 \footnotesize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Multiplication is Associative} & For all $a, b, c \in F,\quad (a \cdot b) \cdot c = a \cdot (b \cdot c)$ & \lean{IsMulAssoc.mul\_assoc} \\
 \textbf{Multiplication is Commutative} & For all $a, b \in F,\quad a \cdot b = b \cdot a$ & \lean{IsMulComm.mul\_comm} \\
 \textbf{Left Multiplicative Identity ($1$)} & For all $a \in F,\quad 1 \cdot a = a$ & \lean{IsOneMul.one\_mul} \\
@@ -94,50 +94,50 @@
 
 \begin{axbox}[title={III. Ring Compatibility (Multiplication Distributes over Addition)}]{teal}
 \footnotesize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Left Distributivity} & For all $a, b, c \in F,\quad a \cdot (b + c) = a \cdot b + a \cdot c$ & \lean{IsMulAdd.mul\_add} \\
 \end{tabularx}
 \end{axbox}
 
 \begin{axbox}[title={IV. Non-Strict Total Order Axioms ($\le$ is the Primary Order Engine)}]{navy}
 \footnotesize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Order is Reflexive} & For all $a \in F,\quad a \le a$ & \lean{IsLERefl.le\_refl} \\
 \textbf{Order is Transitive} & For all $a, b, c \in F,\quad a \le b \to b \le c \to a \le c$ & \lean{IsLETrans.le\_trans} \\
 \textbf{Order is Antisymmetric} & For all $a, b \in F,\quad a \le b \to b \le a \to a = b$ & \lean{IsLEAntisymm.le\_antisymm} \\
 \textbf{Order is Total (Linear)} & For all $a, b \in F,\quad a \le b \lor b \le a$ & \lean{IsLETotal.le\_total} \\
-\textbf{Order is Decidable} & For all $a, b \in F,\quad \texttt{Decidable }(a \le b)$ \quad (enables \texttt{if}/\texttt{max}/\texttt{min}) & \lean{LEDecidable.decLE} \\
+\textbf{Decidable Comparison (Lean Data)} & For all $a, b \in F,\quad \texttt{Decidable }(a \le b)$ \quad (computational assumption for \texttt{if}/\texttt{max}/\texttt{min}) & \lean{LEDecidable.decLE} \\
 \end{tabularx}
 \end{axbox}
 
 \begin{axbox}[title={V. Strict Order Translator ($<$ Defined in Terms of $\le$)}]{amber}
 \footnotesize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Strict Order Equivalence} & For all $a, b \in F,\quad a < b \leftrightarrow (a \le b \land \lnot(b \le a))$ & \lean{IsLTIffLENotLE.lt\_iff\_le\_not\_le} \\
 \end{tabularx}
 \end{axbox}
 
 \begin{axbox}[title={VI. Order \& Field Compatibility Axioms (Linking $\le, <$ to $+, \cdot$)}]{blue}
 \footnotesize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Addition Preserves $\le$ (Right)} & For all $a, b \in F,\quad a \le b \to \forall c \in F,\; a + c \le b + c$ & \lean{IsAddLEAddRight.add\_le\_add\_right} \\
 \textbf{Product of Positives is Positive} & For all $a, b \in F,\quad 0 < a \to 0 < b \to 0 < a \cdot b$ & \lean{IsMulPos.mul\_pos} \\
 \end{tabularx}
 \end{axbox}
 
-\begin{axbox}[title={VII. Completeness \& Archimedean Axioms (\texttt{CompleteOrderedField})}]{teal}
+\begin{axbox}[title={VII. Order Completeness and the Separate Archimedean Property}]{teal}
 \footnotesize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Upper Bound Definition} & For $s : F \to \texttt{Prop}$ and $a \in F,\quad \forall x \in F,\; s(x) \to x \le a$ & \lean{IsUpperBound} \\
 \textbf{Least Upper Bound ($\sup$)} & $\texttt{IsUpperBound } s\; a \;\land\; \forall b \in F,\; \texttt{IsUpperBound } s\; b \to a \le b$ & \lean{IsLeastUpperBound} \\
 \textbf{Order Completeness (LUB)} & Every nonempty $s : F \to \texttt{Prop}$ bounded above has a least upper bound $a \in F$ & \lean{IsOrderComplete} \\
-\textbf{Archimedean Property} & For all $x \in F,\quad \exists n \in \mathbb{N},\; x < \texttt{natCast}(n)$ & \lean{ArchimedeanProperty.archimedean} \\
+\textbf{Archimedean Property} & For all $x \in F,\quad \exists n \in \mathbb{N},\; x < \texttt{natCast}(n)$ (separate mixin; follows from completeness) & \lean{ArchimedeanProperty.archimedean} \\
 \end{tabularx}
 \end{axbox}
 
 \begin{axbox}[title={VIII. Core Lean Structural Tools Available in Every Proof}]{muted}
 \footnotesize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Reflexivity \& Symmetry of $=$} & For all $x, y \in F,\quad x = x$ \quad and \quad $x = y \to y = x$ & \lean{rfl} / \lean{identity} / \lean{h.symm} \\
 \textbf{Congruence of Functions} & For all $x, y \in F,\quad x = y \to f(x) = f(y)$ \quad (e.g.\ add $-a$ to both sides) & \lean{congrArg (· + -a) h} \\
 \textbf{Rewrite \& Reverse Rewrite} & Replace left-hand side of $=$ or $\leftrightarrow$ with right-hand side (or reverse with $\leftarrow$) & \lean{rw [thm]} / \lean{rw [<- thm]} \\
@@ -150,8 +150,8 @@
 % PAGE 2: THEOREMS IN DEPENDENCY ORDER
 % ============================================================================
 \begin{center}
-  {\Large\sffamily\bfseries\color{navy} Page 2: Derived Theorems \& Tools in Dependency Order}\\[1pt]
-  {\footnotesize\sffamily\color{muted} Grouped by dependency layer. Each result depends only on the Page 1 axioms and results listed above it.}
+  {\Large\sffamily\bfseries\color{navy} Derived Theorems \& Tools in Dependency Order}\\[1pt]
+  {\footnotesize\sffamily\color{muted} Grouped by dependency layer. This is a mathematical statement reference, not a certification that every Lean proof is complete.}
 \end{center}
 \vspace{-4pt}
 
@@ -159,38 +159,38 @@
 
 \begin{axbox}[title={Group 1: Additive Group (Identities, Uniqueness, Cancellation \& Subtraction)}]{navy}
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
-\textbf{Right \& Left Additive Identity} & For all $x \in R,\quad x + 0 = x$ \quad and \quad $0 + x = x$ & \lean{add\_zero} / \lean{zero\_add} \kind{cor} \\
-\textbf{Uniqueness of Zero} & For all $z \in R,\quad (\forall x, z + x = x) \to z = 0$ \quad and \quad $(\forall x, x + z = x) \to z = 0$ & \lean{zero\_unique} / \lean{\_right} \kind{prop} \\
-\textbf{Left Additive Inverse} & For all $x \in R,\quad -x + x = 0$ & \lean{neg\_add} \kind{cor} \\
-\textbf{Uniqueness of Additive Inverse} & For all $x, y \in R,\quad x + y = 0 \to y = -x$ \quad and \quad $y + x = 0 \to y = -x$ & \lean{neg\_unique} / \lean{\_left} \kind{prop} \\
-\textbf{Additive Cancellation} & For all $x, y, z \in R,\quad x + y = x + z \to y = z$ \quad and \quad $y + x = z + x \to y = z$ & \lean{add\_left\_cancel} / \lean{\_right\_} \kind{prop} \\
-\textbf{Solve Addition via Subtraction} & For all $x, a, b \in R,\quad x + a = b \leftrightarrow x = b - a$ \quad and \quad $a + x = b \leftrightarrow x = b - a$ & \lean{add\_eq\_iff\_eq\_sub} / \lean{\_left} \kind{prop} \\
-\textbf{Double Negation \& Neg Zero} & For all $x \in R,\quad -(-x) = x$ \quad and \quad $-(0 : R) = 0$ & \lean{neg\_neg} / \lean{neg\_zero} \kind{cor} \\
-\textbf{Flip Negation Across $=$} & For all $x, y \in R,\quad -x = y \leftrightarrow x = -y$ & \lean{neg\_eq\_iff\_eq\_neg} \kind{lem} \\
-\textbf{Self-Subtraction \& Zero Test} & For all $x, y \in R,\quad x - x = 0$ \quad and \quad $x - y = 0 \leftrightarrow x = y$ & \lean{sub\_self} / \lean{sub\_eq\_zero\_iff} \kind{lem} \\
-\textbf{Negation of Sum \& Difference} & For all $x, y \in R,\quad -(x + y) = -y + -x$ \quad and \quad $-(x - y) = y - x$ & \lean{neg\_add\_rev} / \lean{neg\_sub} \kind{lem} \\
-\textbf{Add-Sub \& Sub-Add Cancel} & For all $x, y \in R,\quad (x + y) - y = x,\;\; (y + x) - y = x,\;\; (x - y) + y = x,\;\; y + (x - y) = x$ & \lean{add\_sub\_cancel\_*} / \lean{sub\_add\_*} \kind{lem} \\
-\textbf{Iterated Subtraction} & For all $x, y, z \in R,\quad (x - y) - z = x - (y + z)$ & \lean{sub\_sub} \kind{lem} \\
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
+\textbf{Right \& Left Additive Identity} & For all $x \in F,\quad x + 0 = x$ \quad and \quad $0 + x = x$ & \lean{add\_zero} / \lean{zero\_add} \kind{cor} \\
+\textbf{Uniqueness of Zero} & For all $z \in F,\quad (\forall x, z + x = x) \to z = 0$ \quad and \quad $(\forall x, x + z = x) \to z = 0$ & \lean{zero\_unique} / \lean{\_right} \kind{prop} \\
+\textbf{Left Additive Inverse} & For all $x \in F,\quad -x + x = 0$ & \lean{neg\_add} \kind{cor} \\
+\textbf{Uniqueness of Additive Inverse} & For all $x, y \in F,\quad x + y = 0 \to y = -x$ \quad and \quad $y + x = 0 \to y = -x$ & \lean{neg\_unique} / \lean{\_left} \kind{prop} \\
+\textbf{Additive Cancellation} & For all $x, y, z \in F,\quad x + y = x + z \to y = z$ \quad and \quad $y + x = z + x \to y = z$ & \lean{add\_left\_cancel} / \lean{\_right\_} \kind{prop} \\
+\textbf{Solve Addition via Subtraction} & For all $x, a, b \in F,\quad x + a = b \leftrightarrow x = b - a$ \quad and \quad $a + x = b \leftrightarrow x = b - a$ & \lean{add\_eq\_iff\_eq\_sub} / \lean{\_left} \kind{prop} \\
+\textbf{Double Negation \& Neg Zero} & For all $x \in F,\quad -(-x) = x$ \quad and \quad $-(0 : F) = 0$ & \lean{neg\_neg} / \lean{neg\_zero} \kind{cor} \\
+\textbf{Flip Negation Across $=$} & For all $x, y \in F,\quad -x = y \leftrightarrow x = -y$ & \lean{neg\_eq\_iff\_eq\_neg} \kind{lem} \\
+\textbf{Self-Subtraction \& Zero Test} & For all $x, y \in F,\quad x - x = 0$ \quad and \quad $x - y = 0 \leftrightarrow x = y$ & \lean{sub\_self} / \lean{sub\_eq\_zero\_iff} \kind{lem} \\
+\textbf{Negation of Sum \& Difference} & For all $x, y \in F,\quad -(x + y) = -y + -x$ \quad and \quad $-(x - y) = y - x$ & \lean{neg\_add\_rev} / \lean{neg\_sub} \kind{lem} \\
+\textbf{Add-Sub \& Sub-Add Cancel} & For all $x, y \in F,\quad (x + y) - y = x,\;\; (y + x) - y = x,\;\; (x - y) + y = x,\;\; y + (x - y) = x$ & \lean{add\_sub\_cancel\_*} / \lean{sub\_add\_*} \kind{lem} \\
+\textbf{Iterated Subtraction} & For all $x, y, z \in F,\quad (x - y) - z = x - (y + z)$ & \lean{sub\_sub} \kind{lem} \\
 \end{tabularx}
 \end{axbox}
 
 \begin{axbox}[title={Group 2: Multiplicative Group on $F \setminus \{0\}$ (Identities, Inverses, Cancellation \& Division)}]{blue}
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
-\textbf{Right Multiplicative Identity} & For all $x \in R,\quad x \cdot 1 = x$ & \lean{mul\_one} \kind{cor} \\
-\textbf{Uniqueness of One} & For all $e \in R,\quad (\forall x, x \cdot e = x) \to e = 1$ \quad and \quad $(\forall x, e \cdot x = x) \to e = 1$ & \lean{one\_unique} / \lean{\_left} \kind{prop} \\
-\textbf{Left Multiplicative Inverse} & For all $x \in R,\quad x \neq 0 \to x^{-1} \cdot x = 1$ & \lean{inv\_mul\_cancel} \kind{cor} \\
-\textbf{Uniqueness of Inverse} & For all $x, y \in R,\quad x \neq 0 \to x \cdot y = 1 \to y = x^{-1}$ \quad and \quad $y \cdot x = 1 \to y = x^{-1}$ & \lean{inv\_unique} / \lean{\_left} \kind{prop} \\
-\textbf{Multiplicative Cancellation} & For all $x, y, z \in R,\quad x \neq 0 \to x \cdot y = x \cdot z \to y = z$ \quad and \quad $y \cdot x = z \cdot x \to y = z$ & \lean{mul\_left\_cancel} / \lean{\_right\_} \kind{prop} \\
-\textbf{Mul-Div \& Div-Mul Cancel} & For all $x, y \in R,\; y \neq 0 \to (x \cdot y)/y = x,\;\; (y \cdot x)/y = x,\;\; (x/y)\cdot y = x,\;\; y \cdot (x/y) = x$ & \lean{mul\_div\_cancel\_*} / \lean{div\_mul\_*} \kind{lem} \\
-\textbf{Solve Multiplication via Division} & For all $a, x, b \in R,\; a \neq 0 \to (a \cdot x = b \leftrightarrow x = b / a)$ \quad and \quad $(x \cdot a = b \leftrightarrow x = b / a)$ & \lean{mul\_eq\_iff\_eq\_div} / \lean{\_right} \kind{prop} \\
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
+\textbf{Right Multiplicative Identity} & For all $x \in F,\quad x \cdot 1 = x$ & \lean{mul\_one} \kind{cor} \\
+\textbf{Uniqueness of One} & For all $e \in F,\quad (\forall x, x \cdot e = x) \to e = 1$ \quad and \quad $(\forall x, e \cdot x = x) \to e = 1$ & \lean{one\_unique} / \lean{\_left} \kind{prop} \\
+\textbf{Left Multiplicative Inverse} & For all $x \in F,\quad x \neq 0 \to x^{-1} \cdot x = 1$ & \lean{inv\_mul\_cancel} \kind{cor} \\
+\textbf{Uniqueness of Inverse} & For all $x, y \in F,\quad x \neq 0 \to x \cdot y = 1 \to y = x^{-1}$ \quad and \quad $y \cdot x = 1 \to y = x^{-1}$ & \lean{inv\_unique} / \lean{\_left} \kind{prop} \\
+\textbf{Multiplicative Cancellation} & For all $x, y, z \in F,\quad x \neq 0 \to x \cdot y = x \cdot z \to y = z$ \quad and \quad $y \cdot x = z \cdot x \to y = z$ & \lean{mul\_left\_cancel} / \lean{\_right\_} \kind{prop} \\
+\textbf{Mul-Div \& Div-Mul Cancel} & For all $x, y \in F,\; y \neq 0 \to (x \cdot y)/y = x,\;\; (y \cdot x)/y = x,\;\; (x/y)\cdot y = x,\;\; y \cdot (x/y) = x$ & \lean{mul\_div\_cancel\_*} / \lean{div\_mul\_*} \kind{lem} \\
+\textbf{Solve Multiplication via Division} & For all $a, x, b \in F,\; a \neq 0 \to (a \cdot x = b \leftrightarrow x = b / a)$ \quad and \quad $(x \cdot a = b \leftrightarrow x = b / a)$ & \lean{mul\_eq\_iff\_eq\_div} / \lean{\_right} \kind{prop} \\
 \end{tabularx}
 \end{axbox}
 
 \begin{axbox}[title={Group 3: Ring Interaction (Distributivity, Multiplication by Zero \& Sign Laws)}]{teal}
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Right Distributivity} & For all $a, b, c \in F,\quad (a + b) \cdot c = a \cdot c + b \cdot c$ & \lean{add\_mul} \kind{cor} \\
 \textbf{Multiplication by Zero} & For all $a \in F,\quad a \cdot 0 = 0$ \quad and \quad $0 \cdot a = 0$ & \lean{mul\_zero} / \lean{zero\_mul} \kind{prop} \\
 \textbf{Negation Pulls Out of Product} & For all $a, b \in F,\quad (-a) \cdot b = -(a \cdot b)$ \quad and \quad $a \cdot (-b) = -(a \cdot b)$ & \lean{neg\_mul} / \lean{mul\_neg} \kind{lem} \\
@@ -200,7 +200,7 @@
 
 \begin{axbox}[title={Group 4: Pure Order Laws ($\le$ and $<$: Unpackers, Transitivity \& Trichotomy)}]{amber}
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Strict Order is Irreflexive} & For all $a \in F,\quad \lnot(a < a)$ & \lean{lt\_irrefl} \kind{lem} \\
 \textbf{Strict Implies Non-Strict ($\le$)} & For all $a, b \in F,\quad a < b \to a \le b$ \quad (\textbf{Unpacker 1:} extracts positive half of $a < b$) & \lean{le\_of\_lt} \kind{lem} \\
 \textbf{Strict Rules Out Reverse $\le$} & For all $a, b \in F,\quad a < b \to \lnot(b \le a)$ \quad (\textbf{Unpacker 2:} extracts roadblock of $a < b$) & \lean{not\_le\_of\_lt} \kind{lem} \\
@@ -214,7 +214,7 @@
 
 \begin{axbox}[title={Group 5: Order \& Addition (Translation Invariance, Cancellation \& Sign Flip)}]{navy}
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Addition Preserves $\le$} & For all $a, b, c \in F,\quad a \le b \to a + c \le b + c$ \quad and \quad $a \le b \to c + a \le c + b$ & \lean{add\_le\_add\_right} / \lean{\_left} \kind{cor} \\
 \textbf{Addition Reflects $\le$ (Cancel)} & For all $a, b, c \in F,\quad a + c \le b + c \to a \le b$ \quad and \quad $c + a \le c + b \to a \le b$ & \lean{le\_of\_add\_le\_add\_right} / \lean{\_left} \kind{lem} \\
 \textbf{Adding Two $\le$ Inequalities} & For all $a, b, c, d \in F,\quad a \le b \to c \le d \to a + c \le b + d$ & \lean{add\_le\_add} \kind{prop} \\
@@ -228,7 +228,7 @@
 
 \begin{axbox}[title={Group 6: Order, Multiplication, Maximum \& Absolute Value}]{blue}
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}X r@{}}
 \textbf{Product of Nonnegatives} & For all $a, b \in F,\quad 0 \le a \to 0 \le b \to 0 \le a \cdot b$ & \lean{mul\_nonneg} \kind{lem} \\
 \textbf{Positive Factor Preserves $<, \le$} & For all $a, b, c \in F,\quad (a < b \to 0 < c \to a c < b c,\; c a < c b)$ and $(a \le b \to 0 \le c \to a c \le b c,\; c a \le c b)$ & \lean{mul\_lt\_mul\_of\_pos\_*} / \lean{mul\_le\_*} \kind{prop} \\
 \textbf{Negative Factor Reverses $<, \le$} & For all $a, b, c \in F,\quad (a < b \to c < 0 \to b c < a c,\; c b < c a)$ and $(a \le b \to c \le 0 \to b c \le a c,\; c b \le c a)$ & \lean{mul\_lt\_mul\_of\_neg\_*} / \lean{mul\_le\_*} \kind{prop} \\
