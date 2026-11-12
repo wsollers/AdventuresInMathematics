@@ -640,27 +640,38 @@ proposition mul_left_cancel {R : Type u}
 proposition mul_right_cancel {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
   (x y z : R) : x ≠ 0 → y * x = z * x → y = z := by
-  sorry
+  intro hxne0
+  intro hxy
+  apply mul_left_cancel x y z hxne0
+  rw [IsMulComm.mul_comm x y, IsMulComm.mul_comm x z]
+  exact hxy
 
 -- | `lemma` | `mul_div_cancel_right` | `y ≠ 0 → x * y / y = x` | `mul_div_cancel_left` | — |
 lemma mul_div_cancel_right {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [Div R]
   [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
   (x y : R) (hy : y ≠ 0) : x * y / y = x := by
+
   sorry
 
 -- | `lemma` | `mul_div_cancel_left` | `y ≠ 0 → y * x / y = x` | `mul_div_cancel_right` | — |
 lemma mul_div_cancel_left {R : Type u}
-  [Zero R] [One R] [Mul R] [Inv R] [Div R]
-  [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
-  (x y : R) (hy : y ≠ 0) : y * x / y = x := by
-  sorry
+    [Zero R] [One R] [Mul R] [Inv R] [Div R]
+    [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R]
+    [IsOneMul R] [IsDivEqMulInv R]
+    (x y : R) (hy : y ≠ 0) : y * x / y = x := by
+  rw [IsMulComm.mul_comm y x]
+  rw [IsDivEqMulInv.div_eq_mul_inv]
+  rw [IsMulAssoc.mul_assoc]
+  rw [IsMulInvCancel.mul_inv_cancel y hy]
+  rw [mul_one]
 
 -- | `lemma` | `div_mul_cancel_right` | `y ≠ 0 → x / y * y = x` | `div_mul_cancel_left` | — |
 lemma div_mul_cancel_right {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [Div R]
   [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
   (x y : R) (hy : y ≠ 0) : x / y * y = x := by
+
   sorry
 
 -- | `lemma` | `div_mul_cancel_left` | `y ≠ 0 → y * (x / y) = x` | `div_mul_cancel_right` | — |
@@ -668,7 +679,12 @@ lemma div_mul_cancel_left {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [Div R]
   [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
   (x y : R) (hy : y ≠ 0) : y * (x / y) = x := by
-  sorry
+  rw [IsDivEqMulInv.div_eq_mul_inv]
+  rw [<-IsMulAssoc.mul_assoc]
+  rw [IsMulComm.mul_comm y x]
+  rw [IsMulAssoc.mul_assoc]
+  rw [IsMulInvCancel.mul_inv_cancel y hy]
+  rw [mul_one]
 
 -- | `proposition` | `mul_eq_iff_eq_div` (left) | `a ≠ 0 → (a * x = b ↔ x = b / a)` | `mul_eq_iff_eq_div_right` | Z b.3° |
 proposition mul_eq_iff_eq_div {R : Type u}
