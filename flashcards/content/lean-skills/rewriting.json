@@ -1,0 +1,75 @@
+[
+  {
+    "id": "LS-RW-001",
+    "category": "rewriting",
+    "difficulty": "beginner",
+    "question": "Rewrite the goal with additive commutativity.",
+    "expected_goal": "a + b = b + a",
+    "context": "{R : Type u} [Add R] [IsAddComm R] (a b : R)",
+    "canonical_answer": "rw [IsAddComm.add_comm]",
+    "alternative_accepted_answers": [
+      "exact IsAddComm.add_comm a b"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 288,
+      "anchor": "rw [IsAddComm.add_comm x]",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "add_zero",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-RW-002",
+    "category": "rewriting",
+    "difficulty": "intermediate",
+    "question": "Rewrite backwards from a + -b to a - b in the goal.",
+    "expected_goal": "a + -b = a - b",
+    "context": "{R : Type u} [Add R] [Neg R] [Sub R] [IsSubEqAddNeg R] (a b : R)",
+    "canonical_answer": "rw [← IsSubEqAddNeg.sub_eq_add_neg]",
+    "alternative_accepted_answers": [
+      "exact (IsSubEqAddNeg.sub_eq_add_neg a b).symm"
+    ],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 384,
+      "anchor": "rw [← IsSubEqAddNeg.sub_eq_add_neg]",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "add_eq_iff_eq_sub",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-RW-003",
+    "category": "rewriting",
+    "difficulty": "intermediate",
+    "question": "Rewrite h using a local equality g : a = b.",
+    "expected_goal": "b + d = b + d",
+    "context": "{R : Type u} [Add R] (a b d : R) (g : a = b) (h : a + d = a + d)",
+    "canonical_answer": "rw [g] at h\nexact h",
+    "alternative_accepted_answers": [],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 323,
+      "anchor": "rw [IsAddComm.add_comm] at h",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "neg_unique",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  }
+]
