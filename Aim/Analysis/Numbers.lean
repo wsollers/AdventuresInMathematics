@@ -781,12 +781,24 @@ lemma lt_asymm {F : Type u} [OrderedField F] {a b : F} (h : a < b) : ¬ b < a :=
 
 /-- Strict order is transitive. -/
 proposition lt_trans {F : Type u} [OrderedField F] {a b c : F}
-    (hab : a < b) (hbc : b < c) : a < c := by
-  sorry
+  (hab : a < b) (hbc : b < c) : a < c := by
+  have h1 := le_of_lt hab
+  have h2 := le_of_lt hbc
+  have h3 : a ≤ c := IsLETrans.le_trans a b c h1 h2
+  rw [IsLTIffLENotLE.lt_iff_le_not_le]
+  constructor
+  . -- ->
+    exact h3
+  . -- <-
+    intro hca
+    --XXXX
+    sorry
 
 /-- A strict inequality followed by a non-strict one remains strict. -/
 lemma lt_of_lt_of_le {F : Type u} [OrderedField F] {a b c : F}
     (hab : a < b) (hbc : b ≤ c) : a < c := by
+  have h1 := le_of_lt hab
+  --rw [IsLETrans.le_trans]  hab hbc at hbc
   sorry
 
 /-- A non-strict inequality followed by a strict one remains strict. -/
