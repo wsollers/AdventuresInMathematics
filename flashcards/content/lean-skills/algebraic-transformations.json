@@ -1,0 +1,94 @@
+[
+  {
+    "id": "LS-ALG-001",
+    "category": "algebraic-transformations",
+    "difficulty": "intermediate",
+    "question": "Close an equality by associativity and commutativity.",
+    "expected_goal": "a + b + c = c + (b + a)",
+    "context": "{R : Type u} [Field R] (a b c : R)",
+    "canonical_answer": "ac_rfl",
+    "alternative_accepted_answers": [],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 1019,
+      "anchor": "  ac_rfl",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "field_ac_smoke_test",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-ALG-002",
+    "category": "algebraic-transformations",
+    "difficulty": "intermediate",
+    "question": "Select the then branch of a decidable if using h.",
+    "expected_goal": "(if a ≤ b then b else a) = b",
+    "context": "{R : Type u} [OrderedField R] (a b : R) (h : a ≤ b)",
+    "canonical_answer": "exact if_pos h",
+    "alternative_accepted_answers": [],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 1044,
+      "anchor": "exact if_pos h",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "abs_branch_pos_smoke_test",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-ALG-003",
+    "category": "algebraic-transformations",
+    "difficulty": "intermediate",
+    "question": "Select the else branch of a decidable if using h.",
+    "expected_goal": "(if a ≤ b then b else a) = a",
+    "context": "{R : Type u} [OrderedField R] (a b : R) (h : ¬ a ≤ b)",
+    "canonical_answer": "exact if_neg h",
+    "alternative_accepted_answers": [],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 1050,
+      "anchor": "exact if_neg h",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "abs_branch_neg_smoke_test",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  },
+  {
+    "id": "LS-ALG-004",
+    "category": "algebraic-transformations",
+    "difficulty": "intermediate",
+    "question": "Change goal syntax to expose the definition of abs, then use if_pos.",
+    "expected_goal": "abs x = -x",
+    "context": "{R : Type u} [OrderedField R] (x : R) (h : x ≤ -x)",
+    "canonical_answer": "show (if x ≤ -x then -x else x) = -x\nexact if_pos h",
+    "alternative_accepted_answers": [],
+    "source": {
+      "file": "Aim/Analysis/Numbers.lean",
+      "line": 1043,
+      "anchor": "show (if x ≤ -x then -x else x) = -x",
+      "blob_sha": "3b30bd24d76d4157aaf387f1c2dde62a6b0a72a4"
+    },
+    "related_declarations": "abs_branch_pos_smoke_test",
+    "prerequisite_skills": [],
+    "verification": {
+      "status": "unverified",
+      "reason": "Compiler execution pending; do not infer success from authoring"
+    },
+    "explanation": "Write the proof in the specified local context; compilation, not string matching, determines validity."
+  }
+]
