@@ -13,15 +13,15 @@ Number systems and their properties used throughout real analysis.
 The concrete number systems are *constructed* elsewhere; this file only
 fixes the axiom bundles they must satisfy. Planned carriers, in order:
 
-* `ℕ`  — 1-based natural numbers
-* `𝕎`  — whole numbers (ℕ with 0)
-* `ℤ`  — integers
-* `ℚ`  — rational numbers
-* `ℝ`  — real numbers (a `CompleteOrderedField`)
-* `𝕀`  — irrational numbers (a subtype of ℝ)
-* `𝕋`  — transcendental numbers (a subtype of 𝕀)
-* `ℂ`  — complex numbers
-* `ℍ`  — quaternions
+- `ℕ`  — 1-based natural numbers
+- `𝕎`  — whole numbers (ℕ with 0)
+- `ℤ`  — integers
+- `ℚ`  — rational numbers
+- `ℝ`  — real numbers (a `CompleteOrderedField`)
+- `𝕀`  — irrational numbers (a subtype of ℝ)
+- `𝕋`  — transcendental numbers (a subtype of 𝕀)
+- `ℂ`  — complex numbers
+- `ℍ`  — quaternions
 
 A bare `variable` declaration contributes nothing to the environment unless a
 later declaration mentions it, so the carriers are not declared here.
@@ -120,7 +120,7 @@ class Field (F : Type u)
 instance {F : Type u} [Field F] : Nonempty F :=
   ⟨0⟩
 
--- Other Airthmetic on F
+-- Other Arithmetic on F
 /-- Subtraction, defined as addition of the negation. -/
 instance {F : Type u} [Field F] : Sub F :=
   ⟨fun a b => a + -b⟩
@@ -219,6 +219,7 @@ def abs {F : Type u} [OrderedField F] (x : F) : F :=
 -- needs only decidability + totality + antisymmetry, nothing algebraic
 lemma max_comm {X : Type u} [LE X] [LEDecidable X]
     [IsLETotal X] [IsLEAntisymm X] (a b : X) : max a b = max b a := by
+
   sorry
 
 
@@ -273,11 +274,17 @@ structure Distance (X : Type u) (R : Type v) [Zero R] [LE R] where
   dist : X → X → R
   dist_nonneg : ∀ x y : X, 0 ≤ dist x y
 
+-- ============================================================================
+-- 6. Algebraic Consequences & Field Arithmetic
+-- ============================================================================
 
+-- 6a. Equality / Reflexivity
 
+/-- Reflexivity of equality as a named theorem (`x = x`). -/
+theorem identity {R : Type u} (x : R) : x = x := by
+  sorry
 
-
-
+-- 6b. Addition & Subtraction (Identities, Inverses, Cancellation)
 
 -- | `add_zero` | `x + 0 = x` | `zero_add` (ax) | Z a |
 corollary add_zero {R : Type u}
@@ -285,7 +292,7 @@ corollary add_zero {R : Type u}
   rw [IsAddComm.add_comm x]
   rw [IsZeroAdd.zero_add]
 
---zero_unique	(∀ x, x + z = x) → z = 0	(∀ x, z + x = x) → z = 0	Z a.1°
+-- | `zero_unique` (left) | `(∀ x, z + x = x) → z = 0` | `(∀ x, x + z = x) → z = 0` | Z a.1° |
 proposition zero_unique {R : Type u}
   [Add R] [Zero R] [IsZeroAdd R] [IsAddComm R] (z : R) : (∀ x, z + x = x) → z = 0 := by
   intro h
@@ -293,23 +300,34 @@ proposition zero_unique {R : Type u}
   rw [add_zero] at hx0
   exact hx0
 
---neg_add	-x + x = 0	add_neg (ax)
+-- | `zero_unique_right` | `(∀ x, x + z = x) → z = 0` | `zero_unique` | Z a.1° |
+proposition zero_unique_right {R : Type u}
+  [Add R] [Zero R] [IsZeroAdd R] [IsAddComm R] (z : R) : (∀ x, x + z = x) → z = 0 := by
+  sorry
+
+-- | `neg_add` | `-x + x = 0` | `add_neg` (ax) | — |
 corollary neg_add {R : Type u} [Neg R] [Add R] [Zero R] [IsAddComm R] [IsAddNeg R] (x : R) : -x + x = (0 : R) := by
-  rw [IsAddComm.add_comm  (-x)]
+  rw [IsAddComm.add_comm (-x)]
   rw [IsAddNeg.add_neg]
 
--- neg_unique	x + y = 0 → y = -x	y + x = 0 → y = -x
+-- | `neg_unique` (right) | `x + y = 0 → y = -x` | `y + x = 0 → y = -x` | — |
 proposition neg_unique {R : Type u}
   [Add R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R]
   (x y : R) : x + y = 0 → y = -x := by
   intro h
   rw [IsAddComm.add_comm] at h
   have h2 : y + x + -x = 0 + -x := congrArg (· + -x) h
-  rw [IsAddAssoc.add_assoc ] at h2
+  rw [IsAddAssoc.add_assoc] at h2
   rw [IsAddNeg.add_neg] at h2
   rw [IsZeroAdd.zero_add] at h2
   rw [add_zero] at h2
   exact h2
+
+-- | `neg_unique_left` | `y + x = 0 → y = -x` | `neg_unique` | — |
+proposition neg_unique_left {R : Type u}
+  [Add R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R]
+  (x y : R) : y + x = 0 → y = -x := by
+  sorry
 
 -- | `proposition` | `add_left_cancel` | `x + y = x + z → y = z` | `add_right_cancel` | Z a.3° |
 proposition add_left_cancel {R : Type u}
@@ -319,13 +337,19 @@ proposition add_left_cancel {R : Type u}
   have h2 : x + y + -x = x + z + -x := congrArg (· + -x) h
   rw [IsAddComm.add_comm x y] at h2
   rw [IsAddComm.add_comm x z] at h2
-  rw [IsAddAssoc.add_assoc ] at h2
+  rw [IsAddAssoc.add_assoc] at h2
   rw [IsAddNeg.add_neg] at h2
-  rw [IsAddAssoc.add_assoc ] at h2
+  rw [IsAddAssoc.add_assoc] at h2
   rw [IsAddNeg.add_neg] at h2
   rw [add_zero] at h2
   rw [add_zero] at h2
   exact h2
+
+-- | `proposition` | `add_right_cancel` | `y + x = z + x → y = z` | `add_left_cancel` | Z a.3° |
+proposition add_right_cancel {R : Type u}
+  [Add R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R]
+  (x y z : R) : y + x = z + x → y = z := by
+  sorry
 
 -- | `proposition` | `add_eq_iff_eq_sub` | `x + a = b ↔ x = b - a` | `a + x = b ↔ x = b - a` | Z a.3° |
 proposition add_eq_iff_eq_sub {R : Type u}
@@ -350,11 +374,16 @@ proposition add_eq_iff_eq_sub {R : Type u}
     rw [add_zero] at h2
     exact h2
 
+-- | `proposition` | `add_eq_iff_eq_sub_left` | `a + x = b ↔ x = b - a` | `add_eq_iff_eq_sub` | Z a.3° |
+proposition add_eq_iff_eq_sub_left {R : Type u}
+  [Add R] [Sub R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R] [IsSubEqAddNeg R]
+  (a x b : R) : a + x = b ↔ x = b - a := by
+  sorry
+
 -- | `corollary` | `neg_neg` | `-(-x) = x` | — | — |
 corollary neg_neg {R : Type u}
   [Add R] [Sub R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R] [IsSubEqAddNeg R]
   (x : R) : -(-x) = x := by
-
   have h : -x + x = 0 := neg_add x
   have h2 : x = -(-x) := neg_unique (-x) x h
   exact h2.symm
@@ -367,7 +396,6 @@ corollary neg_zero {R : Type u}
   rw [IsZeroAdd.zero_add] at h
   exact h
 
-
 -- | `lemma` | `neg_eq_iff_eq_neg` | `-x = y ↔ x = -y` | `neg_inj : -x = -y ↔ x = y` | — |
 lemma neg_eq_iff_eq_neg {R : Type u}
   [Add R] [Sub R] [Zero R] [IsZeroAdd R] [IsAddAssoc R] [IsAddComm R] [Neg R] [IsAddNeg R] [IsSubEqAddNeg R]
@@ -376,11 +404,11 @@ lemma neg_eq_iff_eq_neg {R : Type u}
   . -- ->
     intro h
     have h2 : -x + x = y + x := congrArg (· + x) h
-    rw [IsAddComm.add_comm (-x) x]  at h2
+    rw [IsAddComm.add_comm (-x) x] at h2
     rw [IsAddNeg.add_neg] at h2
     have h2 : 0 + -y = y + x + -y := congrArg (· + -y) h2
     rw [IsZeroAdd.zero_add] at h2
-    rw [<-IsAddComm.add_comm x y]  at h2
+    rw [<-IsAddComm.add_comm x y] at h2
     rw [IsAddAssoc.add_assoc] at h2
     rw [IsAddNeg.add_neg] at h2
     rw [add_zero] at h2
@@ -391,20 +419,16 @@ lemma neg_eq_iff_eq_neg {R : Type u}
     rw [neg_neg] at h2
     exact h2
 
-
-
-
-
 -- | `corollary` | `sub_self` | `x - x = 0` | — | — |
 corollary sub_self {R : Type u}
-  [Add R] [Neg R] [Sub R]  [Zero R] [IsSubEqAddNeg R] [IsAddNeg R]
+  [Add R] [Neg R] [Sub R] [Zero R] [IsSubEqAddNeg R] [IsAddNeg R]
   (x : R) : x - x = (0:R) := by
   rw [IsSubEqAddNeg.sub_eq_add_neg]
   rw [IsAddNeg.add_neg]
 
 -- | `lemma` | `sub_eq_zero_iff` | `x - y = 0 ↔ x = y` | `sub_ne_zero_iff` | — |
 lemma sub_eq_zero_iff {R : Type u}
-  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
   (x y : R) : x - y = 0 ↔ x = y := by
   constructor
   . -- ->
@@ -423,12 +447,12 @@ lemma sub_eq_zero_iff {R : Type u}
     rw [IsSubEqAddNeg.sub_eq_add_neg]
     exact h2
 
---| `lemma` | `neg_add_rev` | `-(x + y) = -y + -x` | `neg_add' : -(x + y) = -x + -y` | — |
+-- | `lemma` | `neg_add_rev` | `-(x + y) = -y + -x` | `neg_add' : -(x + y) = -x + -y` | — |
 lemma neg_add_rev {R : Type u}
-  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
   (x y : R) : -(x + y) = -y + -x := by
   have h : (x + y) + -(x + y) = 0 := IsAddNeg.add_neg (x + y)
-  have h2 := congrArg ((-y + -x) + ·) h             --Smarter use of congrArg
+  have h2 := congrArg ((-y + -x) + ·) h
   rw [<- IsAddAssoc.add_assoc] at h2
   rw [<- IsAddAssoc.add_assoc (-y + -x) x y] at h2
   rw [IsAddAssoc.add_assoc (-y) (-x) x] at h2
@@ -446,27 +470,43 @@ corollary add_neg_eq_sub {R : Type u}
 
 -- | `lemma` | `neg_sub` | `-(x - y) = y - x` | — | — |
 lemma neg_sub {R : Type u}
-  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
   (x y : R) : -(x - y) = y - x := by
-  --rw [<-IsAddComm.add_comm y (-x)]
   rw [IsSubEqAddNeg.sub_eq_add_neg x y]
   rw [IsSubEqAddNeg.sub_eq_add_neg y x]
   rw [neg_add_rev]
   rw [neg_neg]
 
--- | `lemma` | `add_sub_cancel_right` | `x + y - y = x` | `sub_add_cancel : x - y + y = x` | — |
-lemma add_sub_cancel_right { R: Type u}
-  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+-- | `lemma` | `add_sub_cancel_right` | `x + y - y = x` | `add_sub_cancel_left` | — |
+lemma add_sub_cancel_right {R : Type u}
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
   (x y : R) : x + y - y = x := by
-
   rw [IsSubEqAddNeg.sub_eq_add_neg]
   rw [IsAddAssoc.add_assoc]
   rw [IsAddNeg.add_neg]
   rw [add_zero]
 
+-- | `lemma` | `add_sub_cancel_left` | `y + x - y = x` | `add_sub_cancel_right` | — |
+lemma add_sub_cancel_left {R : Type u}
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  (x y : R) : y + x - y = x := by
+  sorry
+
+-- | `lemma` | `sub_add_cancel_right` | `x - y + y = x` | `sub_add_cancel_left` | — |
+lemma sub_add_cancel_right {R : Type u}
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  (x y : R) : x - y + y = x := by
+  sorry
+
+-- | `lemma` | `sub_add_cancel_left` | `y + (x - y) = x` | `sub_add_cancel_right` | — |
+lemma sub_add_cancel_left {R : Type u}
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  (x y : R) : y + (x - y) = x := by
+  sorry
+
 -- | `lemma` | `sub_sub` | `x - y - z = x - (y + z)` | `sub_add : x - y + z = x - (y - z)` | — |
 lemma sub_sub {R : Type u}
-  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R]  [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
+  [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
   (x y z : R) : x - y - z = x - (y + z) := by
   have h : x = x := rfl
   have h2 : x + -y = x + -y := congrArg (· + -y) h
@@ -478,7 +518,16 @@ lemma sub_sub {R : Type u}
   rw [add_neg_eq_sub x (y + z)] at h3
   exact h3
 
---| `proposition` | `one_unique` | `(∀ x, x * e = x) → e = 1` | left version | Z b.1° |
+-- 6c. Multiplication & Division (Identities, Inverses, Cancellation, Distributivity)
+
+-- | `corollary` | `mul_one` | `x * 1 = x` | `one_mul` (ax) | Z b |
+corollary mul_one {R : Type u}
+  [One R] [Mul R] [IsOneMul R] [IsMulComm R]
+  (x : R) : x * 1 = x := by
+  rw [IsMulComm.mul_comm x]
+  rw [IsOneMul.one_mul]
+
+-- | `proposition` | `one_unique` (right) | `(∀ x, x * e = x) → e = 1` | `one_unique_left` | Z b.1° |
 proposition one_unique {R : Type u}
   [One R] [Mul R] [IsOneMul R]
   (e : R) : (∀ x, x * e = x) → e = 1 := by
@@ -487,7 +536,13 @@ proposition one_unique {R : Type u}
   rw [IsOneMul.one_mul] at hx1
   exact hx1
 
---| `corollary` | `inv_mul_cancel` | `x ≠ 0 → x⁻¹ * x = 1` | `mul_inv_cancel` (ax) | — |
+-- | `proposition` | `one_unique_left` | `(∀ x, e * x = x) → e = 1` | `one_unique` | Z b.1° |
+proposition one_unique_left {R : Type u}
+  [One R] [Mul R] [IsOneMul R] [IsMulComm R]
+  (e : R) : (∀ x, e * x = x) → e = 1 := by
+  sorry
+
+-- | `corollary` | `inv_mul_cancel` | `x ≠ 0 → x⁻¹ * x = 1` | `mul_inv_cancel` (ax) | — |
 corollary inv_mul_cancel {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R]
   (x : R) : x ≠ 0 → x⁻¹ * x = 1 := by
@@ -496,14 +551,7 @@ corollary inv_mul_cancel {R : Type u}
   rw [IsMulInvCancel.mul_inv_cancel]
   exact hne0
 
-corollary mul_one {R : Type u}
-  [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
-  (x : R) : x * 1 = x := by
-  rw [IsMulComm.mul_comm x]
-  rw [IsOneMul.one_mul]
-
-
---| `proposition` | `inv_unique` | `x ≠ 0 → x * y = 1 → y = x⁻¹` | `y * x = 1 → y = x⁻¹` | Z b.2° |
+-- | `proposition` | `inv_unique` (right) | `x ≠ 0 → x * y = 1 → y = x⁻¹` | `inv_unique_left` | Z b.2° |
 proposition inv_unique {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
   (x y : R) : x ≠ 0 → x * y = 1 → y = x⁻¹ := by
@@ -516,7 +564,13 @@ proposition inv_unique {R : Type u}
   rw [mul_one] at h2
   exact h2
 
---| `proposition` | `mul_left_cancel` | `x ≠ 0 → x * y = x * z → y = z` | `mul_right_cancel` | Z b.3° |
+-- | `proposition` | `inv_unique_left` | `x ≠ 0 → y * x = 1 → y = x⁻¹` | `inv_unique` | Z b.2° |
+proposition inv_unique_left {R : Type u}
+  [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
+  (x y : R) : x ≠ 0 → y * x = 1 → y = x⁻¹ := by
+  sorry
+
+-- | `proposition` | `mul_left_cancel` | `x ≠ 0 → x * y = x * z → y = z` | `mul_right_cancel` | Z b.3° |
 proposition mul_left_cancel {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
   (x y z : R) : x ≠ 0 → x * y = x * z → y = z := by
@@ -532,37 +586,65 @@ proposition mul_left_cancel {R : Type u}
   rw [mul_one] at h2
   exact h2
 
---| `proposition` | `mul_eq_iff_eq_div` | `a ≠ 0 → (a * x = b ↔ x = b / a)` | `x * a = b ↔ x = b / a` | Z b.3° |
+-- | `proposition` | `mul_right_cancel` | `x ≠ 0 → y * x = z * x → y = z` | `mul_left_cancel` | Z b.3° |
+proposition mul_right_cancel {R : Type u}
+  [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
+  (x y z : R) : x ≠ 0 → y * x = z * x → y = z := by
+  sorry
+
+-- | `corollary` | `mul_inv_eq_div` | `a * b⁻¹ = a / b` | `add_neg_eq_sub` | — |
+corollary mul_inv_eq_div {R : Type u}
+  [Mul R] [Inv R] [Div R] [IsDivEqMulInv R]
+  (a b : R) : a * b⁻¹ = a / b := by
+  sorry
+
+-- | `lemma` | `mul_div_cancel_right` | `y ≠ 0 → x * y / y = x` | `mul_div_cancel_left` | — |
+lemma mul_div_cancel_right {R : Type u}
+  [Zero R] [One R] [Mul R] [Inv R] [Div R]
+  [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
+  (x y : R) (hy : y ≠ 0) : x * y / y = x := by
+  sorry
+
+-- | `lemma` | `mul_div_cancel_left` | `y ≠ 0 → y * x / y = x` | `mul_div_cancel_right` | — |
+lemma mul_div_cancel_left {R : Type u}
+  [Zero R] [One R] [Mul R] [Inv R] [Div R]
+  [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
+  (x y : R) (hy : y ≠ 0) : y * x / y = x := by
+  sorry
+
+-- | `lemma` | `div_mul_cancel_right` | `y ≠ 0 → x / y * y = x` | `div_mul_cancel_left` | — |
+lemma div_mul_cancel_right {R : Type u}
+  [Zero R] [One R] [Mul R] [Inv R] [Div R]
+  [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
+  (x y : R) (hy : y ≠ 0) : x / y * y = x := by
+  sorry
+
+-- | `lemma` | `div_mul_cancel_left` | `y ≠ 0 → y * (x / y) = x` | `div_mul_cancel_right` | — |
+lemma div_mul_cancel_left {R : Type u}
+  [Zero R] [One R] [Mul R] [Inv R] [Div R]
+  [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
+  (x y : R) (hy : y ≠ 0) : y * (x / y) = x := by
+  sorry
+
+-- | `proposition` | `mul_eq_iff_eq_div` (left) | `a ≠ 0 → (a * x = b ↔ x = b / a)` | `mul_eq_iff_eq_div_right` | Z b.3° |
 proposition mul_eq_iff_eq_div {R : Type u}
-  [Zero R] [One R] [Mul R] [Div R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
+  [Zero R] [One R] [Mul R] [Div R] [Inv R]
+  [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
   (a x b : R) : a ≠ 0 → (a * x = b ↔ x = b / a) := by
-  intro hane0
-  constructor
-  . -- ->
-    intro hmp
-    rw [Div.div a b] at hmp
-    sorry
-  . -- <-
-    intro hmpr
-    sorry
+  sorry
 
+-- | `proposition` | `mul_eq_iff_eq_div_right` | `a ≠ 0 → (x * a = b ↔ x = b / a)` | `mul_eq_iff_eq_div` | Z b.3° |
+proposition mul_eq_iff_eq_div_right {R : Type u}
+  [Zero R] [One R] [Mul R] [Div R] [Inv R]
+  [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
+  (a x b : R) : a ≠ 0 → (x * a = b ↔ x = b / a) := by
+  sorry
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- | `corollary` | `add_mul` | `(a + b) * c = a * c + b * c` | `mul_add` (ax) | — |
+corollary add_mul {R : Type u}
+  [Add R] [Mul R] [IsMulComm R] [IsMulAdd R]
+  (a b c : R) : (a + b) * c = a * c + b * c := by
+  sorry
 
 
 
