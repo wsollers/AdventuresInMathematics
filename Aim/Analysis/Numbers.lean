@@ -141,9 +141,21 @@ lemma sub_eq_add_neg {F : Type u} [Field F] (a b : F) :
     a - b = a + -b :=
   rfl
 
+/-- Addition of a negation is subtraction. -/
+corollary add_neg_eq_sub {R : Type u}
+    [Add R] [Neg R] [Sub R] [IsSubEqAddNeg R] (a b : R) :
+    a + -b = a - b :=
+  (IsSubEqAddNeg.sub_eq_add_neg a b).symm
+
 lemma div_eq_mul_inv {F : Type u} [Field F] (a b : F) :
     a / b = a * b⁻¹ :=
   rfl
+
+/-- Multiplication by an inverse is division. -/
+corollary mul_inv_eq_div {R : Type u}
+    [Mul R] [Inv R] [Div R] [IsDivEqMulInv R] (a b : R) :
+    a * b⁻¹ = a / b := by
+  sorry
 
 instance {F : Type u} [Field F] : IsSubEqAddNeg F := ⟨fun _ _ => rfl⟩
 instance {F : Type u} [Field F] : IsDivEqMulInv F := ⟨fun _ _ => rfl⟩
@@ -211,22 +223,6 @@ instance {X : Type u} [LE X] [LEDecidable X] : Max X :=
 
 instance {X : Type u} [LE X] [LEDecidable X] : Min X :=
   ⟨fun a b => if a ≤ b then a else b⟩
-
-/-- Absolute value: `|x| = max x (-x)`. -/
-def abs {F : Type u} [OrderedField F] (x : F) : F :=
-  max x (-x)
-
--- needs only decidability + totality + antisymmetry, nothing algebraic
-lemma max_comm {X : Type u} [LE X] [LEDecidable X]
-    [IsLETotal X] [IsLEAntisymm X] (a b : X) : max a b = max b a := by
-
-  sorry
-
-
--- needs the field/order interaction
-theorem abs_add_le {F : Type u} [OrderedField F] (x y : F) :
-    abs (x + y) ≤ abs x + abs y := by
-  sorry
 
 /-- `a` is an upper bound for `s`. -/
 def IsUpperBound {F : Type u} [LE F] (s : F → Prop) (a : F) : Prop :=
@@ -402,9 +398,18 @@ proposition add_eq_iff_eq_sub_left {R : Type u}
     rw [IsAddNeg.add_neg] at h2
     rw [add_zero] at h2
     rw [add_neg_eq_sub] at h2
+    exact h2
   . -- <-
     intro h
-    sorry
+    rw [IsSubEqAddNeg.sub_eq_add_neg] at h
+    have h2 : x + a = b + -a + a := congrArg (· + a) h
+    rw [IsAddAssoc.add_assoc] at h2
+
+    rw [IsAddComm.add_comm (-a) a] at h2
+    rw [IsAddNeg.add_neg] at h2
+    rw [add_zero] at h2
+    rw [IsAddComm.add_comm x a] at h2
+    exact h2
 
 -- | `corollary` | `neg_neg` | `-(-x) = x` | — | — |
 corollary neg_neg {R : Type u}
@@ -489,11 +494,6 @@ lemma neg_add_rev {R : Type u}
   rw [add_zero] at h2
   exact h2
 
-corollary add_neg_eq_sub {R : Type u}
-  [Add R] [Neg R] [Sub R] [IsSubEqAddNeg R] (a b : R) :
-  a + -b = a - b :=
-  (IsSubEqAddNeg.sub_eq_add_neg a b).symm
-
 -- | `lemma` | `neg_sub` | `-(x - y) = y - x` | — | — |
 lemma neg_sub {R : Type u}
   [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
@@ -516,19 +516,32 @@ lemma add_sub_cancel_right {R : Type u}
 lemma add_sub_cancel_left {R : Type u}
   [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
   (x y : R) : y + x - y = x := by
-  sorry
+  rw [IsAddComm.add_comm y x]
+  rw [IsSubEqAddNeg.sub_eq_add_neg]
+  rw [IsAddAssoc.add_assoc]
+  rw [IsAddNeg.add_neg]
+  rw [add_zero]
 
 -- | `lemma` | `sub_add_cancel_right` | `x - y + y = x` | `sub_add_cancel_left` | — |
 lemma sub_add_cancel_right {R : Type u}
   [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
   (x y : R) : x - y + y = x := by
-  sorry
+  rw [IsSubEqAddNeg.sub_eq_add_neg]
+  rw [IsAddAssoc.add_assoc]
+  rw [neg_add]
+  rw [add_zero]
+
 
 -- | `lemma` | `sub_add_cancel_left` | `y + (x - y) = x` | `sub_add_cancel_right` | — |
 lemma sub_add_cancel_left {R : Type u}
   [Add R] [IsAddComm R] [IsAddAssoc R] [Neg R] [Sub R] [Zero R] [IsZeroAdd R] [IsSubEqAddNeg R] [IsAddNeg R]
   (x y : R) : y + (x - y) = x := by
-  sorry
+  rw [IsSubEqAddNeg.sub_eq_add_neg]
+  rw [<-IsAddAssoc.add_assoc]
+  rw [IsAddComm.add_comm y x]
+  rw [IsAddAssoc.add_assoc]
+  rw [IsAddNeg.add_neg]
+  rw [add_zero]
 
 -- | `lemma` | `sub_sub` | `x - y - z = x - (y + z)` | `sub_add : x - y + z = x - (y - z)` | — |
 lemma sub_sub {R : Type u}
@@ -566,7 +579,10 @@ proposition one_unique {R : Type u}
 proposition one_unique_left {R : Type u}
   [One R] [Mul R] [IsOneMul R] [IsMulComm R]
   (e : R) : (∀ x, e * x = x) → e = 1 := by
-  sorry
+  intro h
+  have hx1 := h 1
+  rw [mul_one] at hx1
+  exact hx1
 
 -- | `corollary` | `inv_mul_cancel` | `x ≠ 0 → x⁻¹ * x = 1` | `mul_inv_cancel` (ax) | — |
 corollary inv_mul_cancel {R : Type u}
@@ -594,7 +610,15 @@ proposition inv_unique {R : Type u}
 proposition inv_unique_left {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
   (x y : R) : x ≠ 0 → y * x = 1 → y = x⁻¹ := by
-  sorry
+  intro hxne0
+  intro h2
+  have h3 : (y * x) * x⁻¹ = 1 * x⁻¹ := congrArg (· * x⁻¹) h2
+  rw [IsMulAssoc.mul_assoc] at h3
+  rw [IsMulComm.mul_comm x x⁻¹] at h3
+  rw [inv_mul_cancel x hxne0] at h3
+  rw [mul_one] at h3
+  rw [IsOneMul.one_mul] at h3
+  exact h3
 
 -- | `proposition` | `mul_left_cancel` | `x ≠ 0 → x * y = x * z → y = z` | `mul_right_cancel` | Z b.3° |
 proposition mul_left_cancel {R : Type u}
@@ -616,12 +640,6 @@ proposition mul_left_cancel {R : Type u}
 proposition mul_right_cancel {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R]
   (x y z : R) : x ≠ 0 → y * x = z * x → y = z := by
-  sorry
-
--- | `corollary` | `mul_inv_eq_div` | `a * b⁻¹ = a / b` | `add_neg_eq_sub` | — |
-corollary mul_inv_eq_div {R : Type u}
-  [Mul R] [Inv R] [Div R] [IsDivEqMulInv R]
-  (a b : R) : a * b⁻¹ = a / b := by
   sorry
 
 -- | `lemma` | `mul_div_cancel_right` | `y ≠ 0 → x * y / y = x` | `mul_div_cancel_left` | — |
@@ -862,6 +880,22 @@ proposition mul_le_mul_of_nonpos_right {F : Type u} [OrderedField F] {a b c : F}
 /-- Multiplication by a nonpositive left factor reverses `≤`. -/
 proposition mul_le_mul_of_nonpos_left {F : Type u} [OrderedField F] {a b c : F}
     (hab : a ≤ b) (hc : c ≤ 0) : c * b ≤ c * a := by
+  sorry
+
+-- 6g. Maximum and absolute value
+
+/-- Absolute value: `|x| = max x (-x)`. -/
+def abs {F : Type u} [OrderedField F] (x : F) : F :=
+  max x (-x)
+
+/-- Maximum is commutative. -/
+lemma max_comm {X : Type u} [LE X] [LEDecidable X]
+    [IsLETotal X] [IsLEAntisymm X] (a b : X) : max a b = max b a := by
+  sorry
+
+/-- The triangle inequality. -/
+theorem abs_add_le {F : Type u} [OrderedField F] (x y : F) :
+    abs (x + y) ≤ abs x + abs y := by
   sorry
 
 
