@@ -1,0 +1,3440 @@
+{
+  "title": "Adventures in Mathematics — Foundations",
+  "version": 1,
+  "source_commit": "5bda7f10ee04f7a20a3c2136afe397953804b85f",
+  "stages": [
+    {
+      "stage": 0,
+      "title": "Mathematical language",
+      "file": "stage-00.json",
+      "card_ids": [
+        "aim.orderedfields.00.forall",
+        "aim.orderedfields.00.exists",
+        "aim.orderedfields.00.imp",
+        "aim.orderedfields.00.iff",
+        "aim.orderedfields.00.negforall",
+        "aim.orderedfields.00.negexists",
+        "aim.orderedfields.00.negimp",
+        "aim.orderedfields.00.prop",
+        "aim.orderedfields.00.hyp",
+        "aim.orderedfields.00.concl",
+        "aim.orderedfields.00.eq",
+        "aim.orderedfields.00.contra",
+        "aim.orderedfields.00.contradiction",
+        "aim.orderedfields.00.structure"
+      ]
+    },
+    {
+      "stage": 1,
+      "title": "Sets, functions, and relations",
+      "file": "stage-01.json",
+      "card_ids": [
+        "aim.orderedfields.01.set",
+        "aim.orderedfields.01.member",
+        "aim.orderedfields.01.predicate",
+        "aim.orderedfields.01.relation",
+        "aim.orderedfields.01.function",
+        "aim.orderedfields.01.operation",
+        "aim.orderedfields.01.closed",
+        "aim.orderedfields.01.reflexive",
+        "aim.orderedfields.01.antisymmetric",
+        "aim.orderedfields.01.transitive",
+        "aim.orderedfields.01.total",
+        "aim.orderedfields.01.antisymsym"
+      ]
+    },
+    {
+      "stage": 2,
+      "title": "Algebraic structures",
+      "file": "stage-02.json",
+      "card_ids": [
+        "aim.orderedfields.02.carrier",
+        "aim.orderedfields.02.assoc",
+        "aim.orderedfields.02.comm",
+        "aim.orderedfields.02.identity",
+        "aim.orderedfields.02.inverse",
+        "aim.orderedfields.02.group",
+        "aim.orderedfields.02.abelian",
+        "aim.orderedfields.02.ring",
+        "aim.orderedfields.02.field",
+        "aim.orderedfields.02.axiomtheorem",
+        "aim.orderedfields.02.integers",
+        "aim.orderedfields.02.rationals"
+      ]
+    },
+    {
+      "stage": 3,
+      "title": "Field axioms",
+      "file": "stage-03.json",
+      "card_ids": [
+        "aim.orderedfields.03.tex-001",
+        "aim.orderedfields.03.tex-002",
+        "aim.orderedfields.03.tex-003",
+        "aim.orderedfields.03.tex-004",
+        "aim.orderedfields.03.tex-005",
+        "aim.orderedfields.03.tex-006",
+        "aim.orderedfields.03.tex-007",
+        "aim.orderedfields.03.tex-008",
+        "aim.orderedfields.03.mul-inv-axiom",
+        "aim.orderedfields.03.tex-009",
+        "aim.orderedfields.03.tex-010",
+        "aim.orderedfields.03.tex-011"
+      ]
+    },
+    {
+      "stage": 4,
+      "title": "Ordered fields",
+      "file": "stage-04.json",
+      "card_ids": [
+        "aim.orderedfields.04.tex-012",
+        "aim.orderedfields.04.tex-013",
+        "aim.orderedfields.04.tex-014",
+        "aim.orderedfields.04.tex-015",
+        "aim.orderedfields.04.tex-016",
+        "aim.orderedfields.04.tex-017",
+        "aim.orderedfields.04.tex-018",
+        "aim.orderedfields.04.tex-019"
+      ]
+    },
+    {
+      "stage": 5,
+      "title": "Completeness",
+      "file": "stage-05.json",
+      "card_ids": [
+        "aim.orderedfields.05.lower",
+        "aim.orderedfields.05.inf",
+        "aim.orderedfields.05.archvscomplete",
+        "aim.orderedfields.05.qcomplete",
+        "aim.orderedfields.05.supinterval",
+        "aim.orderedfields.05.tex-020",
+        "aim.orderedfields.05.tex-021",
+        "aim.orderedfields.05.tex-022",
+        "aim.orderedfields.05.tex-023",
+        "aim.orderedfields.05.tex-024",
+        "aim.orderedfields.05.tex-025",
+        "aim.orderedfields.05.tex-026"
+      ]
+    },
+    {
+      "stage": 6,
+      "title": "Derived algebraic theorems",
+      "file": "stage-06.json",
+      "card_ids": [
+        "aim.orderedfields.06.tex-027",
+        "aim.orderedfields.06.tex-028",
+        "aim.orderedfields.06.tex-029",
+        "aim.orderedfields.06.tex-030",
+        "aim.orderedfields.06.tex-031",
+        "aim.orderedfields.06.tex-032",
+        "aim.orderedfields.06.tex-033",
+        "aim.orderedfields.06.tex-034",
+        "aim.orderedfields.06.tex-035",
+        "aim.orderedfields.06.tex-036",
+        "aim.orderedfields.06.tex-037",
+        "aim.orderedfields.06.tex-038",
+        "aim.orderedfields.06.tex-039",
+        "aim.orderedfields.06.tex-040",
+        "aim.orderedfields.06.tex-041",
+        "aim.orderedfields.06.tex-042",
+        "aim.orderedfields.06.tex-043",
+        "aim.orderedfields.06.tex-044",
+        "aim.orderedfields.06.tex-045",
+        "aim.orderedfields.06.tex-046",
+        "aim.orderedfields.06.tex-047",
+        "aim.orderedfields.06.tex-048",
+        "aim.orderedfields.06.tex-049",
+        "aim.orderedfields.06.lean-sub_eq_add_neg",
+        "aim.orderedfields.06.lean-add_neg_eq_sub",
+        "aim.orderedfields.06.lean-div_eq_mul_inv",
+        "aim.orderedfields.06.lean-mul_inv_eq_div",
+        "aim.orderedfields.06.lean-add_zero",
+        "aim.orderedfields.06.lean-zero_add",
+        "aim.orderedfields.06.lean-zero_unique",
+        "aim.orderedfields.06.lean-zero_unique_right",
+        "aim.orderedfields.06.lean-neg_add",
+        "aim.orderedfields.06.lean-neg_unique",
+        "aim.orderedfields.06.lean-neg_unique_left",
+        "aim.orderedfields.06.lean-add_left_cancel",
+        "aim.orderedfields.06.hyp-add_left_cancel",
+        "aim.orderedfields.06.lean-add_right_cancel",
+        "aim.orderedfields.06.hyp-add_right_cancel",
+        "aim.orderedfields.06.lean-add_eq_iff_eq_sub",
+        "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left",
+        "aim.orderedfields.06.lean-neg_neg",
+        "aim.orderedfields.06.lean-neg_zero",
+        "aim.orderedfields.06.lean-neg_eq_iff_eq_neg",
+        "aim.orderedfields.06.lean-sub_self",
+        "aim.orderedfields.06.lean-sub_eq_zero_iff",
+        "aim.orderedfields.06.lean-neg_add_rev",
+        "aim.orderedfields.06.lean-neg_sub",
+        "aim.orderedfields.06.lean-add_sub_cancel_right",
+        "aim.orderedfields.06.hyp-add_sub_cancel_right",
+        "aim.orderedfields.06.lean-add_sub_cancel_left",
+        "aim.orderedfields.06.hyp-add_sub_cancel_left",
+        "aim.orderedfields.06.lean-sub_add_cancel_right",
+        "aim.orderedfields.06.hyp-sub_add_cancel_right",
+        "aim.orderedfields.06.lean-sub_add_cancel_left",
+        "aim.orderedfields.06.hyp-sub_add_cancel_left",
+        "aim.orderedfields.06.lean-sub_sub",
+        "aim.orderedfields.06.lean-mul_one",
+        "aim.orderedfields.06.lean-one_unique",
+        "aim.orderedfields.06.lean-one_unique_left",
+        "aim.orderedfields.06.lean-inv_mul_cancel",
+        "aim.orderedfields.06.hyp-inv_mul_cancel",
+        "aim.orderedfields.06.lean-inv_unique",
+        "aim.orderedfields.06.hyp-inv_unique",
+        "aim.orderedfields.06.lean-inv_unique_left",
+        "aim.orderedfields.06.hyp-inv_unique_left",
+        "aim.orderedfields.06.lean-mul_left_cancel",
+        "aim.orderedfields.06.hyp-mul_left_cancel",
+        "aim.orderedfields.06.lean-mul_right_cancel",
+        "aim.orderedfields.06.hyp-mul_right_cancel",
+        "aim.orderedfields.06.lean-mul_div_cancel_right",
+        "aim.orderedfields.06.hyp-mul_div_cancel_right",
+        "aim.orderedfields.06.lean-mul_div_cancel_left",
+        "aim.orderedfields.06.hyp-mul_div_cancel_left",
+        "aim.orderedfields.06.lean-div_mul_cancel_right",
+        "aim.orderedfields.06.hyp-div_mul_cancel_right",
+        "aim.orderedfields.06.lean-div_mul_cancel_left",
+        "aim.orderedfields.06.hyp-div_mul_cancel_left",
+        "aim.orderedfields.06.lean-mul_eq_iff_eq_div",
+        "aim.orderedfields.06.hyp-mul_eq_iff_eq_div",
+        "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right",
+        "aim.orderedfields.06.hyp-mul_eq_iff_eq_div_right",
+        "aim.orderedfields.06.lean-add_mul",
+        "aim.orderedfields.06.lean-mul_zero",
+        "aim.orderedfields.06.lean-zero_mul",
+        "aim.orderedfields.06.lean-neg_mul",
+        "aim.orderedfields.06.lean-mul_neg",
+        "aim.orderedfields.06.lean-mul_sub",
+        "aim.orderedfields.06.lean-sub_mul"
+      ]
+    },
+    {
+      "stage": 7,
+      "title": "Derived order theorems",
+      "file": "stage-07.json",
+      "card_ids": [
+        "aim.orderedfields.07.tex-050",
+        "aim.orderedfields.07.tex-051",
+        "aim.orderedfields.07.tex-052",
+        "aim.orderedfields.07.tex-053",
+        "aim.orderedfields.07.tex-054",
+        "aim.orderedfields.07.tex-055",
+        "aim.orderedfields.07.tex-056",
+        "aim.orderedfields.07.tex-057",
+        "aim.orderedfields.07.tex-058",
+        "aim.orderedfields.07.tex-059",
+        "aim.orderedfields.07.tex-060",
+        "aim.orderedfields.07.tex-061",
+        "aim.orderedfields.07.tex-062",
+        "aim.orderedfields.07.tex-063",
+        "aim.orderedfields.07.tex-064",
+        "aim.orderedfields.07.tex-065",
+        "aim.orderedfields.07.tex-066",
+        "aim.orderedfields.07.tex-067",
+        "aim.orderedfields.07.tex-068",
+        "aim.orderedfields.07.tex-069",
+        "aim.orderedfields.07.lean-lt_irrefl",
+        "aim.orderedfields.07.lean-le_of_lt",
+        "aim.orderedfields.07.lean-not_le_of_lt",
+        "aim.orderedfields.07.lean-lt_asymm",
+        "aim.orderedfields.07.lean-lt_trans",
+        "aim.orderedfields.07.lean-lt_of_lt_of_le",
+        "aim.orderedfields.07.lean-lt_of_le_of_lt",
+        "aim.orderedfields.07.lean-le_iff_lt_or_eq",
+        "aim.orderedfields.07.lean-lt_trichotomy",
+        "aim.orderedfields.07.lean-add_le_add_right",
+        "aim.orderedfields.07.lean-add_le_add_left",
+        "aim.orderedfields.07.lean-le_of_add_le_add_right",
+        "aim.orderedfields.07.lean-le_of_add_le_add_left",
+        "aim.orderedfields.07.lean-add_le_add",
+        "aim.orderedfields.07.lean-add_lt_add_right",
+        "aim.orderedfields.07.lean-add_lt_add_left",
+        "aim.orderedfields.07.lean-lt_of_add_lt_add_right",
+        "aim.orderedfields.07.lean-lt_of_add_lt_add_left",
+        "aim.orderedfields.07.lean-add_lt_add",
+        "aim.orderedfields.07.lean-sub_nonneg",
+        "aim.orderedfields.07.lean-sub_pos",
+        "aim.orderedfields.07.lean-neg_le_neg_iff",
+        "aim.orderedfields.07.lean-neg_lt_neg_iff",
+        "aim.orderedfields.07.lean-neg_pos_of_neg",
+        "aim.orderedfields.07.lean-mul_nonneg",
+        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right",
+        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left",
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right",
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left",
+        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right",
+        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left",
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right",
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left",
+        "aim.orderedfields.07.lean-max_comm",
+        "aim.orderedfields.07.lean-abs_add_le"
+      ]
+    },
+    {
+      "stage": 8,
+      "title": "Proof reconstruction",
+      "file": "stage-08.json",
+      "card_ids": [
+        "aim.orderedfields.08.dependency-add_zero",
+        "aim.orderedfields.08.proof-add_zero",
+        "aim.orderedfields.08.dependency-neg_add",
+        "aim.orderedfields.08.proof-neg_add",
+        "aim.orderedfields.08.dependency-mul_one",
+        "aim.orderedfields.08.proof-mul_one",
+        "aim.orderedfields.08.dependency-add_left_cancel",
+        "aim.orderedfields.08.proof-add_left_cancel",
+        "aim.orderedfields.08.dependency-sub_self",
+        "aim.orderedfields.08.proof-sub_self",
+        "aim.orderedfields.08.dependency-mul_zero",
+        "aim.orderedfields.08.proof-mul_zero",
+        "aim.orderedfields.08.dependency-lt_irrefl",
+        "aim.orderedfields.08.proof-lt_irrefl",
+        "aim.orderedfields.08.dependency-lt_trans",
+        "aim.orderedfields.08.proof-lt_trans",
+        "aim.orderedfields.08.dependency-add_mul",
+        "aim.orderedfields.08.proof-add_mul",
+        "aim.orderedfields.08.dependency-inv_mul_cancel",
+        "aim.orderedfields.08.proof-inv_mul_cancel",
+        "aim.orderedfields.08.dependency-neg_neg",
+        "aim.orderedfields.08.proof-neg_neg"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "aim.orderedfields.00.forall",
+      "order": 1,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "notation",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.exists",
+      "order": 2,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "notation",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.imp",
+      "order": 3,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "notation",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.iff",
+      "order": 4,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "notation",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.negforall",
+      "order": 5,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "notation",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.negexists",
+      "order": 6,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "notation",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.negimp",
+      "order": 7,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "notation",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.prop",
+      "order": 8,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.hyp",
+      "order": 9,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.concl",
+      "order": 10,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.eq",
+      "order": 11,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.contra",
+      "order": 12,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.contradiction",
+      "order": 13,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.00.structure",
+      "order": 14,
+      "stage": 0,
+      "topic": "Mathematical language",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.set",
+      "order": 15,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.member",
+      "order": 16,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "notation",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.predicate",
+      "order": 17,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.relation",
+      "order": 18,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.function",
+      "order": 19,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.operation",
+      "order": 20,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.closed",
+      "order": 21,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.reflexive",
+      "order": 22,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.antisymmetric",
+      "order": 23,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.transitive",
+      "order": 24,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.total",
+      "order": 25,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.01.antisymsym",
+      "order": 26,
+      "stage": 1,
+      "topic": "Sets, functions, and relations",
+      "type": "counterexample",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.carrier",
+      "order": 27,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.assoc",
+      "order": 28,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.comm",
+      "order": 29,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.identity",
+      "order": 30,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.inverse",
+      "order": 31,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.group",
+      "order": 32,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.abelian",
+      "order": 33,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.ring",
+      "order": 34,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.field",
+      "order": 35,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.axiomtheorem",
+      "order": 36,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.integers",
+      "order": 37,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "counterexample",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.02.rationals",
+      "order": 38,
+      "stage": 2,
+      "topic": "Algebraic structures",
+      "type": "example",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-001",
+      "order": 39,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsAddAssoc.add_assoc"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-002",
+      "order": 40,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsAddComm.add_comm"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-003",
+      "order": 41,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsZeroAdd.zero_add"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-004",
+      "order": 42,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsAddNeg.add_neg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-005",
+      "order": 43,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsSubEqAddNeg.sub_eq_add_neg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-006",
+      "order": 44,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsMulAssoc.mul_assoc"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-007",
+      "order": 45,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsMulComm.mul_comm"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-008",
+      "order": 46,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsOneMul.one_mul"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.mul-inv-axiom",
+      "order": 47,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsMulInvCancel.mul_inv_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-009",
+      "order": 48,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsZeroNeOne.zero_ne_one"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-010",
+      "order": 49,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsDivEqMulInv.div_eq_mul_inv"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.03.tex-011",
+      "order": 50,
+      "stage": 3,
+      "topic": "Field axioms",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsMulAdd.mul_add"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.04.tex-012",
+      "order": 51,
+      "stage": 4,
+      "topic": "Ordered fields",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsLERefl.le_refl"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.04.tex-013",
+      "order": 52,
+      "stage": 4,
+      "topic": "Ordered fields",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsLETrans.le_trans"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.04.tex-014",
+      "order": 53,
+      "stage": 4,
+      "topic": "Ordered fields",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsLEAntisymm.le_antisymm"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.04.tex-015",
+      "order": 54,
+      "stage": 4,
+      "topic": "Ordered fields",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsLETotal.le_total"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.04.tex-016",
+      "order": 55,
+      "stage": 4,
+      "topic": "Ordered fields",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "LEDecidable.decLE"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.04.tex-017",
+      "order": 56,
+      "stage": 4,
+      "topic": "Ordered fields",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsLTIffLENotLE.lt_iff_le_not_le"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.04.tex-018",
+      "order": 57,
+      "stage": 4,
+      "topic": "Ordered fields",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsAddLEAddRight.add_le_add_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.04.tex-019",
+      "order": 58,
+      "stage": 4,
+      "topic": "Ordered fields",
+      "type": "axiom",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsMulPos.mul_pos"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.lower",
+      "order": 59,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.inf",
+      "order": 60,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.archvscomplete",
+      "order": 61,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.qcomplete",
+      "order": 62,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "counterexample",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.supinterval",
+      "order": 63,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "example",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": null
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.tex-020",
+      "order": 64,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsUpperBound"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.tex-021",
+      "order": 65,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsLeastUpperBound"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.tex-022",
+      "order": 66,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "IsOrderComplete"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.tex-023",
+      "order": 67,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "concept",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "ArchimedeanProperty.archimedean"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.tex-024",
+      "order": 68,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "rfl"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.tex-025",
+      "order": 69,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "congrArg (· + -a) h"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.05.tex-026",
+      "order": 70,
+      "stage": 5,
+      "topic": "Completeness",
+      "type": "definition",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "rw [thm]"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-027",
+      "order": 71,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_zero"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-028",
+      "order": 72,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_unique"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-029",
+      "order": 73,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_add"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-030",
+      "order": 74,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_unique"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-031",
+      "order": 75,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_left_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-032",
+      "order": 76,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_eq_iff_eq_sub"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-033",
+      "order": 77,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_neg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-034",
+      "order": 78,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_eq_iff_eq_neg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-035",
+      "order": 79,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_self"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-036",
+      "order": 80,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_add_rev"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-037",
+      "order": 81,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_sub_cancel_*"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-038",
+      "order": 82,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_sub"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-039",
+      "order": 83,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_one"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-040",
+      "order": 84,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "one_unique"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-041",
+      "order": 85,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_mul_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-042",
+      "order": 86,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_unique"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-043",
+      "order": 87,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_left_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-044",
+      "order": 88,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_div_cancel_*"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-045",
+      "order": 89,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_eq_iff_eq_div"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-046",
+      "order": 90,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_mul"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-047",
+      "order": 91,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_zero"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-048",
+      "order": 92,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_mul"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.tex-049",
+      "order": 93,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_sub"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-sub_eq_add_neg",
+      "order": 94,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_eq_add_neg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-add_neg_eq_sub",
+      "order": 95,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_neg_eq_sub"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-div_eq_mul_inv",
+      "order": 96,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "div_eq_mul_inv"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_inv_eq_div",
+      "order": 97,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_inv_eq_div"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-add_zero",
+      "order": 98,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_zero"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-zero_add",
+      "order": 99,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_add"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-zero_unique",
+      "order": 100,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_unique"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-zero_unique_right",
+      "order": 101,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_unique_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-neg_add",
+      "order": 102,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_add"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-neg_unique",
+      "order": 103,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_unique"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-neg_unique_left",
+      "order": 104,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_unique_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-add_left_cancel",
+      "order": 105,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_left_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-add_left_cancel",
+      "order": 106,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_left_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_left_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-add_right_cancel",
+      "order": 107,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_right_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-add_right_cancel",
+      "order": 108,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_right_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_right_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-add_eq_iff_eq_sub",
+      "order": 109,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_eq_iff_eq_sub"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left",
+      "order": 110,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_eq_iff_eq_sub_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-neg_neg",
+      "order": 111,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_neg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-neg_zero",
+      "order": 112,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_zero"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-neg_eq_iff_eq_neg",
+      "order": 113,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_eq_iff_eq_neg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-sub_self",
+      "order": 114,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_self"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-sub_eq_zero_iff",
+      "order": 115,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_eq_zero_iff"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-neg_add_rev",
+      "order": 116,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_add_rev"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-neg_sub",
+      "order": 117,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_sub"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-add_sub_cancel_right",
+      "order": 118,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_sub_cancel_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-add_sub_cancel_right",
+      "order": 119,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_sub_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_sub_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-add_sub_cancel_left",
+      "order": 120,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_sub_cancel_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-add_sub_cancel_left",
+      "order": 121,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_sub_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_sub_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-sub_add_cancel_right",
+      "order": 122,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_add_cancel_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-sub_add_cancel_right",
+      "order": 123,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_add_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_add_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-sub_add_cancel_left",
+      "order": 124,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_add_cancel_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-sub_add_cancel_left",
+      "order": 125,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_add_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_add_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-sub_sub",
+      "order": 126,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_sub"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_one",
+      "order": 127,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_one"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-one_unique",
+      "order": 128,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "one_unique"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-one_unique_left",
+      "order": 129,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "one_unique_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-inv_mul_cancel",
+      "order": 130,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_mul_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-inv_mul_cancel",
+      "order": 131,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_mul_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-inv_mul_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-inv_unique",
+      "order": 132,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_unique"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-inv_unique",
+      "order": 133,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_unique"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-inv_unique"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-inv_unique_left",
+      "order": 134,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_unique_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-inv_unique_left",
+      "order": 135,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_unique_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-inv_unique_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_left_cancel",
+      "order": 136,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_left_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-mul_left_cancel",
+      "order": 137,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_left_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_left_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_right_cancel",
+      "order": 138,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_right_cancel"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-mul_right_cancel",
+      "order": 139,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_right_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_right_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_div_cancel_right",
+      "order": 140,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_div_cancel_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-mul_div_cancel_right",
+      "order": 141,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_div_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_div_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_div_cancel_left",
+      "order": 142,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_div_cancel_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-mul_div_cancel_left",
+      "order": 143,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_div_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_div_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-div_mul_cancel_right",
+      "order": 144,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "div_mul_cancel_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-div_mul_cancel_right",
+      "order": 145,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "div_mul_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-div_mul_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-div_mul_cancel_left",
+      "order": 146,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "div_mul_cancel_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-div_mul_cancel_left",
+      "order": 147,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "div_mul_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-div_mul_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_eq_iff_eq_div",
+      "order": 148,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_eq_iff_eq_div"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-mul_eq_iff_eq_div",
+      "order": 149,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_eq_iff_eq_div"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_eq_iff_eq_div"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right",
+      "order": 150,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_eq_iff_eq_div_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.hyp-mul_eq_iff_eq_div_right",
+      "order": 151,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "hypothesis",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_eq_iff_eq_div_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.06.lean-add_mul",
+      "order": 152,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_mul"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_zero",
+      "order": 153,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_zero"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-zero_mul",
+      "order": 154,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_mul"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-neg_mul",
+      "order": 155,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_mul"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_neg",
+      "order": 156,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_neg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-mul_sub",
+      "order": 157,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_sub"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.06.lean-sub_mul",
+      "order": 158,
+      "stage": 6,
+      "topic": "Derived algebraic theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_mul"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-050",
+      "order": 159,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_irrefl"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-051",
+      "order": 160,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_lt"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-052",
+      "order": 161,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "not_le_of_lt"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-053",
+      "order": 162,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_asymm"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-054",
+      "order": 163,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_trans"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-055",
+      "order": 164,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_lt_of_le"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-056",
+      "order": 165,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_iff_lt_or_eq"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-057",
+      "order": 166,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_trichotomy"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-058",
+      "order": 167,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-059",
+      "order": 168,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_add_le_add_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-060",
+      "order": 169,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-061",
+      "order": 170,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-062",
+      "order": 171,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_add_lt_add_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-063",
+      "order": 172,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-064",
+      "order": 173,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_nonneg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-065",
+      "order": 174,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_le_neg_iff"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-066",
+      "order": 175,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_nonneg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-067",
+      "order": 176,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_pos_*"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-068",
+      "order": 177,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_neg_*"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.tex-069",
+      "order": 178,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "max_comm"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-lt_irrefl",
+      "order": 179,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_irrefl"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-le_of_lt",
+      "order": 180,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_lt"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-not_le_of_lt",
+      "order": 181,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "not_le_of_lt"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-lt_asymm",
+      "order": 182,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_asymm"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-lt_trans",
+      "order": 183,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_trans"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-lt_of_lt_of_le",
+      "order": 184,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_lt_of_le"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-lt_of_le_of_lt",
+      "order": 185,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_le_of_lt"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-le_iff_lt_or_eq",
+      "order": 186,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_iff_lt_or_eq"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-lt_trichotomy",
+      "order": 187,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_trichotomy"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-add_le_add_right",
+      "order": 188,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-add_le_add_left",
+      "order": 189,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-le_of_add_le_add_right",
+      "order": 190,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_add_le_add_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-le_of_add_le_add_left",
+      "order": 191,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_add_le_add_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-add_le_add",
+      "order": 192,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-add_lt_add_right",
+      "order": 193,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-add_lt_add_left",
+      "order": 194,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-lt_of_add_lt_add_right",
+      "order": 195,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_add_lt_add_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-lt_of_add_lt_add_left",
+      "order": 196,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_add_lt_add_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-add_lt_add",
+      "order": 197,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-sub_nonneg",
+      "order": 198,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_nonneg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-sub_pos",
+      "order": 199,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_pos"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-neg_le_neg_iff",
+      "order": 200,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_le_neg_iff"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-neg_lt_neg_iff",
+      "order": 201,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_lt_neg_iff"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-neg_pos_of_neg",
+      "order": 202,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_pos_of_neg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-mul_nonneg",
+      "order": 203,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_nonneg"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right",
+      "order": 204,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_pos_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left",
+      "order": 205,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_pos_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right",
+      "order": 206,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonneg_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left",
+      "order": 207,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonneg_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right",
+      "order": 208,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_neg_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left",
+      "order": 209,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_neg_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right",
+      "order": 210,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonpos_right"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left",
+      "order": 211,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonpos_left"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-max_comm",
+      "order": 212,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "max_comm"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.07.lean-abs_add_le",
+      "order": 213,
+      "stage": 7,
+      "topic": "Derived order theorems",
+      "type": "theorem",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "abs_add_le"
+      },
+      "prerequisites": []
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_zero",
+      "order": 214,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_zero"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_zero"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_zero",
+      "order": 215,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_zero"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_zero"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_add",
+      "order": 216,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_add"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_add"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_add",
+      "order": 217,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_add"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_add"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_one",
+      "order": 218,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_one"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_one"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_one",
+      "order": 219,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_one"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_one"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_left_cancel",
+      "order": 220,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_left_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_left_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_left_cancel",
+      "order": 221,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_left_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_left_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-sub_self",
+      "order": 222,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_self"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_self"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-sub_self",
+      "order": 223,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_self"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_self"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_zero",
+      "order": 224,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_zero"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_zero"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_zero",
+      "order": 225,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_zero"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_zero"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-lt_irrefl",
+      "order": 226,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_irrefl"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_irrefl"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-lt_irrefl",
+      "order": 227,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_irrefl"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_irrefl"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-lt_trans",
+      "order": 228,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_trans"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_trans"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-lt_trans",
+      "order": 229,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_trans"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_trans"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_mul",
+      "order": 230,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_mul"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_mul"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_mul",
+      "order": 231,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_mul"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_mul"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-inv_mul_cancel",
+      "order": 232,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_mul_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-inv_mul_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-inv_mul_cancel",
+      "order": 233,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_mul_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-inv_mul_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_neg",
+      "order": 234,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_neg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_neg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_neg",
+      "order": 235,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_neg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_neg"
+      ]
+    }
+  ]
+}

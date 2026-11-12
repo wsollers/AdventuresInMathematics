@@ -1,0 +1,1708 @@
+[
+  {
+    "id": "aim.orderedfields.06.tex-027",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Right \\& Left Additive Identity.",
+    "back": "For all $x \\in F,\\; x + 0 = x$ \\; and \\; $0 + x = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_zero"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-028",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Uniqueness of Zero.",
+    "back": "For all $z \\in F,\\; (\\forall x, z + x = x) \\to z = 0$ \\; and \\; $(\\forall x, x + z = x) \\to z = 0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_unique"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-029",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Left Additive Inverse.",
+    "back": "For all $x \\in F,\\; -x + x = 0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_add"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-030",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Uniqueness of Additive Inverse.",
+    "back": "For all $x, y \\in F,\\; x + y = 0 \\to y = -x$ \\; and \\; $y + x = 0 \\to y = -x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_unique"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-031",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Additive Cancellation.",
+    "back": "For all $x, y, z \\in F,\\; x + y = x + z \\to y = z$ \\; and \\; $y + x = z + x \\to y = z$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_left_cancel"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-032",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Solve Addition via Subtraction.",
+    "back": "For all $x, a, b \\in F,\\; x + a = b \\leftrightarrow x = b - a$ \\; and \\; $a + x = b \\leftrightarrow x = b - a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_eq_iff_eq_sub"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-033",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Double Negation \\& Neg Zero.",
+    "back": "For all $x \\in F,\\; -(-x) = x$ \\; and \\; $-(0 : F) = 0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_neg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-034",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Flip Negation Across $=$.",
+    "back": "For all $x, y \\in F,\\; -x = y \\leftrightarrow x = -y$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_eq_iff_eq_neg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-035",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Self-Subtraction \\& Zero Test.",
+    "back": "For all $x, y \\in F,\\; x - x = 0$ \\; and \\; $x - y = 0 \\leftrightarrow x = y$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_self"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-036",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Negation of Sum \\& Difference.",
+    "back": "For all $x, y \\in F,\\; -(x + y) = -y + -x$ \\; and \\; $-(x - y) = y - x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_add_rev"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-037",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Add-Sub \\& Sub-Add Cancel.",
+    "back": "For all $x, y \\in F,\\; (x + y) - y = x,\\;\\; (y + x) - y = x,\\;\\; (x - y) + y = x,\\;\\; y + (x - y) = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_sub_cancel_*"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-038",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Iterated Subtraction.",
+    "back": "For all $x, y, z \\in F,\\; (x - y) - z = x - (y + z)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_sub"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-039",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Right Multiplicative Identity.",
+    "back": "For all $x \\in F,\\; x \\cdot 1 = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_one"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-040",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Uniqueness of One.",
+    "back": "For all $e \\in F,\\; (\\forall x, x \\cdot e = x) \\to e = 1$ \\; and \\; $(\\forall x, e \\cdot x = x) \\to e = 1$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "one_unique"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-041",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Left Multiplicative Inverse.",
+    "back": "For all $x \\in F,\\; x \\neq 0 \\to x^{-1} \\cdot x = 1$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_mul_cancel"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-042",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Uniqueness of Inverse.",
+    "back": "For all $x, y \\in F,\\; x \\neq 0 \\to x \\cdot y = 1 \\to y = x^{-1}$ \\; and \\; $y \\cdot x = 1 \\to y = x^{-1}$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_unique"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-043",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Multiplicative Cancellation.",
+    "back": "For all $x, y, z \\in F,\\; x \\neq 0 \\to x \\cdot y = x \\cdot z \\to y = z$ \\; and \\; $y \\cdot x = z \\cdot x \\to y = z$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_left_cancel"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-044",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Mul-Div \\& Div-Mul Cancel.",
+    "back": "For all $x, y \\in F,\\; y \\neq 0 \\to (x \\cdot y)/y = x,\\;\\; (y \\cdot x)/y = x,\\;\\; (x/y)\\cdot y = x,\\;\\; y \\cdot (x/y) = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_div_cancel_*"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-045",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Solve Multiplication via Division.",
+    "back": "For all $a, x, b \\in F,\\; a \\neq 0 \\to (a \\cdot x = b \\leftrightarrow x = b / a)$ \\; and \\; $(x \\cdot a = b \\leftrightarrow x = b / a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_eq_iff_eq_div"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-046",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Right Distributivity.",
+    "back": "For all $a, b, c \\in F,\\; (a + b) \\cdot c = a \\cdot c + b \\cdot c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_mul"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-047",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Multiplication by Zero.",
+    "back": "For all $a \\in F,\\; a \\cdot 0 = 0$ \\; and \\; $0 \\cdot a = 0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_zero"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-048",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Negation Pulls Out of Product.",
+    "back": "For all $a, b \\in F,\\; (-a) \\cdot b = -(a \\cdot b)$ \\; and \\; $a \\cdot (-b) = -(a \\cdot b)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_mul"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.tex-049",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "State: Distributivity over Subtraction.",
+    "back": "For all $a, b, c \\in F,\\; a \\cdot (b - c) = a \\cdot b - a \\cdot c$ \\; and \\; $(a - b) \\cdot c = a \\cdot c - b \\cdot c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_sub"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-sub_eq_add_neg",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of sub eq add neg.",
+    "back": "$a - b = a + -b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_eq_add_neg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-add_neg_eq_sub",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add neg eq sub.",
+    "back": "$a + -b = a - b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_neg_eq_sub"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-div_eq_mul_inv",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of div eq mul inv.",
+    "back": "$a / b = a * b^{-1}$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "div_eq_mul_inv"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_inv_eq_div",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul inv eq div.",
+    "back": "$a * b^{-1} = a / b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_inv_eq_div"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-add_zero",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add zero.",
+    "back": "$x + 0 = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_zero"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-zero_add",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of zero add.",
+    "back": "$0 + x = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_add"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-zero_unique",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of zero unique.",
+    "back": "$(\\forall  x, z + x = x) \\Rightarrow  z = 0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_unique"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-zero_unique_right",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of zero unique right.",
+    "back": "$(\\forall  x, x + z = x) \\Rightarrow  z = 0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_unique_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-neg_add",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg add.",
+    "back": "$-x+x=0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_add"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-neg_unique",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg unique.",
+    "back": "$x + y = 0 \\Rightarrow  y = -x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_unique"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-neg_unique_left",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg unique left.",
+    "back": "$y + x = 0 \\Rightarrow  y = -x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_unique_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-add_left_cancel",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add left cancel.",
+    "back": "$x + y = x + z \\Rightarrow  y = z$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_left_cancel"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-add_left_cancel",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in add left cancel?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_left_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_left_cancel"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-add_right_cancel",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add right cancel.",
+    "back": "$y + x = z + x \\Rightarrow  y = z$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_right_cancel"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-add_right_cancel",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in add right cancel?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_right_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_right_cancel"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-add_eq_iff_eq_sub",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add eq iff eq sub.",
+    "back": "$x + a = b \\Leftrightarrow  x = b - a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_eq_iff_eq_sub"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add eq iff eq sub left.",
+    "back": "$a + x = b \\Leftrightarrow  x = b - a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_eq_iff_eq_sub_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-neg_neg",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg neg.",
+    "back": "$-(-x) = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_neg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-neg_zero",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg zero.",
+    "back": "$-0=0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_zero"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-neg_eq_iff_eq_neg",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg eq iff eq neg.",
+    "back": "$-x = y \\Leftrightarrow  x = -y$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_eq_iff_eq_neg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-sub_self",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of sub self.",
+    "back": "$x - x = (0:R)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_self"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-sub_eq_zero_iff",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of sub eq zero iff.",
+    "back": "$x - y = 0 \\Leftrightarrow  x = y$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_eq_zero_iff"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-neg_add_rev",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg add rev.",
+    "back": "$-(x + y) = -y + -x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_add_rev"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-neg_sub",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg sub.",
+    "back": "$-(x - y) = y - x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_sub"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-add_sub_cancel_right",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add sub cancel right.",
+    "back": "$x + y - y = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_sub_cancel_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-add_sub_cancel_right",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in add sub cancel right?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_sub_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_sub_cancel_right"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-add_sub_cancel_left",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add sub cancel left.",
+    "back": "$y + x - y = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_sub_cancel_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-add_sub_cancel_left",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in add sub cancel left?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_sub_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_sub_cancel_left"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-sub_add_cancel_right",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of sub add cancel right.",
+    "back": "$x - y + y = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_add_cancel_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-sub_add_cancel_right",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in sub add cancel right?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_add_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_add_cancel_right"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-sub_add_cancel_left",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of sub add cancel left.",
+    "back": "$y + (x - y) = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_add_cancel_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-sub_add_cancel_left",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in sub add cancel left?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_add_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_add_cancel_left"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-sub_sub",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of sub sub.",
+    "back": "$x - y - z = x - (y + z)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_sub"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_one",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul one.",
+    "back": "$x * 1 = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_one"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-one_unique",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of one unique.",
+    "back": "$(\\forall  x, x * e = x) \\Rightarrow  e = 1$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "one_unique"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-one_unique_left",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of one unique left.",
+    "back": "$(\\forall  x, e * x = x) \\Rightarrow  e = 1$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "one_unique_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-inv_mul_cancel",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of inv mul cancel.",
+    "back": "$x \\ne  0 \\Rightarrow  x^{-1} * x = 1$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_mul_cancel"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-inv_mul_cancel",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in inv mul cancel?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_mul_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-inv_mul_cancel"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-inv_unique",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of inv unique.",
+    "back": "$x \\ne  0 \\Rightarrow  x * y = 1 \\Rightarrow  y = x^{-1}$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_unique"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-inv_unique",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in inv unique?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_unique"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-inv_unique"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-inv_unique_left",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of inv unique left.",
+    "back": "$x \\ne  0 \\Rightarrow  y * x = 1 \\Rightarrow  y = x^{-1}$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_unique_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-inv_unique_left",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in inv unique left?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_unique_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-inv_unique_left"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_left_cancel",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul left cancel.",
+    "back": "$x \\ne  0 \\Rightarrow  x * y = x * z \\Rightarrow  y = z$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_left_cancel"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-mul_left_cancel",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in mul left cancel?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_left_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_left_cancel"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_right_cancel",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul right cancel.",
+    "back": "$x \\ne  0 \\Rightarrow  y * x = z * x \\Rightarrow  y = z$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_right_cancel"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-mul_right_cancel",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in mul right cancel?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_right_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_right_cancel"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_div_cancel_right",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul div cancel right.",
+    "back": "$y\\ne0\\Rightarrow (xy)/y=x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_div_cancel_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-mul_div_cancel_right",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in mul div cancel right?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_div_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_div_cancel_right"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_div_cancel_left",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul div cancel left.",
+    "back": "$y\\ne0\\Rightarrow (yx)/y=x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_div_cancel_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-mul_div_cancel_left",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in mul div cancel left?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_div_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_div_cancel_left"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-div_mul_cancel_right",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of div mul cancel right.",
+    "back": "$y\\ne0\\Rightarrow (x/y)y=x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "div_mul_cancel_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-div_mul_cancel_right",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in div mul cancel right?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "div_mul_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-div_mul_cancel_right"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-div_mul_cancel_left",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of div mul cancel left.",
+    "back": "$y\\ne0\\Rightarrow y(x/y)=x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "div_mul_cancel_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-div_mul_cancel_left",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in div mul cancel left?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "div_mul_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-div_mul_cancel_left"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_eq_iff_eq_div",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul eq iff eq div.",
+    "back": "$a \\ne  0 \\Rightarrow  (a * x = b \\Leftrightarrow  x = b / a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_eq_iff_eq_div"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-mul_eq_iff_eq_div",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in mul eq iff eq div?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_eq_iff_eq_div"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_eq_iff_eq_div"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul eq iff eq div right.",
+    "back": "$a \\ne  0 \\Rightarrow  (x * a = b \\Leftrightarrow  x = b / a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_eq_iff_eq_div_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.hyp-mul_eq_iff_eq_div_right",
+    "type": "hypothesis",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "What necessary hypothesis appears in mul eq iff eq div right?",
+    "back": "The canceled or inverted factor must be nonzero.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_eq_iff_eq_div_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right"
+    ],
+    "tags": [
+      "hypothesis",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-add_mul",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add mul.",
+    "back": "$(a + b) * c = a * c + b * c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_mul"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_zero",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul zero.",
+    "back": "$a * 0 = 0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_zero"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-zero_mul",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of zero mul.",
+    "back": "$0 * a = 0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_mul"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-neg_mul",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg mul.",
+    "back": "$(-a) * b = -(a * b)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_mul"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_neg",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul neg.",
+    "back": "$a * (-b) = -(a * b)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_neg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-mul_sub",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul sub.",
+    "back": "$a * (b - c) = a * b - a * c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_sub"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.06.lean-sub_mul",
+    "type": "theorem",
+    "stage": 6,
+    "topic": "Derived algebraic theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of sub mul.",
+    "back": "$(a - b) * c = a * c - b * c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_mul"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  }
+]

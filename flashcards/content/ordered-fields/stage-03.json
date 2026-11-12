@@ -1,0 +1,230 @@
+[
+  {
+    "id": "aim.orderedfields.03.tex-001",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Addition is Associative.",
+    "back": "For all $a, b, c \\in F,\\; (a + b) + c = a + (b + c)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsAddAssoc.add_assoc"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.tex-002",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Addition is Commutative.",
+    "back": "For all $a, b \\in F,\\; a + b = b + a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsAddComm.add_comm"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.tex-003",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Left Additive Identity ($0$).",
+    "back": "For all $a \\in F,\\; 0 + a = a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsZeroAdd.zero_add"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.tex-004",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Right Additive Inverse ($-a$).",
+    "back": "For all $a \\in F,\\; a + (-a) = 0$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsAddNeg.add_neg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.tex-005",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Subtraction Definition.",
+    "back": "For all $a, b \\in F,\\; a - b = a + (-b)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsSubEqAddNeg.sub_eq_add_neg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.tex-006",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Multiplication is Associative.",
+    "back": "For all $a, b, c \\in F,\\; (a \\cdot b) \\cdot c = a \\cdot (b \\cdot c)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsMulAssoc.mul_assoc"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.tex-007",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Multiplication is Commutative.",
+    "back": "For all $a, b \\in F,\\; a \\cdot b = b \\cdot a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsMulComm.mul_comm"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.tex-008",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Left Multiplicative Identity ($1$).",
+    "back": "For all $a \\in F,\\; 1 \\cdot a = a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsOneMul.one_mul"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.mul-inv-axiom",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State the multiplicative inverse axiom.",
+    "back": "For all $a\\in F$, if $a\\ne0$, then $a\\cdot a^{-1}=1$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsMulInvCancel.mul_inv_cancel"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.tex-009",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Non-Triviality ($0 \\neq 1$).",
+    "back": "The additive and multiplicative identities are distinct: $(0 : F) \\neq 1$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsZeroNeOne.zero_ne_one"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.tex-010",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Division Definition.",
+    "back": "For all $a, b \\in F,\\; a / b = a \\cdot b^{-1}$ \\; (reverse: )",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsDivEqMulInv.div_eq_mul_inv"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.03.tex-011",
+    "type": "axiom",
+    "stage": 3,
+    "topic": "Field axioms",
+    "difficulty": "introductory",
+    "front": "State: Left Distributivity.",
+    "back": "For all $a, b, c \\in F,\\; a \\cdot (b + c) = a \\cdot b + a \\cdot c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsMulAdd.mul_add"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  }
+]

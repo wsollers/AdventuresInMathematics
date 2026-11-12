@@ -1,0 +1,464 @@
+[
+  {
+    "id": "aim.orderedfields.08.dependency-add_zero",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support add_zero?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_zero"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_zero"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-add_zero",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove add zero.",
+    "back": "$x+0=0+x=x$; use commutativity then left identity.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_zero"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_zero"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.dependency-neg_add",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support neg_add?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_add"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_add"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-neg_add",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove neg add.",
+    "back": "$-x+x=x+(-x)=0$; use commutativity and right inverse.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_add"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_add"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.dependency-mul_one",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support mul_one?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_one"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_one"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-mul_one",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove mul one.",
+    "back": "$x1=1x=x$; use commutativity and left identity.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_one"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_one"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.dependency-add_left_cancel",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support add_left_cancel?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_left_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_left_cancel"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-add_left_cancel",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove add left cancel.",
+    "back": "From $x+y=x+z$, add $-x$ to both sides; reassociate and simplify to $y=z$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_left_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_left_cancel"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.dependency-sub_self",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support sub_self?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_self"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_self"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-sub_self",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove sub self.",
+    "back": "$x-x=x+(-x)=0$ by the definition of subtraction and additive inverse.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_self"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_self"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.dependency-mul_zero",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support mul_zero?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_zero"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_zero"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-mul_zero",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove mul zero.",
+    "back": "$a0=a(0+0)=a0+a0$; cancel the first $a0$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_zero"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_zero"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.dependency-lt_irrefl",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support lt_irrefl?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_irrefl"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_irrefl"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-lt_irrefl",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove lt irrefl.",
+    "back": "Assume $a<a$. The strict-order definition gives $a\\le a$ and $\\neg(a\\le a)$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_irrefl"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_irrefl"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.dependency-lt_trans",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support lt_trans?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_trans"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_trans"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-lt_trans",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove lt trans.",
+    "back": "From $a<b<c$, get $a\\le c$. If $c\\le a$, transitivity gives $b\\le a$, contradicting $a<b$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_trans"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_trans"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.dependency-add_mul",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support add_mul?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_mul"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_mul"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-add_mul",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove add mul.",
+    "back": "$(a+b)c=c(a+b)=ca+cb=ac+bc$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_mul"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_mul"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.dependency-inv_mul_cancel",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support inv_mul_cancel?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_mul_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-inv_mul_cancel"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-inv_mul_cancel",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove inv mul cancel.",
+    "back": "For $x\\ne0$, $x^{-1}x=xx^{-1}=1$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_mul_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-inv_mul_cancel"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.dependency-neg_neg",
+    "type": "dependency",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Which earlier results support neg_neg?",
+    "back": "Identify the applicable identity, inverse, associativity, or order laws.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_neg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_neg"
+    ],
+    "tags": [
+      "dependency",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.08.proof-neg_neg",
+    "type": "proof",
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "front": "Prove neg neg.",
+    "back": "$-x+x=0$, so inverse uniqueness identifies $x$ as the inverse of $-x$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_neg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_neg"
+    ],
+    "tags": [
+      "proof",
+      "ordered-fields"
+    ]
+  }
+]

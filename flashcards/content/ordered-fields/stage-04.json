@@ -1,0 +1,154 @@
+[
+  {
+    "id": "aim.orderedfields.04.tex-012",
+    "type": "axiom",
+    "stage": 4,
+    "topic": "Ordered fields",
+    "difficulty": "introductory",
+    "front": "State: Order is Reflexive.",
+    "back": "For all $a \\in F,\\; a \\le a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsLERefl.le_refl"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.tex-013",
+    "type": "axiom",
+    "stage": 4,
+    "topic": "Ordered fields",
+    "difficulty": "introductory",
+    "front": "State: Order is Transitive.",
+    "back": "For all $a, b, c \\in F,\\; a \\le b \\to b \\le c \\to a \\le c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsLETrans.le_trans"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.tex-014",
+    "type": "axiom",
+    "stage": 4,
+    "topic": "Ordered fields",
+    "difficulty": "introductory",
+    "front": "State: Order is Antisymmetric.",
+    "back": "For all $a, b \\in F,\\; a \\le b \\to b \\le a \\to a = b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsLEAntisymm.le_antisymm"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.tex-015",
+    "type": "axiom",
+    "stage": 4,
+    "topic": "Ordered fields",
+    "difficulty": "introductory",
+    "front": "State: Order is Total (Linear).",
+    "back": "For all $a, b \\in F,\\; a \\le b \\lor b \\le a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsLETotal.le_total"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.tex-016",
+    "type": "concept",
+    "stage": 4,
+    "topic": "Ordered fields",
+    "difficulty": "introductory",
+    "front": "What does decidability of $a\\le b$ provide in Lean?",
+    "back": "A procedure to decide the comparison, needed for computational branching; it is not a mathematical order axiom.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "LEDecidable.decLE"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.tex-017",
+    "type": "axiom",
+    "stage": 4,
+    "topic": "Ordered fields",
+    "difficulty": "introductory",
+    "front": "State: Strict Order Equivalence.",
+    "back": "For all $a, b \\in F,\\; a < b \\leftrightarrow (a \\le b \\land \\lnot(b \\le a))$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsLTIffLENotLE.lt_iff_le_not_le"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.tex-018",
+    "type": "axiom",
+    "stage": 4,
+    "topic": "Ordered fields",
+    "difficulty": "introductory",
+    "front": "State: Addition Preserves $\\le$ (Right).",
+    "back": "For all $a, b \\in F,\\; a \\le b \\to \\forall c \\in F,\\; a + c \\le b + c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsAddLEAddRight.add_le_add_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.tex-019",
+    "type": "axiom",
+    "stage": 4,
+    "topic": "Ordered fields",
+    "difficulty": "introductory",
+    "front": "State: Product of Positives is Positive.",
+    "back": "For all $a, b \\in F,\\; 0 < a \\to 0 < b \\to 0 < a \\cdot b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsMulPos.mul_pos"
+    },
+    "prerequisites": [],
+    "tags": [
+      "axiom",
+      "ordered-fields"
+    ]
+  }
+]

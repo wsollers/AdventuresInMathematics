@@ -1,0 +1,230 @@
+[
+  {
+    "id": "aim.orderedfields.02.carrier",
+    "type": "definition",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "What is the carrier of a field?",
+    "back": "Its underlying set $F$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.assoc",
+    "type": "definition",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "Define associativity.",
+    "back": "$(a\\star b)\\star c=a\\star(b\\star c)$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.comm",
+    "type": "definition",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "Define commutativity.",
+    "back": "$a\\star b=b\\star a$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.identity",
+    "type": "definition",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "Define a two-sided identity $e$.",
+    "back": "$e\\star a=a=a\\star e$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.inverse",
+    "type": "definition",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "Define an inverse $b$ of $a$.",
+    "back": "$a\\star b=e=b\\star a$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.group",
+    "type": "definition",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "What is a group?",
+    "back": "An associative operation with an identity and inverses.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.abelian",
+    "type": "definition",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "What is an abelian group?",
+    "back": "A group whose operation is commutative.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.ring",
+    "type": "definition",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "What is a unital ring?",
+    "back": "An additive abelian group with associative unital multiplication distributing over addition.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.field",
+    "type": "definition",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "What is a field?",
+    "back": "A commutative unital ring with $0\\ne1$ and inverses for nonzero elements.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.axiomtheorem",
+    "type": "concept",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "Axiom versus theorem?",
+    "back": "An axiom is assumed; a theorem is derived.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "concept",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.integers",
+    "type": "counterexample",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "Why is $\\mathbb Z$ not a field?",
+    "back": "$2$ has no reciprocal in $\\mathbb Z$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "counterexample",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.02.rationals",
+    "type": "example",
+    "stage": 2,
+    "topic": "Algebraic structures",
+    "difficulty": "foundation",
+    "front": "Give an example of a field.",
+    "back": "$\\mathbb Q$ with usual operations.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "example",
+      "ordered-fields"
+    ]
+  }
+]

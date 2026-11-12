@@ -1,0 +1,1136 @@
+{
+  "source_commit": "5bda7f10ee04f7a20a3c2136afe397953804b85f",
+  "tex_rows": [
+    {
+      "label": "Addition is Associative",
+      "card_ids": [
+        "aim.orderedfields.03.tex-001"
+      ]
+    },
+    {
+      "label": "Addition is Commutative",
+      "card_ids": [
+        "aim.orderedfields.03.tex-002"
+      ]
+    },
+    {
+      "label": "Left Additive Identity ($0$)",
+      "card_ids": [
+        "aim.orderedfields.03.tex-003"
+      ]
+    },
+    {
+      "label": "Right Additive Inverse ($-a$)",
+      "card_ids": [
+        "aim.orderedfields.03.tex-004"
+      ]
+    },
+    {
+      "label": "Subtraction Definition",
+      "card_ids": [
+        "aim.orderedfields.03.tex-005"
+      ]
+    },
+    {
+      "label": "Multiplication is Associative",
+      "card_ids": [
+        "aim.orderedfields.03.tex-006"
+      ]
+    },
+    {
+      "label": "Multiplication is Commutative",
+      "card_ids": [
+        "aim.orderedfields.03.tex-007"
+      ]
+    },
+    {
+      "label": "Left Multiplicative Identity ($1$)",
+      "card_ids": [
+        "aim.orderedfields.03.tex-008"
+      ]
+    },
+    {
+      "label": "Right Multiplicative Inverse ($a^{-1}$)",
+      "card_ids": [
+        "aim.orderedfields.03.mul-inv-axiom"
+      ]
+    },
+    {
+      "label": "Non-Triviality ($0 \\neq 1$)",
+      "card_ids": [
+        "aim.orderedfields.03.tex-009"
+      ]
+    },
+    {
+      "label": "Division Definition",
+      "card_ids": [
+        "aim.orderedfields.03.tex-010"
+      ]
+    },
+    {
+      "label": "Left Distributivity",
+      "card_ids": [
+        "aim.orderedfields.03.tex-011"
+      ]
+    },
+    {
+      "label": "Order is Reflexive",
+      "card_ids": [
+        "aim.orderedfields.04.tex-012"
+      ]
+    },
+    {
+      "label": "Order is Transitive",
+      "card_ids": [
+        "aim.orderedfields.04.tex-013"
+      ]
+    },
+    {
+      "label": "Order is Antisymmetric",
+      "card_ids": [
+        "aim.orderedfields.04.tex-014"
+      ]
+    },
+    {
+      "label": "Order is Total (Linear)",
+      "card_ids": [
+        "aim.orderedfields.04.tex-015"
+      ]
+    },
+    {
+      "label": "Decidable Comparison (Lean Data)",
+      "card_ids": [
+        "aim.orderedfields.04.tex-016"
+      ]
+    },
+    {
+      "label": "Strict Order Equivalence",
+      "card_ids": [
+        "aim.orderedfields.04.tex-017"
+      ]
+    },
+    {
+      "label": "Addition Preserves $\\le$ (Right)",
+      "card_ids": [
+        "aim.orderedfields.04.tex-018"
+      ]
+    },
+    {
+      "label": "Product of Positives is Positive",
+      "card_ids": [
+        "aim.orderedfields.04.tex-019"
+      ]
+    },
+    {
+      "label": "Upper Bound Definition",
+      "card_ids": [
+        "aim.orderedfields.05.tex-020"
+      ]
+    },
+    {
+      "label": "Least Upper Bound ($\\sup$)",
+      "card_ids": [
+        "aim.orderedfields.05.tex-021"
+      ]
+    },
+    {
+      "label": "Order Completeness (LUB)",
+      "card_ids": [
+        "aim.orderedfields.05.tex-022"
+      ]
+    },
+    {
+      "label": "Archimedean Property",
+      "card_ids": [
+        "aim.orderedfields.05.tex-023"
+      ]
+    },
+    {
+      "label": "Reflexivity \\& Symmetry of $=$",
+      "card_ids": [
+        "aim.orderedfields.05.tex-024"
+      ]
+    },
+    {
+      "label": "Congruence of Functions",
+      "card_ids": [
+        "aim.orderedfields.05.tex-025"
+      ]
+    },
+    {
+      "label": "Rewrite \\& Reverse Rewrite",
+      "card_ids": [
+        "aim.orderedfields.05.tex-026"
+      ]
+    },
+    {
+      "label": "Right \\& Left Additive Identity",
+      "card_ids": [
+        "aim.orderedfields.06.tex-027"
+      ]
+    },
+    {
+      "label": "Uniqueness of Zero",
+      "card_ids": [
+        "aim.orderedfields.06.tex-028"
+      ]
+    },
+    {
+      "label": "Left Additive Inverse",
+      "card_ids": [
+        "aim.orderedfields.06.tex-029"
+      ]
+    },
+    {
+      "label": "Uniqueness of Additive Inverse",
+      "card_ids": [
+        "aim.orderedfields.06.tex-030"
+      ]
+    },
+    {
+      "label": "Additive Cancellation",
+      "card_ids": [
+        "aim.orderedfields.06.tex-031"
+      ]
+    },
+    {
+      "label": "Solve Addition via Subtraction",
+      "card_ids": [
+        "aim.orderedfields.06.tex-032"
+      ]
+    },
+    {
+      "label": "Double Negation \\& Neg Zero",
+      "card_ids": [
+        "aim.orderedfields.06.tex-033"
+      ]
+    },
+    {
+      "label": "Flip Negation Across $=$",
+      "card_ids": [
+        "aim.orderedfields.06.tex-034"
+      ]
+    },
+    {
+      "label": "Self-Subtraction \\& Zero Test",
+      "card_ids": [
+        "aim.orderedfields.06.tex-035"
+      ]
+    },
+    {
+      "label": "Negation of Sum \\& Difference",
+      "card_ids": [
+        "aim.orderedfields.06.tex-036"
+      ]
+    },
+    {
+      "label": "Add-Sub \\& Sub-Add Cancel",
+      "card_ids": [
+        "aim.orderedfields.06.tex-037"
+      ]
+    },
+    {
+      "label": "Iterated Subtraction",
+      "card_ids": [
+        "aim.orderedfields.06.tex-038"
+      ]
+    },
+    {
+      "label": "Right Multiplicative Identity",
+      "card_ids": [
+        "aim.orderedfields.06.tex-039"
+      ]
+    },
+    {
+      "label": "Uniqueness of One",
+      "card_ids": [
+        "aim.orderedfields.06.tex-040"
+      ]
+    },
+    {
+      "label": "Left Multiplicative Inverse",
+      "card_ids": [
+        "aim.orderedfields.06.tex-041"
+      ]
+    },
+    {
+      "label": "Uniqueness of Inverse",
+      "card_ids": [
+        "aim.orderedfields.06.tex-042"
+      ]
+    },
+    {
+      "label": "Multiplicative Cancellation",
+      "card_ids": [
+        "aim.orderedfields.06.tex-043"
+      ]
+    },
+    {
+      "label": "Mul-Div \\& Div-Mul Cancel",
+      "card_ids": [
+        "aim.orderedfields.06.tex-044"
+      ]
+    },
+    {
+      "label": "Solve Multiplication via Division",
+      "card_ids": [
+        "aim.orderedfields.06.tex-045"
+      ]
+    },
+    {
+      "label": "Right Distributivity",
+      "card_ids": [
+        "aim.orderedfields.06.tex-046"
+      ]
+    },
+    {
+      "label": "Multiplication by Zero",
+      "card_ids": [
+        "aim.orderedfields.06.tex-047"
+      ]
+    },
+    {
+      "label": "Negation Pulls Out of Product",
+      "card_ids": [
+        "aim.orderedfields.06.tex-048"
+      ]
+    },
+    {
+      "label": "Distributivity over Subtraction",
+      "card_ids": [
+        "aim.orderedfields.06.tex-049"
+      ]
+    },
+    {
+      "label": "Strict Order is Irreflexive",
+      "card_ids": [
+        "aim.orderedfields.07.tex-050"
+      ]
+    },
+    {
+      "label": "Strict Implies Non-Strict ($\\le$)",
+      "card_ids": [
+        "aim.orderedfields.07.tex-051"
+      ]
+    },
+    {
+      "label": "Strict Rules Out Reverse $\\le$",
+      "card_ids": [
+        "aim.orderedfields.07.tex-052"
+      ]
+    },
+    {
+      "label": "Strict Order is Asymmetric",
+      "card_ids": [
+        "aim.orderedfields.07.tex-053"
+      ]
+    },
+    {
+      "label": "Strict Order is Transitive",
+      "card_ids": [
+        "aim.orderedfields.07.tex-054"
+      ]
+    },
+    {
+      "label": "Mixed Transitivity ($<$ and $\\le$)",
+      "card_ids": [
+        "aim.orderedfields.07.tex-055"
+      ]
+    },
+    {
+      "label": "Non-Strict Split ($<$ or $=$)",
+      "card_ids": [
+        "aim.orderedfields.07.tex-056"
+      ]
+    },
+    {
+      "label": "Law of Trichotomy",
+      "card_ids": [
+        "aim.orderedfields.07.tex-057"
+      ]
+    },
+    {
+      "label": "Addition Preserves $\\le$",
+      "card_ids": [
+        "aim.orderedfields.07.tex-058"
+      ]
+    },
+    {
+      "label": "Addition Reflects $\\le$ (Cancel)",
+      "card_ids": [
+        "aim.orderedfields.07.tex-059"
+      ]
+    },
+    {
+      "label": "Adding Two $\\le$ Inequalities",
+      "card_ids": [
+        "aim.orderedfields.07.tex-060"
+      ]
+    },
+    {
+      "label": "Addition Preserves $<$",
+      "card_ids": [
+        "aim.orderedfields.07.tex-061"
+      ]
+    },
+    {
+      "label": "Addition Reflects $<$ (Cancel)",
+      "card_ids": [
+        "aim.orderedfields.07.tex-062"
+      ]
+    },
+    {
+      "label": "Adding Two $<$ Inequalities",
+      "card_ids": [
+        "aim.orderedfields.07.tex-063"
+      ]
+    },
+    {
+      "label": "Subtraction Detects Order",
+      "card_ids": [
+        "aim.orderedfields.07.tex-064"
+      ]
+    },
+    {
+      "label": "Negation Reverses Order",
+      "card_ids": [
+        "aim.orderedfields.07.tex-065"
+      ]
+    },
+    {
+      "label": "Product of Nonnegatives",
+      "card_ids": [
+        "aim.orderedfields.07.tex-066"
+      ]
+    },
+    {
+      "label": "Positive Factor Preserves $<, \\le$",
+      "card_ids": [
+        "aim.orderedfields.07.tex-067"
+      ]
+    },
+    {
+      "label": "Negative Factor Reverses $<, \\le$",
+      "card_ids": [
+        "aim.orderedfields.07.tex-068"
+      ]
+    },
+    {
+      "label": "Max Commutativity \\& Triangle",
+      "card_ids": [
+        "aim.orderedfields.07.tex-069"
+      ]
+    }
+  ],
+  "lean_declarations": [
+    {
+      "declaration": "sub_eq_add_neg",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-sub_eq_add_neg"
+      ]
+    },
+    {
+      "declaration": "add_neg_eq_sub",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-add_neg_eq_sub"
+      ]
+    },
+    {
+      "declaration": "div_eq_mul_inv",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-div_eq_mul_inv"
+      ]
+    },
+    {
+      "declaration": "mul_inv_eq_div",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-mul_inv_eq_div"
+      ]
+    },
+    {
+      "declaration": "identity",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": []
+    },
+    {
+      "declaration": "add_zero",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-027",
+        "aim.orderedfields.06.lean-add_zero",
+        "aim.orderedfields.08.dependency-add_zero",
+        "aim.orderedfields.08.proof-add_zero"
+      ]
+    },
+    {
+      "declaration": "zero_add",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-zero_add"
+      ]
+    },
+    {
+      "declaration": "zero_unique",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-028",
+        "aim.orderedfields.06.lean-zero_unique"
+      ]
+    },
+    {
+      "declaration": "zero_unique_right",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-zero_unique_right"
+      ]
+    },
+    {
+      "declaration": "neg_add",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-029",
+        "aim.orderedfields.06.lean-neg_add",
+        "aim.orderedfields.08.dependency-neg_add",
+        "aim.orderedfields.08.proof-neg_add"
+      ]
+    },
+    {
+      "declaration": "neg_unique",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-030",
+        "aim.orderedfields.06.lean-neg_unique"
+      ]
+    },
+    {
+      "declaration": "neg_unique_left",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-neg_unique_left"
+      ]
+    },
+    {
+      "declaration": "add_left_cancel",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-031",
+        "aim.orderedfields.06.lean-add_left_cancel",
+        "aim.orderedfields.06.hyp-add_left_cancel",
+        "aim.orderedfields.08.dependency-add_left_cancel",
+        "aim.orderedfields.08.proof-add_left_cancel"
+      ]
+    },
+    {
+      "declaration": "add_right_cancel",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-add_right_cancel",
+        "aim.orderedfields.06.hyp-add_right_cancel"
+      ]
+    },
+    {
+      "declaration": "add_eq_iff_eq_sub",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-032",
+        "aim.orderedfields.06.lean-add_eq_iff_eq_sub"
+      ]
+    },
+    {
+      "declaration": "add_eq_iff_eq_sub_left",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left"
+      ]
+    },
+    {
+      "declaration": "neg_neg",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-033",
+        "aim.orderedfields.06.lean-neg_neg",
+        "aim.orderedfields.08.dependency-neg_neg",
+        "aim.orderedfields.08.proof-neg_neg"
+      ]
+    },
+    {
+      "declaration": "neg_zero",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-neg_zero"
+      ]
+    },
+    {
+      "declaration": "neg_eq_iff_eq_neg",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-034",
+        "aim.orderedfields.06.lean-neg_eq_iff_eq_neg"
+      ]
+    },
+    {
+      "declaration": "sub_self",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-035",
+        "aim.orderedfields.06.lean-sub_self",
+        "aim.orderedfields.08.dependency-sub_self",
+        "aim.orderedfields.08.proof-sub_self"
+      ]
+    },
+    {
+      "declaration": "sub_eq_zero_iff",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-sub_eq_zero_iff"
+      ]
+    },
+    {
+      "declaration": "neg_add_rev",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-036",
+        "aim.orderedfields.06.lean-neg_add_rev"
+      ]
+    },
+    {
+      "declaration": "neg_sub",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-neg_sub"
+      ]
+    },
+    {
+      "declaration": "add_sub_cancel_right",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-add_sub_cancel_right",
+        "aim.orderedfields.06.hyp-add_sub_cancel_right"
+      ]
+    },
+    {
+      "declaration": "add_sub_cancel_left",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-add_sub_cancel_left",
+        "aim.orderedfields.06.hyp-add_sub_cancel_left"
+      ]
+    },
+    {
+      "declaration": "sub_add_cancel_right",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-sub_add_cancel_right",
+        "aim.orderedfields.06.hyp-sub_add_cancel_right"
+      ]
+    },
+    {
+      "declaration": "sub_add_cancel_left",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-sub_add_cancel_left",
+        "aim.orderedfields.06.hyp-sub_add_cancel_left"
+      ]
+    },
+    {
+      "declaration": "sub_sub",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-038",
+        "aim.orderedfields.06.lean-sub_sub"
+      ]
+    },
+    {
+      "declaration": "mul_one",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-039",
+        "aim.orderedfields.06.lean-mul_one",
+        "aim.orderedfields.08.dependency-mul_one",
+        "aim.orderedfields.08.proof-mul_one"
+      ]
+    },
+    {
+      "declaration": "one_unique",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-040",
+        "aim.orderedfields.06.lean-one_unique"
+      ]
+    },
+    {
+      "declaration": "one_unique_left",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-one_unique_left"
+      ]
+    },
+    {
+      "declaration": "inv_mul_cancel",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-041",
+        "aim.orderedfields.06.lean-inv_mul_cancel",
+        "aim.orderedfields.06.hyp-inv_mul_cancel",
+        "aim.orderedfields.08.dependency-inv_mul_cancel",
+        "aim.orderedfields.08.proof-inv_mul_cancel"
+      ]
+    },
+    {
+      "declaration": "inv_unique",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-042",
+        "aim.orderedfields.06.lean-inv_unique",
+        "aim.orderedfields.06.hyp-inv_unique"
+      ]
+    },
+    {
+      "declaration": "inv_unique_left",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-inv_unique_left",
+        "aim.orderedfields.06.hyp-inv_unique_left"
+      ]
+    },
+    {
+      "declaration": "mul_left_cancel",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-043",
+        "aim.orderedfields.06.lean-mul_left_cancel",
+        "aim.orderedfields.06.hyp-mul_left_cancel"
+      ]
+    },
+    {
+      "declaration": "mul_right_cancel",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-mul_right_cancel",
+        "aim.orderedfields.06.hyp-mul_right_cancel"
+      ]
+    },
+    {
+      "declaration": "mul_div_cancel_right",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.06.lean-mul_div_cancel_right",
+        "aim.orderedfields.06.hyp-mul_div_cancel_right"
+      ]
+    },
+    {
+      "declaration": "mul_div_cancel_left",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-mul_div_cancel_left",
+        "aim.orderedfields.06.hyp-mul_div_cancel_left"
+      ]
+    },
+    {
+      "declaration": "div_mul_cancel_right",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-div_mul_cancel_right",
+        "aim.orderedfields.06.hyp-div_mul_cancel_right"
+      ]
+    },
+    {
+      "declaration": "div_mul_cancel_left",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-div_mul_cancel_left",
+        "aim.orderedfields.06.hyp-div_mul_cancel_left"
+      ]
+    },
+    {
+      "declaration": "mul_eq_iff_eq_div",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-045",
+        "aim.orderedfields.06.lean-mul_eq_iff_eq_div",
+        "aim.orderedfields.06.hyp-mul_eq_iff_eq_div"
+      ]
+    },
+    {
+      "declaration": "mul_eq_iff_eq_div_right",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right",
+        "aim.orderedfields.06.hyp-mul_eq_iff_eq_div_right"
+      ]
+    },
+    {
+      "declaration": "add_mul",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.05.tex-046",
+        "aim.orderedfields.06.lean-add_mul",
+        "aim.orderedfields.08.dependency-add_mul",
+        "aim.orderedfields.08.proof-add_mul"
+      ]
+    },
+    {
+      "declaration": "lt_irrefl",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.07.tex-050",
+        "aim.orderedfields.07.lean-lt_irrefl",
+        "aim.orderedfields.08.dependency-lt_irrefl",
+        "aim.orderedfields.08.proof-lt_irrefl"
+      ]
+    },
+    {
+      "declaration": "le_of_lt",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.07.tex-051",
+        "aim.orderedfields.07.lean-le_of_lt"
+      ]
+    },
+    {
+      "declaration": "not_le_of_lt",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.07.tex-052",
+        "aim.orderedfields.07.lean-not_le_of_lt"
+      ]
+    },
+    {
+      "declaration": "lt_asymm",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": [
+        "aim.orderedfields.07.tex-053",
+        "aim.orderedfields.07.lean-lt_asymm"
+      ]
+    },
+    {
+      "declaration": "lt_trans",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-054",
+        "aim.orderedfields.07.lean-lt_trans",
+        "aim.orderedfields.08.dependency-lt_trans",
+        "aim.orderedfields.08.proof-lt_trans"
+      ]
+    },
+    {
+      "declaration": "lt_of_lt_of_le",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-055",
+        "aim.orderedfields.07.lean-lt_of_lt_of_le"
+      ]
+    },
+    {
+      "declaration": "lt_of_le_of_lt",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-lt_of_le_of_lt"
+      ]
+    },
+    {
+      "declaration": "le_iff_lt_or_eq",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-056",
+        "aim.orderedfields.07.lean-le_iff_lt_or_eq"
+      ]
+    },
+    {
+      "declaration": "lt_trichotomy",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-057",
+        "aim.orderedfields.07.lean-lt_trichotomy"
+      ]
+    },
+    {
+      "declaration": "add_le_add_right",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-058",
+        "aim.orderedfields.07.lean-add_le_add_right"
+      ]
+    },
+    {
+      "declaration": "add_le_add_left",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-add_le_add_left"
+      ]
+    },
+    {
+      "declaration": "le_of_add_le_add_right",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-059",
+        "aim.orderedfields.07.lean-le_of_add_le_add_right"
+      ]
+    },
+    {
+      "declaration": "le_of_add_le_add_left",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-le_of_add_le_add_left"
+      ]
+    },
+    {
+      "declaration": "add_le_add",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-060",
+        "aim.orderedfields.07.lean-add_le_add"
+      ]
+    },
+    {
+      "declaration": "add_lt_add_right",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-061",
+        "aim.orderedfields.07.lean-add_lt_add_right"
+      ]
+    },
+    {
+      "declaration": "add_lt_add_left",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-add_lt_add_left"
+      ]
+    },
+    {
+      "declaration": "lt_of_add_lt_add_right",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-062",
+        "aim.orderedfields.07.lean-lt_of_add_lt_add_right"
+      ]
+    },
+    {
+      "declaration": "lt_of_add_lt_add_left",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-lt_of_add_lt_add_left"
+      ]
+    },
+    {
+      "declaration": "add_lt_add",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-063",
+        "aim.orderedfields.07.lean-add_lt_add"
+      ]
+    },
+    {
+      "declaration": "sub_nonneg",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-064",
+        "aim.orderedfields.07.lean-sub_nonneg"
+      ]
+    },
+    {
+      "declaration": "sub_pos",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-sub_pos"
+      ]
+    },
+    {
+      "declaration": "neg_le_neg_iff",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-065",
+        "aim.orderedfields.07.lean-neg_le_neg_iff"
+      ]
+    },
+    {
+      "declaration": "neg_lt_neg_iff",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-neg_lt_neg_iff"
+      ]
+    },
+    {
+      "declaration": "neg_pos_of_neg",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-neg_pos_of_neg"
+      ]
+    },
+    {
+      "declaration": "mul_zero",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.05.tex-047",
+        "aim.orderedfields.06.lean-mul_zero",
+        "aim.orderedfields.08.dependency-mul_zero",
+        "aim.orderedfields.08.proof-mul_zero"
+      ]
+    },
+    {
+      "declaration": "zero_mul",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.06.lean-zero_mul"
+      ]
+    },
+    {
+      "declaration": "neg_mul",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.05.tex-048",
+        "aim.orderedfields.06.lean-neg_mul"
+      ]
+    },
+    {
+      "declaration": "mul_neg",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.06.lean-mul_neg"
+      ]
+    },
+    {
+      "declaration": "mul_sub",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.05.tex-049",
+        "aim.orderedfields.06.lean-mul_sub"
+      ]
+    },
+    {
+      "declaration": "sub_mul",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.06.lean-sub_mul"
+      ]
+    },
+    {
+      "declaration": "mul_nonneg",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-066",
+        "aim.orderedfields.07.lean-mul_nonneg"
+      ]
+    },
+    {
+      "declaration": "mul_lt_mul_of_pos_right",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right"
+      ]
+    },
+    {
+      "declaration": "mul_lt_mul_of_pos_left",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left"
+      ]
+    },
+    {
+      "declaration": "mul_le_mul_of_nonneg_right",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right"
+      ]
+    },
+    {
+      "declaration": "mul_le_mul_of_nonneg_left",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left"
+      ]
+    },
+    {
+      "declaration": "mul_lt_mul_of_neg_right",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right"
+      ]
+    },
+    {
+      "declaration": "mul_lt_mul_of_neg_left",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left"
+      ]
+    },
+    {
+      "declaration": "mul_le_mul_of_nonpos_right",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right"
+      ]
+    },
+    {
+      "declaration": "mul_le_mul_of_nonpos_left",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left"
+      ]
+    },
+    {
+      "declaration": "max_comm",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.tex-069",
+        "aim.orderedfields.07.lean-max_comm"
+      ]
+    },
+    {
+      "declaration": "abs_add_le",
+      "proof_status": "contains_sorry",
+      "card_ids": [
+        "aim.orderedfields.07.lean-abs_add_le"
+      ]
+    },
+    {
+      "declaration": "field_smoke_test",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": []
+    },
+    {
+      "declaration": "field_ac_smoke_test",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": []
+    },
+    {
+      "declaration": "ordered_field_smoke_test",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": []
+    },
+    {
+      "declaration": "max_smoke_test",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": []
+    },
+    {
+      "declaration": "abs_smoke_test",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": []
+    },
+    {
+      "declaration": "abs_branch_pos_smoke_test",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": []
+    },
+    {
+      "declaration": "abs_branch_neg_smoke_test",
+      "proof_status": "no_sorry_in_declaration",
+      "card_ids": []
+    }
+  ],
+  "discrepancies": [
+    "The TeX describes the Archimedean property as following from completeness; the Lean file only declares a separate mixin without proving this implication.",
+    "Subtraction and division are defined operations in Numbers.lean, although the TeX puts their defining laws among the axiom tables.",
+    "Lean contains sorry placeholders; a declaration is not proof certification.",
+    "The TeX table's nested braces around a^{-1} required a separate recovery step to capture the inverse axiom."
+  ],
+  "limitations": [
+    "TeX rows sometimes group several results; source-linked per-declaration cards supplement those rows.",
+    "Lean proof statuses determined by textual inspection; not Lean compiler certification."
+  ]
+}

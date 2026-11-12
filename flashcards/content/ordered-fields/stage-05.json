@@ -1,0 +1,230 @@
+[
+  {
+    "id": "aim.orderedfields.05.lower",
+    "type": "definition",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "Define lower bound $\\ell$ of $S$.",
+    "back": "$\\forall x\\in S,\\ \\ell\\le x$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.inf",
+    "type": "definition",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "Define $i=\\inf S$.",
+    "back": "$i$ is a lower bound and every lower bound $b$ satisfies $b\\le i$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.archvscomplete",
+    "type": "concept",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "Does Archimedeanness imply completeness?",
+    "back": "No; $\\mathbb Q$ is Archimedean but not complete.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "concept",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.qcomplete",
+    "type": "counterexample",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "Why does $\\mathbb Q$ fail LUB completeness?",
+    "back": "The rational positives with $q^2<2$ have no rational supremum.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "counterexample",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.supinterval",
+    "type": "example",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "What is $\\sup(0,1)$ over $\\mathbb R$?",
+    "back": "$1$, although $1\\notin(0,1)$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "example",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.tex-020",
+    "type": "definition",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "State: Upper Bound Definition.",
+    "back": "For $s : F \\to Prop$ and $a \\in F,\\; \\forall x \\in F,\\; s(x) \\to x \\le a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsUpperBound"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.tex-021",
+    "type": "definition",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "State: Least Upper Bound ($\\sup$).",
+    "back": "$IsUpperBound  s\\; a \\;\\land\\; \\forall b \\in F,\\; IsUpperBound  s\\; b \\to a \\le b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsLeastUpperBound"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.tex-022",
+    "type": "definition",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "State: Order Completeness (LUB).",
+    "back": "Every nonempty $s : F \\to Prop$ bounded above has a least upper bound $a \\in F$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsOrderComplete"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.tex-023",
+    "type": "concept",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "How does the reference treat the Archimedean property?",
+    "back": "It is a separate Lean mixin; mathematically it follows from least-upper-bound completeness.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "ArchimedeanProperty.archimedean"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.tex-024",
+    "type": "definition",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "State: Reflexivity \\& Symmetry of $=$.",
+    "back": "For all $x, y \\in F,\\; x = x$ \\; and \\; $x = y \\to y = x$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "rfl"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.tex-025",
+    "type": "definition",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "State: Congruence of Functions.",
+    "back": "For all $x, y \\in F,\\; x = y \\to f(x) = f(y)$ \\; (e.g.\\ add $-a$ to both sides)",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "congrArg (· + -a) h"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.05.tex-026",
+    "type": "definition",
+    "stage": 5,
+    "topic": "Completeness",
+    "difficulty": "introductory",
+    "front": "State: Rewrite \\& Reverse Rewrite.",
+    "back": "Replace left-hand side of $=$ or $\\leftrightarrow$ with right-hand side (or reverse with $\\leftarrow$)",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "rw [thm]"
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  }
+]
