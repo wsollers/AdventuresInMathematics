@@ -1,0 +1,47 @@
+name: Foundations flashcard checks
+
+on:
+  push:
+    branches: [main, feat/foundations-ordered-fields-flashcards]
+    paths:
+      - "flashcards/**"
+      - ".github/workflows/flashcards-check.yml"
+  pull_request:
+    paths:
+      - "flashcards/**"
+      - ".github/workflows/flashcards-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install validation dependencies
+        run: |
+          python -m pip install jsonschema==4.23.0
+          npm install --no-audit --no-fund --no-save --prefix /tmp/aim-katex katex@0.16.22
+      - name: Validate deck schema, coverage, unlock map and source references
+        run: python flashcards/content/ordered-fields/validate.py
+      - name: Check app JavaScript syntax
+        run: |
+          node --check flashcards/web/app.mjs
+          node --check flashcards/web/scheduler.mjs
+          node --check flashcards/web/sw.js
+      - name: Test review scheduling and prerequisites
+        run: node --test flashcards/web/tests/scheduler.test.mjs
+      - name: Test static web interface contract
+        run: python flashcards/web/tests/test_static.py
+      - name: Validate every flashcard mathematical expression with KaTeX
+        env:
+          KATEX_PATH: /tmp/aim-katex/node_modules/katex
+        run: node --test flashcards/web/tests/math.test.mjs
+

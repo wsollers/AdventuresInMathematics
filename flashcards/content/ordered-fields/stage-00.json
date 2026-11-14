@@ -1,0 +1,268 @@
+[
+  {
+    "id": "aim.orderedfields.00.forall",
+    "type": "notation",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "Read $\\forall x\\in F\\,P(x)$.",
+    "back": "Every element $x$ of $F$ satisfies $P(x)$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "notation",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.exists",
+    "type": "notation",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "Read $\\exists x\\in F\\,P(x)$.",
+    "back": "At least one $x$ in $F$ satisfies $P(x)$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "notation",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.imp",
+    "type": "notation",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "Read $P\\Rightarrow Q$.",
+    "back": "If $P$ then $Q$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "notation",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.iff",
+    "type": "notation",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "Read $P\\Leftrightarrow Q$.",
+    "back": "Both $P\\Rightarrow Q$ and $Q\\Rightarrow P$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "notation",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.negforall",
+    "type": "notation",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "Negate $\\forall x\\,P(x)$.",
+    "back": "$\\exists x\\,\\neg P(x)$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "notation",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.negexists",
+    "type": "notation",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "Negate $\\exists x\\,P(x)$.",
+    "back": "$\\forall x\\,\\neg P(x)$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "notation",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.negimp",
+    "type": "notation",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "Negate $P\\Rightarrow Q$.",
+    "back": "$P\\land\\neg Q$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "notation",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.prop",
+    "type": "concept",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "What is a proposition?",
+    "back": "An assertion that is true or false.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "concept",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.hyp",
+    "type": "concept",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "What is a hypothesis?",
+    "back": "An assumed condition needed for a conclusion.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "concept",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.concl",
+    "type": "concept",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "What is a conclusion?",
+    "back": "What a theorem asserts under its hypotheses.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "concept",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.eq",
+    "type": "concept",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "What does substitutivity of equality allow?",
+    "back": "If $a=b$, then $f(a)=f(b)$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "concept",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.contra",
+    "type": "concept",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "What is the contrapositive of $P\\Rightarrow Q$?",
+    "back": "$\\neg Q\\Rightarrow\\neg P$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "concept",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.contradiction",
+    "type": "concept",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "How does proof by contradiction work?",
+    "back": "Assume the desired conclusion is false and derive a contradiction.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "concept",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.00.structure",
+    "type": "concept",
+    "stage": 0,
+    "topic": "Mathematical language",
+    "difficulty": "foundation",
+    "front": "What is an ambient structure?",
+    "back": "A carrier with specified operations, relations, and axioms.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "concept",
+      "ordered-fields"
+    ]
+  }
+]

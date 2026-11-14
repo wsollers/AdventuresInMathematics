@@ -1,0 +1,1047 @@
+[
+  {
+    "id": "aim.orderedfields.07.tex-050",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Strict Order is Irreflexive.",
+    "back": "For all $a \\in F,\\; \\lnot(a < a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_irrefl"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-051",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Strict Implies Non-Strict ($\\le$).",
+    "back": "For all $a, b \\in F,\\; a < b \\to a \\le b$ \\; (Unpacker 1: extracts positive half of $a < b$)",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_lt"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-052",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Strict Rules Out Reverse $\\le$.",
+    "back": "For all $a, b \\in F,\\; a < b \\to \\lnot(b \\le a)$ \\; (Unpacker 2: extracts roadblock of $a < b$)",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "not_le_of_lt"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-053",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Strict Order is Asymmetric.",
+    "back": "For all $a, b \\in F,\\; a < b \\to \\lnot(b < a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_asymm"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-054",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Strict Order is Transitive.",
+    "back": "For all $a, b, c \\in F,\\; a < b \\to b < c \\to a < c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_trans"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-055",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Mixed Transitivity ($<$ and $\\le$).",
+    "back": "For all $a, b, c \\in F,\\; (a < b \\to b \\le c \\to a < c)$ \\; and \\; $(a \\le b \\to b < c \\to a < c)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_lt_of_le"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-056",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Non-Strict Split ($<$ or $=$).",
+    "back": "For all $a, b \\in F,\\; a \\le b \\leftrightarrow (a < b \\lor a = b)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_iff_lt_or_eq"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-057",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Law of Trichotomy.",
+    "back": "For all $a, b \\in F,\\; a < b \\lor a = b \\lor b < a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_trichotomy"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-058",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Addition Preserves $\\le$.",
+    "back": "For all $a, b, c \\in F,\\; a \\le b \\to a + c \\le b + c$ \\; and \\; $a \\le b \\to c + a \\le c + b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-059",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Addition Reflects $\\le$ (Cancel).",
+    "back": "For all $a, b, c \\in F,\\; a + c \\le b + c \\to a \\le b$ \\; and \\; $c + a \\le c + b \\to a \\le b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_add_le_add_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-060",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Adding Two $\\le$ Inequalities.",
+    "back": "For all $a, b, c, d \\in F,\\; a \\le b \\to c \\le d \\to a + c \\le b + d$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-061",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Addition Preserves $<$.",
+    "back": "For all $a, b, c \\in F,\\; a < b \\to a + c < b + c$ \\; and \\; $a < b \\to c + a < c + b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-062",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Addition Reflects $<$ (Cancel).",
+    "back": "For all $a, b, c \\in F,\\; a + c < b + c \\to a < b$ \\; and \\; $c + a < c + b \\to a < b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_add_lt_add_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-063",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Adding Two $<$ Inequalities.",
+    "back": "For all $a, b, c, d \\in F,\\; a < b \\to c < d \\to a + c < b + d$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-064",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Subtraction Detects Order.",
+    "back": "For all $a, b \\in F,\\; (0 \\le a - b \\leftrightarrow b \\le a)$ \\; and \\; $(0 < a - b \\leftrightarrow b < a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_nonneg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-065",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Negation Reverses Order.",
+    "back": "For all $a, b \\in F,\\; (-a \\le -b \\leftrightarrow b \\le a),\\;\\; (-a < -b \\leftrightarrow b < a),\\;\\; (a < 0 \\to 0 < -a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_le_neg_iff"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-066",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Product of Nonnegatives.",
+    "back": "For all $a, b \\in F,\\; 0 \\le a \\to 0 \\le b \\to 0 \\le a \\cdot b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_nonneg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-067",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Positive Factor Preserves $<, \\le$.",
+    "back": "For all $a, b, c \\in F,\\; (a < b \\to 0 < c \\to a c < b c,\\; c a < c b)$ and $(a \\le b \\to 0 \\le c \\to a c \\le b c,\\; c a \\le c b)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_pos_*"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-068",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Negative Factor Reverses $<, \\le$.",
+    "back": "For all $a, b, c \\in F,\\; (a < b \\to c < 0 \\to b c < a c,\\; c b < c a)$ and $(a \\le b \\to c \\le 0 \\to b c \\le a c,\\; c b \\le c a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_neg_*"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.tex-069",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "State: Max Commutativity \\& Triangle.",
+    "back": "For all $x, y \\in F,\\; \\max(x, y) = \\max(y, x)$ \\; and \\; $|x + y| \\le |x| + |y|$ \\; where $|x| := \\max(x, -x)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "max_comm"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-lt_irrefl",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of lt irrefl.",
+    "back": "$\\neg(a<a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_irrefl"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-le_of_lt",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of le of lt.",
+    "back": "$a<b\\Rightarrow a\\le b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_lt"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-not_le_of_lt",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of not le of lt.",
+    "back": "$a<b\\Rightarrow\\neg(b\\le a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "not_le_of_lt"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-lt_asymm",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of lt asymm.",
+    "back": "$a<b\\Rightarrow\\neg(b<a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_asymm"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-lt_trans",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of lt trans.",
+    "back": "$a<b\\land b<c\\Rightarrow a<c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_trans"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-lt_of_lt_of_le",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of lt of lt of le.",
+    "back": "$a<b\\land b\\le c\\Rightarrow a<c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_lt_of_le"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-lt_of_le_of_lt",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of lt of le of lt.",
+    "back": "$a\\le b\\land b<c\\Rightarrow a<c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_le_of_lt"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-le_iff_lt_or_eq",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of le iff lt or eq.",
+    "back": "$a\\le b\\Leftrightarrow(a<b\\lor a=b)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_iff_lt_or_eq"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-lt_trichotomy",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of lt trichotomy.",
+    "back": "$a<b\\lor a=b\\lor b<a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_trichotomy"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-add_le_add_right",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add le add right.",
+    "back": "$a\\le b\\Rightarrow a+c\\le b+c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-add_le_add_left",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add le add left.",
+    "back": "$a\\le b\\Rightarrow c+a\\le c+b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-le_of_add_le_add_right",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of le of add le add right.",
+    "back": "$a+c\\le b+c\\Rightarrow a\\le b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_add_le_add_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-le_of_add_le_add_left",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of le of add le add left.",
+    "back": "$c+a\\le c+b\\Rightarrow a\\le b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_add_le_add_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-add_le_add",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add le add.",
+    "back": "$a\\le b\\land c\\le d\\Rightarrow a+c\\le b+d$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-add_lt_add_right",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add lt add right.",
+    "back": "$a<b\\Rightarrow a+c<b+c$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-add_lt_add_left",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add lt add left.",
+    "back": "$a<b\\Rightarrow c+a<c+b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-lt_of_add_lt_add_right",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of lt of add lt add right.",
+    "back": "$a+c<b+c\\Rightarrow a<b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_add_lt_add_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-lt_of_add_lt_add_left",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of lt of add lt add left.",
+    "back": "$c+a<c+b\\Rightarrow a<b$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_add_lt_add_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-add_lt_add",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of add lt add.",
+    "back": "$a<b\\land c<d\\Rightarrow a+c<b+d$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-sub_nonneg",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of sub nonneg.",
+    "back": "$0\\le a-b\\Leftrightarrow b\\le a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_nonneg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-sub_pos",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of sub pos.",
+    "back": "$0<a-b\\Leftrightarrow b<a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_pos"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-neg_le_neg_iff",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg le neg iff.",
+    "back": "$-a\\le-b\\Leftrightarrow b\\le a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_le_neg_iff"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-neg_lt_neg_iff",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg lt neg iff.",
+    "back": "$-a<-b\\Leftrightarrow b<a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_lt_neg_iff"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-neg_pos_of_neg",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of neg pos of neg.",
+    "back": "$a<0\\Rightarrow 0<-a$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_pos_of_neg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-mul_nonneg",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul nonneg.",
+    "back": "$0\\le a\\land0\\le b\\Rightarrow0\\le ab$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_nonneg"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul lt mul of pos right.",
+    "back": "$a<b\\land0<c\\Rightarrow ac<bc$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_pos_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul lt mul of pos left.",
+    "back": "$a<b\\land0<c\\Rightarrow ca<cb$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_pos_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul le mul of nonneg right.",
+    "back": "$a\\le b\\land0\\le c\\Rightarrow ac\\le bc$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonneg_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul le mul of nonneg left.",
+    "back": "$a\\le b\\land0\\le c\\Rightarrow ca\\le cb$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonneg_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul lt mul of neg right.",
+    "back": "$a<b\\land c<0\\Rightarrow bc<ac$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_neg_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul lt mul of neg left.",
+    "back": "$a<b\\land c<0\\Rightarrow cb<ca$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_neg_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul le mul of nonpos right.",
+    "back": "$a\\le b\\land c\\le0\\Rightarrow bc\\le ac$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonpos_right"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of mul le mul of nonpos left.",
+    "back": "$a\\le b\\land c\\le0\\Rightarrow cb\\le ca$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonpos_left"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-max_comm",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of max comm.",
+    "back": "$\\max(a,b)=\\max(b,a)$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "max_comm"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.07.lean-abs_add_le",
+    "type": "theorem",
+    "stage": 7,
+    "topic": "Derived order theorems",
+    "difficulty": "intermediate",
+    "front": "Recall the statement of abs add le.",
+    "back": "$|x+y|\\le|x|+|y|$",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "abs_add_le"
+    },
+    "prerequisites": [],
+    "tags": [
+      "theorem",
+      "ordered-fields"
+    ]
+  }
+]

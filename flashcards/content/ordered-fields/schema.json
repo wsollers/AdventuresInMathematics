@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "type",
+      "stage",
+      "topic",
+      "difficulty",
+      "front",
+      "back",
+      "source",
+      "prerequisites",
+      "tags"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "type": {
+        "enum": [
+          "notation",
+          "definition",
+          "axiom",
+          "theorem",
+          "hypothesis",
+          "dependency",
+          "proof",
+          "example",
+          "counterexample",
+          "concept"
+        ]
+      },
+      "stage": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 8
+      },
+      "front": {
+        "type": "string"
+      },
+      "back": {
+        "type": "string"
+      },
+      "source": {
+        "type": "object",
+        "required": [
+          "tex",
+          "lean",
+          "declaration"
+        ],
+        "properties": {
+          "tex": {
+            "const": "output/pdf/ordered_field_reference.tex"
+          },
+          "lean": {
+            "const": "Aim/Analysis/Numbers.lean"
+          },
+          "declaration": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "prerequisites": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

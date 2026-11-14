@@ -1,0 +1,230 @@
+[
+  {
+    "id": "aim.orderedfields.01.set",
+    "type": "definition",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Define a subset $A\\subseteq B$.",
+    "back": "$\\forall x\\,(x\\in A\\Rightarrow x\\in B)$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.member",
+    "type": "notation",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Read $x\\in A$.",
+    "back": "$x$ belongs to $A$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "notation",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.predicate",
+    "type": "definition",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Represent a subset of $F$ as a predicate.",
+    "back": "$s:F\\to\\mathrm{Prop}$; $s(x)$ means membership.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.relation",
+    "type": "definition",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Define a binary relation on $F$.",
+    "back": "A predicate $R:F\\times F\\to\\mathrm{Prop}$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.function",
+    "type": "definition",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Define a function $f:A\\to B$.",
+    "back": "Each input in $A$ has exactly one output in $B$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.operation",
+    "type": "definition",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Define a binary operation on $F$.",
+    "back": "A function $F\\times F\\to F$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.closed",
+    "type": "definition",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "What is closure under $\\star$?",
+    "back": "For all $a,b\\in F$, $a\\star b\\in F$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.reflexive",
+    "type": "definition",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Define reflexivity.",
+    "back": "$\\forall a\\in F,\\ aRa$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.antisymmetric",
+    "type": "definition",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Define antisymmetry.",
+    "back": "$aRb\\land bRa\\Rightarrow a=b$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.transitive",
+    "type": "definition",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Define transitivity.",
+    "back": "$aRb\\land bRc\\Rightarrow aRc$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.total",
+    "type": "definition",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Define totality.",
+    "back": "$aRb\\lor bRa$ for every $a,b\\in F$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "definition",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.01.antisymsym",
+    "type": "counterexample",
+    "stage": 1,
+    "topic": "Sets, functions, and relations",
+    "difficulty": "foundation",
+    "front": "Can a relation be symmetric and antisymmetric?",
+    "back": "Yes: equality.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [],
+    "tags": [
+      "counterexample",
+      "ordered-fields"
+    ]
+  }
+]
