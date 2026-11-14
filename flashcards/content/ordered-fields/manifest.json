@@ -302,7 +302,143 @@
         "aim.orderedfields.08.dependency-inv_mul_cancel",
         "aim.orderedfields.08.proof-inv_mul_cancel",
         "aim.orderedfields.08.dependency-neg_neg",
-        "aim.orderedfields.08.proof-neg_neg"
+        "aim.orderedfields.08.proof-neg_neg",
+        "aim.orderedfields.08.dependency-zero_add",
+        "aim.orderedfields.08.proof-zero_add",
+        "aim.orderedfields.08.dependency-zero_unique",
+        "aim.orderedfields.08.proof-zero_unique",
+        "aim.orderedfields.08.dependency-zero_unique_right",
+        "aim.orderedfields.08.proof-zero_unique_right",
+        "aim.orderedfields.08.dependency-neg_unique",
+        "aim.orderedfields.08.proof-neg_unique",
+        "aim.orderedfields.08.dependency-neg_unique_left",
+        "aim.orderedfields.08.proof-neg_unique_left",
+        "aim.orderedfields.08.dependency-add_right_cancel",
+        "aim.orderedfields.08.proof-add_right_cancel",
+        "aim.orderedfields.08.dependency-add_eq_iff_eq_sub",
+        "aim.orderedfields.08.proof-add_eq_iff_eq_sub",
+        "aim.orderedfields.08.dependency-add_eq_iff_eq_sub_left",
+        "aim.orderedfields.08.proof-add_eq_iff_eq_sub_left",
+        "aim.orderedfields.08.dependency-neg_zero",
+        "aim.orderedfields.08.proof-neg_zero",
+        "aim.orderedfields.08.dependency-neg_eq_iff_eq_neg",
+        "aim.orderedfields.08.proof-neg_eq_iff_eq_neg",
+        "aim.orderedfields.08.dependency-sub_eq_zero_iff",
+        "aim.orderedfields.08.proof-sub_eq_zero_iff",
+        "aim.orderedfields.08.dependency-neg_add_rev",
+        "aim.orderedfields.08.proof-neg_add_rev",
+        "aim.orderedfields.08.dependency-neg_sub",
+        "aim.orderedfields.08.proof-neg_sub",
+        "aim.orderedfields.08.dependency-add_sub_cancel_right",
+        "aim.orderedfields.08.proof-add_sub_cancel_right",
+        "aim.orderedfields.08.dependency-add_sub_cancel_left",
+        "aim.orderedfields.08.proof-add_sub_cancel_left",
+        "aim.orderedfields.08.dependency-sub_add_cancel_right",
+        "aim.orderedfields.08.proof-sub_add_cancel_right",
+        "aim.orderedfields.08.dependency-sub_add_cancel_left",
+        "aim.orderedfields.08.proof-sub_add_cancel_left",
+        "aim.orderedfields.08.dependency-sub_sub",
+        "aim.orderedfields.08.proof-sub_sub",
+        "aim.orderedfields.08.dependency-one_unique",
+        "aim.orderedfields.08.proof-one_unique",
+        "aim.orderedfields.08.dependency-one_unique_left",
+        "aim.orderedfields.08.proof-one_unique_left",
+        "aim.orderedfields.08.dependency-inv_unique",
+        "aim.orderedfields.08.proof-inv_unique",
+        "aim.orderedfields.08.dependency-inv_unique_left",
+        "aim.orderedfields.08.proof-inv_unique_left",
+        "aim.orderedfields.08.dependency-mul_left_cancel",
+        "aim.orderedfields.08.proof-mul_left_cancel",
+        "aim.orderedfields.08.dependency-mul_right_cancel",
+        "aim.orderedfields.08.proof-mul_right_cancel",
+        "aim.orderedfields.08.dependency-mul_div_cancel_right",
+        "aim.orderedfields.08.proof-mul_div_cancel_right",
+        "aim.orderedfields.08.dependency-mul_div_cancel_left",
+        "aim.orderedfields.08.proof-mul_div_cancel_left",
+        "aim.orderedfields.08.dependency-div_mul_cancel_right",
+        "aim.orderedfields.08.proof-div_mul_cancel_right",
+        "aim.orderedfields.08.dependency-div_mul_cancel_left",
+        "aim.orderedfields.08.proof-div_mul_cancel_left",
+        "aim.orderedfields.08.dependency-mul_eq_iff_eq_div",
+        "aim.orderedfields.08.proof-mul_eq_iff_eq_div",
+        "aim.orderedfields.08.dependency-mul_eq_iff_eq_div_right",
+        "aim.orderedfields.08.proof-mul_eq_iff_eq_div_right",
+        "aim.orderedfields.08.dependency-zero_mul",
+        "aim.orderedfields.08.proof-zero_mul",
+        "aim.orderedfields.08.dependency-neg_mul",
+        "aim.orderedfields.08.proof-neg_mul",
+        "aim.orderedfields.08.dependency-mul_neg",
+        "aim.orderedfields.08.proof-mul_neg",
+        "aim.orderedfields.08.dependency-mul_sub",
+        "aim.orderedfields.08.proof-mul_sub",
+        "aim.orderedfields.08.dependency-sub_mul",
+        "aim.orderedfields.08.proof-sub_mul",
+        "aim.orderedfields.08.dependency-le_of_lt",
+        "aim.orderedfields.08.proof-le_of_lt",
+        "aim.orderedfields.08.dependency-not_le_of_lt",
+        "aim.orderedfields.08.proof-not_le_of_lt",
+        "aim.orderedfields.08.dependency-lt_asymm",
+        "aim.orderedfields.08.proof-lt_asymm",
+        "aim.orderedfields.08.dependency-lt_of_lt_of_le",
+        "aim.orderedfields.08.proof-lt_of_lt_of_le",
+        "aim.orderedfields.08.dependency-lt_of_le_of_lt",
+        "aim.orderedfields.08.proof-lt_of_le_of_lt",
+        "aim.orderedfields.08.dependency-le_iff_lt_or_eq",
+        "aim.orderedfields.08.proof-le_iff_lt_or_eq",
+        "aim.orderedfields.08.dependency-lt_trichotomy",
+        "aim.orderedfields.08.proof-lt_trichotomy",
+        "aim.orderedfields.08.dependency-add_le_add_right",
+        "aim.orderedfields.08.proof-add_le_add_right",
+        "aim.orderedfields.08.dependency-add_le_add_left",
+        "aim.orderedfields.08.proof-add_le_add_left",
+        "aim.orderedfields.08.dependency-le_of_add_le_add_right",
+        "aim.orderedfields.08.proof-le_of_add_le_add_right",
+        "aim.orderedfields.08.dependency-le_of_add_le_add_left",
+        "aim.orderedfields.08.proof-le_of_add_le_add_left",
+        "aim.orderedfields.08.dependency-add_le_add",
+        "aim.orderedfields.08.proof-add_le_add",
+        "aim.orderedfields.08.dependency-add_lt_add_right",
+        "aim.orderedfields.08.proof-add_lt_add_right",
+        "aim.orderedfields.08.dependency-add_lt_add_left",
+        "aim.orderedfields.08.proof-add_lt_add_left",
+        "aim.orderedfields.08.dependency-lt_of_add_lt_add_right",
+        "aim.orderedfields.08.proof-lt_of_add_lt_add_right",
+        "aim.orderedfields.08.dependency-lt_of_add_lt_add_left",
+        "aim.orderedfields.08.proof-lt_of_add_lt_add_left",
+        "aim.orderedfields.08.dependency-add_lt_add",
+        "aim.orderedfields.08.proof-add_lt_add",
+        "aim.orderedfields.08.dependency-sub_nonneg",
+        "aim.orderedfields.08.proof-sub_nonneg",
+        "aim.orderedfields.08.dependency-sub_pos",
+        "aim.orderedfields.08.proof-sub_pos",
+        "aim.orderedfields.08.dependency-neg_le_neg_iff",
+        "aim.orderedfields.08.proof-neg_le_neg_iff",
+        "aim.orderedfields.08.dependency-neg_lt_neg_iff",
+        "aim.orderedfields.08.proof-neg_lt_neg_iff",
+        "aim.orderedfields.08.dependency-neg_pos_of_neg",
+        "aim.orderedfields.08.proof-neg_pos_of_neg",
+        "aim.orderedfields.08.dependency-mul_nonneg",
+        "aim.orderedfields.08.proof-mul_nonneg",
+        "aim.orderedfields.08.dependency-mul_lt_mul_of_pos_right",
+        "aim.orderedfields.08.proof-mul_lt_mul_of_pos_right",
+        "aim.orderedfields.08.dependency-mul_lt_mul_of_pos_left",
+        "aim.orderedfields.08.proof-mul_lt_mul_of_pos_left",
+        "aim.orderedfields.08.dependency-mul_le_mul_of_nonneg_right",
+        "aim.orderedfields.08.proof-mul_le_mul_of_nonneg_right",
+        "aim.orderedfields.08.dependency-mul_le_mul_of_nonneg_left",
+        "aim.orderedfields.08.proof-mul_le_mul_of_nonneg_left",
+        "aim.orderedfields.08.dependency-mul_lt_mul_of_neg_right",
+        "aim.orderedfields.08.proof-mul_lt_mul_of_neg_right",
+        "aim.orderedfields.08.dependency-mul_lt_mul_of_neg_left",
+        "aim.orderedfields.08.proof-mul_lt_mul_of_neg_left",
+        "aim.orderedfields.08.dependency-mul_le_mul_of_nonpos_right",
+        "aim.orderedfields.08.proof-mul_le_mul_of_nonpos_right",
+        "aim.orderedfields.08.dependency-mul_le_mul_of_nonpos_left",
+        "aim.orderedfields.08.proof-mul_le_mul_of_nonpos_left",
+        "aim.orderedfields.08.dependency-max_comm",
+        "aim.orderedfields.08.proof-max_comm",
+        "aim.orderedfields.08.dependency-abs_add_le",
+        "aim.orderedfields.08.proof-abs_add_le"
       ]
     }
   ],
@@ -1520,8 +1656,8 @@
       "id": "aim.orderedfields.06.lean-sub_eq_add_neg",
       "order": 94,
       "stage": 6,
-      "topic": "Derived algebraic theorems",
-      "type": "theorem",
+      "topic": "Derived algebra (definitional identities)",
+      "type": "definition",
       "source": {
         "tex": "output/pdf/ordered_field_reference.tex",
         "lean": "Aim/Analysis/Numbers.lean",
@@ -1533,8 +1669,8 @@
       "id": "aim.orderedfields.06.lean-add_neg_eq_sub",
       "order": 95,
       "stage": 6,
-      "topic": "Derived algebraic theorems",
-      "type": "theorem",
+      "topic": "Derived algebra (definitional identities)",
+      "type": "definition",
       "source": {
         "tex": "output/pdf/ordered_field_reference.tex",
         "lean": "Aim/Analysis/Numbers.lean",
@@ -1546,8 +1682,8 @@
       "id": "aim.orderedfields.06.lean-div_eq_mul_inv",
       "order": 96,
       "stage": 6,
-      "topic": "Derived algebraic theorems",
-      "type": "theorem",
+      "topic": "Derived algebra (definitional identities)",
+      "type": "definition",
       "source": {
         "tex": "output/pdf/ordered_field_reference.tex",
         "lean": "Aim/Analysis/Numbers.lean",
@@ -1559,8 +1695,8 @@
       "id": "aim.orderedfields.06.lean-mul_inv_eq_div",
       "order": 97,
       "stage": 6,
-      "topic": "Derived algebraic theorems",
-      "type": "theorem",
+      "topic": "Derived algebra (definitional identities)",
+      "type": "definition",
       "source": {
         "tex": "output/pdf/ordered_field_reference.tex",
         "lean": "Aim/Analysis/Numbers.lean",
@@ -3490,6 +3626,2046 @@
       },
       "prerequisites": [
         "aim.orderedfields.06.lean-neg_neg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-zero_add",
+      "order": 240,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_add"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-zero_add"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-zero_add",
+      "order": 241,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_add"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-zero_add"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-zero_unique",
+      "order": 242,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_unique"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-zero_unique"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-zero_unique",
+      "order": 243,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_unique"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-zero_unique"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-zero_unique_right",
+      "order": 244,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_unique_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-zero_unique_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-zero_unique_right",
+      "order": 245,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_unique_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-zero_unique_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_unique",
+      "order": 246,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_unique"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_unique"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_unique",
+      "order": 247,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_unique"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_unique"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_unique_left",
+      "order": 248,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_unique_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_unique_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_unique_left",
+      "order": 249,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_unique_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_unique_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_right_cancel",
+      "order": 250,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_right_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_right_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_right_cancel",
+      "order": 251,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_right_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_right_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_eq_iff_eq_sub",
+      "order": 252,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_eq_iff_eq_sub"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_eq_iff_eq_sub"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_eq_iff_eq_sub",
+      "order": 253,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_eq_iff_eq_sub"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_eq_iff_eq_sub"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_eq_iff_eq_sub_left",
+      "order": 254,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_eq_iff_eq_sub_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_eq_iff_eq_sub_left",
+      "order": 255,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_eq_iff_eq_sub_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_zero",
+      "order": 256,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_zero"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_zero"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_zero",
+      "order": 257,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_zero"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_zero"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_eq_iff_eq_neg",
+      "order": 258,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_eq_iff_eq_neg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_eq_iff_eq_neg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_eq_iff_eq_neg",
+      "order": 259,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_eq_iff_eq_neg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_eq_iff_eq_neg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-sub_eq_zero_iff",
+      "order": 260,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_eq_zero_iff"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_eq_zero_iff"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-sub_eq_zero_iff",
+      "order": 261,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_eq_zero_iff"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_eq_zero_iff"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_add_rev",
+      "order": 262,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_add_rev"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_add_rev"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_add_rev",
+      "order": 263,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_add_rev"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_add_rev"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_sub",
+      "order": 264,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_sub"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_sub"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_sub",
+      "order": 265,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_sub"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_sub"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_sub_cancel_right",
+      "order": 266,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_sub_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_sub_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_sub_cancel_right",
+      "order": 267,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_sub_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_sub_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_sub_cancel_left",
+      "order": 268,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_sub_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_sub_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_sub_cancel_left",
+      "order": 269,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_sub_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-add_sub_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-sub_add_cancel_right",
+      "order": 270,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_add_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_add_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-sub_add_cancel_right",
+      "order": 271,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_add_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_add_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-sub_add_cancel_left",
+      "order": 272,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_add_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_add_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-sub_add_cancel_left",
+      "order": 273,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_add_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_add_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-sub_sub",
+      "order": 274,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_sub"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_sub"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-sub_sub",
+      "order": 275,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_sub"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_sub"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-one_unique",
+      "order": 276,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "one_unique"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-one_unique"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-one_unique",
+      "order": 277,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "one_unique"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-one_unique"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-one_unique_left",
+      "order": 278,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "one_unique_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-one_unique_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-one_unique_left",
+      "order": 279,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "one_unique_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-one_unique_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-inv_unique",
+      "order": 280,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_unique"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-inv_unique"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-inv_unique",
+      "order": 281,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_unique"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-inv_unique"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-inv_unique_left",
+      "order": 282,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_unique_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-inv_unique_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-inv_unique_left",
+      "order": 283,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "inv_unique_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-inv_unique_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_left_cancel",
+      "order": 284,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_left_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_left_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_left_cancel",
+      "order": 285,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_left_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_left_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_right_cancel",
+      "order": 286,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_right_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_right_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_right_cancel",
+      "order": 287,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_right_cancel"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_right_cancel"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_div_cancel_right",
+      "order": 288,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_div_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_div_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_div_cancel_right",
+      "order": 289,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_div_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_div_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_div_cancel_left",
+      "order": 290,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_div_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_div_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_div_cancel_left",
+      "order": 291,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_div_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_div_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-div_mul_cancel_right",
+      "order": 292,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "div_mul_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-div_mul_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-div_mul_cancel_right",
+      "order": 293,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "div_mul_cancel_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-div_mul_cancel_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-div_mul_cancel_left",
+      "order": 294,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "div_mul_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-div_mul_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-div_mul_cancel_left",
+      "order": 295,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "div_mul_cancel_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-div_mul_cancel_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_eq_iff_eq_div",
+      "order": 296,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_eq_iff_eq_div"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_eq_iff_eq_div"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_eq_iff_eq_div",
+      "order": 297,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_eq_iff_eq_div"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_eq_iff_eq_div"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_eq_iff_eq_div_right",
+      "order": 298,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_eq_iff_eq_div_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_eq_iff_eq_div_right",
+      "order": 299,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_eq_iff_eq_div_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-zero_mul",
+      "order": 300,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_mul"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-zero_mul"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-zero_mul",
+      "order": 301,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "zero_mul"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-zero_mul"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_mul",
+      "order": 302,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_mul"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_mul"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_mul",
+      "order": 303,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_mul"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-neg_mul"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_neg",
+      "order": 304,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_neg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_neg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_neg",
+      "order": 305,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_neg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_neg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_sub",
+      "order": 306,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_sub"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_sub"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_sub",
+      "order": 307,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_sub"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-mul_sub"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-sub_mul",
+      "order": 308,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_mul"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_mul"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-sub_mul",
+      "order": 309,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_mul"
+      },
+      "prerequisites": [
+        "aim.orderedfields.06.lean-sub_mul"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-le_of_lt",
+      "order": 310,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_lt"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-le_of_lt"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-le_of_lt",
+      "order": 311,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_lt"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-le_of_lt"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-not_le_of_lt",
+      "order": 312,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "not_le_of_lt"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-not_le_of_lt"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-not_le_of_lt",
+      "order": 313,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "not_le_of_lt"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-not_le_of_lt"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-lt_asymm",
+      "order": 314,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_asymm"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_asymm"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-lt_asymm",
+      "order": 315,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_asymm"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_asymm"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-lt_of_lt_of_le",
+      "order": 316,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_lt_of_le"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_of_lt_of_le"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-lt_of_lt_of_le",
+      "order": 317,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_lt_of_le"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_of_lt_of_le"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-lt_of_le_of_lt",
+      "order": 318,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_le_of_lt"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_of_le_of_lt"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-lt_of_le_of_lt",
+      "order": 319,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_le_of_lt"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_of_le_of_lt"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-le_iff_lt_or_eq",
+      "order": 320,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_iff_lt_or_eq"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-le_iff_lt_or_eq"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-le_iff_lt_or_eq",
+      "order": 321,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_iff_lt_or_eq"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-le_iff_lt_or_eq"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-lt_trichotomy",
+      "order": 322,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_trichotomy"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_trichotomy"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-lt_trichotomy",
+      "order": 323,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_trichotomy"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_trichotomy"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_le_add_right",
+      "order": 324,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_le_add_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_le_add_right",
+      "order": 325,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_le_add_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_le_add_left",
+      "order": 326,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_le_add_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_le_add_left",
+      "order": 327,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_le_add_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-le_of_add_le_add_right",
+      "order": 328,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_add_le_add_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-le_of_add_le_add_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-le_of_add_le_add_right",
+      "order": 329,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_add_le_add_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-le_of_add_le_add_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-le_of_add_le_add_left",
+      "order": 330,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_add_le_add_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-le_of_add_le_add_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-le_of_add_le_add_left",
+      "order": 331,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "le_of_add_le_add_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-le_of_add_le_add_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_le_add",
+      "order": 332,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_le_add"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_le_add",
+      "order": 333,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_le_add"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_le_add"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_lt_add_right",
+      "order": 334,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_lt_add_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_lt_add_right",
+      "order": 335,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_lt_add_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_lt_add_left",
+      "order": 336,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_lt_add_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_lt_add_left",
+      "order": 337,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_lt_add_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-lt_of_add_lt_add_right",
+      "order": 338,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_add_lt_add_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_of_add_lt_add_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-lt_of_add_lt_add_right",
+      "order": 339,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_add_lt_add_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_of_add_lt_add_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-lt_of_add_lt_add_left",
+      "order": 340,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_add_lt_add_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_of_add_lt_add_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-lt_of_add_lt_add_left",
+      "order": 341,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "lt_of_add_lt_add_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-lt_of_add_lt_add_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-add_lt_add",
+      "order": 342,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_lt_add"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-add_lt_add",
+      "order": 343,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "add_lt_add"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-add_lt_add"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-sub_nonneg",
+      "order": 344,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_nonneg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-sub_nonneg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-sub_nonneg",
+      "order": 345,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_nonneg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-sub_nonneg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-sub_pos",
+      "order": 346,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_pos"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-sub_pos"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-sub_pos",
+      "order": 347,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "sub_pos"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-sub_pos"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_le_neg_iff",
+      "order": 348,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_le_neg_iff"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-neg_le_neg_iff"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_le_neg_iff",
+      "order": 349,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_le_neg_iff"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-neg_le_neg_iff"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_lt_neg_iff",
+      "order": 350,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_lt_neg_iff"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-neg_lt_neg_iff"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_lt_neg_iff",
+      "order": 351,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_lt_neg_iff"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-neg_lt_neg_iff"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-neg_pos_of_neg",
+      "order": 352,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_pos_of_neg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-neg_pos_of_neg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-neg_pos_of_neg",
+      "order": 353,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "neg_pos_of_neg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-neg_pos_of_neg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_nonneg",
+      "order": 354,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_nonneg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_nonneg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_nonneg",
+      "order": 355,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_nonneg"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_nonneg"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_lt_mul_of_pos_right",
+      "order": 356,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_pos_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_lt_mul_of_pos_right",
+      "order": 357,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_pos_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_lt_mul_of_pos_left",
+      "order": 358,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_pos_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_lt_mul_of_pos_left",
+      "order": 359,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_pos_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_le_mul_of_nonneg_right",
+      "order": 360,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonneg_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_le_mul_of_nonneg_right",
+      "order": 361,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonneg_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_le_mul_of_nonneg_left",
+      "order": 362,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonneg_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_le_mul_of_nonneg_left",
+      "order": 363,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonneg_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_lt_mul_of_neg_right",
+      "order": 364,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_neg_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_lt_mul_of_neg_right",
+      "order": 365,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_neg_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_lt_mul_of_neg_left",
+      "order": 366,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_neg_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_lt_mul_of_neg_left",
+      "order": 367,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_lt_mul_of_neg_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_le_mul_of_nonpos_right",
+      "order": 368,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonpos_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_le_mul_of_nonpos_right",
+      "order": 369,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonpos_right"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-mul_le_mul_of_nonpos_left",
+      "order": 370,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonpos_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-mul_le_mul_of_nonpos_left",
+      "order": 371,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "mul_le_mul_of_nonpos_left"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-max_comm",
+      "order": 372,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "max_comm"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-max_comm"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-max_comm",
+      "order": 373,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "max_comm"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-max_comm"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.dependency-abs_add_le",
+      "order": 374,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "dependency",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "abs_add_le"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-abs_add_le"
+      ]
+    },
+    {
+      "id": "aim.orderedfields.08.proof-abs_add_le",
+      "order": 375,
+      "stage": 8,
+      "topic": "Proof reconstruction",
+      "type": "proof",
+      "source": {
+        "tex": "output/pdf/ordered_field_reference.tex",
+        "lean": "Aim/Analysis/Numbers.lean",
+        "declaration": "abs_add_le"
+      },
+      "prerequisites": [
+        "aim.orderedfields.07.lean-abs_add_le"
       ]
     }
   ]

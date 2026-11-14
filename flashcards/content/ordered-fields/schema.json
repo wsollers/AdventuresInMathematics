@@ -77,6 +77,10 @@
         "items": {
           "type": "string"
         }
+      },
+      "explanation": {
+        "type": "string",
+        "minLength": 1
       }
     }
   }

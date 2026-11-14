@@ -448,9 +448,9 @@
   },
   {
     "id": "aim.orderedfields.06.lean-sub_eq_add_neg",
-    "type": "theorem",
+    "type": "definition",
     "stage": 6,
-    "topic": "Derived algebraic theorems",
+    "topic": "Derived algebra (definitional identities)",
     "difficulty": "intermediate",
     "front": "Recall the statement of sub eq add neg.",
     "back": "$a - b = a + -b$",
@@ -461,15 +461,16 @@
     },
     "prerequisites": [],
     "tags": [
-      "theorem",
-      "ordered-fields"
+      "field",
+      "definition",
+      "subtraction-division"
     ]
   },
   {
     "id": "aim.orderedfields.06.lean-add_neg_eq_sub",
-    "type": "theorem",
+    "type": "definition",
     "stage": 6,
-    "topic": "Derived algebraic theorems",
+    "topic": "Derived algebra (definitional identities)",
     "difficulty": "intermediate",
     "front": "Recall the statement of add neg eq sub.",
     "back": "$a + -b = a - b$",
@@ -480,15 +481,16 @@
     },
     "prerequisites": [],
     "tags": [
-      "theorem",
-      "ordered-fields"
+      "field",
+      "definition",
+      "subtraction-division"
     ]
   },
   {
     "id": "aim.orderedfields.06.lean-div_eq_mul_inv",
-    "type": "theorem",
+    "type": "definition",
     "stage": 6,
-    "topic": "Derived algebraic theorems",
+    "topic": "Derived algebra (definitional identities)",
     "difficulty": "intermediate",
     "front": "Recall the statement of div eq mul inv.",
     "back": "$a / b = a * b^{-1}$",
@@ -499,15 +501,16 @@
     },
     "prerequisites": [],
     "tags": [
-      "theorem",
-      "ordered-fields"
+      "field",
+      "definition",
+      "subtraction-division"
     ]
   },
   {
     "id": "aim.orderedfields.06.lean-mul_inv_eq_div",
-    "type": "theorem",
+    "type": "definition",
     "stage": 6,
-    "topic": "Derived algebraic theorems",
+    "topic": "Derived algebra (definitional identities)",
     "difficulty": "intermediate",
     "front": "Recall the statement of mul inv eq div.",
     "back": "$a * b^{-1} = a / b$",
@@ -518,8 +521,9 @@
     },
     "prerequisites": [],
     "tags": [
-      "theorem",
-      "ordered-fields"
+      "field",
+      "definition",
+      "subtraction-division"
     ]
   },
   {

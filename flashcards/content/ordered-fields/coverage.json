@@ -474,7 +474,9 @@
       "declaration": "zero_add",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.06.lean-zero_add"
+        "aim.orderedfields.06.lean-zero_add",
+        "aim.orderedfields.08.dependency-zero_add",
+        "aim.orderedfields.08.proof-zero_add"
       ]
     },
     {
@@ -482,7 +484,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.tex-028",
-        "aim.orderedfields.06.lean-zero_unique"
+        "aim.orderedfields.06.lean-zero_unique",
+        "aim.orderedfields.08.dependency-zero_unique",
+        "aim.orderedfields.08.proof-zero_unique"
       ]
     },
     {
@@ -490,7 +494,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-zero_unique_right",
-        "aim.orderedfields.06.zero-unique-right"
+        "aim.orderedfields.06.zero-unique-right",
+        "aim.orderedfields.08.dependency-zero_unique_right",
+        "aim.orderedfields.08.proof-zero_unique_right"
       ]
     },
     {
@@ -508,7 +514,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.tex-030",
-        "aim.orderedfields.06.lean-neg_unique"
+        "aim.orderedfields.06.lean-neg_unique",
+        "aim.orderedfields.08.dependency-neg_unique",
+        "aim.orderedfields.08.proof-neg_unique"
       ]
     },
     {
@@ -516,7 +524,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-neg_unique_left",
-        "aim.orderedfields.06.neg-unique-left"
+        "aim.orderedfields.06.neg-unique-left",
+        "aim.orderedfields.08.dependency-neg_unique_left",
+        "aim.orderedfields.08.proof-neg_unique_left"
       ]
     },
     {
@@ -536,7 +546,9 @@
       "card_ids": [
         "aim.orderedfields.06.lean-add_right_cancel",
         "aim.orderedfields.06.hyp-add_right_cancel",
-        "aim.orderedfields.06.add-cancel-right"
+        "aim.orderedfields.06.add-cancel-right",
+        "aim.orderedfields.08.dependency-add_right_cancel",
+        "aim.orderedfields.08.proof-add_right_cancel"
       ]
     },
     {
@@ -544,7 +556,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.tex-032",
-        "aim.orderedfields.06.lean-add_eq_iff_eq_sub"
+        "aim.orderedfields.06.lean-add_eq_iff_eq_sub",
+        "aim.orderedfields.08.dependency-add_eq_iff_eq_sub",
+        "aim.orderedfields.08.proof-add_eq_iff_eq_sub"
       ]
     },
     {
@@ -552,7 +566,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left",
-        "aim.orderedfields.06.solve-add-left"
+        "aim.orderedfields.06.solve-add-left",
+        "aim.orderedfields.08.dependency-add_eq_iff_eq_sub_left",
+        "aim.orderedfields.08.proof-add_eq_iff_eq_sub_left"
       ]
     },
     {
@@ -569,7 +585,9 @@
       "declaration": "neg_zero",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.06.lean-neg_zero"
+        "aim.orderedfields.06.lean-neg_zero",
+        "aim.orderedfields.08.dependency-neg_zero",
+        "aim.orderedfields.08.proof-neg_zero"
       ]
     },
     {
@@ -577,7 +595,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.tex-034",
-        "aim.orderedfields.06.lean-neg_eq_iff_eq_neg"
+        "aim.orderedfields.06.lean-neg_eq_iff_eq_neg",
+        "aim.orderedfields.08.dependency-neg_eq_iff_eq_neg",
+        "aim.orderedfields.08.proof-neg_eq_iff_eq_neg"
       ]
     },
     {
@@ -594,7 +614,9 @@
       "declaration": "sub_eq_zero_iff",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.06.lean-sub_eq_zero_iff"
+        "aim.orderedfields.06.lean-sub_eq_zero_iff",
+        "aim.orderedfields.08.dependency-sub_eq_zero_iff",
+        "aim.orderedfields.08.proof-sub_eq_zero_iff"
       ]
     },
     {
@@ -602,14 +624,18 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.tex-036",
-        "aim.orderedfields.06.lean-neg_add_rev"
+        "aim.orderedfields.06.lean-neg_add_rev",
+        "aim.orderedfields.08.dependency-neg_add_rev",
+        "aim.orderedfields.08.proof-neg_add_rev"
       ]
     },
     {
       "declaration": "neg_sub",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.06.lean-neg_sub"
+        "aim.orderedfields.06.lean-neg_sub",
+        "aim.orderedfields.08.dependency-neg_sub",
+        "aim.orderedfields.08.proof-neg_sub"
       ]
     },
     {
@@ -617,7 +643,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-add_sub_cancel_right",
-        "aim.orderedfields.06.hyp-add_sub_cancel_right"
+        "aim.orderedfields.06.hyp-add_sub_cancel_right",
+        "aim.orderedfields.08.dependency-add_sub_cancel_right",
+        "aim.orderedfields.08.proof-add_sub_cancel_right"
       ]
     },
     {
@@ -625,7 +653,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-add_sub_cancel_left",
-        "aim.orderedfields.06.hyp-add_sub_cancel_left"
+        "aim.orderedfields.06.hyp-add_sub_cancel_left",
+        "aim.orderedfields.08.dependency-add_sub_cancel_left",
+        "aim.orderedfields.08.proof-add_sub_cancel_left"
       ]
     },
     {
@@ -633,7 +663,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-sub_add_cancel_right",
-        "aim.orderedfields.06.hyp-sub_add_cancel_right"
+        "aim.orderedfields.06.hyp-sub_add_cancel_right",
+        "aim.orderedfields.08.dependency-sub_add_cancel_right",
+        "aim.orderedfields.08.proof-sub_add_cancel_right"
       ]
     },
     {
@@ -641,7 +673,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-sub_add_cancel_left",
-        "aim.orderedfields.06.hyp-sub_add_cancel_left"
+        "aim.orderedfields.06.hyp-sub_add_cancel_left",
+        "aim.orderedfields.08.dependency-sub_add_cancel_left",
+        "aim.orderedfields.08.proof-sub_add_cancel_left"
       ]
     },
     {
@@ -649,7 +683,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.tex-038",
-        "aim.orderedfields.06.lean-sub_sub"
+        "aim.orderedfields.06.lean-sub_sub",
+        "aim.orderedfields.08.dependency-sub_sub",
+        "aim.orderedfields.08.proof-sub_sub"
       ]
     },
     {
@@ -667,14 +703,18 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.tex-040",
-        "aim.orderedfields.06.lean-one_unique"
+        "aim.orderedfields.06.lean-one_unique",
+        "aim.orderedfields.08.dependency-one_unique",
+        "aim.orderedfields.08.proof-one_unique"
       ]
     },
     {
       "declaration": "one_unique_left",
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
-        "aim.orderedfields.06.lean-one_unique_left"
+        "aim.orderedfields.06.lean-one_unique_left",
+        "aim.orderedfields.08.dependency-one_unique_left",
+        "aim.orderedfields.08.proof-one_unique_left"
       ]
     },
     {
@@ -694,7 +734,9 @@
       "card_ids": [
         "aim.orderedfields.06.tex-042",
         "aim.orderedfields.06.lean-inv_unique",
-        "aim.orderedfields.06.hyp-inv_unique"
+        "aim.orderedfields.06.hyp-inv_unique",
+        "aim.orderedfields.08.dependency-inv_unique",
+        "aim.orderedfields.08.proof-inv_unique"
       ]
     },
     {
@@ -702,7 +744,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-inv_unique_left",
-        "aim.orderedfields.06.hyp-inv_unique_left"
+        "aim.orderedfields.06.hyp-inv_unique_left",
+        "aim.orderedfields.08.dependency-inv_unique_left",
+        "aim.orderedfields.08.proof-inv_unique_left"
       ]
     },
     {
@@ -711,7 +755,9 @@
       "card_ids": [
         "aim.orderedfields.06.tex-043",
         "aim.orderedfields.06.lean-mul_left_cancel",
-        "aim.orderedfields.06.hyp-mul_left_cancel"
+        "aim.orderedfields.06.hyp-mul_left_cancel",
+        "aim.orderedfields.08.dependency-mul_left_cancel",
+        "aim.orderedfields.08.proof-mul_left_cancel"
       ]
     },
     {
@@ -719,7 +765,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-mul_right_cancel",
-        "aim.orderedfields.06.hyp-mul_right_cancel"
+        "aim.orderedfields.06.hyp-mul_right_cancel",
+        "aim.orderedfields.08.dependency-mul_right_cancel",
+        "aim.orderedfields.08.proof-mul_right_cancel"
       ]
     },
     {
@@ -727,7 +775,9 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.06.lean-mul_div_cancel_right",
-        "aim.orderedfields.06.hyp-mul_div_cancel_right"
+        "aim.orderedfields.06.hyp-mul_div_cancel_right",
+        "aim.orderedfields.08.dependency-mul_div_cancel_right",
+        "aim.orderedfields.08.proof-mul_div_cancel_right"
       ]
     },
     {
@@ -735,7 +785,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-mul_div_cancel_left",
-        "aim.orderedfields.06.hyp-mul_div_cancel_left"
+        "aim.orderedfields.06.hyp-mul_div_cancel_left",
+        "aim.orderedfields.08.dependency-mul_div_cancel_left",
+        "aim.orderedfields.08.proof-mul_div_cancel_left"
       ]
     },
     {
@@ -743,7 +795,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-div_mul_cancel_right",
-        "aim.orderedfields.06.hyp-div_mul_cancel_right"
+        "aim.orderedfields.06.hyp-div_mul_cancel_right",
+        "aim.orderedfields.08.dependency-div_mul_cancel_right",
+        "aim.orderedfields.08.proof-div_mul_cancel_right"
       ]
     },
     {
@@ -751,7 +805,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-div_mul_cancel_left",
-        "aim.orderedfields.06.hyp-div_mul_cancel_left"
+        "aim.orderedfields.06.hyp-div_mul_cancel_left",
+        "aim.orderedfields.08.dependency-div_mul_cancel_left",
+        "aim.orderedfields.08.proof-div_mul_cancel_left"
       ]
     },
     {
@@ -760,7 +816,9 @@
       "card_ids": [
         "aim.orderedfields.06.tex-045",
         "aim.orderedfields.06.lean-mul_eq_iff_eq_div",
-        "aim.orderedfields.06.hyp-mul_eq_iff_eq_div"
+        "aim.orderedfields.06.hyp-mul_eq_iff_eq_div",
+        "aim.orderedfields.08.dependency-mul_eq_iff_eq_div",
+        "aim.orderedfields.08.proof-mul_eq_iff_eq_div"
       ]
     },
     {
@@ -768,7 +826,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right",
-        "aim.orderedfields.06.hyp-mul_eq_iff_eq_div_right"
+        "aim.orderedfields.06.hyp-mul_eq_iff_eq_div_right",
+        "aim.orderedfields.08.dependency-mul_eq_iff_eq_div_right",
+        "aim.orderedfields.08.proof-mul_eq_iff_eq_div_right"
       ]
     },
     {
@@ -796,7 +856,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.07.tex-051",
-        "aim.orderedfields.07.lean-le_of_lt"
+        "aim.orderedfields.07.lean-le_of_lt",
+        "aim.orderedfields.08.dependency-le_of_lt",
+        "aim.orderedfields.08.proof-le_of_lt"
       ]
     },
     {
@@ -804,7 +866,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.07.tex-052",
-        "aim.orderedfields.07.lean-not_le_of_lt"
+        "aim.orderedfields.07.lean-not_le_of_lt",
+        "aim.orderedfields.08.dependency-not_le_of_lt",
+        "aim.orderedfields.08.proof-not_le_of_lt"
       ]
     },
     {
@@ -812,7 +876,9 @@
       "proof_status": "no_sorry_in_declaration",
       "card_ids": [
         "aim.orderedfields.07.tex-053",
-        "aim.orderedfields.07.lean-lt_asymm"
+        "aim.orderedfields.07.lean-lt_asymm",
+        "aim.orderedfields.08.dependency-lt_asymm",
+        "aim.orderedfields.08.proof-lt_asymm"
       ]
     },
     {
@@ -830,14 +896,18 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-055",
-        "aim.orderedfields.07.lean-lt_of_lt_of_le"
+        "aim.orderedfields.07.lean-lt_of_lt_of_le",
+        "aim.orderedfields.08.dependency-lt_of_lt_of_le",
+        "aim.orderedfields.08.proof-lt_of_lt_of_le"
       ]
     },
     {
       "declaration": "lt_of_le_of_lt",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-lt_of_le_of_lt"
+        "aim.orderedfields.07.lean-lt_of_le_of_lt",
+        "aim.orderedfields.08.dependency-lt_of_le_of_lt",
+        "aim.orderedfields.08.proof-lt_of_le_of_lt"
       ]
     },
     {
@@ -845,7 +915,9 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-056",
-        "aim.orderedfields.07.lean-le_iff_lt_or_eq"
+        "aim.orderedfields.07.lean-le_iff_lt_or_eq",
+        "aim.orderedfields.08.dependency-le_iff_lt_or_eq",
+        "aim.orderedfields.08.proof-le_iff_lt_or_eq"
       ]
     },
     {
@@ -853,7 +925,9 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-057",
-        "aim.orderedfields.07.lean-lt_trichotomy"
+        "aim.orderedfields.07.lean-lt_trichotomy",
+        "aim.orderedfields.08.dependency-lt_trichotomy",
+        "aim.orderedfields.08.proof-lt_trichotomy"
       ]
     },
     {
@@ -861,14 +935,18 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-058",
-        "aim.orderedfields.07.lean-add_le_add_right"
+        "aim.orderedfields.07.lean-add_le_add_right",
+        "aim.orderedfields.08.dependency-add_le_add_right",
+        "aim.orderedfields.08.proof-add_le_add_right"
       ]
     },
     {
       "declaration": "add_le_add_left",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-add_le_add_left"
+        "aim.orderedfields.07.lean-add_le_add_left",
+        "aim.orderedfields.08.dependency-add_le_add_left",
+        "aim.orderedfields.08.proof-add_le_add_left"
       ]
     },
     {
@@ -876,14 +954,18 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-059",
-        "aim.orderedfields.07.lean-le_of_add_le_add_right"
+        "aim.orderedfields.07.lean-le_of_add_le_add_right",
+        "aim.orderedfields.08.dependency-le_of_add_le_add_right",
+        "aim.orderedfields.08.proof-le_of_add_le_add_right"
       ]
     },
     {
       "declaration": "le_of_add_le_add_left",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-le_of_add_le_add_left"
+        "aim.orderedfields.07.lean-le_of_add_le_add_left",
+        "aim.orderedfields.08.dependency-le_of_add_le_add_left",
+        "aim.orderedfields.08.proof-le_of_add_le_add_left"
       ]
     },
     {
@@ -891,7 +973,9 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-060",
-        "aim.orderedfields.07.lean-add_le_add"
+        "aim.orderedfields.07.lean-add_le_add",
+        "aim.orderedfields.08.dependency-add_le_add",
+        "aim.orderedfields.08.proof-add_le_add"
       ]
     },
     {
@@ -899,14 +983,18 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-061",
-        "aim.orderedfields.07.lean-add_lt_add_right"
+        "aim.orderedfields.07.lean-add_lt_add_right",
+        "aim.orderedfields.08.dependency-add_lt_add_right",
+        "aim.orderedfields.08.proof-add_lt_add_right"
       ]
     },
     {
       "declaration": "add_lt_add_left",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-add_lt_add_left"
+        "aim.orderedfields.07.lean-add_lt_add_left",
+        "aim.orderedfields.08.dependency-add_lt_add_left",
+        "aim.orderedfields.08.proof-add_lt_add_left"
       ]
     },
     {
@@ -914,14 +1002,18 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-062",
-        "aim.orderedfields.07.lean-lt_of_add_lt_add_right"
+        "aim.orderedfields.07.lean-lt_of_add_lt_add_right",
+        "aim.orderedfields.08.dependency-lt_of_add_lt_add_right",
+        "aim.orderedfields.08.proof-lt_of_add_lt_add_right"
       ]
     },
     {
       "declaration": "lt_of_add_lt_add_left",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-lt_of_add_lt_add_left"
+        "aim.orderedfields.07.lean-lt_of_add_lt_add_left",
+        "aim.orderedfields.08.dependency-lt_of_add_lt_add_left",
+        "aim.orderedfields.08.proof-lt_of_add_lt_add_left"
       ]
     },
     {
@@ -929,7 +1021,9 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-063",
-        "aim.orderedfields.07.lean-add_lt_add"
+        "aim.orderedfields.07.lean-add_lt_add",
+        "aim.orderedfields.08.dependency-add_lt_add",
+        "aim.orderedfields.08.proof-add_lt_add"
       ]
     },
     {
@@ -937,14 +1031,18 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-064",
-        "aim.orderedfields.07.lean-sub_nonneg"
+        "aim.orderedfields.07.lean-sub_nonneg",
+        "aim.orderedfields.08.dependency-sub_nonneg",
+        "aim.orderedfields.08.proof-sub_nonneg"
       ]
     },
     {
       "declaration": "sub_pos",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-sub_pos"
+        "aim.orderedfields.07.lean-sub_pos",
+        "aim.orderedfields.08.dependency-sub_pos",
+        "aim.orderedfields.08.proof-sub_pos"
       ]
     },
     {
@@ -952,21 +1050,27 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-065",
-        "aim.orderedfields.07.lean-neg_le_neg_iff"
+        "aim.orderedfields.07.lean-neg_le_neg_iff",
+        "aim.orderedfields.08.dependency-neg_le_neg_iff",
+        "aim.orderedfields.08.proof-neg_le_neg_iff"
       ]
     },
     {
       "declaration": "neg_lt_neg_iff",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-neg_lt_neg_iff"
+        "aim.orderedfields.07.lean-neg_lt_neg_iff",
+        "aim.orderedfields.08.dependency-neg_lt_neg_iff",
+        "aim.orderedfields.08.proof-neg_lt_neg_iff"
       ]
     },
     {
       "declaration": "neg_pos_of_neg",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-neg_pos_of_neg"
+        "aim.orderedfields.07.lean-neg_pos_of_neg",
+        "aim.orderedfields.08.dependency-neg_pos_of_neg",
+        "aim.orderedfields.08.proof-neg_pos_of_neg"
       ]
     },
     {
@@ -983,7 +1087,9 @@
       "declaration": "zero_mul",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.06.lean-zero_mul"
+        "aim.orderedfields.06.lean-zero_mul",
+        "aim.orderedfields.08.dependency-zero_mul",
+        "aim.orderedfields.08.proof-zero_mul"
       ]
     },
     {
@@ -991,14 +1097,18 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.06.tex-048",
-        "aim.orderedfields.06.lean-neg_mul"
+        "aim.orderedfields.06.lean-neg_mul",
+        "aim.orderedfields.08.dependency-neg_mul",
+        "aim.orderedfields.08.proof-neg_mul"
       ]
     },
     {
       "declaration": "mul_neg",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.06.lean-mul_neg"
+        "aim.orderedfields.06.lean-mul_neg",
+        "aim.orderedfields.08.dependency-mul_neg",
+        "aim.orderedfields.08.proof-mul_neg"
       ]
     },
     {
@@ -1006,14 +1116,18 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.06.tex-049",
-        "aim.orderedfields.06.lean-mul_sub"
+        "aim.orderedfields.06.lean-mul_sub",
+        "aim.orderedfields.08.dependency-mul_sub",
+        "aim.orderedfields.08.proof-mul_sub"
       ]
     },
     {
       "declaration": "sub_mul",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.06.lean-sub_mul"
+        "aim.orderedfields.06.lean-sub_mul",
+        "aim.orderedfields.08.dependency-sub_mul",
+        "aim.orderedfields.08.proof-sub_mul"
       ]
     },
     {
@@ -1021,63 +1135,81 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-066",
-        "aim.orderedfields.07.lean-mul_nonneg"
+        "aim.orderedfields.07.lean-mul_nonneg",
+        "aim.orderedfields.08.dependency-mul_nonneg",
+        "aim.orderedfields.08.proof-mul_nonneg"
       ]
     },
     {
       "declaration": "mul_lt_mul_of_pos_right",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right"
+        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right",
+        "aim.orderedfields.08.dependency-mul_lt_mul_of_pos_right",
+        "aim.orderedfields.08.proof-mul_lt_mul_of_pos_right"
       ]
     },
     {
       "declaration": "mul_lt_mul_of_pos_left",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left"
+        "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left",
+        "aim.orderedfields.08.dependency-mul_lt_mul_of_pos_left",
+        "aim.orderedfields.08.proof-mul_lt_mul_of_pos_left"
       ]
     },
     {
       "declaration": "mul_le_mul_of_nonneg_right",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right"
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right",
+        "aim.orderedfields.08.dependency-mul_le_mul_of_nonneg_right",
+        "aim.orderedfields.08.proof-mul_le_mul_of_nonneg_right"
       ]
     },
     {
       "declaration": "mul_le_mul_of_nonneg_left",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left"
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left",
+        "aim.orderedfields.08.dependency-mul_le_mul_of_nonneg_left",
+        "aim.orderedfields.08.proof-mul_le_mul_of_nonneg_left"
       ]
     },
     {
       "declaration": "mul_lt_mul_of_neg_right",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right"
+        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right",
+        "aim.orderedfields.08.dependency-mul_lt_mul_of_neg_right",
+        "aim.orderedfields.08.proof-mul_lt_mul_of_neg_right"
       ]
     },
     {
       "declaration": "mul_lt_mul_of_neg_left",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left"
+        "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left",
+        "aim.orderedfields.08.dependency-mul_lt_mul_of_neg_left",
+        "aim.orderedfields.08.proof-mul_lt_mul_of_neg_left"
       ]
     },
     {
       "declaration": "mul_le_mul_of_nonpos_right",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right"
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right",
+        "aim.orderedfields.08.dependency-mul_le_mul_of_nonpos_right",
+        "aim.orderedfields.08.proof-mul_le_mul_of_nonpos_right"
       ]
     },
     {
       "declaration": "mul_le_mul_of_nonpos_left",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left"
+        "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left",
+        "aim.orderedfields.08.dependency-mul_le_mul_of_nonpos_left",
+        "aim.orderedfields.08.proof-mul_le_mul_of_nonpos_left"
       ]
     },
     {
@@ -1085,14 +1217,18 @@
       "proof_status": "contains_sorry",
       "card_ids": [
         "aim.orderedfields.07.tex-069",
-        "aim.orderedfields.07.lean-max_comm"
+        "aim.orderedfields.07.lean-max_comm",
+        "aim.orderedfields.08.dependency-max_comm",
+        "aim.orderedfields.08.proof-max_comm"
       ]
     },
     {
       "declaration": "abs_add_le",
       "proof_status": "contains_sorry",
       "card_ids": [
-        "aim.orderedfields.07.lean-abs_add_le"
+        "aim.orderedfields.07.lean-abs_add_le",
+        "aim.orderedfields.08.dependency-abs_add_le",
+        "aim.orderedfields.08.proof-abs_add_le"
       ]
     },
     {

@@ -460,5 +460,3065 @@
       "proof",
       "ordered-fields"
     ]
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_add"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-zero_add"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "zero_add"
+    ],
+    "id": "aim.orderedfields.08.dependency-zero_add",
+    "type": "dependency",
+    "front": "Which results are needed to prove zero add?",
+    "back": "Additive left identity axiom"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_add"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-zero_add"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "zero_add"
+    ],
+    "id": "aim.orderedfields.08.proof-zero_add",
+    "type": "proof",
+    "front": "Prove: $0 + x = x$",
+    "back": "Use the axiom directly.",
+    "explanation": "The primitive assumption states that zero plus any element equals that element. This Lean corollary restates that same mathematical fact."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_unique"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-zero_unique"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "zero_unique"
+    ],
+    "id": "aim.orderedfields.08.dependency-zero_unique",
+    "type": "dependency",
+    "front": "Which results are needed to prove zero unique?",
+    "back": "Right additive identity; substitution at zero"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_unique"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-zero_unique"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "zero_unique"
+    ],
+    "id": "aim.orderedfields.08.proof-zero_unique",
+    "type": "proof",
+    "front": "Prove: $(\\forall  x, z + x = x) \\Rightarrow  z = 0$",
+    "back": "Set x to zero.",
+    "explanation": "Assume z+x=x for every x. Taking x=0 gives z+0=0. The derived right identity reduces the left side to z, proving z=0."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_unique_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-zero_unique_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "zero_unique_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-zero_unique_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove zero unique right?",
+    "back": "Left additive identity; substitution at zero"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_unique_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-zero_unique_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "zero_unique_right"
+    ],
+    "id": "aim.orderedfields.08.proof-zero_unique_right",
+    "type": "proof",
+    "front": "Prove: $(\\forall  x, x + z = x) \\Rightarrow  z = 0$",
+    "back": "Set x to zero.",
+    "explanation": "Assume x+z=x for every x. Taking x=0 gives 0+z=0, while the left additive identity gives 0+z=z. Hence z=0."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_unique"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_unique"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_unique"
+    ],
+    "id": "aim.orderedfields.08.dependency-neg_unique",
+    "type": "dependency",
+    "front": "Which results are needed to prove neg unique?",
+    "back": "Associativity, identity, additive inverse"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_unique"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_unique"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_unique"
+    ],
+    "id": "aim.orderedfields.08.proof-neg_unique",
+    "type": "proof",
+    "front": "Prove: $x + y = 0 \\Rightarrow  y = -x$",
+    "back": "Add the inverse of x and simplify.",
+    "explanation": "From x+y=0, add -x on the left. Associativity and -x+x=0 reduce the left to y and the right to -x."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_unique_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_unique_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_unique_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-neg_unique_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove neg unique left?",
+    "back": "Associativity, identity, additive inverse"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_unique_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_unique_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_unique_left"
+    ],
+    "id": "aim.orderedfields.08.proof-neg_unique_left",
+    "type": "proof",
+    "front": "Prove: $y + x = 0 \\Rightarrow  y = -x$",
+    "back": "Add -x on the right.",
+    "explanation": "From y+x=0, add -x on the right; reassociate y+(x+(-x))=0+(-x) to obtain y=-x."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_right_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_right_cancel"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_right_cancel"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_right_cancel",
+    "type": "dependency",
+    "front": "Which results are needed to prove add right cancel?",
+    "back": "Associativity, additive inverse and identity"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_right_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_right_cancel"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_right_cancel"
+    ],
+    "id": "aim.orderedfields.08.proof-add_right_cancel",
+    "type": "proof",
+    "front": "Prove: $y + x = z + x \\Rightarrow  y = z$",
+    "back": "Add -x to both sides and simplify.",
+    "explanation": "From y+x=z+x, add -x to both sides on the right. Associativity and x+(-x)=0 yield y+0=z+0, so y=z."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_eq_iff_eq_sub"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_eq_iff_eq_sub"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_eq_iff_eq_sub"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_eq_iff_eq_sub",
+    "type": "dependency",
+    "front": "Which results are needed to prove add eq iff eq sub?",
+    "back": "Subtraction definition and add-sub cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_eq_iff_eq_sub"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_eq_iff_eq_sub"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_eq_iff_eq_sub"
+    ],
+    "id": "aim.orderedfields.08.proof-add_eq_iff_eq_sub",
+    "type": "proof",
+    "front": "Prove: $x + a = b \\Leftrightarrow  x = b - a$",
+    "back": "Prove both implications by adding or subtracting a.",
+    "explanation": "From x+a=b, subtract a to obtain x=b-a. Conversely x=b-a implies x+a=(b-a)+a=b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_eq_iff_eq_sub_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_eq_iff_eq_sub_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_eq_iff_eq_sub_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove add eq iff eq sub left?",
+    "back": "Commutativity and the right-addend equation theorem"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_eq_iff_eq_sub_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_eq_iff_eq_sub_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_eq_iff_eq_sub_left"
+    ],
+    "id": "aim.orderedfields.08.proof-add_eq_iff_eq_sub_left",
+    "type": "proof",
+    "front": "Prove: $a + x = b \\Leftrightarrow  x = b - a$",
+    "back": "Commute a+x to x+a; apply the earlier equivalence.",
+    "explanation": "The equality a+x=b is equivalent by commutativity to x+a=b. The additive solve theorem gives x=b-a in both directions."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_zero"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_zero"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_zero"
+    ],
+    "id": "aim.orderedfields.08.dependency-neg_zero",
+    "type": "dependency",
+    "front": "Which results are needed to prove neg zero?",
+    "back": "Left identity and additive inverse axiom"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_zero"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_zero"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_zero"
+    ],
+    "id": "aim.orderedfields.08.proof-neg_zero",
+    "type": "proof",
+    "front": "Prove: $-0=0$",
+    "back": "Compare 0+(-0)=0 with 0+(-0)=-0.",
+    "explanation": "The inverse axiom at zero gives 0+(-0)=0. The left identity axiom makes the same expression equal -0, so -0=0."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_eq_iff_eq_neg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_eq_iff_eq_neg"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_eq_iff_eq_neg"
+    ],
+    "id": "aim.orderedfields.08.dependency-neg_eq_iff_eq_neg",
+    "type": "dependency",
+    "front": "Which results are needed to prove neg eq iff eq neg?",
+    "back": "Double negation and equality congruence"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_eq_iff_eq_neg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_eq_iff_eq_neg"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_eq_iff_eq_neg"
+    ],
+    "id": "aim.orderedfields.08.proof-neg_eq_iff_eq_neg",
+    "type": "proof",
+    "front": "Prove: $-x = y \\Leftrightarrow  x = -y$",
+    "back": "Negate each side and simplify twice.",
+    "explanation": "If -x=y, applying negation gives -(-x)=-y, hence x=-y. Conversely, x=-y implies -x=-(-y)=y."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_eq_zero_iff"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_eq_zero_iff"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_eq_zero_iff"
+    ],
+    "id": "aim.orderedfields.08.dependency-sub_eq_zero_iff",
+    "type": "dependency",
+    "front": "Which results are needed to prove sub eq zero iff?",
+    "back": "Subtraction definition, additive inverse, cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_eq_zero_iff"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_eq_zero_iff"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_eq_zero_iff"
+    ],
+    "id": "aim.orderedfields.08.proof-sub_eq_zero_iff",
+    "type": "proof",
+    "front": "Prove: $x - y = 0 \\Leftrightarrow  x = y$",
+    "back": "Add y to both sides; reverse using self-subtraction.",
+    "explanation": "If x-y=0, then (x-y)+y=0+y, reducing to x=y. If x=y, rewrite x-y as y-y=0."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_add_rev"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_add_rev"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_add_rev"
+    ],
+    "id": "aim.orderedfields.08.dependency-neg_add_rev",
+    "type": "dependency",
+    "front": "Which results are needed to prove neg add rev?",
+    "back": "Associativity, inverse uniqueness"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_add_rev"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_add_rev"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_add_rev"
+    ],
+    "id": "aim.orderedfields.08.proof-neg_add_rev",
+    "type": "proof",
+    "front": "Prove: $-(x + y) = -y + -x$",
+    "back": "Show the reversed sum is an inverse of x+y.",
+    "explanation": "By associativity and inverse laws, (x+y)+((-y)+(-x))=0. Uniqueness of additive inverses gives -(x+y)=(-y)+(-x)."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_sub"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_sub"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_sub"
+    ],
+    "id": "aim.orderedfields.08.dependency-neg_sub",
+    "type": "dependency",
+    "front": "Which results are needed to prove neg sub?",
+    "back": "Subtraction definition, negation of a sum, double negation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_sub"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_sub"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_sub"
+    ],
+    "id": "aim.orderedfields.08.proof-neg_sub",
+    "type": "proof",
+    "front": "Prove: $-(x - y) = y - x$",
+    "back": "Expand subtraction, negate the sum and simplify.",
+    "explanation": "Rewrite x-y as x+(-y); the negation-of-sum law gives -(-y)+(-x). Double negation reduces this to y+(-x)=y-x."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_sub_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_sub_cancel_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_sub_cancel_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_sub_cancel_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove add sub cancel right?",
+    "back": "Subtraction definition, associativity, additive inverse"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_sub_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_sub_cancel_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_sub_cancel_right"
+    ],
+    "id": "aim.orderedfields.08.proof-add_sub_cancel_right",
+    "type": "proof",
+    "front": "Prove: $x + y - y = x$",
+    "back": "Regroup y+(-y) as zero.",
+    "explanation": "(x+y)-y=x+(y+(-y))=x+0=x by associativity, the inverse axiom, and the identity law."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_sub_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_sub_cancel_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_sub_cancel_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_sub_cancel_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove add sub cancel left?",
+    "back": "Commutativity and right add-sub cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_sub_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-add_sub_cancel_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_sub_cancel_left"
+    ],
+    "id": "aim.orderedfields.08.proof-add_sub_cancel_left",
+    "type": "proof",
+    "front": "Prove: $y + x - y = x$",
+    "back": "Commute y+x, then cancel y.",
+    "explanation": "Rewrite (y+x)-y as (x+y)-y by commutativity and use add_sub_cancel_right."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_add_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_add_cancel_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_add_cancel_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-sub_add_cancel_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove sub add cancel right?",
+    "back": "Subtraction definition, associativity, inverse"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_add_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_add_cancel_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_add_cancel_right"
+    ],
+    "id": "aim.orderedfields.08.proof-sub_add_cancel_right",
+    "type": "proof",
+    "front": "Prove: $x - y + y = x$",
+    "back": "Regroup (-y)+y as zero.",
+    "explanation": "(x-y)+y=(x+(-y))+y=x+((-y)+y)=x+0=x."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_add_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_add_cancel_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_add_cancel_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-sub_add_cancel_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove sub add cancel left?",
+    "back": "Commutativity and right sub-add cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_add_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_add_cancel_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_add_cancel_left"
+    ],
+    "id": "aim.orderedfields.08.proof-sub_add_cancel_left",
+    "type": "proof",
+    "front": "Prove: $y + (x - y) = x$",
+    "back": "Commute the outer terms, then cancel.",
+    "explanation": "Since y+(x-y)=(x-y)+y, the previously proved right sub-add cancellation yields x."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_sub"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_sub"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_sub"
+    ],
+    "id": "aim.orderedfields.08.dependency-sub_sub",
+    "type": "dependency",
+    "front": "Which results are needed to prove sub sub?",
+    "back": "Subtraction, associativity, negation of sums"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_sub"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_sub"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_sub"
+    ],
+    "id": "aim.orderedfields.08.proof-sub_sub",
+    "type": "proof",
+    "front": "Prove: $x - y - z = x - (y + z)$",
+    "back": "Expand two subtractions, regroup negatives.",
+    "explanation": "(x-y)-z=(x+(-y))+(-z)=x+((-y)+(-z))=x+(-(y+z))=x-(y+z)."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "one_unique"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-one_unique"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "one_unique"
+    ],
+    "id": "aim.orderedfields.08.dependency-one_unique",
+    "type": "dependency",
+    "front": "Which results are needed to prove one unique?",
+    "back": "Left multiplicative identity; evaluate at one"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "one_unique"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-one_unique"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "one_unique"
+    ],
+    "id": "aim.orderedfields.08.proof-one_unique",
+    "type": "proof",
+    "front": "Prove: $(\\forall  x, x * e = x) \\Rightarrow  e = 1$",
+    "back": "Apply the proposed identity law to 1.",
+    "explanation": "Assume x*e=x for all x. Let x=1: 1*e=1. The primitive left identity gives 1*e=e, hence e=1."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "one_unique_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-one_unique_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "one_unique_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-one_unique_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove one unique left?",
+    "back": "Right multiplicative identity; evaluate at one"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "one_unique_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-one_unique_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "one_unique_left"
+    ],
+    "id": "aim.orderedfields.08.proof-one_unique_left",
+    "type": "proof",
+    "front": "Prove: $(\\forall  x, e * x = x) \\Rightarrow  e = 1$",
+    "back": "Apply the proposed identity law to 1.",
+    "explanation": "Assume e*x=x for all x. Let x=1: e*1=1. The derived right identity gives e*1=e, hence e=1."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_unique"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-inv_unique"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "inv_unique"
+    ],
+    "id": "aim.orderedfields.08.dependency-inv_unique",
+    "type": "dependency",
+    "front": "Which results are needed to prove inv unique?",
+    "back": "Multiplicative associativity and nonzero inverse"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_unique"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-inv_unique"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "inv_unique"
+    ],
+    "id": "aim.orderedfields.08.proof-inv_unique",
+    "type": "proof",
+    "front": "Prove: $x \\ne  0 \\Rightarrow  x * y = 1 \\Rightarrow  y = x^{-1}$",
+    "back": "Multiply by x inverse and simplify.",
+    "explanation": "Assume x is nonzero and x*y=1. Multiply both sides on the left by x inverse; associativity and inverse cancellation yield y=x inverse."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_unique_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-inv_unique_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "inv_unique_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-inv_unique_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove inv unique left?",
+    "back": "Commutativity and inverse uniqueness"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "inv_unique_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-inv_unique_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "inv_unique_left"
+    ],
+    "id": "aim.orderedfields.08.proof-inv_unique_left",
+    "type": "proof",
+    "front": "Prove: $x \\ne  0 \\Rightarrow  y * x = 1 \\Rightarrow  y = x^{-1}$",
+    "back": "Commute y*x=1 and apply inverse uniqueness.",
+    "explanation": "For nonzero x, y*x=1 implies x*y=1 by commutativity. Uniqueness of inverse on the right gives y=x inverse."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_left_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_left_cancel"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_left_cancel"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_left_cancel",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul left cancel?",
+    "back": "Nonzero inverse, associativity and multiplicative identity"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_left_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_left_cancel"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_left_cancel"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_left_cancel",
+    "type": "proof",
+    "front": "Prove: $x \\ne  0 \\Rightarrow  x * y = x * z \\Rightarrow  y = z$",
+    "back": "Multiply both sides by the inverse of x.",
+    "explanation": "If x is nonzero and x*y=x*z, left multiplication by x inverse gives (x inverse*x)*y=(x inverse*x)*z; simplify to y=z."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_right_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_right_cancel"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_right_cancel"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_right_cancel",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul right cancel?",
+    "back": "Multiplicative commutativity and left cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_right_cancel"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_right_cancel"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_right_cancel"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_right_cancel",
+    "type": "proof",
+    "front": "Prove: $x \\ne  0 \\Rightarrow  y * x = z * x \\Rightarrow  y = z$",
+    "back": "Commute both products and use left cancellation.",
+    "explanation": "For nonzero x, y*x=z*x is equivalent to x*y=x*z. Apply the previously proved left multiplicative cancellation theorem."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_div_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_div_cancel_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_div_cancel_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_div_cancel_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul div cancel right?",
+    "back": "Division definition, associativity and inverse law"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_div_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_div_cancel_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_div_cancel_right"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_div_cancel_right",
+    "type": "proof",
+    "front": "Prove: $y\\ne0\\Rightarrow (xy)/y=x$",
+    "back": "Group y with its inverse.",
+    "explanation": "For nonzero y, (x*y)/y=(x*y)*y inverse=x*(y*y inverse)=x*1=x."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_div_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_div_cancel_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_div_cancel_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_div_cancel_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul div cancel left?",
+    "back": "Commutativity and right mul-div cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_div_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_div_cancel_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_div_cancel_left"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_div_cancel_left",
+    "type": "proof",
+    "front": "Prove: $y\\ne0\\Rightarrow (yx)/y=x$",
+    "back": "Commute y*x before dividing.",
+    "explanation": "With y nonzero, (y*x)/y=(x*y)/y=x by commutativity and the right mul-div cancellation theorem."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "div_mul_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-div_mul_cancel_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "div_mul_cancel_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-div_mul_cancel_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove div mul cancel right?",
+    "back": "Division definition, associativity, inverse law"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "div_mul_cancel_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-div_mul_cancel_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "div_mul_cancel_right"
+    ],
+    "id": "aim.orderedfields.08.proof-div_mul_cancel_right",
+    "type": "proof",
+    "front": "Prove: $y\\ne0\\Rightarrow (x/y)y=x$",
+    "back": "Group the inverse of y with y.",
+    "explanation": "For nonzero y, (x/y)*y=(x*y inverse)*y=x*(y inverse*y)=x*1=x."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "div_mul_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-div_mul_cancel_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "div_mul_cancel_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-div_mul_cancel_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove div mul cancel left?",
+    "back": "Commutativity and right div-mul cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "div_mul_cancel_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-div_mul_cancel_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "div_mul_cancel_left"
+    ],
+    "id": "aim.orderedfields.08.proof-div_mul_cancel_left",
+    "type": "proof",
+    "front": "Prove: $y\\ne0\\Rightarrow y(x/y)=x$",
+    "back": "Commute y with x/y and simplify.",
+    "explanation": "For y nonzero, y*(x/y)=(x/y)*y=x by commutativity and the right div-mul cancellation theorem."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_eq_iff_eq_div"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_eq_iff_eq_div"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_eq_iff_eq_div"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_eq_iff_eq_div",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul eq iff eq div?",
+    "back": "Nonzero-factor division cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_eq_iff_eq_div"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_eq_iff_eq_div"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_eq_iff_eq_div"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_eq_iff_eq_div",
+    "type": "proof",
+    "front": "Prove: $a \\ne  0 \\Rightarrow  (a * x = b \\Leftrightarrow  x = b / a)$",
+    "back": "Divide by a for the forward implication; multiply back for the reverse.",
+    "explanation": "If a is nonzero and a*x=b, then x=(a*x)/a=b/a. If x=b/a, multiply by a and use cancellation to get a*x=b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_eq_iff_eq_div_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_eq_iff_eq_div_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_eq_iff_eq_div_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul eq iff eq div right?",
+    "back": "Commutativity and left-factor solve theorem"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_eq_iff_eq_div_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_eq_iff_eq_div_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_eq_iff_eq_div_right"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_eq_iff_eq_div_right",
+    "type": "proof",
+    "front": "Prove: $a \\ne  0 \\Rightarrow  (x * a = b \\Leftrightarrow  x = b / a)$",
+    "back": "Commute x*a and apply the left-factor equation equivalence.",
+    "explanation": "For nonzero a, x*a=b is equivalent by commutativity to a*x=b, which is equivalent to x=b/a."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_mul"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-zero_mul"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "zero_mul"
+    ],
+    "id": "aim.orderedfields.08.dependency-zero_mul",
+    "type": "dependency",
+    "front": "Which results are needed to prove zero mul?",
+    "back": "Multiplication commutativity and mul_zero"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "zero_mul"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-zero_mul"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "zero_mul"
+    ],
+    "id": "aim.orderedfields.08.proof-zero_mul",
+    "type": "proof",
+    "front": "Prove: $0 * a = 0$",
+    "back": "Commute the factors and use multiplication by zero.",
+    "explanation": "For any a, 0*a=a*0 by commutativity, and a*0=0 by the multiplication-by-zero theorem."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_mul"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_mul"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_mul"
+    ],
+    "id": "aim.orderedfields.08.dependency-neg_mul",
+    "type": "dependency",
+    "front": "Which results are needed to prove neg mul?",
+    "back": "Right distributivity, zero multiplication, inverse uniqueness"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_mul"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-neg_mul"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_mul"
+    ],
+    "id": "aim.orderedfields.08.proof-neg_mul",
+    "type": "proof",
+    "front": "Prove: $(-a) * b = -(a * b)$",
+    "back": "Show (-a)*b is the inverse of a*b.",
+    "explanation": "Distributivity gives (a*b)+((-a)*b)=(a+(-a))*b=0*b=0. Thus (-a)*b=-(a*b) by inverse uniqueness."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_neg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_neg"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_neg"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_neg",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul neg?",
+    "back": "Commutativity and neg_mul"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_neg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_neg"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_neg"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_neg",
+    "type": "proof",
+    "front": "Prove: $a * (-b) = -(a * b)$",
+    "back": "Commute factors and apply the negative-factor law.",
+    "explanation": "a*(-b)=(-b)*a=-(b*a)=-(a*b), using commutativity and neg_mul."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_sub"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_sub"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_sub"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_sub",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul sub?",
+    "back": "Definition of subtraction, left distributivity, mul_neg"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_sub"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-mul_sub"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_sub"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_sub",
+    "type": "proof",
+    "front": "Prove: $a * (b - c) = a * b - a * c$",
+    "back": "Expand a*(b+(-c)) and simplify.",
+    "explanation": "a*(b-c)=a*(b+(-c))=a*b+a*(-c)=a*b+(-(a*c))=a*b-a*c."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_mul"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_mul"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_mul"
+    ],
+    "id": "aim.orderedfields.08.dependency-sub_mul",
+    "type": "dependency",
+    "front": "Which results are needed to prove sub mul?",
+    "back": "Commutativity and mul_sub"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_mul"
+    },
+    "prerequisites": [
+      "aim.orderedfields.06.lean-sub_mul"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_mul"
+    ],
+    "id": "aim.orderedfields.08.proof-sub_mul",
+    "type": "proof",
+    "front": "Prove: $(a - b) * c = a * c - b * c$",
+    "back": "Commute the product and apply right subtraction distributivity.",
+    "explanation": "(a-b)*c=c*(a-b)=c*a-c*b=a*c-b*c."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_lt"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-le_of_lt"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "le_of_lt"
+    ],
+    "id": "aim.orderedfields.08.dependency-le_of_lt",
+    "type": "dependency",
+    "front": "Which results are needed to prove le of lt?",
+    "back": "Definition of strict order as le and not reverse-le"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_lt"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-le_of_lt"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "le_of_lt"
+    ],
+    "id": "aim.orderedfields.08.proof-le_of_lt",
+    "type": "proof",
+    "front": "Prove: $a<b\\Rightarrow a\\le b$",
+    "back": "Take the first part of the strict-order equivalence.",
+    "explanation": "By definition a<b means both a<=b and not(b<=a). Therefore a<=b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "not_le_of_lt"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-not_le_of_lt"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "not_le_of_lt"
+    ],
+    "id": "aim.orderedfields.08.dependency-not_le_of_lt",
+    "type": "dependency",
+    "front": "Which results are needed to prove not le of lt?",
+    "back": "Definition of strict order as le and not reverse-le"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "not_le_of_lt"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-not_le_of_lt"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "not_le_of_lt"
+    ],
+    "id": "aim.orderedfields.08.proof-not_le_of_lt",
+    "type": "proof",
+    "front": "Prove: $a<b\\Rightarrow\\neg(b\\le a)$",
+    "back": "Take the second part of the strict-order equivalence.",
+    "explanation": "By definition a<b includes the condition that b<=a is false. This is exactly the desired conclusion."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_asymm"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_asymm"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_asymm"
+    ],
+    "id": "aim.orderedfields.08.dependency-lt_asymm",
+    "type": "dependency",
+    "front": "Which results are needed to prove lt asymm?",
+    "back": "Strict order definition; le_of_lt"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_asymm"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_asymm"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_asymm"
+    ],
+    "id": "aim.orderedfields.08.proof-lt_asymm",
+    "type": "proof",
+    "front": "Prove: $a<b\\Rightarrow\\neg(b<a)$",
+    "back": "Assume both orientations and contradict reverse-le exclusion.",
+    "explanation": "From a<b we get not(b<=a). But b<a would imply b<=a, a contradiction; hence not(b<a)."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_lt_of_le"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_of_lt_of_le"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_of_lt_of_le"
+    ],
+    "id": "aim.orderedfields.08.dependency-lt_of_lt_of_le",
+    "type": "dependency",
+    "front": "Which results are needed to prove lt of lt of le?",
+    "back": "Transitivity of le and strict order definition"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_lt_of_le"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_of_lt_of_le"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_of_lt_of_le"
+    ],
+    "id": "aim.orderedfields.08.proof-lt_of_lt_of_le",
+    "type": "proof",
+    "front": "Prove: $a<b\\land b\\le c\\Rightarrow a<c$",
+    "back": "Prove non-strict order, then rule out the reverse.",
+    "explanation": "From a<b and b<=c infer a<=c. If c<=a, then b<=a by transitivity, contradicting a<b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_le_of_lt"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_of_le_of_lt"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_of_le_of_lt"
+    ],
+    "id": "aim.orderedfields.08.dependency-lt_of_le_of_lt",
+    "type": "dependency",
+    "front": "Which results are needed to prove lt of le of lt?",
+    "back": "Transitivity of le and strict order definition"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_le_of_lt"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_of_le_of_lt"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_of_le_of_lt"
+    ],
+    "id": "aim.orderedfields.08.proof-lt_of_le_of_lt",
+    "type": "proof",
+    "front": "Prove: $a\\le b\\land b<c\\Rightarrow a<c$",
+    "back": "Prove non-strict order, then rule out the reverse.",
+    "explanation": "From a<=b and b<c infer a<=c. If c<=a, then c<=b, contradicting b<c."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_iff_lt_or_eq"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-le_iff_lt_or_eq"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "le_iff_lt_or_eq"
+    ],
+    "id": "aim.orderedfields.08.dependency-le_iff_lt_or_eq",
+    "type": "dependency",
+    "front": "Which results are needed to prove le iff lt or eq?",
+    "back": "Totality, antisymmetry, strict order definition"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_iff_lt_or_eq"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-le_iff_lt_or_eq"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "le_iff_lt_or_eq"
+    ],
+    "id": "aim.orderedfields.08.proof-le_iff_lt_or_eq",
+    "type": "proof",
+    "front": "Prove: $a\\le b\\Leftrightarrow(a<b\\lor a=b)$",
+    "back": "Split a<=b according to whether b<=a.",
+    "explanation": "If a<=b and b<=a, antisymmetry gives a=b; otherwise the strict-order definition gives a<b. Conversely either case implies a<=b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_trichotomy"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_trichotomy"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_trichotomy"
+    ],
+    "id": "aim.orderedfields.08.dependency-lt_trichotomy",
+    "type": "dependency",
+    "front": "Which results are needed to prove lt trichotomy?",
+    "back": "Totality, antisymmetry, strict-order definition"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_trichotomy"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_trichotomy"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_trichotomy"
+    ],
+    "id": "aim.orderedfields.08.proof-lt_trichotomy",
+    "type": "proof",
+    "front": "Prove: $a<b\\lor a=b\\lor b<a$",
+    "back": "Split totality into equality or a strict orientation.",
+    "explanation": "Totality gives a<=b or b<=a. If the reverse also holds, antisymmetry gives equality. Otherwise the corresponding strict inequality holds."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_le_add_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_le_add_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_le_add_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove add le add right?",
+    "back": "Compatibility of order with addition"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_le_add_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_le_add_right"
+    ],
+    "id": "aim.orderedfields.08.proof-add_le_add_right",
+    "type": "proof",
+    "front": "Prove: $a\\le b\\Rightarrow a+c\\le b+c$",
+    "back": "Apply the primitive order-addition axiom.",
+    "explanation": "The ordered-field assumption states directly that adding the same c on the right to a<=b preserves the inequality."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_le_add_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_le_add_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_le_add_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove add le add left?",
+    "back": "Addition commutativity and right translation axiom"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_le_add_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_le_add_left"
+    ],
+    "id": "aim.orderedfields.08.proof-add_le_add_left",
+    "type": "proof",
+    "front": "Prove: $a\\le b\\Rightarrow c+a\\le c+b$",
+    "back": "Add c on the right and commute both sums.",
+    "explanation": "From a<=b infer a+c<=b+c by the axiom. Using commutativity, rewrite this as c+a<=c+b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_add_le_add_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-le_of_add_le_add_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "le_of_add_le_add_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-le_of_add_le_add_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove le of add le add right?",
+    "back": "Right translation axiom and additive cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_add_le_add_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-le_of_add_le_add_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "le_of_add_le_add_right"
+    ],
+    "id": "aim.orderedfields.08.proof-le_of_add_le_add_right",
+    "type": "proof",
+    "front": "Prove: $a+c\\le b+c\\Rightarrow a\\le b$",
+    "back": "Add -c to both sides of the given inequality.",
+    "explanation": "From a+c<=b+c, translate by -c and simplify (a+c)+(-c)=a and (b+c)+(-c)=b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_add_le_add_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-le_of_add_le_add_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "le_of_add_le_add_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-le_of_add_le_add_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove le of add le add left?",
+    "back": "Commutativity and right order cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "le_of_add_le_add_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-le_of_add_le_add_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "le_of_add_le_add_left"
+    ],
+    "id": "aim.orderedfields.08.proof-le_of_add_le_add_left",
+    "type": "proof",
+    "front": "Prove: $c+a\\le c+b\\Rightarrow a\\le b$",
+    "back": "Commute both sums and apply right order cancellation.",
+    "explanation": "c+a<=c+b becomes a+c<=b+c by commutativity. Cancel the right addition of c to conclude a<=b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_le_add"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_le_add"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_le_add",
+    "type": "dependency",
+    "front": "Which results are needed to prove add le add?",
+    "back": "Additive order compatibility and le transitivity"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_le_add"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_le_add"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_le_add"
+    ],
+    "id": "aim.orderedfields.08.proof-add_le_add",
+    "type": "proof",
+    "front": "Prove: $a\\le b\\land c\\le d\\Rightarrow a+c\\le b+d$",
+    "back": "Translate each inequality, then chain.",
+    "explanation": "From a<=b obtain a+c<=b+c. From c<=d obtain b+c<=b+d. Transitivity yields a+c<=b+d."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_lt_add_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_lt_add_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_lt_add_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove add lt add right?",
+    "back": "Strict order definition; order compatibility and cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_lt_add_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_lt_add_right"
+    ],
+    "id": "aim.orderedfields.08.proof-add_lt_add_right",
+    "type": "proof",
+    "front": "Prove: $a<b\\Rightarrow a+c<b+c$",
+    "back": "Translate the le part and forbid the reverse order.",
+    "explanation": "From a<b get a<=b and not(b<=a). Translate to a+c<=b+c. If b+c<=a+c, cancel c to infer b<=a, a contradiction."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_lt_add_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_lt_add_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_lt_add_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove add lt add left?",
+    "back": "Commutativity and strict right translation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_lt_add_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_lt_add_left"
+    ],
+    "id": "aim.orderedfields.08.proof-add_lt_add_left",
+    "type": "proof",
+    "front": "Prove: $a<b\\Rightarrow c+a<c+b$",
+    "back": "Commute both sums and apply the right-translation result.",
+    "explanation": "From a<b infer a+c<b+c. Commutativity rewrites these sums as c+a<c+b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_add_lt_add_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_of_add_lt_add_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_of_add_lt_add_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-lt_of_add_lt_add_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove lt of add lt add right?",
+    "back": "Strict order definition; additive order translation and cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_add_lt_add_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_of_add_lt_add_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_of_add_lt_add_right"
+    ],
+    "id": "aim.orderedfields.08.proof-lt_of_add_lt_add_right",
+    "type": "proof",
+    "front": "Prove: $a+c<b+c\\Rightarrow a<b$",
+    "back": "Cancel c in both parts of the strict inequality.",
+    "explanation": "If a+c<b+c, then a+c<=b+c, so a<=b. If b<=a, translation yields b+c<=a+c, contradicting strictness."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_add_lt_add_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_of_add_lt_add_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_of_add_lt_add_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-lt_of_add_lt_add_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove lt of add lt add left?",
+    "back": "Commutativity and strict right cancellation"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_of_add_lt_add_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-lt_of_add_lt_add_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "lt_of_add_lt_add_left"
+    ],
+    "id": "aim.orderedfields.08.proof-lt_of_add_lt_add_left",
+    "type": "proof",
+    "front": "Prove: $c+a<c+b\\Rightarrow a<b$",
+    "back": "Commute both sums, then use the right cancellation lemma.",
+    "explanation": "c+a<c+b is equivalent by commutativity to a+c<b+c, which implies a<b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_lt_add"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_lt_add"
+    ],
+    "id": "aim.orderedfields.08.dependency-add_lt_add",
+    "type": "dependency",
+    "front": "Which results are needed to prove add lt add?",
+    "back": "Strict translation and strict transitivity"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "add_lt_add"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-add_lt_add"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "add_lt_add"
+    ],
+    "id": "aim.orderedfields.08.proof-add_lt_add",
+    "type": "proof",
+    "front": "Prove: $a<b\\land c<d\\Rightarrow a+c<b+d$",
+    "back": "Translate a<b by c, then c<d by b; chain.",
+    "explanation": "From a<b get a+c<b+c. From c<d get b+c<b+d. Strict transitivity yields a+c<b+d."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_nonneg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-sub_nonneg"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_nonneg"
+    ],
+    "id": "aim.orderedfields.08.dependency-sub_nonneg",
+    "type": "dependency",
+    "front": "Which results are needed to prove sub nonneg?",
+    "back": "Subtraction definition and order translation equivalence"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_nonneg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-sub_nonneg"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_nonneg"
+    ],
+    "id": "aim.orderedfields.08.proof-sub_nonneg",
+    "type": "proof",
+    "front": "Prove: $0\\le a-b\\Leftrightarrow b\\le a$",
+    "back": "Translate zero<=a-b by b and simplify.",
+    "explanation": "If 0<=a-b, add b to both sides to get b<=a. Conversely if b<=a, translate by -b and simplify to 0<=a-b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_pos"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-sub_pos"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_pos"
+    ],
+    "id": "aim.orderedfields.08.dependency-sub_pos",
+    "type": "dependency",
+    "front": "Which results are needed to prove sub pos?",
+    "back": "Strict order translation and subtraction definition"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "sub_pos"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-sub_pos"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "sub_pos"
+    ],
+    "id": "aim.orderedfields.08.proof-sub_pos",
+    "type": "proof",
+    "front": "Prove: $0<a-b\\Leftrightarrow b<a$",
+    "back": "Translate 0<a-b by b and reverse the argument.",
+    "explanation": "Adding b to 0<a-b yields b<a. Conversely subtract b from b<a using strict translation to obtain 0<a-b."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_le_neg_iff"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-neg_le_neg_iff"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_le_neg_iff"
+    ],
+    "id": "aim.orderedfields.08.dependency-neg_le_neg_iff",
+    "type": "dependency",
+    "front": "Which results are needed to prove neg le neg iff?",
+    "back": "Additive order translation and inverse identities"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_le_neg_iff"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-neg_le_neg_iff"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_le_neg_iff"
+    ],
+    "id": "aim.orderedfields.08.proof-neg_le_neg_iff",
+    "type": "proof",
+    "front": "Prove: $-a\\le-b\\Leftrightarrow b\\le a$",
+    "back": "Translate -a<=-b by a+b.",
+    "explanation": "Adding a+b to both sides reduces -a<=-b to b<=a using associativity and additive inverses. Reverse the translation for the converse."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_lt_neg_iff"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-neg_lt_neg_iff"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_lt_neg_iff"
+    ],
+    "id": "aim.orderedfields.08.dependency-neg_lt_neg_iff",
+    "type": "dependency",
+    "front": "Which results are needed to prove neg lt neg iff?",
+    "back": "Strict translation and additive inverses"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_lt_neg_iff"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-neg_lt_neg_iff"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_lt_neg_iff"
+    ],
+    "id": "aim.orderedfields.08.proof-neg_lt_neg_iff",
+    "type": "proof",
+    "front": "Prove: $-a<-b\\Leftrightarrow b<a$",
+    "back": "Translate -a<-b by a+b, then reverse.",
+    "explanation": "Adding a+b turns -a<-b into b<a; strict translation is reversible, giving the biconditional."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_pos_of_neg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-neg_pos_of_neg"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_pos_of_neg"
+    ],
+    "id": "aim.orderedfields.08.dependency-neg_pos_of_neg",
+    "type": "dependency",
+    "front": "Which results are needed to prove neg pos of neg?",
+    "back": "Strict translation and additive inverse"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "neg_pos_of_neg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-neg_pos_of_neg"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "neg_pos_of_neg"
+    ],
+    "id": "aim.orderedfields.08.proof-neg_pos_of_neg",
+    "type": "proof",
+    "front": "Prove: $a<0\\Rightarrow 0<-a$",
+    "back": "Translate a<0 by -a.",
+    "explanation": "From a<0, add -a to obtain a+(-a)<0+(-a), hence 0<-a."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_nonneg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_nonneg"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_nonneg"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_nonneg",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul nonneg?",
+    "back": "Trichotomy; multiplication by zero; positive product axiom"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_nonneg"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_nonneg"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_nonneg"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_nonneg",
+    "type": "proof",
+    "front": "Prove: $0\\le a\\land0\\le b\\Rightarrow0\\le ab$",
+    "back": "Separate zero and positive cases.",
+    "explanation": "If a=0 or b=0, their product is zero. Otherwise 0<=a and 0<=b imply both are positive, so the positive-product axiom gives 0<ab, hence 0<=ab."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_pos_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_lt_mul_of_pos_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_lt_mul_of_pos_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul lt mul of pos right?",
+    "back": "Subtraction detects strict order, positive product, distributivity"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_pos_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_lt_mul_of_pos_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_lt_mul_of_pos_right"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_lt_mul_of_pos_right",
+    "type": "proof",
+    "front": "Prove: $a<b\\land0<c\\Rightarrow ac<bc$",
+    "back": "Express b-a as positive and multiply by c.",
+    "explanation": "Since a<b, 0<b-a. With 0<c, positivity of products gives 0<(b-a)c=bc-ac. The strict subtraction test gives ac<bc."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_pos_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_lt_mul_of_pos_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_lt_mul_of_pos_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul lt mul of pos left?",
+    "back": "Commutativity and positive right multiplication"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_pos_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_lt_mul_of_pos_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_lt_mul_of_pos_left"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_lt_mul_of_pos_left",
+    "type": "proof",
+    "front": "Prove: $a<b\\land0<c\\Rightarrow ca<cb$",
+    "back": "Commute both products and use the right-factor lemma.",
+    "explanation": "From a<b and 0<c, the right-factor theorem gives ac<bc. Rewrite products as ca<cb."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonneg_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_le_mul_of_nonneg_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_le_mul_of_nonneg_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul le mul of nonneg right?",
+    "back": "Non-strict split, positive right multiplication, zero law"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonneg_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_le_mul_of_nonneg_right"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_le_mul_of_nonneg_right",
+    "type": "proof",
+    "front": "Prove: $a\\le b\\land0\\le c\\Rightarrow ac\\le bc$",
+    "back": "Consider c=0 and c>0; also split a<=b.",
+    "explanation": "If c=0, both products are zero. If 0<c, either a=b and products are equal or a<b and positive-factor multiplication gives ac<bc; hence ac<=bc."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonneg_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_le_mul_of_nonneg_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_le_mul_of_nonneg_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul le mul of nonneg left?",
+    "back": "Commutativity and nonnegative right multiplication"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonneg_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_le_mul_of_nonneg_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_le_mul_of_nonneg_left"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_le_mul_of_nonneg_left",
+    "type": "proof",
+    "front": "Prove: $a\\le b\\land0\\le c\\Rightarrow ca\\le cb$",
+    "back": "Commute each product and use right-factor preservation.",
+    "explanation": "From a<=b and 0<=c get ac<=bc by nonnegative right multiplication; commute to obtain ca<=cb."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_neg_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_lt_mul_of_neg_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_lt_mul_of_neg_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul lt mul of neg right?",
+    "back": "Negation of negative is positive, positive factor and sign laws"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_neg_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_lt_mul_of_neg_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_lt_mul_of_neg_right"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_lt_mul_of_neg_right",
+    "type": "proof",
+    "front": "Prove: $a<b\\land c<0\\Rightarrow bc<ac$",
+    "back": "Multiply by -c>0, then negate both sides.",
+    "explanation": "From c<0 infer 0<-c. Since a<b, a(-c)<b(-c). Rewrite as -(ac)<-(bc) and apply order reversal under negation to get bc<ac."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_neg_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_lt_mul_of_neg_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_lt_mul_of_neg_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul lt mul of neg left?",
+    "back": "Commutativity and negative right multiplication"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_lt_mul_of_neg_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_lt_mul_of_neg_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_lt_mul_of_neg_left"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_lt_mul_of_neg_left",
+    "type": "proof",
+    "front": "Prove: $a<b\\land c<0\\Rightarrow cb<ca$",
+    "back": "Commute the factors and apply negative right-factor reversal.",
+    "explanation": "With a<b and c<0, the negative right-factor theorem gives bc<ac. By commutativity, cb<ca."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonpos_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_le_mul_of_nonpos_right"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_le_mul_of_nonpos_right",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul le mul of nonpos right?",
+    "back": "Order reversal under negation, nonnegative multiplication, sign laws"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonpos_right"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_right"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_le_mul_of_nonpos_right"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_le_mul_of_nonpos_right",
+    "type": "proof",
+    "front": "Prove: $a\\le b\\land c\\le0\\Rightarrow bc\\le ac$",
+    "back": "Multiply by -c>=0 and then negate.",
+    "explanation": "For c<=0, 0<=-c. Multiply a<=b by -c to get a(-c)<=b(-c). Rewrite as -(ac)<=-(bc) and negate to infer bc<=ac."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonpos_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_le_mul_of_nonpos_left"
+    ],
+    "id": "aim.orderedfields.08.dependency-mul_le_mul_of_nonpos_left",
+    "type": "dependency",
+    "front": "Which results are needed to prove mul le mul of nonpos left?",
+    "back": "Commutativity and nonpositive right multiplication"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "mul_le_mul_of_nonpos_left"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-mul_le_mul_of_nonpos_left"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "mul_le_mul_of_nonpos_left"
+    ],
+    "id": "aim.orderedfields.08.proof-mul_le_mul_of_nonpos_left",
+    "type": "proof",
+    "front": "Prove: $a\\le b\\land c\\le0\\Rightarrow cb\\le ca$",
+    "back": "Commute the factors and use right-factor reversal.",
+    "explanation": "From a<=b and c<=0, the nonpositive right-factor theorem gives bc<=ac; commutativity yields cb<=ca."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "max_comm"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-max_comm"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "max_comm"
+    ],
+    "id": "aim.orderedfields.08.dependency-max_comm",
+    "type": "dependency",
+    "front": "Which results are needed to prove max comm?",
+    "back": "Totality, antisymmetry, definition of max"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "max_comm"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-max_comm"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "max_comm"
+    ],
+    "id": "aim.orderedfields.08.proof-max_comm",
+    "type": "proof",
+    "front": "Prove: $\\max(a,b)=\\max(b,a)$",
+    "back": "Split on a<=b and compare the max branches.",
+    "explanation": "If a<=b then max(a,b)=b. Totality and antisymmetry show max(b,a)=b as well; the other orientation is symmetric."
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "abs_add_le"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-abs_add_le"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "abs_add_le"
+    ],
+    "id": "aim.orderedfields.08.dependency-abs_add_le",
+    "type": "dependency",
+    "front": "Which results are needed to prove abs add le?",
+    "back": "Definition of absolute value as max, monotonic addition"
+  },
+  {
+    "stage": 8,
+    "topic": "Proof reconstruction",
+    "difficulty": "intermediate",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "abs_add_le"
+    },
+    "prerequisites": [
+      "aim.orderedfields.07.lean-abs_add_le"
+    ],
+    "tags": [
+      "ordered-fields",
+      "proof-reconstruction",
+      "abs_add_le"
+    ],
+    "id": "aim.orderedfields.08.proof-abs_add_le",
+    "type": "proof",
+    "front": "Prove: $|x+y|\\le|x|+|y|$",
+    "back": "Bound both x+y and its negation, then take the maximum.",
+    "explanation": "By definition x<=|x| and -x<=|x|, and similarly for y. Adding yields x+y<=|x|+|y| and -(x+y)<=|x|+|y|. Since |x+y| is the maximum of these two left-hand sides, it obeys the same upper bound."
   }
 ]
