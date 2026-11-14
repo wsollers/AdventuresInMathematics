@@ -680,8 +680,8 @@
     "stage": 6,
     "topic": "Derived algebraic theorems",
     "difficulty": "intermediate",
-    "front": "What necessary hypothesis appears in add left cancel?",
-    "back": "The canceled or inverted factor must be nonzero.",
+    "front": "Does add left cancel require a nonzero element?",
+    "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -691,8 +691,9 @@
       "aim.orderedfields.06.lean-add_left_cancel"
     ],
     "tags": [
+      "addition",
       "hypothesis",
-      "ordered-fields"
+      "nonzero-not-required"
     ]
   },
   {
@@ -720,8 +721,8 @@
     "stage": 6,
     "topic": "Derived algebraic theorems",
     "difficulty": "intermediate",
-    "front": "What necessary hypothesis appears in add right cancel?",
-    "back": "The canceled or inverted factor must be nonzero.",
+    "front": "Does add right cancel require a nonzero element?",
+    "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -731,8 +732,9 @@
       "aim.orderedfields.06.lean-add_right_cancel"
     ],
     "tags": [
+      "addition",
       "hypothesis",
-      "ordered-fields"
+      "nonzero-not-required"
     ]
   },
   {
@@ -931,8 +933,8 @@
     "stage": 6,
     "topic": "Derived algebraic theorems",
     "difficulty": "intermediate",
-    "front": "What necessary hypothesis appears in add sub cancel right?",
-    "back": "The canceled or inverted factor must be nonzero.",
+    "front": "Does add sub cancel right require a nonzero element?",
+    "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -942,8 +944,9 @@
       "aim.orderedfields.06.lean-add_sub_cancel_right"
     ],
     "tags": [
+      "addition",
       "hypothesis",
-      "ordered-fields"
+      "nonzero-not-required"
     ]
   },
   {
@@ -971,8 +974,8 @@
     "stage": 6,
     "topic": "Derived algebraic theorems",
     "difficulty": "intermediate",
-    "front": "What necessary hypothesis appears in add sub cancel left?",
-    "back": "The canceled or inverted factor must be nonzero.",
+    "front": "Does add sub cancel left require a nonzero element?",
+    "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -982,8 +985,9 @@
       "aim.orderedfields.06.lean-add_sub_cancel_left"
     ],
     "tags": [
+      "addition",
       "hypothesis",
-      "ordered-fields"
+      "nonzero-not-required"
     ]
   },
   {
@@ -1011,8 +1015,8 @@
     "stage": 6,
     "topic": "Derived algebraic theorems",
     "difficulty": "intermediate",
-    "front": "What necessary hypothesis appears in sub add cancel right?",
-    "back": "The canceled or inverted factor must be nonzero.",
+    "front": "Does sub add cancel right require a nonzero element?",
+    "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -1022,8 +1026,9 @@
       "aim.orderedfields.06.lean-sub_add_cancel_right"
     ],
     "tags": [
+      "addition",
       "hypothesis",
-      "ordered-fields"
+      "nonzero-not-required"
     ]
   },
   {
@@ -1051,8 +1056,8 @@
     "stage": 6,
     "topic": "Derived algebraic theorems",
     "difficulty": "intermediate",
-    "front": "What necessary hypothesis appears in sub add cancel left?",
-    "back": "The canceled or inverted factor must be nonzero.",
+    "front": "Does sub add cancel left require a nonzero element?",
+    "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
       "lean": "Aim/Analysis/Numbers.lean",
@@ -1062,8 +1067,9 @@
       "aim.orderedfields.06.lean-sub_add_cancel_left"
     ],
     "tags": [
+      "addition",
       "hypothesis",
-      "ordered-fields"
+      "nonzero-not-required"
     ]
   },
   {
