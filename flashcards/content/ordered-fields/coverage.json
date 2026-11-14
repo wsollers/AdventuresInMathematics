@@ -1310,5 +1310,17 @@
       "declaration": "abs_branch_neg_smoke_test",
       "reason": "Lean implementation branch check."
     }
-  ]
+  ],
+  "proof_reconstruction": {
+    "named_derived_declarations": 83,
+    "definitional_identities_excluded": [
+      "sub_eq_add_neg",
+      "add_neg_eq_sub",
+      "div_eq_mul_inv",
+      "mul_inv_eq_div"
+    ],
+    "derived_declarations_with_proof_cards": 79,
+    "without_proof_cards": [],
+    "comment": "All non-definitional named derived results have separate dependency and proof-practice cards. These are teaching outlines, not Lean proof certification."
+  }
 }

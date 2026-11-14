@@ -2,6 +2,17 @@
 
 A self-contained Lean 4 library for undergraduate mathematics, built from the ground up without `mathlib4`.
 
+## Foundations flashcards
+
+The ordered-fields Foundations deck has 375 public cards across nine stages, with theorem statements, prerequisite and hypothesis questions, and proof reconstruction.
+
+- [Study the interactive web deck](https://wsollers.dev/AdventuresInMath/flashcards/) (mobile/tablet and desktop)
+- [Review the version-controlled cards](flashcards/content/ordered-fields/)
+- [Web app implementation and local-progress details](flashcards/web/README.md)
+
+Review progress and unlocked levels are stored only in the browser, never in this public repository. The mathematical statements in the deck are not claims of formal Lean verification; see the coverage report for outstanding `sorry` placeholders.
+
+
 ## Architecture & Dependency Spine
 
 Every module builds from the ground up along a linear axiomatic progression:
