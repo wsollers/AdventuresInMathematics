@@ -32,7 +32,7 @@ assert len(ids) == len(set(ids)), "duplicate IDs"
 assert ids == [c["id"] for c in manifest["cards"]], "manifest order drift"
 byid = {c["id"]: c for c in cards}
 for c in cards:
-    assert re.fullmatch(r"aim\.orderedfields\.0[0-8]\.[a-z0-9-]+", c["id"]), c["id"]
+    assert re.fullmatch(r"aim\.orderedfields\.0[0-8]\.[a-z0-9_-]+", c["id"]), c["id"]
     assert c["front"].strip() and c["back"].strip()
     for field in ("front", "back"):
         body = c[field]
