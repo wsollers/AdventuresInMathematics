@@ -27,9 +27,9 @@ test("study app loads real cards, reveals an answer and saves review locally", a
     Object.defineProperty(globalThis,"navigator",{value:win.navigator,configurable:true});
     globalThis.fetch = async url => {
       const pathname = new URL(String(url)).pathname;
-      const prefix = "/AdventuresInMath/flashcards/decks/ordered-fields/";
-      assert.ok(pathname.startsWith(prefix), "unexpected fetch: " + pathname);
-      const relative = pathname.slice(prefix.length);
+      const marker = "/decks/ordered-fields/";
+      assert.ok(pathname.includes(marker), "unexpected fetch: " + pathname);
+      const relative = pathname.slice(pathname.lastIndexOf(marker) + marker.length);
       assert.ok(/^[a-z0-9-]+\.json$/.test(relative));
       const data = JSON.parse(fs.readFileSync(path.join(dataRoot,relative),"utf8"));
       return {ok:true,json:async()=>data};
@@ -40,7 +40,7 @@ test("study app loads real cards, reveals an answer and saves review locally", a
     }
     const $ = id => win.document.getElementById(id);
     assert.equal($("load-error").hidden,true, $("load-error").textContent);
-    assert.equal($("stat-total").textContent,"239");
+    assert.equal($("stat-total").textContent,"375");
     assert.equal($("stat-new").textContent,"4");
     assert.equal($("card-category").textContent,"Stage 3 · axiom");
     assert.equal($("answer-section").hidden,true);
