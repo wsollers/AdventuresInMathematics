@@ -1140,5 +1140,39 @@
   "limitations": [
     "TeX rows sometimes group several results; source-linked per-declaration cards supplement those rows.",
     "Lean proof statuses determined by textual inspection; not Lean compiler certification."
+  ],
+  "excluded_declarations": [
+    {
+      "declaration": "identity",
+      "reason": "Logical equality reflexivity, taught in Stage 0."
+    },
+    {
+      "declaration": "field_smoke_test",
+      "reason": "Lean instance smoke test, not an additional mathematical theorem."
+    },
+    {
+      "declaration": "field_ac_smoke_test",
+      "reason": "Lean associativity/commutativity automation smoke test."
+    },
+    {
+      "declaration": "ordered_field_smoke_test",
+      "reason": "Lean inherited order instance smoke test."
+    },
+    {
+      "declaration": "max_smoke_test",
+      "reason": "Lean implementation unfolding check for max."
+    },
+    {
+      "declaration": "abs_smoke_test",
+      "reason": "Lean implementation unfolding check for abs."
+    },
+    {
+      "declaration": "abs_branch_pos_smoke_test",
+      "reason": "Lean implementation branch check."
+    },
+    {
+      "declaration": "abs_branch_neg_smoke_test",
+      "reason": "Lean implementation branch check."
+    }
   ]
 }
