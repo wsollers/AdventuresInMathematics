@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fbfbfa">
+  <meta name="description" content="Ordered-field mathematics flashcards, practice and review.">
+  <title>Foundations flashcards · wsollers.dev</title>
+  <link rel="canonical" href="https://wsollers.dev/AdventuresInMath/flashcards/">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="./flashcards.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+  <script defer src="/assets/js/site.js"></script>
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner">
+  <a class="site-name" href="/">wsollers.dev</a>
+  <div class="header-right"><nav class="nav" aria-label="Main navigation">
+    <a href="/AdventuresInMath/">Mathematics</a><a href="/explorer/">Explorer</a>
+    <a href="https://github.com/wsollers/AdventuresInMathematics">Source</a>
+  </nav><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">◐</button></div>
+</div></header>
+<main id="main" class="container flashcards-main">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/AdventuresInMath/">Mathematics</a><span>/</span><span>Flashcards</span></nav>
+  <div class="page-heading"><div><h1>Foundations flashcards</h1>
+    <p>Recall the answer, reveal it, and rate how well you knew it.</p></div>
+    <a href="/AdventuresInMath/ordered_field_reference.pdf">Reference PDF ↗</a></div>
+  <div id="load-error" role="alert" class="error" hidden></div>
+  <div class="stats" aria-label="Progress">
+    <div><strong id="stat-total">—</strong><span>Total cards</span></div>
+    <div><strong id="stat-unlocked">—</strong><span>Unlocked</span></div>
+    <div><strong id="stat-new">—</strong><span>New</span></div>
+    <div><strong id="stat-due">—</strong><span>Due</span></div>
+    <div><strong id="stat-studied">—</strong><span>Studied</span></div>
+  </div>
+  <section class="settings-area" aria-label="Study controls">
+    <div class="filters">
+      <label for="mode">Mode<select id="mode">
+        <option value="new">New cards</option><option value="due">Due review</option>
+        <option value="practice">Practice unlocked</option><option value="browse">Browse all (no grading)</option>
+      </select></label>
+      <label for="stage">Stage<select id="stage"><option value="all">All stages</option></select></label>
+      <label for="type">Card type<select id="type"><option value="all">All types</option></select></label>
+    </div>
+    <details class="backup"><summary>Progress and backups</summary>
+      <p>Review history stays in this browser. Export it to transfer devices; there is no automatic sync.</p>
+      <div class="actions">
+        <button type="button" id="export-progress">Export</button>
+        <label class="import">Import<input type="file" id="import-progress" accept=".json,application/json"></label>
+        <button type="button" id="reset-progress">Reset progress</button>
+      </div>
+    </details>
+  </section>
+  <div class="study-layout">
+    <section aria-label="Flashcard" class="study">
+      <div class="card-info"><span id="card-position" aria-live="polite">Loading…</span><span id="card-category"></span></div>
+      <article class="flashcard" id="flashcard">
+        <div class="side-label">Question</div>
+        <div id="card-front" class="card-text">Loading the deck…</div>
+        <div id="answer-section" class="answer-section" hidden>
+          <div class="side-label">Answer</div><div id="card-back" class="card-text"></div>
+          <details id="explanation-wrap" class="explanation" hidden>
+            <summary>Detailed explanation</summary><div id="card-explanation"></div>
+          </details>
+        </div>
+      </article>
+      <div id="study-actions" hidden>
+        <div class="actions top-actions">
+          <button type="button" id="reveal" class="primary">Show answer</button>
+          <button type="button" id="skip">Skip</button>
+        </div>
+        <div id="grade-panel" hidden><p>How well did you know it?</p>
+          <div class="grade-grid">
+            <button type="button" data-grade="again"><strong>Again</strong><small>1 min · 1</small></button>
+            <button type="button" data-grade="hard"><strong>Hard</strong><small>10 min · 2</small></button>
+            <button type="button" data-grade="good"><strong>Good</strong><small>1 day+ · 3</small></button>
+            <button type="button" data-grade="easy"><strong>Easy</strong><small>4 days+ · 4</small></button>
+          </div>
+        </div>
+        <div id="browse-actions" hidden><button type="button" class="primary" id="browse-next">Next card →</button></div>
+      </div>
+      <p id="study-status" role="status" aria-live="polite"></p>
+      <details class="sources" id="source-details" hidden>
+        <summary>Sources and Lean status</summary><div id="source-content"></div>
+      </details>
+      <p class="hint">Space: reveal · 1–4: grade · N: skip</p>
+    </section>
+    <aside><details class="levels" open><summary>Study levels <span id="level-count"></span></summary>
+      <p>Unlock levels manually. Browsing works for the whole deck; scheduling uses only unlocked levels.</p>
+      <div id="level-list"></div>
+    </details></aside>
+  </div>
+  <p class="privacy">Progress stays on this device. A Lean declaration with a proof placeholder is not a formally verified result.</p>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><span>© <span data-year>2026</span> · wsollers.dev</span><a href="/AdventuresInMath/">Mathematics</a></div></footer>
+</body></html>
