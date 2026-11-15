@@ -1,6 +1,9 @@
 import {schedule, selectCards, stats, levelCardIds, mayUnlock} from "./scheduler.mjs";
+import {setupResponse} from "./response.mjs";
 
 const $ = id => document.getElementById(id);
+const response = setupResponse(document, window);
+let gradingRequest = null, suggestedRating = null;
 const DATA = new URL("./decks/ordered-fields/", import.meta.url);
 const KEY = "aim-foundations-review-v1";
 const FORMAT = "aim-foundations-progress";
@@ -191,8 +194,68 @@ function sourceInfo(card) {
 
 function currentQueue() { return selectCards(state.cards, state.reviews, filters()); }
 
+async function submitAnswer() {
+  if (!state.current || state.flipped || gradingRequest) return;
+  const controller = new AbortController();
+  gradingRequest = controller;
+  $("response-workspace").inert = true;
+  $("submit-answer").disabled = true;
+  $("assessment").hidden = false;
+  $("assessment-title").textContent = "Checking your answer…";
+  $("assessment-feedback").textContent = "Reading your response and comparing it with the card.";
+  $("assessment-reading").textContent = "";
+  $("assessment-missing").textContent = "";
+  $("accept-assessment").hidden = true;
+  const cardId = state.current.id;
+  const timeout = setTimeout(() => controller.abort(), 60000);
+  try {
+    const answer = await response.snapshot();
+    if (gradingRequest !== controller) return;
+    if (!answer.text && !answer.image) throw new Error("Write or say an answer before submitting.");
+    const result = await fetch(new URL("./api/grade", import.meta.url), {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({cardId, ...answer}), signal:controller.signal
+    });
+    if (!(result.headers.get("content-type") || "").includes("application/json")) {
+      throw new Error("Automatic grading is not connected on this site yet. Your answer is still here.");
+    }
+    const data = await result.json();
+    if (!result.ok) throw new Error(data.error || "Could not grade this answer. Please try again.");
+    if (gradingRequest !== controller) return;
+    if (!["correct", "partial", "incorrect", "unclear"].includes(data.verdict) ||
+        !RATINGS.includes(data.rating) || ![data.feedback,data.reading,data.missing].every(v => typeof v === "string")) {
+      throw new Error("The grader returned an incomplete result. Please try again.");
+    }
+    gradingRequest = null;
+    showAnswer();
+    $("assessment-title").textContent = {correct:"Correct",partial:"Partly correct",incorrect:"Needs another try",unclear:"Please clarify your answer"}[data.verdict];
+    $("assessment-feedback").textContent = data.feedback;
+    $("assessment-reading").textContent = "I read your answer as: " + data.reading;
+    $("assessment-missing").textContent = data.missing ? "To improve: " + data.missing : "";
+    suggestedRating = data.verdict === "unclear" ? null : data.rating;
+    $("accept-assessment").hidden = !suggestedRating || $("mode").value === "browse";
+    $("accept-assessment").textContent = "Save “" + data.rating + "” and continue";
+    $("assessment-title").focus();
+    $("assessment").scrollIntoView?.({behavior:"smooth", block:"nearest"});
+  } catch (error) {
+    if (gradingRequest !== controller) return;
+    $("assessment-title").textContent = "Answer not graded";
+    $("assessment-feedback").textContent = controller.signal.aborted ? "Grading timed out. Your answer is still here; please try again." : error.message;
+  } finally {
+    clearTimeout(timeout);
+    if (gradingRequest === controller) gradingRequest = null;
+    $("submit-answer").disabled = Boolean(gradingRequest);
+    $("response-workspace").inert = Boolean(gradingRequest);
+  }
+}
+
 function showAnswer() {
   if (!state.current || state.flipped) return;
+  if (gradingRequest) $("assessment").hidden = true;
+  gradingRequest?.abort(); gradingRequest = null;
+  $("response-workspace").inert = false;
+  $("submit-answer").hidden = true;
+  response.stop();
   state.flipped = true;
   $("answer-section").hidden = false;
   math($("card-back"), state.current.back);
@@ -232,6 +295,13 @@ function finishCurrent(rating) {
 
 function render() {
   if (!state.loaded) return;
+  gradingRequest?.abort(); gradingRequest = null; suggestedRating = null;
+  $("response-workspace").inert = false;
+  $("submit-answer").hidden = false;
+  $("submit-answer").disabled = false;
+  $("assessment").hidden = true;
+  $("accept-assessment").hidden = true;
+  response.reset();
   updateStats();
   const queue = currentQueue();
   state.current = queue[0] || null;
@@ -366,6 +436,8 @@ async function init() {
 }
 
 $("reveal").addEventListener("click", showAnswer);
+$("submit-answer").addEventListener("click", submitAnswer);
+$("accept-assessment").addEventListener("click", () => { if (suggestedRating) finishCurrent(suggestedRating); });
 $("skip").addEventListener("click", () => finishCurrent(null));
 $("browse-next").addEventListener("click", () => finishCurrent(null));
 for (const button of document.querySelectorAll("[data-grade]")) {

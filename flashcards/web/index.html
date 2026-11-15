@@ -18,17 +18,18 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="container header-inner">
-  <a class="site-name" href="/">wsollers.dev</a>
+  <a class="site-name" href="https://wsollers.dev/">wsollers.dev</a>
   <div class="header-right"><nav class="nav" aria-label="Main navigation">
-    <a href="/AdventuresInMath/">Mathematics</a><a href="/explorer/">Explorer</a>
+    <a href="https://wsollers.dev/AdventuresInMath/">Mathematics</a><a href="https://wsollers.dev/explorer/">Explorer</a>
     <a href="https://github.com/wsollers/AdventuresInMathematics">Source</a>
+    <a href="/signout-with-chatgpt?return_to=%2F" target="_top">Sign out</a>
   </nav><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">◐</button></div>
 </div></header>
 <main id="main" class="container flashcards-main">
-  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/AdventuresInMath/">Mathematics</a><span>/</span><span>Flashcards</span></nav>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="https://wsollers.dev/AdventuresInMath/">Mathematics</a><span>/</span><span>Flashcards</span></nav>
   <div class="page-heading"><div><h1>Foundations flashcards</h1>
     <p>Recall the answer, reveal it, and rate how well you knew it.</p></div>
-    <a href="/AdventuresInMath/ordered_field_reference.pdf">Reference PDF ↗</a></div>
+    <a href="https://wsollers.dev/AdventuresInMath/ordered_field_reference.pdf">Reference PDF ↗</a></div>
   <div id="load-error" role="alert" class="error" hidden></div>
   <div class="stats" aria-label="Progress">
     <div><strong id="stat-total">—</strong><span>Total cards</span></div>
@@ -69,10 +70,37 @@
         </div>
       </article>
       <div id="study-actions" hidden>
+        <section id="response-workspace" class="response-area" aria-label="Your answer">
+          <h2>Your answer</h2>
+          <p class="hint">Write with your S Pen, or speak or type below. Submit for feedback, then save your rating. Responses clear on the next card.</p>
+          <div class="actions">
+            <label class="pen-option"><input type="checkbox" id="pen-only" checked> S Pen only (ignore fingers)</label>
+            <button type="button" id="undo-ink">Undo stroke</button>
+            <button type="button" id="clear-ink">Clear writing</button>
+          </div>
+          <svg id="answer-pad" viewBox="0 0 1000 500" role="img" aria-label="Handwriting pad. Write with your S Pen; use the text field below as an alternative."></svg>
+          <label for="answer-text">Spoken or typed answer</label>
+          <textarea id="answer-text" rows="3" placeholder="Say or type your answer here…"></textarea>
+          <div class="actions">
+            <button type="button" id="speak-answer" aria-pressed="false">Speak answer</button>
+            <button type="button" id="clear-text">Clear text</button>
+          </div>
+          <p id="voice-status" role="status" aria-live="polite"></p>
+          <p class="response-note">Submit sends your writing and text to OpenAI for feedback. Voice may use your browser’s speech service. Responses are not included in progress backups.</p>
+        </section>
         <div class="actions top-actions">
-          <button type="button" id="reveal" class="primary">Show answer</button>
+          <button type="button" id="submit-answer" class="primary">Submit answer</button>
+          <button type="button" id="reveal">Show answer</button>
           <button type="button" id="skip">Skip</button>
         </div>
+        <section id="assessment" class="response-area" aria-label="Answer feedback" hidden>
+          <h2 id="assessment-title" tabindex="-1">Checking your answer…</h2>
+          <p id="assessment-feedback" role="status" aria-live="polite"></p>
+          <p id="assessment-reading"></p>
+          <p id="assessment-missing"></p>
+          <p class="response-note">AI feedback can make mistakes, especially when reading handwriting. Check the reading and adjust your rating below.</p>
+          <div class="actions"><button type="button" id="accept-assessment" hidden></button></div>
+        </section>
         <div id="grade-panel" hidden><p>How well did you know it?</p>
           <div class="grade-grid">
             <button type="button" data-grade="again"><strong>Again</strong><small>1 min · 1</small></button>
@@ -96,5 +124,5 @@
   </div>
   <p class="privacy">Progress stays on this device. A Lean declaration with a proof placeholder is not a formally verified result.</p>
 </main>
-<footer class="site-footer"><div class="container footer-inner"><span>© <span data-year>2026</span> · wsollers.dev</span><a href="/AdventuresInMath/">Mathematics</a></div></footer>
+<footer class="site-footer"><div class="container footer-inner"><span>© <span data-year>2026</span> · wsollers.dev</span><a href="https://wsollers.dev/AdventuresInMath/">Mathematics</a></div></footer>
 </body></html>

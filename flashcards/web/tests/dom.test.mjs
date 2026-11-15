@@ -25,8 +25,12 @@ test("study app loads real cards, reveals an answer and saves review locally", a
     globalThis.location = win.location;
     globalThis.localStorage = win.localStorage;
     Object.defineProperty(globalThis,"navigator",{value:win.navigator,configurable:true});
-    globalThis.fetch = async url => {
+    globalThis.fetch = async (url, options) => {
       const pathname = new URL(String(url)).pathname;
+      if (pathname.endsWith("/api/grade")) {
+        assert.equal(JSON.parse(options.body).text,"a plus b equals b plus a");
+        return Response.json({verdict:"correct",rating:"good",reading:"a + b = b + a",feedback:"Correct commutativity statement.",missing:""});
+      }
       const marker = "/decks/ordered-fields/";
       assert.ok(pathname.includes(marker), "unexpected fetch: " + pathname);
       const relative = pathname.slice(pathname.lastIndexOf(marker) + marker.length);
@@ -44,10 +48,15 @@ test("study app loads real cards, reveals an answer and saves review locally", a
     assert.equal($("stat-new").textContent,"4");
     assert.equal($("card-category").textContent,"Stage 3 · axiom");
     assert.equal($("answer-section").hidden,true);
-    $("reveal").click();
+    $("answer-text").value="a plus b equals b plus a";
+    $("submit-answer").click();
+    for(let n=0;n<50 && $("answer-section").hidden;n++) await new Promise(resolve=>setTimeout(resolve,10));
     assert.equal($("answer-section").hidden,false);
+    assert.equal($("assessment-title").textContent,"Correct");
+    assert.equal($("answer-text").value,"a plus b equals b plus a");
+    assert.equal($("stat-studied").textContent,"0","assessment alone must not save a review");
     assert.match($("card-back").textContent,/a.*b.*c/);
-    win.document.querySelector('[data-grade="good"]').click();
+    $("accept-assessment").click();
     assert.equal($("stat-studied").textContent,"1");
     const stored=JSON.parse(win.localStorage.getItem("aim-foundations-review-v1"));
     assert.equal(stored.format,"aim-foundations-progress");

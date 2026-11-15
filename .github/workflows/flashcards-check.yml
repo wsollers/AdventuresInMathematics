@@ -36,15 +36,17 @@ jobs:
         run: |
           node --check flashcards/web/app.mjs
           node --check flashcards/web/scheduler.mjs
+          node --check flashcards/web/response.mjs
+          node --check flashcards/server/grader.mjs
           node --check flashcards/web/sw.js
       - name: Test review scheduling and prerequisites
-        run: node --test flashcards/web/tests/scheduler.test.mjs
+        run: node --test flashcards/web/tests/scheduler.test.mjs flashcards/web/tests/grader.test.mjs
       - name: Test static web interface contract
         run: python flashcards/web/tests/test_static.py
       - name: Exercise real deck and rating flows in a DOM
         env:
           JSDOM_PATH: /tmp/aim-dom/node_modules/jsdom
-        run: node --test flashcards/web/tests/dom.test.mjs
+        run: node --test flashcards/web/tests/dom.test.mjs flashcards/web/tests/response.test.mjs
       - name: Validate every flashcard mathematical expression with KaTeX
         env:
           KATEX_PATH: /tmp/aim-katex/node_modules/katex
