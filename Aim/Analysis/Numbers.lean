@@ -659,8 +659,10 @@ lemma mul_div_cancel_right {R : Type u}
   [Zero R] [One R] [Mul R] [Inv R] [Div R]
   [IsMulInvCancel R] [IsMulComm R] [IsMulAssoc R] [IsOneMul R] [IsDivEqMulInv R]
   (x y : R) (hy : y ≠ 0) : x * y / y = x := by
-
-  sorry
+  rw [IsDivEqMulInv.div_eq_mul_inv]
+  rw [IsMulAssoc.mul_assoc]
+  rw [IsMulInvCancel.mul_inv_cancel y hy]
+  rw [mul_one]
 
 -- | `lemma` | `mul_div_cancel_left` | `y ≠ 0 → y * x / y = x` | `mul_div_cancel_right` | — |
 lemma mul_div_cancel_left {R : Type u}
@@ -790,26 +792,54 @@ proposition lt_trans {F : Type u} [OrderedField F] {a b c : F}
   . -- ->
     exact h3
   . -- <-
+    rw [IsLTIffLENotLE.lt_iff_le_not_le] at hab
+    rw [IsLTIffLENotLE.lt_iff_le_not_le] at hbc
     intro hca
-    --XXXX
-    sorry
+    have hba : b ≤ a := IsLETrans.le_trans b c a h2 hca
+    exact hab.2 hba
 
 /-- A strict inequality followed by a non-strict one remains strict. -/
 lemma lt_of_lt_of_le {F : Type u} [OrderedField F] {a b c : F}
     (hab : a < b) (hbc : b ≤ c) : a < c := by
   have h1 := le_of_lt hab
-  --rw [IsLETrans.le_trans]  hab hbc at hbc
-  sorry
+  have h3 : a ≤ c := IsLETrans.le_trans a b c h1 hbc
+  rw [IsLTIffLENotLE.lt_iff_le_not_le]
+  constructor
+  . -- ->
+    exact h3
+  . -- <-
+    intro h
+    have hba : b ≤ a := IsLETrans.le_trans b c a hbc h
+    rw [IsLTIffLENotLE.lt_iff_le_not_le] at hab
+    exact hab.2 hba
 
 /-- A non-strict inequality followed by a strict one remains strict. -/
 lemma lt_of_le_of_lt {F : Type u} [OrderedField F] {a b c : F}
     (hab : a ≤ b) (hbc : b < c) : a < c := by
-  sorry
+  rw [IsLTIffLENotLE.lt_iff_le_not_le]
+  constructor
+  . -- ->
+    have hx := le_of_lt hbc
+    have hac : a ≤ c := IsLETrans.le_trans a b c hab hx
+    exact hac
+  . -- <-
+    intro h
+    have hcb : c ≤ b := IsLETrans.le_trans c a b h hab
+    rw [IsLTIffLENotLE.lt_iff_le_not_le] at hbc
+    exact hbc.2 hcb
 
 /-- Non-strict order is strict order or equality. -/
 lemma le_iff_lt_or_eq {F : Type u} [OrderedField F] (a b : F) :
     a ≤ b ↔ a < b ∨ a = b := by
-  sorry
+  constructor
+  . --
+    intro h
+    sorry
+
+  . --
+    intro h
+
+    sorry
 
 /-- Exactly one of `a < b`, `a = b`, and `b < a` can hold. -/
 theorem lt_trichotomy {F : Type u} [OrderedField F] (a b : F) :

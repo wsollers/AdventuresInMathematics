@@ -132,7 +132,17 @@
         "aim.orderedfields.04.tex-016",
         "aim.orderedfields.04.tex-017",
         "aim.orderedfields.04.tex-018",
-        "aim.orderedfields.04.tex-019"
+        "aim.orderedfields.04.tex-019",
+        "aim.orderedfields.04.negation-trichotomy",
+        "aim.orderedfields.04.not-eq",
+        "aim.orderedfields.04.not-ne",
+        "aim.orderedfields.04.not-lt",
+        "aim.orderedfields.04.not-gt",
+        "aim.orderedfields.04.not-le",
+        "aim.orderedfields.04.not-ge",
+        "aim.orderedfields.04.negation-partial-order",
+        "aim.orderedfields.04.push-neg",
+        "aim.orderedfields.04.linarith-negation"
       ],
       "notes": "Manually unlock this group when you are ready to study it."
     },

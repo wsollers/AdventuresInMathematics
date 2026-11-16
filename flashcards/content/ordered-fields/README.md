@@ -2,7 +2,7 @@
 
 This is a fresh, source-linked mathematics curriculum. No cards were copied from previous flashcard repositories.
 
-- **375 version-controlled cards** in stages 00 through 08.
+- **385 version-controlled cards** in stages 00 through 08.
 - **79 named derived results** have a dependency card and a proof-reconstruction card; four definitional identities do not require an independent theorem proof.
 - **Manual study levels** are described in unlock-levels.json. The default review level is additive axioms; every card is assigned to exactly one level.
 - **Web app:** https://wsollers.dev/AdventuresInMath/flashcards/

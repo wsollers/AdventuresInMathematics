@@ -150,5 +150,256 @@
       "axiom",
       "ordered-fields"
     ]
+  },
+  {
+    "id": "aim.orderedfields.04.negation-trichotomy",
+    "type": "concept",
+    "stage": 4,
+    "topic": "Negating comparisons in total orders",
+    "difficulty": "introductory",
+    "front": "In a total (linear) order, why can every negated comparison be rewritten positively?",
+    "back": "Trichotomy leaves exactly three cases: $A<B$, $A=B$, or $B<A$. Negating one comparison selects its exact complement among those cases.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "lt_trichotomy"
+    },
+    "prerequisites": [
+      "aim.orderedfields.04.tex-015",
+      "aim.orderedfields.04.tex-017"
+    ],
+    "tags": [
+      "concept",
+      "negation",
+      "total-order",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.not-eq",
+    "type": "theorem",
+    "stage": 4,
+    "topic": "Negating comparisons in total orders",
+    "difficulty": "introductory",
+    "front": "In a total (linear) order, rewrite $\\lnot(A=B)$ positively.",
+    "back": "$A\\ne B$, equivalently $A<B\\lor B<A$. In Mathlib: `ne_iff_lt_or_gt`.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "ne_iff_lt_or_gt"
+    },
+    "prerequisites": [
+      "aim.orderedfields.04.negation-trichotomy"
+    ],
+    "tags": [
+      "theorem",
+      "negation",
+      "total-order",
+      "lean",
+      "ordered-fields"
+    ],
+    "explanation": "Lean notation A != B means not (A = B). Totality is needed for the further equivalence with A < B or B < A."
+  },
+  {
+    "id": "aim.orderedfields.04.not-ne",
+    "type": "theorem",
+    "stage": 4,
+    "topic": "Negating comparisons in total orders",
+    "difficulty": "introductory",
+    "front": "In a total (linear) order, rewrite $\\lnot(A\\ne B)$ positively.",
+    "back": "$A=B$. In Mathlib: `not_ne_iff` (classically, double-negation elimination).",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "not_ne_iff"
+    },
+    "prerequisites": [
+      "aim.orderedfields.04.negation-trichotomy"
+    ],
+    "tags": [
+      "theorem",
+      "negation",
+      "total-order",
+      "lean",
+      "ordered-fields"
+    ],
+    "explanation": "Since A != B abbreviates not (A = B), its negation is a double negation of equality."
+  },
+  {
+    "id": "aim.orderedfields.04.not-lt",
+    "type": "theorem",
+    "stage": 4,
+    "topic": "Negating comparisons in total orders",
+    "difficulty": "introductory",
+    "front": "In a total (linear) order, rewrite $\\lnot(A<B)$ positively.",
+    "back": "$B\\le A$. The direction swaps and equality is added. In Mathlib: `not_lt`.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "not_lt"
+    },
+    "prerequisites": [
+      "aim.orderedfields.04.negation-trichotomy"
+    ],
+    "tags": [
+      "theorem",
+      "negation",
+      "total-order",
+      "lean",
+      "ordered-fields"
+    ],
+    "explanation": "Totality rules out incomparability: if A is not less than B, then B is less than or equal to A."
+  },
+  {
+    "id": "aim.orderedfields.04.not-gt",
+    "type": "theorem",
+    "stage": 4,
+    "topic": "Negating comparisons in total orders",
+    "difficulty": "introductory",
+    "front": "In a total (linear) order, rewrite $\\lnot(A>B)$ positively.",
+    "back": "$A\\le B$. Since $A>B$ means $B<A$, this is `not_lt` with $A$ and $B$ swapped.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "not_lt"
+    },
+    "prerequisites": [
+      "aim.orderedfields.04.negation-trichotomy"
+    ],
+    "tags": [
+      "theorem",
+      "negation",
+      "total-order",
+      "lean",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.not-le",
+    "type": "theorem",
+    "stage": 4,
+    "topic": "Negating comparisons in total orders",
+    "difficulty": "introductory",
+    "front": "In a total (linear) order, rewrite $\\lnot(A\\le B)$ positively.",
+    "back": "$B<A$. The direction swaps and equality is dropped. In Mathlib: `not_le`.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "not_le"
+    },
+    "prerequisites": [
+      "aim.orderedfields.04.negation-trichotomy"
+    ],
+    "tags": [
+      "theorem",
+      "negation",
+      "total-order",
+      "lean",
+      "ordered-fields"
+    ],
+    "explanation": "By totality, not (A <= B) forces B <= A; together with the negated reverse comparison, the strict-order characterization gives B < A."
+  },
+  {
+    "id": "aim.orderedfields.04.not-ge",
+    "type": "theorem",
+    "stage": 4,
+    "topic": "Negating comparisons in total orders",
+    "difficulty": "introductory",
+    "front": "In a total (linear) order, rewrite $\\lnot(A\\ge B)$ positively.",
+    "back": "$A<B$. Since $A\\ge B$ means $B\\le A$, this is `not_le` with $A$ and $B$ swapped.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "not_le"
+    },
+    "prerequisites": [
+      "aim.orderedfields.04.negation-trichotomy"
+    ],
+    "tags": [
+      "theorem",
+      "negation",
+      "total-order",
+      "lean",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.negation-partial-order",
+    "type": "counterexample",
+    "stage": 4,
+    "topic": "Negating comparisons in total orders",
+    "difficulty": "introductory",
+    "front": "Why do the comparison-negation flips require a total (linear) order rather than merely a partial order?",
+    "back": "A partial order can contain incomparable elements. For sets, $A\\nsubseteq B$ does not imply $B\\subseteq A$.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": "IsLETotal.le_total"
+    },
+    "prerequisites": [
+      "aim.orderedfields.04.negation-trichotomy"
+    ],
+    "tags": [
+      "counterexample",
+      "negation",
+      "partial-order",
+      "total-order",
+      "ordered-fields"
+    ],
+    "explanation": "For example, {1} is not a subset of {2}, and {2} is not a subset of {1}. Totality is precisely what excludes this third possibility."
+  },
+  {
+    "id": "aim.orderedfields.04.push-neg",
+    "type": "concept",
+    "stage": 4,
+    "topic": "Negating comparisons in total orders",
+    "difficulty": "introductory",
+    "front": "In Lean over a total (linear) order, what does the `push_neg` tactic do to negated comparisons?",
+    "back": "It rewrites them into positive complements: for example, $\\lnot(a\\le b)$ becomes $b<a$, $\\lnot(a<b)$ becomes $b\\le a$, and $\\lnot(a\\ne b)$ becomes $a=b$. Use `push_neg at h` to rewrite a hypothesis.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [
+      "aim.orderedfields.04.not-lt",
+      "aim.orderedfields.04.not-le",
+      "aim.orderedfields.04.not-ne"
+    ],
+    "tags": [
+      "concept",
+      "negation",
+      "total-order",
+      "lean",
+      "push-neg",
+      "tactic",
+      "ordered-fields"
+    ]
+  },
+  {
+    "id": "aim.orderedfields.04.linarith-negation",
+    "type": "concept",
+    "stage": 4,
+    "topic": "Negating comparisons in total orders",
+    "difficulty": "introductory",
+    "front": "In Lean over an ordered field (hence a total order), how can `linarith` help with negated comparisons?",
+    "back": "`linarith` understands linear equalities and inequalities and can close contradictions involving their negations, often without manually rewriting each negation first.",
+    "source": {
+      "tex": "output/pdf/ordered_field_reference.tex",
+      "lean": "Aim/Analysis/Numbers.lean",
+      "declaration": null
+    },
+    "prerequisites": [
+      "aim.orderedfields.04.push-neg"
+    ],
+    "tags": [
+      "concept",
+      "negation",
+      "total-order",
+      "lean",
+      "linarith",
+      "tactic",
+      "ordered-fields"
+    ]
   }
 ]
