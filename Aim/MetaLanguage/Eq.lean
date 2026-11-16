@@ -23,7 +23,7 @@ congruence; it is identity only because the semantics interprets it with
 this metalanguage `=`.
 -/
 
-namespace aim.meta
+namespace Aim.Meta
 
 universe u
 
@@ -81,4 +81,4 @@ theorem leibEq_iff_eq {α : Sort u} {a b : α} : LeibEq a b ↔ a = b := by
     exact hpb
 
 
-end aim.meta
+end Aim.Meta

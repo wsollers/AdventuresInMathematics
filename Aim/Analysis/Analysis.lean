@@ -14,6 +14,6 @@ import Aim.Analysis.Integral
 Exports sequences, series, numbers, functional limits, continuity, differentiation, and integration.
 -/
 
-namespace aim.analysis
+namespace Aim.Analysis
 
-end aim.analysis
+end Aim.Analysis

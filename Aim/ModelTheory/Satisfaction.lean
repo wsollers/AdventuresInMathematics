@@ -8,6 +8,6 @@ Variable assignments, term evaluation, Tarski's recursive definition of satisfac
 semantic entailment ($\Gamma \models \varphi$), elementary equivalence, and Soundness.
 -/
 
-namespace aim.modeltheory
+namespace Aim.ModelTheory
 
-end aim.modeltheory
+end Aim.ModelTheory

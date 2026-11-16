@@ -1,6 +1,6 @@
 # Numbers — derived lemmas up to `OrderedField`
 
-Statement-only worklist for `aim.analysis`. Each row is a declaration to be proved from the
+Statement-only worklist for `Aim.Analysis`. Each row is a declaration to be proved from the
 axiom mixins in `Numbers.lean`; nothing here needs `IsOrderComplete` or `ArchimedeanProperty`.
 
 Conventions

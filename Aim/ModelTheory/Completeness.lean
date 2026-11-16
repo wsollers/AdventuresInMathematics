@@ -9,6 +9,6 @@ Gödel's Completeness Theorem ($\Gamma \vdash \varphi \iff \Gamma \models \varph
 and the Compactness Theorem.
 -/
 
-namespace aim.modeltheory
+namespace Aim.ModelTheory
 
-end aim.modeltheory
+end Aim.ModelTheory

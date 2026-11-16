@@ -12,7 +12,7 @@ import Aim.Set.Function
 Exports the set-theoretic layer: axioms, set operations, relations, quotients, and functions.
 -/
 
-namespace aim.set
+namespace Aim.Set
 
-end aim.set
+end Aim.Set
 

@@ -63,6 +63,6 @@ Lazily: an item is added when a proof first needs it.
   and its behaviour under `++` (used for Enderton's parenthesis count).
 -/
 
-namespace aim.meta
+namespace Aim.Meta
 
-end aim.meta
+end Aim.Meta

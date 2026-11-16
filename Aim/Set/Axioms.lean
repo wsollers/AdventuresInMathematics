@@ -8,6 +8,6 @@ Foundational axioms of Set Theory: Extensionality, Empty Set, Pairing,
 Comprehension/Specification, Union, Power Set, and Infinity.
 -/
 
-namespace aim.set
+namespace Aim.Set
 
-end aim.set
+end Aim.Set

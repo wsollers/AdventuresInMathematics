@@ -10,6 +10,6 @@ Monotone Convergence Theorem, subsequences, Bolzano-Weierstrass Theorem,
 $\limsup$/$\liminf$, and the Cauchy Criterion on $\mathbb{R}$.
 -/
 
-namespace aim.analysis
+namespace Aim.Analysis
 
-end aim.analysis
+end Aim.Analysis

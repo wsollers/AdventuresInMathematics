@@ -9,6 +9,6 @@ product/quotient/chain rules, Rolle's Theorem, Mean Value Theorem (MVT),
 L'Hôpital's Rule, and Taylor's Theorem.
 -/
 
-namespace aim.analysis
+namespace Aim.Analysis
 
-end aim.analysis
+end Aim.Analysis

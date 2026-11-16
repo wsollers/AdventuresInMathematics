@@ -8,6 +8,6 @@ The five Peano Axioms, mathematical induction, strong induction, recursion,
 addition, multiplication, and order on $\mathbb{N}$.
 -/
 
-namespace aim.number
+namespace Aim.Number
 
-end aim.number
+end Aim.Number

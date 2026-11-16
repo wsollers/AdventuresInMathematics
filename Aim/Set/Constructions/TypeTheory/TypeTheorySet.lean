@@ -4,6 +4,6 @@ Copyright (c) 2026 William Sollers. All rights reserved.
 
 /-! # Type-Theoretic Set Construction -/
 
-namespace aim.set.constructions.typeTheory
+namespace Aim.Set.Constructions.TypeTheory
 
-end aim.set.constructions.typeTheory
+end Aim.Set.Constructions.TypeTheory

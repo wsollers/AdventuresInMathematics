@@ -8,6 +8,6 @@ Universal ($\forall$) and existential ($\exists, \exists!$) quantifiers, quantif
 and quantifier duality laws.
 -/
 
-namespace aim.logic
+namespace Aim.Logic
 
-end aim.logic
+end Aim.Logic

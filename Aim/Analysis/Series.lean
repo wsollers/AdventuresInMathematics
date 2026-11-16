@@ -9,6 +9,6 @@ comparison tests, absolute vs. conditional convergence, Root Test, Ratio Test,
 and Alternating Series Test.
 -/
 
-namespace aim.analysis
+namespace Aim.Analysis
 
-end aim.analysis
+end Aim.Analysis

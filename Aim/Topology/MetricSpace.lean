@@ -8,6 +8,6 @@ Metric space axioms (positivity, symmetry, triangle inequality), open and closed
 boundedness, metric convergence, Cauchy sequences, and complete metric spaces.
 -/
 
-namespace aim.topology
+namespace Aim.Topology
 
-end aim.topology
+end Aim.Topology

@@ -7,6 +7,6 @@ Copyright (c) 2026 William Sollers. All rights reserved.
 First-order terms, formulas, free and bound variables, and capture-avoiding substitution.
 -/
 
-namespace aim.prooftheory
+namespace Aim.ProofTheory
 
-end aim.prooftheory
+end Aim.ProofTheory

@@ -8,6 +8,6 @@ Ordered pairs, Cartesian products, binary relations, reflexivity/symmetry/transi
 equivalence relations, partitions, and quotient constructions.
 -/
 
-namespace aim.set
+namespace Aim.Set
 
-end aim.set
+end Aim.Set

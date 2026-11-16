@@ -12,7 +12,7 @@ import Aim.Number.Real
 Exports $\mathbb{N}$ (Peano), $\mathbb{Z}$, $\mathbb{Q}$, and $\mathbb{R}$.
 -/
 
-namespace aim.number
+namespace Aim.Number
 
-end aim.number
+end Aim.Number
 

@@ -8,6 +8,6 @@ Construction of $\mathbb{Z}$ from $\mathbb{N} \times \mathbb{N}$ via equivalence
 and proof that $\mathbb{Z}$ satisfies the Ordered Commutative Ring and Integral Domain axioms.
 -/
 
-namespace aim.number
+namespace Aim.Number
 
-end aim.number
+end Aim.Number

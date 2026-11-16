@@ -7,6 +7,6 @@ Copyright (c) 2026 William Sollers. All rights reserved.
 Classical choice principles, Hilbert's $\varepsilon$-operator, and unique choice.
 -/
 
-namespace aim.logic
+namespace Aim.Logic
 
-end aim.logic
+end Aim.Logic

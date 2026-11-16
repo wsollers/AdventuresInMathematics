@@ -8,6 +8,6 @@ Logical axioms and inference rules for propositional connectives ($\lnot, \land,
 Modus Ponens, De Morgan's laws, and classical tautologies ($\vdash \varphi$).
 -/
 
-namespace aim.logic
+namespace Aim.Logic
 
-end aim.logic
+end Aim.Logic

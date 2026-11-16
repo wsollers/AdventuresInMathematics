@@ -8,6 +8,6 @@ Separations, connected spaces, connected subsets of $\mathbb{R}$ (intervals),
 continuous images of connected spaces, and path-connectedness.
 -/
 
-namespace aim.topology
+namespace Aim.Topology
 
-end aim.topology
+end Aim.Topology

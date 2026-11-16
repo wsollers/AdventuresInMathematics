@@ -8,6 +8,6 @@ Functions, composition, injective/surjective/bijective maps, left/right/two-side
 and direct/inverse images of sets.
 -/
 
-namespace aim.set
+namespace Aim.Set
 
-end aim.set
+end Aim.Set

@@ -8,6 +8,6 @@ Topological and metric continuity, preimages of open/closed sets, homeomorphisms
 subspace topology, and product topology.
 -/
 
-namespace aim.topology
+namespace Aim.Topology
 
-end aim.topology
+end Aim.Topology

@@ -91,6 +91,6 @@ macro_rules
   | `(counterexample : $ty:term := $val:term) =>
       `(example : $ty := $val)
 
-namespace aim.common
+namespace Aim.Common
 
-end aim.common
+end Aim.Common

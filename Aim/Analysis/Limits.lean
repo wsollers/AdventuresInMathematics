@@ -10,6 +10,6 @@ continuous functions on intervals, Intermediate Value Theorem (IVT),
 Extreme Value Theorem (EVT), and uniform continuity.
 -/
 
-namespace aim.analysis
+namespace Aim.Analysis
 
-end aim.analysis
+end Aim.Analysis

@@ -9,7 +9,7 @@ import Aim.Common.Common
 Variables (`A, B, C`), logical connectives, formula syntax trees, and string parsing (`"A AND B"`).
 -/
 
-namespace aim.logic
+namespace Aim.Logic
 
 inductive TruthValue where
   | false : TruthValue
@@ -282,4 +282,4 @@ def myFormula : Formula := ¬A ∧ B ∧ B ∧ B
 
 -/
 
-end aim.logic
+end Aim.Logic

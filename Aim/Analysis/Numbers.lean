@@ -29,9 +29,13 @@ later declaration mentions it, so the carriers are not declared here.
 ## Design
 
 Each algebraic / order axiom is its own `Prop`-valued class ("mixin"). The
-structures `Field`, `OrderedField`, `CompleteOrderedField` `extend` those
+structures `Field`, `TotalOrder`, `OrderedField`, and `CompleteOrderedField` extend those
 mixins directly, so Lean generates the projection instances automatically —
 no hand-written `instance … := Field.foo` boilerplate.
+
+The file proceeds from field algebra to pure total order, ordered arithmetic,
+maximum/minimum and absolute value, and finally completeness. Pure order
+results use `TotalOrder`; decidability is a separate computational requirement.
 
 The associativity and commutativity mixins are bridged to core Lean's
 `Std.Associative` / `Std.Commutative` so that `ac_rfl` works on fields.
@@ -103,7 +107,7 @@ instance {X : Type u} [Mul X] [IsMulComm X] :
     Std.Commutative ((· * ·) : X → X → X) :=
   ⟨IsMulComm.mul_comm⟩
 
--- 4. Algebraic and Order Hierarchy
+-- 1a. Field bundle and derived operations
 
 /-- A field, presented independently of Mathlib's hierarchy.
 
@@ -160,127 +164,13 @@ corollary mul_inv_eq_div {R : Type u}
 instance {F : Type u} [Field F] : IsSubEqAddNeg F := ⟨fun _ _ => rfl⟩
 instance {F : Type u} [Field F] : IsDivEqMulInv F := ⟨fun _ _ => rfl⟩
 
--- 2. Order Property Classes
-
-/-- Reflexivity of the non-strict order. -/
-class IsLERefl (X : Type u) [LE X] : Prop where
-  le_refl : ∀ a : X, a ≤ a
-
-/-- Transitivity of the non-strict order. -/
-class IsLETrans (X : Type u) [LE X] : Prop where
-  le_trans : ∀ a b c : X, a ≤ b → b ≤ c → a ≤ c
-
-/-- Antisymmetry of the non-strict order. -/
-class IsLEAntisymm (X : Type u) [LE X] : Prop where
-  le_antisymm : ∀ a b : X, a ≤ b → b ≤ a → a = b
-
-/-- Totality of the non-strict order. -/
-class IsLETotal (X : Type u) [LE X] : Prop where
-  le_total : ∀ a b : X, a ≤ b ∨ b ≤ a
-
-/-- Strict order is the asymmetric part of non-strict order. -/
-class IsLTIffLENotLE (X : Type u) [LE X] [LT X] : Prop where
-  lt_iff_le_not_le : ∀ a b : X, a < b ↔ a ≤ b ∧ ¬b ≤ a
-
-/-- Addition on the right preserves non-strict order. -/
-class IsAddLEAddRight (X : Type u) [Add X] [LE X] : Prop where
-  add_le_add_right : ∀ a b : X, a ≤ b → ∀ c : X, a + c ≤ b + c
-
-/-- The product of two positive elements is positive. -/
-class IsMulPos (X : Type u) [Zero X] [Mul X] [LT X] : Prop where
-  mul_pos : ∀ a b : X, 0 < a → 0 < b → 0 < a * b
-
--- 3. Subtypes Carved Out of an Ordered Carrier
-
-/-- Positive elements: `{ x : R // 0 < x }` (e.g. ℝ⁺). -/
-def RPos (R : Type u) [Zero R] [LT R] : Type u :=
-  { x : R // 0 < x }
-
-/-- Negative elements: `{ x : R // x < 0 }` (e.g. ℝ⁻). -/
-def RNeg (R : Type u) [Zero R] [LT R] : Type u :=
-  { x : R // x < 0 }
-
-/-- Non-negative elements: `{ x : R // 0 ≤ x }` (e.g. ℝ≥0, needed for metric codomains). -/
-def RNonneg (R : Type u) [Zero R] [LE R] : Type u :=
-  { x : R // 0 ≤ x }
-
-/-- The order `≤` is decidable. Data, not a `Prop`: it is what `if` branches on. -/
-class LEDecidable (X : Type u) [LE X] where
-  decLE : ∀ a b : X, Decidable (a ≤ b)
-
-instance {X : Type u} [LE X] [LEDecidable X] (a b : X) : Decidable (a ≤ b) :=
-  LEDecidable.decLE a b
-
-/-- A field equipped with a compatible linear order. -/
-class OrderedField (F : Type u)
-    extends Field F, LE F, LT F,
-      IsLERefl F, IsLETrans F, IsLEAntisymm F, IsLETotal F,
-      IsLTIffLENotLE F, LEDecidable F,
-      IsAddLEAddRight F, IsMulPos F
-
-instance {X : Type u} [LE X] [LEDecidable X] : Max X :=
-  ⟨fun a b => if a ≤ b then b else a⟩
-
-instance {X : Type u} [LE X] [LEDecidable X] : Min X :=
-  ⟨fun a b => if a ≤ b then a else b⟩
-
-/-- `a` is an upper bound for `s`. -/
-def IsUpperBound {F : Type u} [LE F] (s : F → Prop) (a : F) : Prop :=
-  ∀ x : F, s x → x ≤ a
-
-/-- `a` is the least upper bound for `s`. -/
-def IsLeastUpperBound {F : Type u} [LE F] (s : F → Prop) (a : F) : Prop :=
-  IsUpperBound s a ∧ ∀ b : F, IsUpperBound s b → a ≤ b
-
-/-- Every nonempty set bounded above has a least upper bound. -/
-class IsOrderComplete (F : Type u) [LE F] : Prop where
-  exists_isLeastUpperBound :
-    ∀ s : F → Prop,
-      (∃ x : F, s x) →
-      (∃ b : F, IsUpperBound s b) →
-      ∃ a : F, IsLeastUpperBound s a
-
-/-- A complete ordered field. -/
-class CompleteOrderedField (F : Type u)
-    extends OrderedField F, IsOrderComplete F
-
-/-- Embed a natural number by repeated addition of one.
-
-This is the first bridge between core `Nat` and the "naturals inside `F`";
-injectivity and compatibility with `+` and `*` are proved later. -/
-def natCast {F : Type u} [Zero F] [One F] [Add F] : Nat → F
-  | 0 => 0
-  | n + 1 => natCast n + 1
-
-/-- The Archimedean property as an independent mixin.
-
-Redundant for a `CompleteOrderedField` (where it is a theorem), but kept
-separate so that non-Archimedean ordered fields can be discussed. -/
-class ArchimedeanProperty (F : Type u) [OrderedField F] : Prop where
-  archimedean : ∀ x : F, ∃ n : Nat, x < natCast n
-
--- 5. Metric / Distance Signatures
-
-/-- A distance function on `X` valued in `R`, together with a proof that every
-distance is non-negative.
-
-The domain and codomain may live in different universes. The codomain will
-normally be instantiated with the reals once they are constructed. -/
-structure Distance (X : Type u) (R : Type v) [Zero R] [LE R] where
-  dist : X → X → R
-  dist_nonneg : ∀ x y : X, 0 ≤ dist x y
-
--- ============================================================================
--- 6. Algebraic Consequences & Field Arithmetic
--- ============================================================================
-
--- 6a. Equality / Reflexivity
+-- 1b. Equality / Reflexivity
 
 /-- Reflexivity of equality as a named theorem (`x = x`). -/
 theorem identity {R : Type u} (x : R) : x = x := by
   rfl
 
--- 6b. Addition & Subtraction (Identities, Inverses, Cancellation)
+-- 1c. Addition & Subtraction (Identities, Inverses, Cancellation)
 
 -- | `add_zero` | `x + 0 = x` | `zero_add` (ax) | Z a |
 corollary add_zero {R : Type u}
@@ -565,7 +455,7 @@ lemma sub_sub {R : Type u}
   rw [add_neg_eq_sub x (y + z)] at h3
   exact h3
 
--- 6c. Multiplication & Division (Identities, Inverses, Cancellation, Distributivity)
+-- 1d. Multiplication & Division (Identities, Inverses, Cancellation, Distributivity)
 
 -- | `corollary` | `mul_one` | `x * 1 = x` | `one_mul` (ax) | Z b |
 corollary mul_one {R : Type u}
@@ -755,34 +645,135 @@ corollary add_mul {R : Type u}
   rw [IsMulComm.mul_comm]
   rw [IsMulComm.mul_comm b c]
 
--- 6d. Order
+/-- Multiplication by zero gives zero. -/
+proposition mul_zero {F : Type u} [Field F] (a : F) : a * 0 = 0 := by
+  have hdist := IsMulAdd.mul_add a (0 : F) 0
+  have hdist := hdist.symm
+  rw [IsZeroAdd.zero_add] at hdist
+  have h2 := congrArg (fun x => -(a * 0) + x) hdist
+  rw [← IsAddAssoc.add_assoc] at h2
+  rw [neg_add (a * 0)] at h2
+  rw [IsZeroAdd.zero_add] at h2
+  exact h2
+
+/-- Zero multiplied by any element is zero. -/
+proposition zero_mul {F : Type u} [Field F] (a : F) : 0 * a = 0 := by
+  sorry
+
+/-- A negated left factor negates the product. -/
+lemma neg_mul {F : Type u} [Field F] (a b : F) : (-a) * b = -(a * b) := by
+  sorry
+
+/-- A negated right factor negates the product. -/
+lemma mul_neg {F : Type u} [Field F] (a b : F) : a * (-b) = -(a * b) := by
+  sorry
+
+/-- Multiplication distributes over subtraction on the right. -/
+lemma mul_sub {F : Type u} [Field F] (a b c : F) :
+    a * (b - c) = a * b - a * c := by
+  sorry
+
+/-- Multiplication distributes over subtraction on the left. -/
+lemma sub_mul {F : Type u} [Field F] (a b c : F) :
+    (a - b) * c = a * c - b * c := by
+  sorry
+
+/-- The inverse of a nonzero element is nonzero. -/
+lemma inv_ne_zero {F : Type u} [Field F] {a : F}
+    (ha : a ≠ 0) : a⁻¹ ≠ 0 := by
+  sorry
+
+-- 2. Total-order axioms and consequences
+
+/-- Reflexivity of the non-strict order. -/
+class IsLERefl (X : Type u) [LE X] : Prop where
+  le_refl : ∀ a : X, a ≤ a
+
+/-- Transitivity of the non-strict order. -/
+class IsLETrans (X : Type u) [LE X] : Prop where
+  le_trans : ∀ a b c : X, a ≤ b → b ≤ c → a ≤ c
+
+/-- Antisymmetry of the non-strict order. -/
+class IsLEAntisymm (X : Type u) [LE X] : Prop where
+  le_antisymm : ∀ a b : X, a ≤ b → b ≤ a → a = b
+
+/-- Totality of the non-strict order. -/
+class IsLETotal (X : Type u) [LE X] : Prop where
+  le_total : ∀ a b : X, a ≤ b ∨ b ≤ a
+
+/-- Strict order is the asymmetric part of non-strict order. -/
+class IsLTIffLENotLE (X : Type u) [LE X] [LT X] : Prop where
+  lt_iff_le_not_le : ∀ a b : X, a < b ↔ a ≤ b ∧ ¬b ≤ a
+
+/-- A total order, with strict comparison linked to non-strict comparison.
+
+The four non-strict order laws are the mathematical contract. The `LT` parent
+and its linking law expose the equivalent strict comparison. Decidability
+is supplied separately by `LEDecidable`. -/
+class TotalOrder (X : Type u)
+    extends LE X, LT X,
+      IsLERefl X, IsLETrans X, IsLEAntisymm X, IsLETotal X,
+      IsLTIffLENotLE X
+
+/-- The order `≤` is decidable. Data, not a `Prop`: it is what `if` branches on. -/
+class LEDecidable (X : Type u) [LE X] where
+  decLE : ∀ a b : X, Decidable (a ≤ b)
+
+instance {X : Type u} [LE X] [LEDecidable X] (a b : X) : Decidable (a ≤ b) :=
+  LEDecidable.decLE a b
+
+-- 2a. Named forms of the non-strict order axioms
+
+/-- Every element is less than or equal to itself. -/
+lemma le_refl {F : Type u} [TotalOrder F] (a : F) : a ≤ a := by
+  sorry
+
+/-- Non-strict order is transitive. -/
+lemma le_trans {F : Type u} [TotalOrder F] {a b c : F}
+    (hab : a ≤ b) (hbc : b ≤ c) : a ≤ c := by
+  sorry
+
+/-- Two elements below each other are equal. -/
+lemma le_antisymm {F : Type u} [TotalOrder F] {a b : F}
+    (hab : a ≤ b) (hba : b ≤ a) : a = b := by
+  sorry
+
+/-- Every pair of elements is comparable. -/
+lemma le_total {F : Type u} [TotalOrder F] (a b : F) : a ≤ b ∨ b ≤ a := by
+  sorry
+
+-- 2b. Strict and non-strict comparisons
 
 /-- No element is strictly less than itself. -/
-lemma lt_irrefl {F : Type u} [OrderedField F] (a : F) : ¬ a < a := by
+lemma lt_irrefl {F : Type u} [TotalOrder F] (a : F) : ¬ a < a := by
   rw [IsLTIffLENotLE.lt_iff_le_not_le]
   intro h
   exact h.2 h.1
 
 
 /-- A strict inequality implies the corresponding non-strict inequality. -/
-lemma le_of_lt {F : Type u} [OrderedField F] {a b : F} (h : a < b) : a ≤ b := by
+lemma le_of_lt {F : Type u} [TotalOrder F] {a b : F} (h : a < b) : a ≤ b := by
   rw [IsLTIffLENotLE.lt_iff_le_not_le] at h
   exact h.1
 
+/-- Strict inequality implies that the elements are unequal. -/
+lemma ne_of_lt {F : Type u} [TotalOrder F] {a b : F} (h : a < b) : a ≠ b := by
+  sorry
+
 /-- A strict inequality rules out the reverse non-strict inequality. -/
-lemma not_le_of_lt {F : Type u} [OrderedField F] {a b : F} (h : a < b) : ¬ b ≤ a := by
+lemma not_le_of_lt {F : Type u} [TotalOrder F] {a b : F} (h : a < b) : ¬ b ≤ a := by
   rw [IsLTIffLENotLE.lt_iff_le_not_le] at h
   exact h.2
 
 /-- Strict order is asymmetric. -/
-lemma lt_asymm {F : Type u} [OrderedField F] {a b : F} (h : a < b) : ¬ b < a := by
+lemma lt_asymm {F : Type u} [TotalOrder F] {a b : F} (h : a < b) : ¬ b < a := by
   intro hba
   have h1 : ¬ b ≤ a := not_le_of_lt h
   have h2 : b ≤ a   := le_of_lt hba
   exact h1 h2
 
 /-- Strict order is transitive. -/
-proposition lt_trans {F : Type u} [OrderedField F] {a b c : F}
+proposition lt_trans {F : Type u} [TotalOrder F] {a b c : F}
   (hab : a < b) (hbc : b < c) : a < c := by
   have h1 := le_of_lt hab
   have h2 := le_of_lt hbc
@@ -799,7 +790,7 @@ proposition lt_trans {F : Type u} [OrderedField F] {a b c : F}
     exact hab.2 hba
 
 /-- A strict inequality followed by a non-strict one remains strict. -/
-lemma lt_of_lt_of_le {F : Type u} [OrderedField F] {a b c : F}
+lemma lt_of_lt_of_le {F : Type u} [TotalOrder F] {a b c : F}
     (hab : a < b) (hbc : b ≤ c) : a < c := by
   have h1 := le_of_lt hab
   have h3 : a ≤ c := IsLETrans.le_trans a b c h1 hbc
@@ -814,7 +805,7 @@ lemma lt_of_lt_of_le {F : Type u} [OrderedField F] {a b c : F}
     exact hab.2 hba
 
 /-- A non-strict inequality followed by a strict one remains strict. -/
-lemma lt_of_le_of_lt {F : Type u} [OrderedField F] {a b c : F}
+lemma lt_of_le_of_lt {F : Type u} [TotalOrder F] {a b c : F}
     (hab : a ≤ b) (hbc : b < c) : a < c := by
   rw [IsLTIffLENotLE.lt_iff_le_not_le]
   constructor
@@ -828,12 +819,22 @@ lemma lt_of_le_of_lt {F : Type u} [OrderedField F] {a b c : F}
     rw [IsLTIffLENotLE.lt_iff_le_not_le] at hbc
     exact hbc.2 hcb
 
+/-- A non-strict inequality between unequal elements is strict. -/
+lemma lt_of_le_of_ne {F : Type u} [TotalOrder F] (a b : F) :
+  a ≤ b → a ≠ b → a < b := by
+  --intro h
+  --intro hh
+  --rw [IsLTIffLENotLE.lt_iff_le_not_le]
+
+  sorry
+
 /-- Non-strict order is strict order or equality. -/
-lemma le_iff_lt_or_eq {F : Type u} [OrderedField F] (a b : F) :
+lemma le_iff_lt_or_eq {F : Type u} [TotalOrder F] (a b : F) :
     a ≤ b ↔ a < b ∨ a = b := by
   constructor
   . --
     intro h
+
     sorry
 
   . --
@@ -842,11 +843,56 @@ lemma le_iff_lt_or_eq {F : Type u} [OrderedField F] (a b : F) :
     sorry
 
 /-- Exactly one of `a < b`, `a = b`, and `b < a` can hold. -/
-theorem lt_trichotomy {F : Type u} [OrderedField F] (a b : F) :
+theorem lt_trichotomy {F : Type u} [TotalOrder F] (a b : F) :
     a < b ∨ a = b ∨ b < a := by
   sorry
 
--- 6e. Order and addition
+/-- Failure of a non-strict comparison is the reverse strict comparison. -/
+lemma not_le {F : Type u} [TotalOrder F] (a b : F) : ¬ a ≤ b ↔ b < a := by
+  sorry
+
+/-- Failure of a strict comparison is the reverse non-strict comparison. -/
+lemma not_lt {F : Type u} [TotalOrder F] (a b : F) : ¬ a < b ↔ b ≤ a := by
+  sorry
+
+/-- Strict order is non-strict order between unequal elements. -/
+lemma lt_iff_le_and_ne {F : Type u} [TotalOrder F] (a b : F) :
+    a < b ↔ a ≤ b ∧ a ≠ b := by
+  sorry
+
+/-- Equality is equivalent to non-strict comparison in both directions. -/
+lemma le_antisymm_iff {F : Type u} [TotalOrder F] (a b : F) :
+    a = b ↔ a ≤ b ∧ b ≤ a := by
+  sorry
+
+-- 3. Ordered fields and order with addition/subtraction
+
+/-- Addition on the right preserves non-strict order. -/
+class IsAddLEAddRight (X : Type u) [Add X] [LE X] : Prop where
+  add_le_add_right : ∀ a b : X, a ≤ b → ∀ c : X, a + c ≤ b + c
+
+/-- The product of two positive elements is positive. -/
+class IsMulPos (X : Type u) [Zero X] [Mul X] [LT X] : Prop where
+  mul_pos : ∀ a b : X, 0 < a → 0 < b → 0 < a * b
+
+/-- A field equipped with a compatible total order and decidable comparison. -/
+class OrderedField (F : Type u)
+    extends Field F, TotalOrder F, LEDecidable F,
+      IsAddLEAddRight F, IsMulPos F
+
+/-- Positive elements: `{ x : R // 0 < x }` (e.g. ℝ⁺). -/
+def RPos (R : Type u) [Zero R] [LT R] : Type u :=
+  { x : R // 0 < x }
+
+/-- Negative elements: `{ x : R // x < 0 }` (e.g. ℝ⁻). -/
+def RNeg (R : Type u) [Zero R] [LT R] : Type u :=
+  { x : R // x < 0 }
+
+/-- Non-negative elements: `{ x : R // 0 ≤ x }` (e.g. ℝ≥0, needed for metric codomains). -/
+def RNonneg (R : Type u) [Zero R] [LE R] : Type u :=
+  { x : R // 0 ≤ x }
+
+-- 3b. Order and addition/subtraction
 
 /-- Adding the same element on the right preserves `≤`. -/
 corollary add_le_add_right {F : Type u} [OrderedField F] {a b : F}
@@ -922,33 +968,7 @@ lemma neg_lt_neg_iff {F : Type u} [OrderedField F] (a b : F) :
 lemma neg_pos_of_neg {F : Type u} [OrderedField F] {a : F} (h : a < 0) : 0 < -a := by
   sorry
 
--- 6f. Order and multiplication
-
-/-- Multiplication by zero gives zero. -/
-proposition mul_zero {F : Type u} [Field F] (a : F) : a * 0 = 0 := by
-  sorry
-
-/-- Zero multiplied by any element is zero. -/
-proposition zero_mul {F : Type u} [Field F] (a : F) : 0 * a = 0 := by
-  sorry
-
-/-- A negated left factor negates the product. -/
-lemma neg_mul {F : Type u} [Field F] (a b : F) : (-a) * b = -(a * b) := by
-  sorry
-
-/-- A negated right factor negates the product. -/
-lemma mul_neg {F : Type u} [Field F] (a b : F) : a * (-b) = -(a * b) := by
-  sorry
-
-/-- Multiplication distributes over subtraction on the right. -/
-lemma mul_sub {F : Type u} [Field F] (a b c : F) :
-    a * (b - c) = a * b - a * c := by
-  sorry
-
-/-- Multiplication distributes over subtraction on the left. -/
-lemma sub_mul {F : Type u} [Field F] (a b c : F) :
-    (a - b) * c = a * c - b * c := by
-  sorry
+-- 4. Order and multiplication/division
 
 /-- The product of two nonnegative elements is nonnegative. -/
 lemma mul_nonneg {F : Type u} [OrderedField F] {a b : F}
@@ -995,15 +1015,101 @@ proposition mul_le_mul_of_nonpos_left {F : Type u} [OrderedField F] {a b c : F}
     (hab : a ≤ b) (hc : c ≤ 0) : c * b ≤ c * a := by
   sorry
 
--- 6g. Maximum and absolute value
+-- 4b. Signs, squares, and inverses
+
+/-- One is strictly positive. -/
+lemma zero_lt_one {F : Type u} [OrderedField F] : (0 : F) < 1 := by
+  sorry
+
+/-- One is nonnegative. -/
+lemma zero_le_one {F : Type u} [OrderedField F] : (0 : F) ≤ 1 := by
+  sorry
+
+/-- The square of any element is nonnegative. -/
+lemma mul_self_nonneg {F : Type u} [OrderedField F] (a : F) : 0 ≤ a * a := by
+  sorry
+
+/-- The square of a nonzero element is strictly positive. -/
+lemma mul_self_pos {F : Type u} [OrderedField F] {a : F}
+    (ha : a ≠ 0) : 0 < a * a := by
+  sorry
+
+/-- A positive element has a positive inverse. -/
+lemma inv_pos {F : Type u} [OrderedField F] {a : F}
+    (ha : 0 < a) : 0 < a⁻¹ := by
+  sorry
+
+/-- A negative element has a negative inverse. -/
+lemma inv_neg {F : Type u} [OrderedField F] {a : F}
+    (ha : a < 0) : a⁻¹ < 0 := by
+  sorry
+
+-- 4c. Division and comparison
+
+/-- A quotient of positive elements is positive. -/
+lemma div_pos {F : Type u} [OrderedField F] {a b : F}
+    (ha : 0 < a) (hb : 0 < b) : 0 < a / b := by
+  sorry
+
+/-- A nonnegative element divided by a positive element is nonnegative. -/
+lemma div_nonneg {F : Type u} [OrderedField F] {a b : F}
+    (ha : 0 ≤ a) (hb : 0 < b) : 0 ≤ a / b := by
+  sorry
+
+/-- Division by a positive element preserves and reflects non-strict order. -/
+lemma div_le_div_right {F : Type u} [OrderedField F] {a b c : F}
+    (hc : 0 < c) : a / c ≤ b / c ↔ a ≤ b := by
+  sorry
+
+/-- Division by a positive element preserves and reflects strict order. -/
+lemma div_lt_div_right {F : Type u} [OrderedField F] {a b c : F}
+    (hc : 0 < c) : a / c < b / c ↔ a < b := by
+  sorry
+
+/-- Division by a negative element reverses non-strict order. -/
+lemma div_le_div_right_of_neg {F : Type u} [OrderedField F] {a b c : F}
+    (hc : c < 0) : a / c ≤ b / c ↔ b ≤ a := by
+  sorry
+
+/-- Division by a negative element reverses strict order. -/
+lemma div_lt_div_right_of_neg {F : Type u} [OrderedField F] {a b c : F}
+    (hc : c < 0) : a / c < b / c ↔ b < a := by
+  sorry
+
+/-- A positive denominator can be moved across a non-strict inequality. -/
+lemma div_le_iff {F : Type u} [OrderedField F] {a b c : F}
+    (hc : 0 < c) : a / c ≤ b ↔ a ≤ b * c := by
+  sorry
+
+/-- A positive denominator can be moved across a strict inequality. -/
+lemma div_lt_iff {F : Type u} [OrderedField F] {a b c : F}
+    (hc : 0 < c) : a / c < b ↔ a < b * c := by
+  sorry
+
+/-- A positive denominator on the right can be moved across non-strict order. -/
+lemma le_div_iff {F : Type u} [OrderedField F] {a b c : F}
+    (hc : 0 < c) : a ≤ b / c ↔ a * c ≤ b := by
+  sorry
+
+/-- A positive denominator on the right can be moved across strict order. -/
+lemma lt_div_iff {F : Type u} [OrderedField F] {a b c : F}
+    (hc : 0 < c) : a < b / c ↔ a * c < b := by
+  sorry
+
+-- 5. Maximum, minimum, and absolute value
+
+instance {X : Type u} [LE X] [LEDecidable X] : Max X :=
+  ⟨fun a b => if a ≤ b then b else a⟩
+
+instance {X : Type u} [LE X] [LEDecidable X] : Min X :=
+  ⟨fun a b => if a ≤ b then a else b⟩
 
 /-- Absolute value: `|x| = max x (-x)`. -/
 def abs {F : Type u} [OrderedField F] (x : F) : F :=
   max x (-x)
 
 /-- Maximum is commutative. -/
-lemma max_comm {X : Type u} [LE X] [LEDecidable X]
-    [IsLETotal X] [IsLEAntisymm X] (a b : X) : max a b = max b a := by
+lemma max_comm {X : Type u} [TotalOrder X] [LEDecidable X] (a b : X) : max a b = max b a := by
   sorry
 
 /-- The triangle inequality. -/
@@ -1011,32 +1117,55 @@ theorem abs_add_le {F : Type u} [OrderedField F] (x y : F) :
     abs (x + y) ≤ abs x + abs y := by
   sorry
 
+-- 6. Completeness and the Archimedean property
 
+/-- `a` is an upper bound for `s`. -/
+def IsUpperBound {F : Type u} [LE F] (s : F → Prop) (a : F) : Prop :=
+  ∀ x : F, s x → x ≤ a
 
+/-- `a` is the least upper bound for `s`. -/
+def IsLeastUpperBound {F : Type u} [LE F] (s : F → Prop) (a : F) : Prop :=
+  IsUpperBound s a ∧ ∀ b : F, IsUpperBound s b → a ≤ b
 
+/-- Every nonempty set bounded above has a least upper bound. -/
+class IsOrderComplete (F : Type u) [LE F] : Prop where
+  exists_isLeastUpperBound :
+    ∀ s : F → Prop,
+      (∃ x : F, s x) →
+      (∃ b : F, IsUpperBound s b) →
+      ∃ a : F, IsLeastUpperBound s a
 
+/-- A complete ordered field. -/
+class CompleteOrderedField (F : Type u)
+    extends OrderedField F, IsOrderComplete F
 
+/-- Embed a natural number by repeated addition of one.
 
+This is the first bridge between core `Nat` and the "naturals inside `F`";
+injectivity and compatibility with `+` and `*` are proved later. -/
+def natCast {F : Type u} [Zero F] [One F] [Add F] : Nat → F
+  | 0 => 0
+  | n + 1 => natCast n + 1
 
+/-- The Archimedean property as an independent mixin.
 
+Redundant for a `CompleteOrderedField` (where it is a theorem), but kept
+separate so that non-Archimedean ordered fields can be discussed. -/
+class ArchimedeanProperty (F : Type u) [OrderedField F] : Prop where
+  archimedean : ∀ x : F, ∃ n : Nat, x < natCast n
 
+-- 7. Metric / distance signatures
 
+/-- A distance function on `X` valued in `R`, together with a proof that every
+distance is non-negative.
 
+The domain and codomain may live in different universes. The codomain will
+normally be instantiated with the reals once they are constructed. -/
+structure Distance (X : Type u) (R : Type v) [Zero R] [LE R] where
+  dist : X → X → R
+  dist_nonneg : ∀ x y : X, 0 ≤ dist x y
 
-
-
-
-
-
-
-
-
-
-
-
-
-
--- 6. Smoke Tests
+-- 8. Smoke tests
 
 /-- The mixin projections are found through `extends`. -/
 theorem field_smoke_test {F : Type u} [Field F] (a b c : F) :

@@ -8,6 +8,6 @@ $\mathcal{L}$-structures $\mathfrak{M}$, universes/domains, interpretations, sub
 homomorphisms, embeddings, and isomorphisms.
 -/
 
-namespace aim.modeltheory
+namespace Aim.ModelTheory
 
-end aim.modeltheory
+end Aim.ModelTheory

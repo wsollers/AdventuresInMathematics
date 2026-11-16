@@ -12,7 +12,7 @@ import Aim.ProofTheory.SequentCalculus
 Exports formal syntax, Hilbert calculi, Natural Deduction, and Sequent Calculus.
 -/
 
-namespace aim.prooftheory
+namespace Aim.ProofTheory
 
-end aim.prooftheory
+end Aim.ProofTheory
 

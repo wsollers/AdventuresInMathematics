@@ -12,7 +12,7 @@ import Aim.ModelTheory.Completeness
 Exports first-order languages, structures, Tarski satisfaction, and completeness/compactness.
 -/
 
-namespace aim.modeltheory
+namespace Aim.ModelTheory
 
-end aim.modeltheory
+end Aim.ModelTheory
 

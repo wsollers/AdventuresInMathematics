@@ -8,6 +8,6 @@ Introduction and elimination rules for intuitionistic and classical natural dedu
 and proof normalization.
 -/
 
-namespace aim.prooftheory
+namespace Aim.ProofTheory
 
-end aim.prooftheory
+end Aim.ProofTheory

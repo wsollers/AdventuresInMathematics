@@ -8,6 +8,6 @@ Open and closed set axioms, metric-induced topologies, bases and subbases,
 interior, closure, boundary, limit points, and Hausdorff ($T_2$) separation.
 -/
 
-namespace aim.topology
+namespace Aim.Topology
 
-end aim.topology
+end Aim.Topology

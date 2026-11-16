@@ -8,6 +8,6 @@ Open covers, finite subcovers, compact subsets, sequential compactness,
 uniform continuity on compact metric spaces, and the Heine-Borel Theorem.
 -/
 
-namespace aim.topology
+namespace Aim.Topology
 
-end aim.topology
+end Aim.Topology

@@ -8,6 +8,6 @@ Construction of $\mathbb{Q}$ as the field of fractions of $\mathbb{Z}$,
 and proof that $\mathbb{Q}$ satisfies the Ordered Field axioms.
 -/
 
-namespace aim.number
+namespace Aim.Number
 
-end aim.number
+end Aim.Number

@@ -8,6 +8,6 @@ Reflexivity ($x = x$), symmetry, transitivity, and Leibniz's Law of Substitution
 (indiscernibility of identicals: $x = y \to P(x) \to P(y)$).
 -/
 
-namespace aim.logic
+namespace Aim.Logic
 
-end aim.logic
+end Aim.Logic

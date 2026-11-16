@@ -8,6 +8,6 @@ Set algebra: subset ($\subseteq$), union ($\cup$), intersection ($\cap$), set di
 complement, De Morgan's laws for sets, and indexed unions/intersections.
 -/
 
-namespace aim.set
+namespace Aim.Set
 
-end aim.set
+end Aim.Set

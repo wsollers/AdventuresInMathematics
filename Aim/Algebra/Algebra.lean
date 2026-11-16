@@ -10,7 +10,7 @@ import Aim.Algebra.Structures
 Exports order structures and algebraic axioms (Groups, Rings, Fields, Ordered Fields).
 -/
 
-namespace aim.algebra
+namespace Aim.Algebra
 
-end aim.algebra
+end Aim.Algebra
 

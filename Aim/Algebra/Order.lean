@@ -8,6 +8,6 @@ Preorders, Partial Orders, Linear (Total) Orders, upper/lower bounds,
 least upper bounds (Supremum), greatest lower bounds (Infimum), and completeness axioms.
 -/
 
-namespace aim.algebra
+namespace Aim.Algebra
 
-end aim.algebra
+end Aim.Algebra

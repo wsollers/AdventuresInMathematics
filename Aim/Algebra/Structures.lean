@@ -9,6 +9,6 @@ Abelian Groups, Rings, Commutative Rings, Integral Domains, Fields, Ordered Ring
 Ordered Fields, and Complete Ordered Fields.
 -/
 
-namespace aim.algebra
+namespace Aim.Algebra
 
-end aim.algebra
+end Aim.Algebra

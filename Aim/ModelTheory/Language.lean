@@ -8,6 +8,6 @@ Signatures (constant symbols, function symbols, relation symbols with arities)
 and First-Order Languages $\mathcal{L}$.
 -/
 
-namespace aim.modeltheory
+namespace Aim.ModelTheory
 
-end aim.modeltheory
+end Aim.ModelTheory

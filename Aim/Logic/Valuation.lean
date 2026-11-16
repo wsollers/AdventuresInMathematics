@@ -8,6 +8,6 @@ Truth values, truth assignments (valuations), formula evaluation (`eval`), truth
 and tautology/satisfiability checking ($\models \varphi$).
 -/
 
-namespace aim.logic
+namespace Aim.Logic
 
-end aim.logic
+end Aim.Logic

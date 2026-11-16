@@ -8,6 +8,6 @@ Sequents ($\Gamma \vdash \Delta$), structural rules (weakening, contraction, exc
 logical left/right rules, the Cut rule, and Gentzen's Hauptsatz (Cut-Elimination Theorem).
 -/
 
-namespace aim.prooftheory
+namespace Aim.ProofTheory
 
-end aim.prooftheory
+end Aim.ProofTheory

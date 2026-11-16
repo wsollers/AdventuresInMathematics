@@ -9,6 +9,6 @@ integrability of continuous and monotone functions, properties of the integral,
 and the Fundamental Theorem of Calculus (Parts I and II).
 -/
 
-namespace aim.analysis
+namespace Aim.Analysis
 
-end aim.analysis
+end Aim.Analysis

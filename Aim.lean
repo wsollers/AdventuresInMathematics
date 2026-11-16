@@ -18,7 +18,7 @@ import Aim.Analysis.Analysis
 Root module for the `aim` self-contained undergraduate mathematics library.
 -/
 
-namespace aim
+namespace Aim
 
-end aim
+end Aim
 

@@ -15,6 +15,6 @@ Exports the foundational logic layer: syntax, truth-functional valuations,
 sentential logic, predicate logic, equality axioms, and choice.
 -/
 
-namespace aim.logic
+namespace Aim.Logic
 
-end aim.logic
+end Aim.Logic

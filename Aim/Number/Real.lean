@@ -8,6 +8,6 @@ Construction and axiomatization of $\mathbb{R}$ as a Complete Ordered Field
 (Least Upper Bound Property, Archimedean Property, and density of $\mathbb{Q}$ in $\mathbb{R}$).
 -/
 
-namespace aim.number
+namespace Aim.Number
 
-end aim.number
+end Aim.Number
