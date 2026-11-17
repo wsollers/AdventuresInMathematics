@@ -959,8 +959,18 @@ lemma sub_pos {F : Type u} [OrderedField F] {a b : F} :
   sorry
 
 /-- Negation reverses non-strict order. -/
+lemma neg_le_neg {F : Type u} [OrderedField F] {a b : F}
+    (h : a ≤ b) : -b ≤ -a := by
+  sorry
+
+/-- Negation reverses non-strict order. -/
 lemma neg_le_neg_iff {F : Type u} [OrderedField F] (a b : F) :
     -a ≤ -b ↔ b ≤ a := by
+  sorry
+
+/-- Negation reverses strict order. -/
+lemma neg_lt_neg {F : Type u} [OrderedField F] {a b : F}
+    (h : a < b) : -b < -a := by
   sorry
 
 /-- Negation reverses strict order. -/
@@ -968,8 +978,43 @@ lemma neg_lt_neg_iff {F : Type u} [OrderedField F] (a b : F) :
     -a < -b ↔ b < a := by
   sorry
 
+/-- A negation is negative exactly when the original element is positive. -/
+lemma neg_lt_zero {F : Type u} [OrderedField F] {a : F} :
+    -a < 0 ↔ 0 < a := by
+  sorry
+
+/-- A negation is positive exactly when the original element is negative. -/
+lemma neg_pos {F : Type u} [OrderedField F] {a : F} :
+    0 < -a ↔ a < 0 := by
+  sorry
+
+/-- A negation is nonpositive exactly when the original element is nonnegative. -/
+lemma neg_le_zero {F : Type u} [OrderedField F] {a : F} :
+    -a ≤ 0 ↔ 0 ≤ a := by
+  sorry
+
+/-- A negation is nonnegative exactly when the original element is nonpositive. -/
+lemma neg_nonneg {F : Type u} [OrderedField F] {a : F} :
+    0 ≤ -a ↔ a ≤ 0 := by
+  sorry
+
+/-- A positive element has a negative negation. -/
+corollary neg_neg_of_pos {F : Type u} [OrderedField F] {a : F}
+    (h : 0 < a) : -a < 0 := by
+  sorry
+
 /-- A negative element has a positive negation. -/
 lemma neg_pos_of_neg {F : Type u} [OrderedField F] {a : F} (h : a < 0) : 0 < -a := by
+  sorry
+
+/-- A nonnegative element has a nonpositive negation. -/
+lemma neg_nonpos_of_nonneg {F : Type u} [OrderedField F] {a : F}
+    (h : 0 ≤ a) : -a ≤ 0 := by
+  sorry
+
+/-- A nonpositive element has a nonnegative negation. -/
+lemma neg_nonneg_of_nonpos {F : Type u} [OrderedField F] {a : F}
+    (h : a ≤ 0) : 0 ≤ -a := by
   sorry
 
 -- 4. Order and multiplication/division
