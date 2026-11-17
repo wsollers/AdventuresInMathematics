@@ -658,10 +658,14 @@ proposition mul_zero {F : Type u} [Field F] (a : F) : a * 0 = 0 := by
 
 /-- Zero multiplied by any element is zero. -/
 proposition zero_mul {F : Type u} [Field F] (a : F) : 0 * a = 0 := by
-  sorry
+  rw [IsMulComm.mul_comm]
+  exact mul_zero a
 
 /-- A negated left factor negates the product. -/
 lemma neg_mul {F : Type u} [Field F] (a b : F) : (-a) * b = -(a * b) := by
+  have h : b * 0 = 0 := mul_zero b
+  nth_rewrite 1 [← IsAddNeg.add_neg a] at h
+
   sorry
 
 /-- A negated right factor negates the product. -/
