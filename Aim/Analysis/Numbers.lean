@@ -793,6 +793,18 @@ lemma not_le_of_lt {F : Type u} [TotalOrder F] {a b : F} (h : a < b) : ¬ b ≤ 
   rw [IsLTIffLENotLE.lt_iff_le_not_le] at h
   exact h.2
 
+/-- A non-strict inequality rules out the reverse strict inequality. -/
+lemma not_lt_of_le {F : Type u} [TotalOrder F] {a b : F} (h : a ≤ b) : ¬ b < a := by
+  sorry
+
+/-- If the reverse strict comparison fails, the forward non-strict comparison holds. -/
+lemma le_of_not_gt {F : Type u} [TotalOrder F] {a b : F} (h : ¬ b < a) : a ≤ b := by
+  sorry
+
+/-- If the reverse non-strict comparison fails, the forward strict comparison holds. -/
+lemma lt_of_not_ge {F : Type u} [TotalOrder F] {a b : F} (h : ¬ b ≤ a) : a < b := by
+  sorry
+
 /-- Strict order is asymmetric. -/
 lemma lt_asymm {F : Type u} [TotalOrder F] {a b : F} (h : a < b) : ¬ b < a := by
   intro hba
