@@ -19,6 +19,7 @@ Every module builds from the ground up along a linear axiomatic progression:
 
 1. **Common** (`namespace Aim.Common`)
    - [`Aim/Common/Common.lean`](Aim/Common/Common.lean) — Project-wide foundations and universe conventions.
+   - [`Aim/Common/Tactics.lean`](Aim/Common/Tactics.lean) — Local `nth_rewrite` and `nth_rw` macros, adapted from Mathlib with attribution and the [Apache-2.0 license](Aim/Common/LICENSE). Imported by `Common`; requires only Lean, not Mathlib.
 2. **Logic** (`namespace Aim.Logic`)
    - [`Aim/Logic/Syntax.lean`](Aim/Logic/Syntax.lean) — Propositional variables (`A, B, C`), formula syntax trees, string parsing (`"A AND B"`).
    - [`Aim/Logic/Valuation.lean`](Aim/Logic/Valuation.lean) — Truth values, truth-functional valuations (`eval`), truth tables, and tautologies ($\models \varphi$).

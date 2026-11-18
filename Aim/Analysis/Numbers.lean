@@ -41,7 +41,7 @@ The associativity and commutativity mixins are bridged to core Lean's
 `Std.Associative` / `Std.Commutative` so that `ac_rfl` works on fields.
 -/
 
-namespace aim.analysis
+namespace Aim.Analysis
 
 universe u v
 
@@ -665,27 +665,49 @@ proposition zero_mul {F : Type u} [Field F] (a : F) : 0 * a = 0 := by
 lemma neg_mul {F : Type u} [Field F] (a b : F) : (-a) * b = -(a * b) := by
   have h : b * 0 = 0 := mul_zero b
   nth_rewrite 1 [← IsAddNeg.add_neg a] at h
-
-  sorry
+  rw [IsMulAdd.mul_add] at h
+  have h2 := congrArg (fun x => -(b * a) + x) h
+  rw [← IsAddAssoc.add_assoc] at h2
+  rw [add_zero] at h2
+  rw [neg_add (b * a)] at h2
+  rw [zero_add] at h2
+  rw [IsMulComm.mul_comm] at h2
+  nth_rewrite 2 [IsMulComm.mul_comm] at h2
+  exact h2
 
 /-- A negated right factor negates the product. -/
 lemma mul_neg {F : Type u} [Field F] (a b : F) : a * (-b) = -(a * b) := by
-  sorry
+  rw [IsMulComm.mul_comm]
+  nth_rewrite 2 [IsMulComm.mul_comm]
+  rw [neg_mul b a]
 
 /-- Multiplication distributes over subtraction on the right. -/
 lemma mul_sub {F : Type u} [Field F] (a b c : F) :
     a * (b - c) = a * b - a * c := by
-  sorry
+  rw [sub_eq_add_neg b c]
+  rw [IsMulAdd.mul_add]
+  rw [mul_neg]
+  rw [sub_eq_add_neg (a * b) (a * c)]
 
 /-- Multiplication distributes over subtraction on the left. -/
 lemma sub_mul {F : Type u} [Field F] (a b c : F) :
     (a - b) * c = a * c - b * c := by
-  sorry
+  rw [IsMulComm.mul_comm]
+  nth_rewrite 2 [IsMulComm.mul_comm]
+  nth_rewrite 3 [IsMulComm.mul_comm]
+  rw [mul_sub  c a b]
 
 /-- The inverse of a nonzero element is nonzero. -/
 lemma inv_ne_zero {F : Type u} [Field F] {a : F}
     (ha : a ≠ 0) : a⁻¹ ≠ 0 := by
-  sorry
+  intro h
+  have h2 : a * a⁻¹ = a * 0 :=
+    congrArg (fun x => a * x) h
+  rw [mul_zero] at h2
+  rw [IsMulInvCancel.mul_inv_cancel a ha] at h2
+  have h3 : (0 : F) = 1 := h2.symm
+  have c := IsZeroNeOne.zero_ne_one h3
+  exact c
 
 -- 2. Total-order axioms and consequences
 
@@ -730,21 +752,21 @@ instance {X : Type u} [LE X] [LEDecidable X] (a b : X) : Decidable (a ≤ b) :=
 
 /-- Every element is less than or equal to itself. -/
 lemma le_refl {F : Type u} [TotalOrder F] (a : F) : a ≤ a := by
-  sorry
+  exact IsLERefl.le_refl a
 
 /-- Non-strict order is transitive. -/
 lemma le_trans {F : Type u} [TotalOrder F] {a b c : F}
     (hab : a ≤ b) (hbc : b ≤ c) : a ≤ c := by
-  sorry
+  exact IsLETrans.le_trans a b c  hab hbc
 
 /-- Two elements below each other are equal. -/
 lemma le_antisymm {F : Type u} [TotalOrder F] {a b : F}
     (hab : a ≤ b) (hba : b ≤ a) : a = b := by
-  sorry
+  exact IsLEAntisymm.le_antisymm a b hab hba
 
 /-- Every pair of elements is comparable. -/
 lemma le_total {F : Type u} [TotalOrder F] (a b : F) : a ≤ b ∨ b ≤ a := by
-  sorry
+  exact IsLETotal.le_total a b
 
 -- 2b. Strict and non-strict comparisons
 
@@ -762,7 +784,9 @@ lemma le_of_lt {F : Type u} [TotalOrder F] {a b : F} (h : a < b) : a ≤ b := by
 
 /-- Strict inequality implies that the elements are unequal. -/
 lemma ne_of_lt {F : Type u} [TotalOrder F] {a b : F} (h : a < b) : a ≠ b := by
-  sorry
+  intro hne
+  rw [hne] at h
+  exact (lt_irrefl b) h
 
 /-- A strict inequality rules out the reverse non-strict inequality. -/
 lemma not_le_of_lt {F : Type u} [TotalOrder F] {a b : F} (h : a < b) : ¬ b ≤ a := by
@@ -826,25 +850,35 @@ lemma lt_of_le_of_lt {F : Type u} [TotalOrder F] {a b c : F}
 /-- A non-strict inequality between unequal elements is strict. -/
 lemma lt_of_le_of_ne {F : Type u} [TotalOrder F] (a b : F) :
   a ≤ b → a ≠ b → a < b := by
-  --intro h
-  --intro hh
-  --rw [IsLTIffLENotLE.lt_iff_le_not_le]
-
-  sorry
+  rw [IsLTIffLENotLE.lt_iff_le_not_le]
+  intro hlte
+  intro hne
+  constructor
+  . --
+    exact hlte
+  . --
+    intro htemp
+    have he := le_antisymm hlte htemp
+    exact hne he
 
 /-- Non-strict order is strict order or equality. -/
 lemma le_iff_lt_or_eq {F : Type u} [TotalOrder F] (a b : F) :
     a ≤ b ↔ a < b ∨ a = b := by
+  classical
   constructor
-  . --
-    intro h
-
-    sorry
-
-  . --
-    intro h
-
-    sorry
+  · intro h
+    by_cases heq : a = b
+    · right
+      exact heq
+    · left
+      exact lt_of_le_of_ne a b h heq
+  · intro h
+    cases h with
+    | inl hlt =>
+      exact le_of_lt hlt
+    | inr heq =>
+      rw [heq]
+      exact le_refl b
 
 /-- Exactly one of `a < b`, `a = b`, and `b < a` can hold. -/
 theorem lt_trichotomy {F : Type u} [TotalOrder F] (a b : F) :
@@ -1257,4 +1291,4 @@ theorem abs_branch_neg_smoke_test {F : Type u} [OrderedField F] (x : F)
   show (if x ≤ -x then -x else x) = x
   exact if_neg h
 
-end aim.analysis
+end Aim.Analysis

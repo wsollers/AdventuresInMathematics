@@ -2,6 +2,7 @@
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
 import Lean.Parser.Command
+import Aim.Common.Tactics
 
 /-!
 # Common Project Settings and Conventions

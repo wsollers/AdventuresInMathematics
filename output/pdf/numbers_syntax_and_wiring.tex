@@ -196,14 +196,14 @@ therefore part of the browsable API documentation, not merely visual separators.
 \subsection{Namespaces qualify names}
 
 \begin{lstlisting}
-namespace aim.analysis
-  -- Field is really aim.analysis.Field here.
-end aim.analysis
+namespace Aim.Analysis
+  -- Field is really Aim.Analysis.Field here.
+end Aim.Analysis
 \end{lstlisting}
 
 A namespace prevents short names such as \code{Field} from occupying the global name
 space. Inside the namespace, the short name is normally sufficient. Outside, a client
-can write \code{aim.analysis.Field}; an \code{open} command could make short names
+can write \code{Aim.Analysis.Field}; an \code{open} command could make short names
 available without changing their true full names.
 
 \subsection{Universe variables classify types}
@@ -904,7 +904,7 @@ mathematical content.
 \endhead
 module doc comment & \code{/-! ... -/} & file-level generated documentation \\
 declaration doc comment & \code{/-- ... -/} & attaches prose to the next declaration \\
-namespace & \code{namespace aim.analysis} & qualifies all enclosed names \\
+namespace & \code{namespace Aim.Analysis} & qualifies all enclosed names \\
 universe variables & \code{universe u v} & polymorphic levels for carrier types \\
 explicit binder & \code{(X : Type u)} & caller-provided argument \\
 implicit binder & \code{\{F : Type u\}} & inferred ordinary argument \\
