@@ -813,9 +813,14 @@ lemma le_of_not_gt {F : Type u} [TotalOrder F] {a b : F} (h : ¬ b < a) : a ≤ 
 /-- If the reverse non-strict comparison fails, the forward strict comparison holds. -/
 lemma lt_of_not_ge {F : Type u} [TotalOrder F] {a b : F} (h : ¬ b ≤ a) : a < b := by
   rw [IsLTIffLENotLE.lt_iff_le_not_le]
-  have hlte := le_of_not_gt h
-
-  sorry
+  constructor
+  . --
+    rcases IsLETotal.le_total a b with hab | hba
+    . exact hab
+    · have hContra : False := h hba
+      cases hContra
+  . --
+    exact h
 
 /-- Strict order is asymmetric. -/
 lemma lt_asymm {F : Type u} [TotalOrder F] {a b : F} (h : a < b) : ¬ b < a := by
@@ -907,6 +912,7 @@ lemma le_iff_lt_or_eq {F : Type u} [TotalOrder F] (a b : F) :
 /-- Exactly one of `a < b`, `a = b`, and `b < a` can hold. -/
 theorem lt_trichotomy {F : Type u} [TotalOrder F] (a b : F) :
     a < b ∨ a = b ∨ b < a := by
+
   sorry
 
 /-- Failure of a non-strict comparison is the reverse strict comparison. -/
