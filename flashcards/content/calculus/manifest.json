@@ -1,0 +1,2094 @@
+{
+  "title": "Calculus reference",
+  "version": 1,
+  "stages": [
+    {
+      "stage": 9,
+      "title": "Degrees and radians",
+      "file": "angles.json",
+      "card_ids": [
+        "aim.calculus.angles.radian",
+        "aim.calculus.angles.degrees-to-radians",
+        "aim.calculus.angles.radians-to-degrees",
+        "aim.calculus.angles.arc",
+        "aim.calculus.angles.sector",
+        "aim.calculus.angles.deg-0",
+        "aim.calculus.angles.rad-0",
+        "aim.calculus.angles.deg-30",
+        "aim.calculus.angles.rad-30",
+        "aim.calculus.angles.deg-45",
+        "aim.calculus.angles.rad-45",
+        "aim.calculus.angles.deg-60",
+        "aim.calculus.angles.rad-60",
+        "aim.calculus.angles.deg-90",
+        "aim.calculus.angles.rad-90",
+        "aim.calculus.angles.deg-120",
+        "aim.calculus.angles.rad-120",
+        "aim.calculus.angles.deg-135",
+        "aim.calculus.angles.rad-135",
+        "aim.calculus.angles.deg-150",
+        "aim.calculus.angles.rad-150",
+        "aim.calculus.angles.deg-180",
+        "aim.calculus.angles.rad-180",
+        "aim.calculus.angles.deg-210",
+        "aim.calculus.angles.rad-210",
+        "aim.calculus.angles.deg-225",
+        "aim.calculus.angles.rad-225",
+        "aim.calculus.angles.deg-240",
+        "aim.calculus.angles.rad-240",
+        "aim.calculus.angles.deg-270",
+        "aim.calculus.angles.rad-270",
+        "aim.calculus.angles.deg-300",
+        "aim.calculus.angles.rad-300",
+        "aim.calculus.angles.deg-315",
+        "aim.calculus.angles.rad-315",
+        "aim.calculus.angles.deg-330",
+        "aim.calculus.angles.rad-330",
+        "aim.calculus.angles.deg-360",
+        "aim.calculus.angles.rad-360"
+      ]
+    },
+    {
+      "stage": 10,
+      "title": "Trigonometric definitions and exact values",
+      "file": "trig-definitions.json",
+      "card_ids": [
+        "aim.calculus.trig-definitions.unit-circle",
+        "aim.calculus.trig-definitions.sin-triangle",
+        "aim.calculus.trig-definitions.cos-triangle",
+        "aim.calculus.trig-definitions.tan-triangle",
+        "aim.calculus.trig-definitions.tan",
+        "aim.calculus.trig-definitions.cot",
+        "aim.calculus.trig-definitions.sec",
+        "aim.calculus.trig-definitions.csc",
+        "aim.calculus.trig-definitions.q1",
+        "aim.calculus.trig-definitions.q2",
+        "aim.calculus.trig-definitions.q3",
+        "aim.calculus.trig-definitions.q4",
+        "aim.calculus.trig-definitions.sin-0",
+        "aim.calculus.trig-definitions.sin-30",
+        "aim.calculus.trig-definitions.sin-45",
+        "aim.calculus.trig-definitions.sin-60",
+        "aim.calculus.trig-definitions.sin-90",
+        "aim.calculus.trig-definitions.cos-0",
+        "aim.calculus.trig-definitions.cos-30",
+        "aim.calculus.trig-definitions.cos-45",
+        "aim.calculus.trig-definitions.cos-60",
+        "aim.calculus.trig-definitions.cos-90"
+      ]
+    },
+    {
+      "stage": 11,
+      "title": "Trigonometric identities",
+      "file": "trig-identities.json",
+      "card_ids": [
+        "aim.calculus.trig-identities.pythagorean",
+        "aim.calculus.trig-identities.tan-pythagorean",
+        "aim.calculus.trig-identities.cot-pythagorean",
+        "aim.calculus.trig-identities.sin-odd",
+        "aim.calculus.trig-identities.cos-even",
+        "aim.calculus.trig-identities.tan-odd",
+        "aim.calculus.trig-identities.sin-cofunction",
+        "aim.calculus.trig-identities.cos-cofunction",
+        "aim.calculus.trig-identities.tan-cofunction",
+        "aim.calculus.trig-identities.sin-double",
+        "aim.calculus.trig-identities.cos-double",
+        "aim.calculus.trig-identities.cos-double-sin",
+        "aim.calculus.trig-identities.cos-double-cos",
+        "aim.calculus.trig-identities.tan-double",
+        "aim.calculus.trig-identities.sin-square",
+        "aim.calculus.trig-identities.cos-square",
+        "aim.calculus.trig-identities.sin-half",
+        "aim.calculus.trig-identities.cos-half",
+        "aim.calculus.trig-identities.tan-half-a",
+        "aim.calculus.trig-identities.tan-half-b",
+        "aim.calculus.trig-identities.product-ss",
+        "aim.calculus.trig-identities.product-cc",
+        "aim.calculus.trig-identities.product-sc",
+        "aim.calculus.trig-identities.tan-square",
+        "aim.calculus.trig-identities.cot-square",
+        "aim.calculus.trig-identities.sin-cos",
+        "aim.calculus.trig-identities.sin2-cos2",
+        "aim.calculus.trig-identities.sin4",
+        "aim.calculus.trig-identities.cos4",
+        "aim.calculus.trig-identities.sqrt-sec",
+        "aim.calculus.trig-identities.sin-period",
+        "aim.calculus.trig-identities.cos-period",
+        "aim.calculus.trig-identities.tan-period",
+        "aim.calculus.trig-identities.cot-period",
+        "aim.calculus.trig-identities.sec-period",
+        "aim.calculus.trig-identities.csc-period",
+        "aim.calculus.trig-identities.sin-sum",
+        "aim.calculus.trig-identities.cos-sum",
+        "aim.calculus.trig-identities.tan-sum",
+        "aim.calculus.trig-identities.sin-difference",
+        "aim.calculus.trig-identities.cos-difference",
+        "aim.calculus.trig-identities.tan-difference"
+      ]
+    },
+    {
+      "stage": 12,
+      "title": "Trigonometric derivatives and integrals",
+      "file": "trig-calculus.json",
+      "card_ids": [
+        "aim.calculus.trig-calculus.d-sin",
+        "aim.calculus.trig-calculus.d-cos",
+        "aim.calculus.trig-calculus.d-tan",
+        "aim.calculus.trig-calculus.d-cot",
+        "aim.calculus.trig-calculus.d-sec",
+        "aim.calculus.trig-calculus.d-csc",
+        "aim.calculus.trig-calculus.i-sin",
+        "aim.calculus.trig-calculus.i-cos",
+        "aim.calculus.trig-calculus.i-sec2",
+        "aim.calculus.trig-calculus.i-csc2",
+        "aim.calculus.trig-calculus.i-sectan",
+        "aim.calculus.trig-calculus.i-csccot",
+        "aim.calculus.trig-calculus.i-tan",
+        "aim.calculus.trig-calculus.i-cot",
+        "aim.calculus.trig-calculus.i-sec",
+        "aim.calculus.trig-calculus.i-csc",
+        "aim.calculus.trig-calculus.asin-range",
+        "aim.calculus.trig-calculus.acos-range",
+        "aim.calculus.trig-calculus.atan-range",
+        "aim.calculus.trig-calculus.inverse-reciprocal",
+        "aim.calculus.trig-calculus.d-asin",
+        "aim.calculus.trig-calculus.d-acos",
+        "aim.calculus.trig-calculus.d-atan",
+        "aim.calculus.trig-calculus.i-asin",
+        "aim.calculus.trig-calculus.i-atan",
+        "aim.calculus.trig-calculus.sub-sin",
+        "aim.calculus.trig-calculus.sub-tan",
+        "aim.calculus.trig-calculus.sub-sec"
+      ]
+    },
+    {
+      "stage": 13,
+      "title": "Hyperbolic definitions and identities",
+      "file": "hyperbolic.json",
+      "card_ids": [
+        "aim.calculus.hyperbolic.sinh",
+        "aim.calculus.hyperbolic.cosh",
+        "aim.calculus.hyperbolic.tanh",
+        "aim.calculus.hyperbolic.tanh-exp",
+        "aim.calculus.hyperbolic.sech",
+        "aim.calculus.hyperbolic.csch",
+        "aim.calculus.hyperbolic.coth",
+        "aim.calculus.hyperbolic.fundamental",
+        "aim.calculus.hyperbolic.tanh-identity",
+        "aim.calculus.hyperbolic.coth-identity",
+        "aim.calculus.hyperbolic.sinh-odd",
+        "aim.calculus.hyperbolic.cosh-even",
+        "aim.calculus.hyperbolic.tanh-odd",
+        "aim.calculus.hyperbolic.sinh-double",
+        "aim.calculus.hyperbolic.cosh-double",
+        "aim.calculus.hyperbolic.sinh-square",
+        "aim.calculus.hyperbolic.cosh-square",
+        "aim.calculus.hyperbolic.exp-plus",
+        "aim.calculus.hyperbolic.exp-minus",
+        "aim.calculus.hyperbolic.sinh-sum",
+        "aim.calculus.hyperbolic.cosh-sum",
+        "aim.calculus.hyperbolic.sinh-difference",
+        "aim.calculus.hyperbolic.cosh-difference"
+      ]
+    },
+    {
+      "stage": 14,
+      "title": "Hyperbolic derivatives, integrals and inverses",
+      "file": "hyperbolic-calculus.json",
+      "card_ids": [
+        "aim.calculus.hyperbolic-calculus.d-sinh",
+        "aim.calculus.hyperbolic-calculus.d-cosh",
+        "aim.calculus.hyperbolic-calculus.d-tanh",
+        "aim.calculus.hyperbolic-calculus.d-coth",
+        "aim.calculus.hyperbolic-calculus.d-sech",
+        "aim.calculus.hyperbolic-calculus.d-csch",
+        "aim.calculus.hyperbolic-calculus.i-sinh",
+        "aim.calculus.hyperbolic-calculus.i-cosh",
+        "aim.calculus.hyperbolic-calculus.i-tanh",
+        "aim.calculus.hyperbolic-calculus.asinh",
+        "aim.calculus.hyperbolic-calculus.acosh",
+        "aim.calculus.hyperbolic-calculus.atanh",
+        "aim.calculus.hyperbolic-calculus.d-asinh",
+        "aim.calculus.hyperbolic-calculus.d-acosh",
+        "aim.calculus.hyperbolic-calculus.d-atanh",
+        "aim.calculus.hyperbolic-calculus.sub-sinh",
+        "aim.calculus.hyperbolic-calculus.sub-cosh"
+      ]
+    },
+    {
+      "stage": 15,
+      "title": "Polar, cylindrical and spherical coordinates",
+      "file": "coordinates.json",
+      "card_ids": [
+        "aim.calculus.coordinates.convention",
+        "aim.calculus.coordinates.polar-x",
+        "aim.calculus.coordinates.polar-y",
+        "aim.calculus.coordinates.polar-r",
+        "aim.calculus.coordinates.polar-theta",
+        "aim.calculus.coordinates.atan2",
+        "aim.calculus.coordinates.polar-range-r",
+        "aim.calculus.coordinates.polar-range-theta",
+        "aim.calculus.coordinates.polar-area",
+        "aim.calculus.coordinates.polar-enclosed",
+        "aim.calculus.coordinates.cyl-x",
+        "aim.calculus.coordinates.cyl-y",
+        "aim.calculus.coordinates.cyl-z",
+        "aim.calculus.coordinates.cart-cyl-r",
+        "aim.calculus.coordinates.cart-cyl-theta",
+        "aim.calculus.coordinates.cart-cyl-z",
+        "aim.calculus.coordinates.cyl-volume",
+        "aim.calculus.coordinates.sph-x",
+        "aim.calculus.coordinates.sph-y",
+        "aim.calculus.coordinates.sph-z",
+        "aim.calculus.coordinates.cart-sph-rho",
+        "aim.calculus.coordinates.cart-sph-theta",
+        "aim.calculus.coordinates.cart-sph-phi",
+        "aim.calculus.coordinates.sph-range-rho",
+        "aim.calculus.coordinates.sph-range-theta",
+        "aim.calculus.coordinates.sph-range-phi",
+        "aim.calculus.coordinates.sph-cyl-r",
+        "aim.calculus.coordinates.sph-cyl-z",
+        "aim.calculus.coordinates.sph-cyl-theta",
+        "aim.calculus.coordinates.cyl-sph-rho",
+        "aim.calculus.coordinates.cyl-sph-phi",
+        "aim.calculus.coordinates.cyl-sph-theta",
+        "aim.calculus.coordinates.sph-volume",
+        "aim.calculus.coordinates.sphere-area",
+        "aim.calculus.coordinates.surface-cyl-r",
+        "aim.calculus.coordinates.surface-cyl-theta",
+        "aim.calculus.coordinates.surface-cyl-z",
+        "aim.calculus.coordinates.surface-sph-rho",
+        "aim.calculus.coordinates.surface-sph-phi",
+        "aim.calculus.coordinates.surface-sph-theta"
+      ]
+    },
+    {
+      "stage": 16,
+      "title": "Exponential and logarithmic definitions and identities",
+      "file": "exp-log.json",
+      "card_ids": [
+        "aim.calculus.exp-log.ln",
+        "aim.calculus.exp-log.exp",
+        "aim.calculus.exp-log.e",
+        "aim.calculus.exp-log.exp-notation",
+        "aim.calculus.exp-log.real-power",
+        "aim.calculus.exp-log.log",
+        "aim.calculus.exp-log.ln-exp",
+        "aim.calculus.exp-log.exp-ln",
+        "aim.calculus.exp-log.power-zero",
+        "aim.calculus.exp-log.power-one",
+        "aim.calculus.exp-log.log-one",
+        "aim.calculus.exp-log.log-base",
+        "aim.calculus.exp-log.exp-product",
+        "aim.calculus.exp-log.exp-quotient",
+        "aim.calculus.exp-log.power-power",
+        "aim.calculus.exp-log.negative-power",
+        "aim.calculus.exp-log.root",
+        "aim.calculus.exp-log.log-product",
+        "aim.calculus.exp-log.log-quotient",
+        "aim.calculus.exp-log.log-power",
+        "aim.calculus.exp-log.change-base",
+        "aim.calculus.exp-log.log-sum",
+        "aim.calculus.exp-log.log-square"
+      ]
+    },
+    {
+      "stage": 17,
+      "title": "Exponential and logarithmic calculus",
+      "file": "exp-log-calculus.json",
+      "card_ids": [
+        "aim.calculus.exp-log-calculus.d-exp",
+        "aim.calculus.exp-log-calculus.d-base",
+        "aim.calculus.exp-log-calculus.d-ln",
+        "aim.calculus.exp-log-calculus.d-ln-abs",
+        "aim.calculus.exp-log-calculus.d-log",
+        "aim.calculus.exp-log-calculus.chain-exp",
+        "aim.calculus.exp-log-calculus.chain-ln",
+        "aim.calculus.exp-log-calculus.i-exp",
+        "aim.calculus.exp-log-calculus.i-base",
+        "aim.calculus.exp-log-calculus.i-log-pattern",
+        "aim.calculus.exp-log-calculus.i-ln",
+        "aim.calculus.exp-log-calculus.variable-power"
+      ]
+    },
+    {
+      "stage": 18,
+      "title": "Differentiation and integration rules",
+      "file": "calculus-rules.json",
+      "card_ids": [
+        "aim.calculus.calculus-rules.product",
+        "aim.calculus.calculus-rules.quotient",
+        "aim.calculus.calculus-rules.chain",
+        "aim.calculus.calculus-rules.power",
+        "aim.calculus.calculus-rules.power-integral",
+        "aim.calculus.calculus-rules.parts",
+        "aim.calculus.calculus-rules.substitution",
+        "aim.calculus.calculus-rules.odd",
+        "aim.calculus.calculus-rules.even",
+        "aim.calculus.calculus-rules.reflection",
+        "aim.calculus.calculus-rules.ftc",
+        "aim.calculus.calculus-rules.variable-bounds"
+      ]
+    },
+    {
+      "stage": 19,
+      "title": "Algebra for calculus",
+      "file": "algebra.json",
+      "card_ids": [
+        "aim.calculus.algebra.squares",
+        "aim.calculus.algebra.cubes-sum",
+        "aim.calculus.algebra.cubes-difference",
+        "aim.calculus.algebra.complete-square",
+        "aim.calculus.algebra.conjugate",
+        "aim.calculus.algebra.sqrt-square",
+        "aim.calculus.algebra.geometric-finite",
+        "aim.calculus.algebra.geometric-infinite"
+      ]
+    },
+    {
+      "stage": 20,
+      "title": "Limits, Taylor series and small-angle behavior",
+      "file": "limits-series.json",
+      "card_ids": [
+        "aim.calculus.limits-series.limit-sin",
+        "aim.calculus.limits-series.limit-cos",
+        "aim.calculus.limits-series.limit-exp",
+        "aim.calculus.limits-series.limit-log",
+        "aim.calculus.limits-series.limit-e",
+        "aim.calculus.limits-series.series-exp",
+        "aim.calculus.limits-series.series-sin",
+        "aim.calculus.limits-series.series-cos",
+        "aim.calculus.limits-series.series-log",
+        "aim.calculus.limits-series.series-atan",
+        "aim.calculus.limits-series.asymptotic-meaning",
+        "aim.calculus.limits-series.small-sin",
+        "aim.calculus.limits-series.small-tan",
+        "aim.calculus.limits-series.small-cos",
+        "aim.calculus.limits-series.small-exp",
+        "aim.calculus.limits-series.small-log"
+      ]
+    },
+    {
+      "stage": 21,
+      "title": "Euler’s formula and complex exponentials",
+      "file": "complex-exponentials.json",
+      "card_ids": [
+        "aim.calculus.complex-exponentials.euler",
+        "aim.calculus.complex-exponentials.cos",
+        "aim.calculus.complex-exponentials.sin"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "aim.calculus.angles.radian",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.angles.degrees-to-radians",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.angles.radians-to-degrees",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.angles.arc",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.angles.sector",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.angles.deg-0",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-0",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-30",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-30",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-45",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-45",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-60",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-60",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-90",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-90",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-120",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-120",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-135",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-135",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-150",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-150",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-180",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-180",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-210",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-210",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-225",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-225",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-240",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-240",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-270",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-270",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-300",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-300",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-315",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-315",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-330",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-330",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.deg-360",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.angles.rad-360",
+      "stage": 9,
+      "topic": "Degrees and radians",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.unit-circle",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.sin-triangle",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.cos-triangle",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.tan-triangle",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.tan",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.cot",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.sec",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.csc",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.q1",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.q2",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.q3",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.q4",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.sin-0",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.sin-30",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.sin-45",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.sin-60",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.sin-90",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.cos-0",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.cos-30",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.cos-45",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.cos-60",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-definitions.cos-90",
+      "stage": 10,
+      "topic": "Trigonometric definitions and exact values",
+      "type": "example"
+    },
+    {
+      "id": "aim.calculus.trig-identities.pythagorean",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.tan-pythagorean",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cot-pythagorean",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin-odd",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos-even",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.tan-odd",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin-cofunction",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos-cofunction",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.tan-cofunction",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin-double",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos-double",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos-double-sin",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos-double-cos",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.tan-double",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin-square",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos-square",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin-half",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos-half",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.tan-half-a",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.tan-half-b",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.product-ss",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.product-cc",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.product-sc",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.tan-square",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cot-square",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin-cos",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin2-cos2",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin4",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos4",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sqrt-sec",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin-period",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos-period",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.tan-period",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cot-period",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sec-period",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.csc-period",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin-sum",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos-sum",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.tan-sum",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.sin-difference",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.cos-difference",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-identities.tan-difference",
+      "stage": 11,
+      "topic": "Trigonometric identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.d-sin",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.d-cos",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.d-tan",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.d-cot",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.d-sec",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.d-csc",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-sin",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-cos",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-sec2",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-csc2",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-sectan",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-csccot",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-tan",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-cot",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-sec",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-csc",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.asin-range",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.acos-range",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.atan-range",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.inverse-reciprocal",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.d-asin",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.d-acos",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.d-atan",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-asin",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.i-atan",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.sub-sin",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.sub-tan",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.trig-calculus.sub-sec",
+      "stage": 12,
+      "topic": "Trigonometric derivatives and integrals",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.sinh",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.cosh",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.tanh",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.tanh-exp",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.sech",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.csch",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.coth",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.fundamental",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.tanh-identity",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.coth-identity",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.sinh-odd",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.cosh-even",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.tanh-odd",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.sinh-double",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.cosh-double",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.sinh-square",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.cosh-square",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.exp-plus",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.exp-minus",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.sinh-sum",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.cosh-sum",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.sinh-difference",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic.cosh-difference",
+      "stage": 13,
+      "topic": "Hyperbolic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.d-sinh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.d-cosh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.d-tanh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.d-coth",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.d-sech",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.d-csch",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.i-sinh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.i-cosh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.i-tanh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.asinh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.acosh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.atanh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.d-asinh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.d-acosh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.d-atanh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.sub-sinh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.hyperbolic-calculus.sub-cosh",
+      "stage": 14,
+      "topic": "Hyperbolic derivatives, integrals and inverses",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.convention",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.polar-x",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.polar-y",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.polar-r",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.polar-theta",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.atan2",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.polar-range-r",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.polar-range-theta",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.polar-area",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.polar-enclosed",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cyl-x",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cyl-y",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cyl-z",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cart-cyl-r",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cart-cyl-theta",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cart-cyl-z",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cyl-volume",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sph-x",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sph-y",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sph-z",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cart-sph-rho",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cart-sph-theta",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cart-sph-phi",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sph-range-rho",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sph-range-theta",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sph-range-phi",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sph-cyl-r",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sph-cyl-z",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sph-cyl-theta",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cyl-sph-rho",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cyl-sph-phi",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.cyl-sph-theta",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sph-volume",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.sphere-area",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.surface-cyl-r",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.surface-cyl-theta",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.surface-cyl-z",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.surface-sph-rho",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.surface-sph-phi",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.coordinates.surface-sph-theta",
+      "stage": 15,
+      "topic": "Polar, cylindrical and spherical coordinates",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.ln",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.exp",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.e",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.exp-notation",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.real-power",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.log",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.ln-exp",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.exp-ln",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.power-zero",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.power-one",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.log-one",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.log-base",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.exp-product",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.exp-quotient",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.power-power",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.negative-power",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.root",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.log-product",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.log-quotient",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.log-power",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.change-base",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.log-sum",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log.log-square",
+      "stage": 16,
+      "topic": "Exponential and logarithmic definitions and identities",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.d-exp",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.d-base",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.d-ln",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.d-ln-abs",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.d-log",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.chain-exp",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.chain-ln",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.i-exp",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.i-base",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.i-log-pattern",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.i-ln",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.exp-log-calculus.variable-power",
+      "stage": 17,
+      "topic": "Exponential and logarithmic calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.product",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.quotient",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.chain",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.power",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.power-integral",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.parts",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.substitution",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.odd",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.even",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.reflection",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.ftc",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.calculus-rules.variable-bounds",
+      "stage": 18,
+      "topic": "Differentiation and integration rules",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.algebra.squares",
+      "stage": 19,
+      "topic": "Algebra for calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.algebra.cubes-sum",
+      "stage": 19,
+      "topic": "Algebra for calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.algebra.cubes-difference",
+      "stage": 19,
+      "topic": "Algebra for calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.algebra.complete-square",
+      "stage": 19,
+      "topic": "Algebra for calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.algebra.conjugate",
+      "stage": 19,
+      "topic": "Algebra for calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.algebra.sqrt-square",
+      "stage": 19,
+      "topic": "Algebra for calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.algebra.geometric-finite",
+      "stage": 19,
+      "topic": "Algebra for calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.algebra.geometric-infinite",
+      "stage": 19,
+      "topic": "Algebra for calculus",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.limit-sin",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.limit-cos",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.limit-exp",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.limit-log",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.limit-e",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.series-exp",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.series-sin",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.series-cos",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.series-log",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.series-atan",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.asymptotic-meaning",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.small-sin",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.small-tan",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.small-cos",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.small-exp",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.limits-series.small-log",
+      "stage": 20,
+      "topic": "Limits, Taylor series and small-angle behavior",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.complex-exponentials.euler",
+      "stage": 21,
+      "topic": "Euler’s formula and complex exponentials",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.complex-exponentials.cos",
+      "stage": 21,
+      "topic": "Euler’s formula and complex exponentials",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.calculus.complex-exponentials.sin",
+      "stage": 21,
+      "topic": "Euler’s formula and complex exponentials",
+      "type": "theorem"
+    }
+  ]
+}

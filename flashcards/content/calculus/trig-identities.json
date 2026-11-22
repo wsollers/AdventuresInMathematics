@@ -1,0 +1,758 @@
+[
+  {
+    "id": "aim.calculus.trig-identities.pythagorean",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Fundamental Pythagorean identity?",
+    "back": "$\\sin^2x+\\cos^2x=1$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.tan-pythagorean",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Pythagorean identity involving tangent?",
+    "back": "$1+\\tan^2x=\\sec^2x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cot-pythagorean",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Pythagorean identity involving cotangent?",
+    "back": "$1+\\cot^2x=\\csc^2x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin-odd",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\sin(-x)$.",
+    "back": "$-\\sin x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos-even",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\cos(-x)$.",
+    "back": "$\\cos x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.tan-odd",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\tan(-x)$.",
+    "back": "$-\\tan x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin-cofunction",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\sin(\\pi/2-x)$.",
+    "back": "$\\cos x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos-cofunction",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\cos(\\pi/2-x)$.",
+    "back": "$\\sin x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.tan-cofunction",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\tan(\\pi/2-x)$.",
+    "back": "$\\cot x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin-double",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\sin(2x)$.",
+    "back": "$\\sin(2x)=2\\sin x\\cos x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos-double",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\cos(2x)$ using both sine and cosine.",
+    "back": "$\\cos(2x)=\\cos^2x-\\sin^2x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos-double-sin",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Express $\\cos(2x)$ using only sine.",
+    "back": "$\\cos(2x)=1-2\\sin^2x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos-double-cos",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Express $\\cos(2x)$ using only cosine.",
+    "back": "$\\cos(2x)=2\\cos^2x-1$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.tan-double",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\tan(2x)$.",
+    "back": "$\\tan(2x)=\\dfrac{2\\tan x}{1-\\tan^2x}$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin-square",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Reduce the power in $\\sin^2x$.",
+    "back": "$\\sin^2x=(1-\\cos2x)/2$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos-square",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Reduce the power in $\\cos^2x$.",
+    "back": "$\\cos^2x=(1+\\cos2x)/2$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin-half",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Half-angle formula for $\\sin^2(x/2)$?",
+    "back": "$\\sin^2(x/2)=(1-\\cos x)/2$. A square root requires the correct sign.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos-half",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Half-angle formula for $\\cos^2(x/2)$?",
+    "back": "$\\cos^2(x/2)=(1+\\cos x)/2$. A square root requires the correct sign.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.tan-half-a",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Express $\\tan(x/2)$ with denominator $1+\\cos x$.",
+    "back": "$\\tan(x/2)=\\sin x/(1+\\cos x)$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.tan-half-b",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Express $\\tan(x/2)$ with denominator $\\sin x$.",
+    "back": "$\\tan(x/2)=(1-\\cos x)/\\sin x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.product-ss",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Convert $\\sin a\\sin b$ to a sum.",
+    "back": "$\\sin a\\sin b=\\tfrac12[\\cos(a-b)-\\cos(a+b)]$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.product-cc",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Convert $\\cos a\\cos b$ to a sum.",
+    "back": "$\\cos a\\cos b=\\tfrac12[\\cos(a-b)+\\cos(a+b)]$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.product-sc",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Convert $\\sin a\\cos b$ to a sum.",
+    "back": "$\\sin a\\cos b=\\tfrac12[\\sin(a+b)+\\sin(a-b)]$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.tan-square",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Rewrite $\\tan^2x$ using secant.",
+    "back": "$\\tan^2x=\\sec^2x-1$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cot-square",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Rewrite $\\cot^2x$ using cosecant.",
+    "back": "$\\cot^2x=\\csc^2x-1$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin-cos",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Rewrite $\\sin x\\cos x$ using a double angle.",
+    "back": "$\\sin x\\cos x=\\tfrac12\\sin2x$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin2-cos2",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Reduce $\\sin^2x\\cos^2x$ for integration.",
+    "back": "$\\sin^2x\\cos^2x=\\tfrac18(1-\\cos4x)$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin4",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Reduce $\\sin^4x$ for integration.",
+    "back": "$\\sin^4x=\\tfrac18(3-4\\cos2x+\\cos4x)$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos4",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Reduce $\\cos^4x$ for integration.",
+    "back": "$\\cos^4x=\\tfrac18(3+4\\cos2x+\\cos4x)$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sqrt-sec",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\sqrt{\\sec^2\\theta}$.",
+    "back": "$|\\sec\\theta|$.",
+    "explanation": "Angles are in radians. Quotient identities hold wherever every displayed expression is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin-period",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Fundamental period of $\\sin x$?",
+    "back": "$2\\pi$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos-period",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Fundamental period of $\\cos x$?",
+    "back": "$2\\pi$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.tan-period",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Fundamental period of $\\tan x$?",
+    "back": "$\\pi$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cot-period",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Fundamental period of $\\cot x$?",
+    "back": "$\\pi$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sec-period",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Fundamental period of $\\sec x$?",
+    "back": "$2\\pi$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.csc-period",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Fundamental period of $\\csc x$?",
+    "back": "$2\\pi$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin-sum",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\sin(a+b)$.",
+    "back": "$\\sin(a+b)=\\sin a\\cos b+\\cos a\\sin b$.",
+    "explanation": "Where all expressions are defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos-sum",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\cos(a+b)$.",
+    "back": "$\\cos(a+b)=\\cos a\\cos b-\\sin a\\sin b$.",
+    "explanation": "Where all expressions are defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.tan-sum",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\tan(a+b)$.",
+    "back": "$\\tan(a+b)=\\dfrac{\\tan a+\\tan b}{1-\\tan a\\tan b}$.",
+    "explanation": "Where all expressions are defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.sin-difference",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\sin(a-b)$.",
+    "back": "$\\sin(a-b)=\\sin a\\cos b-\\cos a\\sin b$.",
+    "explanation": "Where all expressions are defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.cos-difference",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\cos(a-b)$.",
+    "back": "$\\cos(a-b)=\\cos a\\cos b+\\sin a\\sin b$.",
+    "explanation": "Where all expressions are defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-identities.tan-difference",
+    "type": "theorem",
+    "stage": 11,
+    "topic": "Trigonometric identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\tan(a-b)$.",
+    "back": "$\\tan(a-b)=\\dfrac{\\tan a-\\tan b}{1+\\tan a\\tan b}$.",
+    "explanation": "Where all expressions are defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-identities"
+    ]
+  }
+]

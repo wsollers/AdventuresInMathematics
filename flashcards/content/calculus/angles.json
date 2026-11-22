@@ -1,0 +1,704 @@
+[
+  {
+    "id": "aim.calculus.angles.radian",
+    "type": "theorem",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Define a radian using arc length $s$ and radius $r$.",
+    "back": "$\\theta=s/r$. One radian subtends an arc equal in length to the radius.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.degrees-to-radians",
+    "type": "theorem",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert an angle $d$ in degrees to radians.",
+    "back": "$\\theta=d\\pi/180$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.radians-to-degrees",
+    "type": "theorem",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert an angle $\\theta$ in radians to degrees.",
+    "back": "$d=180\\theta/\\pi$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.arc",
+    "type": "theorem",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Arc length for angle $\\theta$ in radians?",
+    "back": "$s=r\\theta$ for a nonnegative swept angle.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.sector",
+    "type": "theorem",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Circular sector area for angle $\\theta$ in radians?",
+    "back": "$A=\\tfrac12r^2\\theta$ for a nonnegative swept angle.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-0",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $0^\\circ$ to radians.",
+    "back": "$0$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-0",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $0$ radians to degrees.",
+    "back": "$0^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-30",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $30^\\circ$ to radians.",
+    "back": "$\\pi/6$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-30",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $\\pi/6$ radians to degrees.",
+    "back": "$30^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-45",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $45^\\circ$ to radians.",
+    "back": "$\\pi/4$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-45",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $\\pi/4$ radians to degrees.",
+    "back": "$45^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-60",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $60^\\circ$ to radians.",
+    "back": "$\\pi/3$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-60",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $\\pi/3$ radians to degrees.",
+    "back": "$60^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-90",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $90^\\circ$ to radians.",
+    "back": "$\\pi/2$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-90",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $\\pi/2$ radians to degrees.",
+    "back": "$90^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-120",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $120^\\circ$ to radians.",
+    "back": "$2\\pi/3$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-120",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $2\\pi/3$ radians to degrees.",
+    "back": "$120^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-135",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $135^\\circ$ to radians.",
+    "back": "$3\\pi/4$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-135",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $3\\pi/4$ radians to degrees.",
+    "back": "$135^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-150",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $150^\\circ$ to radians.",
+    "back": "$5\\pi/6$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-150",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $5\\pi/6$ radians to degrees.",
+    "back": "$150^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-180",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $180^\\circ$ to radians.",
+    "back": "$\\pi$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-180",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $\\pi$ radians to degrees.",
+    "back": "$180^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-210",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $210^\\circ$ to radians.",
+    "back": "$7\\pi/6$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-210",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $7\\pi/6$ radians to degrees.",
+    "back": "$210^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-225",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $225^\\circ$ to radians.",
+    "back": "$5\\pi/4$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-225",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $5\\pi/4$ radians to degrees.",
+    "back": "$225^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-240",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $240^\\circ$ to radians.",
+    "back": "$4\\pi/3$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-240",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $4\\pi/3$ radians to degrees.",
+    "back": "$240^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-270",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $270^\\circ$ to radians.",
+    "back": "$3\\pi/2$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-270",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $3\\pi/2$ radians to degrees.",
+    "back": "$270^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-300",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $300^\\circ$ to radians.",
+    "back": "$5\\pi/3$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-300",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $5\\pi/3$ radians to degrees.",
+    "back": "$300^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-315",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $315^\\circ$ to radians.",
+    "back": "$7\\pi/4$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-315",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $7\\pi/4$ radians to degrees.",
+    "back": "$315^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-330",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $330^\\circ$ to radians.",
+    "back": "$11\\pi/6$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-330",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $11\\pi/6$ radians to degrees.",
+    "back": "$330^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.deg-360",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $360^\\circ$ to radians.",
+    "back": "$2\\pi$ radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  },
+  {
+    "id": "aim.calculus.angles.rad-360",
+    "type": "example",
+    "stage": 9,
+    "topic": "Degrees and radians",
+    "difficulty": "foundation",
+    "front": "Convert $2\\pi$ radians to degrees.",
+    "back": "$360^\\circ$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "angles"
+    ]
+  }
+]

@@ -1,0 +1,211 @@
+[
+  {
+    "id": "aim.geometry.vector-functions.function",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "What is a vector-valued function of a scalar parameter?",
+    "back": "A rule assigning a vector to each allowed scalar input, for example $r(t)=(f(t),g(t),h(t))$.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  },
+  {
+    "id": "aim.geometry.vector-functions.evaluate",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "example",
+    "difficulty": "foundation",
+    "front": "Evaluate $r(t)=(t,t^2,2t-1)$ at $t=2$.",
+    "back": "$r(2)=(2,4,3)$.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  },
+  {
+    "id": "aim.geometry.vector-functions.domain",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "example",
+    "difficulty": "foundation",
+    "front": "Domain of $r(t)=(\\sqrt t,1/(t-1),\\ln(t+2))$ over the reals?",
+    "back": "$[0,1)\\cup(1,\\infty)$; all components must be defined.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  },
+  {
+    "id": "aim.geometry.vector-functions.sum",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "If $r(t)=(t,1)$ and $s(t)=(2,t^2)$, compute $r(t)+s(t)$.",
+    "back": "$(t+2,1+t^2)$.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  },
+  {
+    "id": "aim.geometry.vector-functions.dot-function",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "If $r(t)=(t,1)$ and $s(t)=(2,t^2)$, compute $r(t)\\cdot s(t)$.",
+    "back": "$2t+t^2$; the output is a scalar.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  },
+  {
+    "id": "aim.geometry.vector-functions.cross-function",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "If $r(t)=(t,0,0)$ and $s(t)=(0,1,t)$, compute $r(t)\\times s(t)$.",
+    "back": "$(0,-t^2,t)$; the output is a vector.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  },
+  {
+    "id": "aim.geometry.vector-functions.vector-input",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Example of evaluating a function with vector input: $F(x,y)=(x+y,x-y)$ at $(3,1)$?",
+    "back": "$F(3,1)=(4,2)$.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  },
+  {
+    "id": "aim.geometry.vector-functions.resultant",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Resultant of forces $F_1,\\ldots,F_n$ expressed in the same coordinate frame?",
+    "back": "$F_{\\mathrm{net}}=\\sum_{j=1}^n F_j$.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  },
+  {
+    "id": "aim.geometry.vector-functions.relative",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Velocity of object $A$ relative to $B$, given their velocities in one frame?",
+    "back": "$v_{A/B}=v_A-v_B$.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  },
+  {
+    "id": "aim.geometry.vector-functions.line-direction",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Direction vector of a line through distinct points $P,Q$?",
+    "back": "$u=Q-P$.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  },
+  {
+    "id": "aim.geometry.vector-functions.plane-normal",
+    "stage": 44,
+    "topic": "Vector-valued computations and applications",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Normal vector of a plane containing nonparallel directions $u,v$?",
+    "back": "$n=u\\times v$.",
+    "explanation": "Computational use only; no vector-space theory or calculus is assumed. All components use the same coordinate frame.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "vector-functions"
+    ]
+  }
+]

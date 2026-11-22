@@ -1,0 +1,401 @@
+[
+  {
+    "id": "aim.geometry.conics.circle",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of a circle centered at $(h,k)$ with radius $r>0$?",
+    "back": "$(x-h)^2+(y-k)^2=r^2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.ellipse",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Standard axis-aligned ellipse centered at the origin?",
+    "back": "$x^2/a^2+y^2/b^2=1$, with $a,b>0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.parabola",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of a parabola with vertex at the origin, focus $(0,p)$ and directrix $y=-p$, $p\\ne0$?",
+    "back": "$x^2=4py$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.parabola-definition",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a parabola by distance.",
+    "back": "The locus of points equidistant from a focus and a directrix line not containing that focus.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.hyperbola",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Standard hyperbola opening along the $x$-axis?",
+    "back": "$x^2/a^2-y^2/b^2=1$, with $a,b>0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.hyperbola-asymptotes",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Asymptotes of $x^2/a^2-y^2/b^2=1$?",
+    "back": "$y=\\pm(b/a)x$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.sphere",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of a sphere centered at $(h,k,l)$ with radius $R>0$?",
+    "back": "$(x-h)^2+(y-k)^2+(z-l)^2=R^2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.cylinder",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of a circular cylinder of radius $R>0$ about the $z$-axis?",
+    "back": "$x^2+y^2=R^2$, with $z$ unrestricted.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.cone",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of a circular double cone about the $z$-axis?",
+    "back": "$x^2+y^2=k^2z^2$, with $k>0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.ellipsoid",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Standard ellipsoid centered at the origin?",
+    "back": "$x^2/a^2+y^2/b^2+z^2/c^2=1$, with $a,b,c>0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.elliptic-paraboloid",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Standard elliptic paraboloid opening upward?",
+    "back": "$z=x^2/a^2+y^2/b^2$, with $a,b>0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.hyperbolic-paraboloid",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Standard hyperbolic paraboloid (saddle)?",
+    "back": "$z=x^2/a^2-y^2/b^2$, with $a,b>0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.one-sheet",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Standard hyperboloid of one sheet with axis along $z$?",
+    "back": "$x^2/a^2+y^2/b^2-z^2/c^2=1$, with $a,b,c>0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.two-sheets",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Standard hyperboloid of two sheets with axis along $z$?",
+    "back": "$z^2/c^2-x^2/a^2-y^2/b^2=1$, with $a,b,c>0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.implicit",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "General implicit representation of a surface?",
+    "back": "$F(x,y,z)=0$. Such a zero set need not be a smooth surface everywhere.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.graph",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Represent a surface as the graph of a scalar function of two variables.",
+    "back": "$z=f(x,y)$, for $(x,y)$ in the function’s domain. Not every whole surface is one such graph.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.parametric",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "General parametric representation of a surface?",
+    "back": "$X=r(u,v)$, a vector-valued function of two parameters. Degenerate parameterizations are possible.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.translate",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "How do you translate an equation centered at the origin to center $(h,k,l)$?",
+    "back": "Replace $x,y,z$ by $x-h,y-k,z-l$, respectively.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.intercepts",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "How do you find a surface’s $x$-axis intercepts?",
+    "back": "Set $y=z=0$ and solve for $x$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.sphere-normal",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Normal direction to a sphere centered at $C$, at a point $P$ on it?",
+    "back": "$n=P-C$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  },
+  {
+    "id": "aim.geometry.conics.sphere-tangent",
+    "stage": 40,
+    "topic": "Conics and standard surfaces",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Tangent plane to a sphere centered at $C$, at a point $P$ on it?",
+    "back": "$(P-C)\\cdot(X-P)=0$, for a sphere of positive radius.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "conics"
+    ]
+  }
+]

@@ -1,0 +1,268 @@
+[
+  {
+    "id": "aim.geometry.lines.slope",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Slope through $(x_1,y_1)$ and $(x_2,y_2)$, with $x_2\\ne x_1$?",
+    "back": "$m=(y_2-y_1)/(x_2-x_1)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.point-slope",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of a line of slope $m$ through $(x_0,y_0)$?",
+    "back": "$y-y_0=m(x-x_0)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.intercept",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Slope–intercept equation of a nonvertical line?",
+    "back": "$y=mx+b$, where $b$ is the $y$-intercept.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.general",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "General Cartesian equation of a line in a plane?",
+    "back": "$Ax+By+C=0$, with $(A,B)\\ne(0,0)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.vertical",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of a vertical line through $(x_0,y_0)$?",
+    "back": "$x=x_0$; its slope is undefined.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.parametric",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Vector equation of the line through $P$ with nonzero direction $u$?",
+    "back": "$X=P+tu$, for $t\\in\\mathbb R$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.two-points",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Parametric equation of the line through distinct points $P,Q$?",
+    "back": "$X=P+t(Q-P)$, for $t\\in\\mathbb R$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.symmetric",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Symmetric equation of a 3D line through $(x_0,y_0,z_0)$ with all direction components nonzero?",
+    "back": "$\\dfrac{x-x_0}{u_x}=\\dfrac{y-y_0}{u_y}=\\dfrac{z-z_0}{u_z}$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.zero-component",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "How do you write a line equation if its direction has $u_x=0$?",
+    "back": "Write $x=x_0$ separately; do not divide by $u_x$. Parametric form always works.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.parallel",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Test parallel directions $u,v\\ne0$.",
+    "back": "$u=\\lambda v$ for some nonzero scalar $\\lambda$. Lines may then be coincident or distinct parallel lines.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.perpendicular",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Test perpendicular directions $u,v\\ne0$.",
+    "back": "$u\\cdot v=0$. For perpendicular lines, also require intersection.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.slopes-perp",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Perpendicularity test for two lines with finite slopes $m_1,m_2$?",
+    "back": "$m_1m_2=-1$. A vertical line is perpendicular to a horizontal line.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.angle",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Acute or right angle between unoriented lines with directions $u,v\\ne0$?",
+    "back": "$\\theta=\\arccos\\!\\left(\\dfrac{|u\\cdot v|}{\\|u\\|\\|v\\|}\\right)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  },
+  {
+    "id": "aim.geometry.lines.intersection",
+    "stage": 37,
+    "topic": "Equations and relationships of lines",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "How do you find an intersection of $P+tu$ and $Q+sv$?",
+    "back": "Solve $P+tu=Q+sv$ simultaneously in all coordinates for $t,s$. In 3D a solution need not exist.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "lines"
+    ]
+  }
+]

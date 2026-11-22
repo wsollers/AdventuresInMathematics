@@ -1,0 +1,398 @@
+[
+  {
+    "id": "aim.calculus.trig-definitions.unit-circle",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Coordinates of the unit-circle point at angle $\\theta$?",
+    "back": "$(\\cos\\theta,\\sin\\theta)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.sin-triangle",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Right-triangle definition of $\\sin\\theta$?",
+    "back": "$\\sin\\theta=\\text{opposite}/\\text{hypotenuse}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.cos-triangle",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Right-triangle definition of $\\cos\\theta$?",
+    "back": "$\\cos\\theta=\\text{adjacent}/\\text{hypotenuse}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.tan-triangle",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Right-triangle definition of $\\tan\\theta$?",
+    "back": "$\\tan\\theta=\\text{opposite}/\\text{adjacent}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.tan",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Define tangent using sine and cosine.",
+    "back": "$\\tan x=\\sin x/\\cos x$, for $\\cos x\\ne0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.cot",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Define cotangent using sine and cosine.",
+    "back": "$\\cot x=\\cos x/\\sin x$, for $\\sin x\\ne0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.sec",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Define secant.",
+    "back": "$\\sec x=1/\\cos x$, for $\\cos x\\ne0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.csc",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Define cosecant.",
+    "back": "$\\csc x=1/\\sin x$, for $\\sin x\\ne0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.q1",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Signs of sine, cosine and tangent in quadrant I?",
+    "back": "All three are positive.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.q2",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Signs of sine, cosine and tangent in quadrant II?",
+    "back": "Sine is positive; cosine and tangent are negative.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.q3",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Signs of sine, cosine and tangent in quadrant III?",
+    "back": "Tangent is positive; sine and cosine are negative.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.q4",
+    "type": "theorem",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Signs of sine, cosine and tangent in quadrant IV?",
+    "back": "Cosine is positive; sine and tangent are negative.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.sin-0",
+    "type": "example",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\sin(0)$ exactly.",
+    "back": "$0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.sin-30",
+    "type": "example",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\sin(\\pi/6)$ exactly.",
+    "back": "$\\tfrac12$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.sin-45",
+    "type": "example",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\sin(\\pi/4)$ exactly.",
+    "back": "$\\tfrac{\\sqrt2}{2}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.sin-60",
+    "type": "example",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\sin(\\pi/3)$ exactly.",
+    "back": "$\\tfrac{\\sqrt3}{2}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.sin-90",
+    "type": "example",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\sin(\\pi/2)$ exactly.",
+    "back": "$1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.cos-0",
+    "type": "example",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\cos(0)$ exactly.",
+    "back": "$1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.cos-30",
+    "type": "example",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\cos(\\pi/6)$ exactly.",
+    "back": "$\\tfrac{\\sqrt3}{2}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.cos-45",
+    "type": "example",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\cos(\\pi/4)$ exactly.",
+    "back": "$\\tfrac{\\sqrt2}{2}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.cos-60",
+    "type": "example",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\cos(\\pi/3)$ exactly.",
+    "back": "$\\tfrac12$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-definitions.cos-90",
+    "type": "example",
+    "stage": 10,
+    "topic": "Trigonometric definitions and exact values",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\cos(\\pi/2)$ exactly.",
+    "back": "$0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-definitions"
+    ]
+  }
+]

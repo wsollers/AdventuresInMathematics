@@ -1,9 +1,12 @@
 import {schedule, selectCards, stats, levelCardIds, mayUnlock} from "./scheduler.mjs";
 import {setupResponse} from "./response.mjs";
+import {indexCurriculum, buildCurriculum} from "./curriculum.mjs";
+import {renderDiagram} from "./diagrams.mjs";
 
 const $ = id => document.getElementById(id);
 const response = setupResponse(document, window);
 let gradingRequest = null, suggestedRating = null;
+let curriculumIndex, curriculumView, browseCardId = null;
 const DATA = new URL("./decks/ordered-fields/", import.meta.url);
 const KEY = "aim-foundations-review-v1";
 const FORMAT = "aim-foundations-progress";
@@ -105,7 +108,7 @@ function loadProgress() {
 function filters() {
   return {
     mode: $("mode").value,
-    stage: $("stage").value,
+    selection: curriculumIndex?.selections.get($("stage").value),
     type: $("type").value,
     available: levelCardIds(state.levels, state.unlocked),
     seen: state.seen,
@@ -164,6 +167,11 @@ function sourceInfo(card) {
   const wrap = $("source-content");
   wrap.replaceChildren();
   const src = card.source || {};
+  if (src.note) {
+    const p = document.createElement("p");
+    p.textContent = src.note;
+    wrap.append(p);
+  }
   const links = [
     {label: "Reference (TeX)", path: src.tex},
     {label: "Formalization (Lean)", path: src.lean}
@@ -192,7 +200,14 @@ function sourceInfo(card) {
   }
 }
 
-function currentQueue() { return selectCards(state.cards, state.reviews, filters()); }
+function currentQueue() {
+  const queue = selectCards(state.cards, state.reviews, filters());
+  if (browseCardId && $("mode").value === "browse") {
+    const index=queue.findIndex(c=>c.id===browseCardId);
+    if(index>0) queue.unshift(...queue.splice(index,1));
+  }
+  return queue;
+}
 
 async function submitAnswer() {
   if (!state.current || state.flipped || gradingRequest) return;
@@ -290,6 +305,7 @@ function finishCurrent(rating) {
     save();
   }
   state.seen.add(state.current.id);
+  browseCardId = null;
   nextCard();
 }
 
@@ -305,6 +321,7 @@ function render() {
   updateStats();
   const queue = currentQueue();
   state.current = queue[0] || null;
+  curriculumView?.refresh(levelCardIds(state.levels,state.unlocked),state.current?.id);
   state.flipped = false;
   $("answer-section").hidden = true;
   $("grade-panel").hidden = true;
@@ -312,15 +329,25 @@ function render() {
   $("reveal").hidden = false;
   $("source-details").hidden = true;
   $("study-actions").hidden = !state.current;
+  $("response-workspace").hidden = $("mode").value === "browse";
+  $("submit-answer").hidden = $("mode").value === "browse";
   const title = state.current ? state.current.front : "No cards in this selection.";
   math($("card-front"), title);
+  renderDiagram($("card-diagram"),state.current);
   if (!state.current) {
+    if (curriculumIndex.selections.get($("stage").value)?.size === 0) {
+      $("card-front").textContent = "No cards yet";
+      $("card-position").textContent = "Future topic";
+      $("card-category").textContent = "";
+      announce("This topic is reserved for future material. Choose another topic to study.");
+      return;
+    }
     $("card-position").textContent = "Session finished";
     $("card-category").textContent = "";
     const mode = $("mode").value;
     const advice = mode === "due" ? "No reviews are due now." :
       mode === "new" ? "Nothing new is available. Check unlocked levels and prerequisites." :
-      "Choose another stage or restart the session.";
+      "Choose another topic or restart the session.";
     announce(advice + (state.completed ? " Reviewed this session: " + state.completed + "." : ""));
     const button = document.createElement("button");
     button.type = "button"; button.textContent = "Restart session";
@@ -331,11 +358,12 @@ function render() {
   }
   const remaining = queue.length;
   $("card-position").textContent = remaining + " remaining in selection";
-  $("card-category").textContent = "Stage " + state.current.stage + " · " + state.current.type;
+  $("card-category").textContent = curriculumIndex.cardTopics.get(state.current.id).topic.title + " · " + state.current.type;
   $("study-status").textContent = state.completed ? state.completed + " reviewed this session" : "";
 }
 
 function resetSession() {
+  browseCardId = null;
   state.seen.clear(); state.completed = 0; state.current = null;
   render();
 }
@@ -388,9 +416,19 @@ async function importProgress(event) {
 
 async function init() {
   try {
-    const [manifest, unlocks, coverage] = await Promise.all([
-      json("manifest.json"), json("unlock-levels.json"), json("coverage.json")
+    const [manifest, unlocks, coverage, calculus, calculusUnlocks, geometry, geometryUnlocks, curriculum] = await Promise.all([
+      json("manifest.json"), json("unlock-levels.json"), json("coverage.json"),
+      json("../calculus/manifest.json"), json("../calculus/unlock-levels.json"),
+      json("../geometry/manifest.json"), json("../geometry/unlock-levels.json"), json("../curriculum.json")
     ]);
+    manifest.stages.push(...calculus.stages.map(s => ({...s, file: "../calculus/" + s.file})));
+    manifest.cards.push(...calculus.cards);
+    unlocks.levels.push(...calculusUnlocks.levels);
+    unlocks.default_unlocked.push(...calculusUnlocks.default_unlocked);
+    manifest.stages.push(...geometry.stages.map(s=>({...s,file:"../geometry/"+s.file})));
+    manifest.cards.push(...geometry.cards);
+    unlocks.levels.push(...geometryUnlocks.levels);
+    unlocks.default_unlocked.push(...geometryUnlocks.default_unlocked);
     const arrays = await Promise.all(manifest.stages.map(stage => json(stage.file)));
     const cards = arrays.flat();
     const ids = new Set(cards.map(c => c.id));
@@ -408,12 +446,17 @@ async function init() {
     state.levelDefaults = unlocks.default_unlocked || [];
     state.coverage = new Map((coverage.lean_declarations || []).map(x => [x.declaration, x]));
     state.manifest = manifest;
-    for (const stage of manifest.stages) {
-      const option = document.createElement("option");
-      option.value = String(stage.stage);
-      option.textContent = "Stage " + stage.stage + " — " + stage.title;
-      $("stage").append(option);
-    }
+    curriculumIndex=indexCurriculum(curriculum,cards);
+    curriculumView=buildCurriculum($("curriculum-tree"),$("stage"),curriculum,curriculumIndex,{
+      math,
+      onSelect(value) {$("stage").value=value;resetSession();},
+      onCard(card,value) {
+        $("stage").value=value;$("mode").value="browse";$("type").value="all";
+        state.seen.clear();state.completed=0;browseCardId=card.id;render();
+        $("flashcard").focus({preventScroll:true});
+        $("flashcard").scrollIntoView?.({behavior:"smooth",block:"start"});
+      }
+    });
     for (const type of [...new Set(cards.map(c => c.type))].sort()) {
       const option = document.createElement("option");
       option.value = type;
@@ -456,4 +499,9 @@ $("reset-progress").addEventListener("click", () => {
   announce("Local progress reset.");
 });
 document.addEventListener("keydown", handleKeyboard);
+const desktopLayout=window.matchMedia?.("(min-width: 1000px)");
+if(desktopLayout) {
+  $("study-menu").open=desktopLayout.matches;
+  desktopLayout.addEventListener?.("change",e=>{$("study-menu").open=e.matches;});
+}
 init();

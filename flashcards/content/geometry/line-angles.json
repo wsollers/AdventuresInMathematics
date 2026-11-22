@@ -1,0 +1,230 @@
+[
+  {
+    "id": "aim.geometry.line-angles.vertical-def",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define vertical angles.",
+    "back": "Opposite angles formed by two intersecting lines.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.vertical",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Relation between vertical angles?",
+    "back": "Vertical angles have equal measures.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.linear",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "If adjacent angles have noncommon sides that are opposite rays, what is their sum?",
+    "back": "$180^\\circ$; they form a linear pair.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.transversal",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a transversal.",
+    "back": "A line intersecting two or more coplanar lines at distinct points.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.corresponding",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "A transversal crosses parallel lines. How do corresponding angles compare?",
+    "back": "Corresponding angles are equal; they occupy matching positions at the two intersections.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.alternate",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "A transversal crosses parallel lines. How do alternate interior angles compare?",
+    "back": "Alternate interior angles are equal; they lie between the lines on opposite sides of the transversal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.same-side",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "A transversal crosses parallel lines. What is the sum of same-side interior angles?",
+    "back": "$180^\\circ$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.converse-corresponding",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "If corresponding angles made by a transversal of two coplanar lines are equal, what follows?",
+    "back": "The two lines are parallel.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.converse-alternate",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "If alternate interior angles made by a transversal of two coplanar lines are equal, what follows?",
+    "back": "The two lines are parallel.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.converse-same-side",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "If same-side interior angles made by a transversal of two coplanar lines sum to $180^\\circ$, what follows?",
+    "back": "The two lines are parallel.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.parallel-axiom",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Through a point not on a given line, how many coplanar parallels to that line exist?",
+    "back": "Exactly one, in Euclidean geometry.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  },
+  {
+    "id": "aim.geometry.line-angles.bisector-locus",
+    "stage": 31,
+    "topic": "Parallel lines and angle theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "What is the locus in a plane of points equidistant from two distinct points $A,B$?",
+    "back": "The perpendicular bisector of $\\overline{AB}$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "line-angles"
+    ]
+  }
+]

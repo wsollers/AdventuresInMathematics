@@ -4,15 +4,23 @@ import path from "node:path";
 const checkout = process.argv[2];
 if (!checkout) throw new Error("Usage: node flashcards/server/build-site.mjs <Sites checkout>");
 const root = path.resolve(import.meta.dirname, "..");
-const web = path.join(root,"web"), data = path.join(root,"content/ordered-fields");
+const web = path.join(root,"web");
+const decks = ["ordered-fields", "calculus", "geometry"];
+const cards = [];
 const assets = {};
 const mime = file => file.endsWith(".css") ? "text/css" : file.endsWith(".json") ? "application/json" : file.endsWith(".html") ? "text/html" : "text/javascript";
 for (const file of fs.readdirSync(web).filter(file => /\.(html|css|mjs|js)$/.test(file))) {
   assets["/" + file] = {body:fs.readFileSync(path.join(web,file),"utf8"),type:mime(file)};
 }
 assets["/"] = assets["/index.html"];
-for (const file of fs.readdirSync(data).filter(file => file.endsWith(".json"))) {
-  assets["/decks/ordered-fields/" + file] = {body:fs.readFileSync(path.join(data,file),"utf8"),type:"application/json"};
+assets["/decks/curriculum.json"] = {body:fs.readFileSync(path.join(root,"content/curriculum.json"),"utf8"),type:"application/json"};
+for (const deck of decks) {
+  const data = path.join(root,"content",deck);
+  for (const file of fs.readdirSync(data).filter(file => file.endsWith(".json"))) {
+    assets["/decks/" + deck + "/" + file] = {body:fs.readFileSync(path.join(data,file),"utf8"),type:"application/json"};
+  }
+  const manifest = JSON.parse(fs.readFileSync(path.join(data,"manifest.json"),"utf8"));
+  cards.push(...manifest.stages.flatMap(stage => JSON.parse(fs.readFileSync(path.join(data,stage.file),"utf8"))));
 }
 for (const file of ["assets/css/site.css","assets/js/site.js"]) {
   const saved = path.join(checkout,"assets",file);
@@ -22,8 +30,6 @@ for (const file of ["assets/css/site.css","assets/js/site.js"]) {
   }
   assets["/" + file] = {body:fs.readFileSync(saved,"utf8"),type:mime(file)};
 }
-const manifest = JSON.parse(fs.readFileSync(path.join(data,"manifest.json"),"utf8"));
-const cards = manifest.stages.flatMap(stage => JSON.parse(fs.readFileSync(path.join(data,stage.file),"utf8")));
 const server = fs.readFileSync(path.join(root,"server/grader.mjs"),"utf8");
 const worker = `${server}\nconst assets=${JSON.stringify(assets)};\nconst cards=${JSON.stringify(cards)};\nexport default {async fetch(request,env) {
   const url=new URL(request.url);

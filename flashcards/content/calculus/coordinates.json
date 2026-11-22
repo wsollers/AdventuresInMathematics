@@ -1,0 +1,722 @@
+[
+  {
+    "id": "aim.calculus.coordinates.convention",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Which angle is $\\phi$ in this deck’s spherical coordinates?",
+    "back": "$\\phi$ is measured down from the positive $z$-axis. Some books swap the angle symbols.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.polar-x",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Polar to Cartesian: formula for $x$?",
+    "back": "$x=r\\cos\\theta$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.polar-y",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Polar to Cartesian: formula for $y$?",
+    "back": "$y=r\\sin\\theta$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.polar-r",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cartesian to polar: formula for $r$?",
+    "back": "$r=\\sqrt{x^2+y^2}$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.polar-theta",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cartesian to polar: formula for $\\theta$?",
+    "back": "$\\theta=\\operatorname{atan2}(y,x)$, adjusted to $[0,2\\pi)$; undefined at the origin.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.atan2",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Why use atan2 instead of $\\arctan(y/x)$?",
+    "back": "It selects the correct quadrant and handles $x=0$ away from the origin.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.polar-range-r",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Standard range for polar radius?",
+    "back": "$r\\geq0$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.polar-range-theta",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Standard range for polar angle?",
+    "back": "$0\\leq\\theta<2\\pi$; the angle is arbitrary at the origin.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.polar-area",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Polar area element?",
+    "back": "$dA=r\\,dr\\,d\\theta$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.polar-enclosed",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Area swept by a polar curve on $[\\alpha,\\beta]$?",
+    "back": "$A=\\tfrac12\\int_\\alpha^\\beta r(\\theta)^2\\,d\\theta$, counting the region once.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cyl-x",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cylindrical to Cartesian: formula for $x$?",
+    "back": "$x=r\\cos\\theta$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cyl-y",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cylindrical to Cartesian: formula for $y$?",
+    "back": "$y=r\\sin\\theta$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cyl-z",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cylindrical to Cartesian: formula for height?",
+    "back": "$z_{\\mathrm{Cartesian}}=z_{\\mathrm{cylindrical}}$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cart-cyl-r",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cartesian to cylindrical: formula for $r$?",
+    "back": "$r=\\sqrt{x^2+y^2}$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cart-cyl-theta",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cartesian to cylindrical: formula for $\\theta$?",
+    "back": "$\\theta=\\operatorname{atan2}(y,x)$, adjusted to $[0,2\\pi)$; arbitrary on the $z$-axis.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cart-cyl-z",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cartesian to cylindrical: formula for height?",
+    "back": "$z_{\\mathrm{cylindrical}}=z_{\\mathrm{Cartesian}}$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cyl-volume",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cylindrical volume element?",
+    "back": "$dV=r\\,dr\\,d\\theta\\,dz$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sph-x",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Spherical to Cartesian: formula for $x$?",
+    "back": "$x=\\rho\\sin\\phi\\cos\\theta$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sph-y",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Spherical to Cartesian: formula for $y$?",
+    "back": "$y=\\rho\\sin\\phi\\sin\\theta$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sph-z",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Spherical to Cartesian: formula for $z$?",
+    "back": "$z=\\rho\\cos\\phi$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cart-sph-rho",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cartesian to spherical: formula for $\\rho$?",
+    "back": "$\\rho=\\sqrt{x^2+y^2+z^2}$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cart-sph-theta",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cartesian to spherical: formula for $\\theta$?",
+    "back": "$\\theta=\\operatorname{atan2}(y,x)$, adjusted to $[0,2\\pi)$; arbitrary on the $z$-axis.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cart-sph-phi",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cartesian to spherical: formula for $\\phi$?",
+    "back": "$\\phi=\\arccos(z/\\rho)$ for $\\rho>0$; arbitrary at the origin.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sph-range-rho",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Standard range for spherical radius?",
+    "back": "$\\rho\\geq0$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sph-range-theta",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Standard range for spherical azimuth?",
+    "back": "$0\\leq\\theta<2\\pi$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sph-range-phi",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Standard range for spherical polar angle?",
+    "back": "$0\\leq\\phi\\leq\\pi$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sph-cyl-r",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Spherical to cylindrical: formula for $r$?",
+    "back": "$r=\\rho\\sin\\phi$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sph-cyl-z",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Spherical to cylindrical: formula for $z$?",
+    "back": "$z=\\rho\\cos\\phi$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sph-cyl-theta",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Spherical to cylindrical: formula for azimuth?",
+    "back": "$\\theta_{\\mathrm{cylindrical}}=\\theta_{\\mathrm{spherical}}$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cyl-sph-rho",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cylindrical to spherical: formula for $\\rho$?",
+    "back": "$\\rho=\\sqrt{r^2+z^2}$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cyl-sph-phi",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cylindrical to spherical: formula for $\\phi$?",
+    "back": "$\\phi=\\operatorname{atan2}(r,z)$ in $[0,\\pi]$, away from the origin.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.cyl-sph-theta",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Cylindrical to spherical: formula for azimuth?",
+    "back": "$\\theta_{\\mathrm{spherical}}=\\theta_{\\mathrm{cylindrical}}$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sph-volume",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Spherical volume element?",
+    "back": "$dV=\\rho^2\\sin\\phi\\,d\\rho\\,d\\phi\\,d\\theta$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.sphere-area",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Surface area element on a sphere of radius $R$?",
+    "back": "$dS=R^2\\sin\\phi\\,d\\phi\\,d\\theta$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.surface-cyl-r",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Describe the cylindrical coordinate surface $r=a>0$.",
+    "back": "A circular cylinder of radius $a$ around the $z$-axis.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.surface-cyl-theta",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Describe the cylindrical coordinate surface $\\theta=\\alpha$.",
+    "back": "A vertical half-plane bounded by the $z$-axis.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.surface-cyl-z",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Describe the cylindrical coordinate surface $z=c$.",
+    "back": "A horizontal plane at height $c$.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.surface-sph-rho",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Describe the spherical coordinate surface $\\rho=a>0$.",
+    "back": "A sphere of radius $a$ centered at the origin.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.surface-sph-phi",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Describe the spherical coordinate surface $\\phi=\\alpha$.",
+    "back": "One nappe of a cone for $0<\\alpha<\\pi$, except $\\alpha=\\pi/2$ gives the $xy$-plane; endpoints give the positive or negative $z$-axis.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  },
+  {
+    "id": "aim.calculus.coordinates.surface-sph-theta",
+    "type": "theorem",
+    "stage": 15,
+    "topic": "Polar, cylindrical and spherical coordinates",
+    "difficulty": "foundation",
+    "front": "Describe the spherical coordinate surface $\\theta=\\alpha$.",
+    "back": "A vertical half-plane bounded by the $z$-axis.",
+    "explanation": "Convention: r is distance from the z-axis (or the planar origin); rho is distance from the 3D origin; theta is azimuth; phi is measured down from the positive z-axis. Angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "coordinates"
+    ]
+  }
+]

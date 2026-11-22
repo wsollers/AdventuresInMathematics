@@ -1,0 +1,290 @@
+[
+  {
+    "id": "aim.calculus.limits-series.limit-sin",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\lim_{x\\to0}\\sin x/x$.",
+    "back": "$1$, with angles in radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.limit-cos",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\lim_{x\\to0}(1-\\cos x)/x$.",
+    "back": "$0$, with angles in radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.limit-exp",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\lim_{x\\to0}(e^x-1)/x$.",
+    "back": "$1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.limit-log",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\lim_{x\\to0}\\ln(1+x)/x$.",
+    "back": "$1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.limit-e",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Give a limit representation of $e$.",
+    "back": "$e=\\lim_{n\\to\\infty}(1+1/n)^n$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.series-exp",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Maclaurin series for $e^x$ and its real convergence domain?",
+    "back": "$e^x=\\sum_{n=0}^\\infty x^n/n!$, for all real $x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.series-sin",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Maclaurin series for $\\sin x$ and its real convergence domain?",
+    "back": "$\\sin x=\\sum_{n=0}^\\infty(-1)^n x^{2n+1}/(2n+1)!$, for all real $x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.series-cos",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Maclaurin series for $\\cos x$ and its real convergence domain?",
+    "back": "$\\cos x=\\sum_{n=0}^\\infty(-1)^n x^{2n}/(2n)!$, for all real $x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.series-log",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Maclaurin series for $\\ln(1+x)$ and its real convergence domain?",
+    "back": "$\\ln(1+x)=\\sum_{n=1}^\\infty(-1)^{n+1}x^n/n$, for $-1<x\\leq1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.series-atan",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Maclaurin series for $\\arctan x$ and its real convergence domain?",
+    "back": "$\\arctan x=\\sum_{n=0}^\\infty(-1)^n x^{2n+1}/(2n+1)$, for $|x|\\leq1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.asymptotic-meaning",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "What does $f(x)\\sim g(x)$ as $x\\to0$ mean?",
+    "back": "$\\lim_{x\\to0}f(x)/g(x)=1$, with the ratio defined near zero.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.small-sin",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Leading equivalent of $\\sin x$ as $x\\to0$?",
+    "back": "$\\sin x\\sim x$ (radians).",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.small-tan",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Leading equivalent of $\\tan x$ as $x\\to0$?",
+    "back": "$\\tan x\\sim x$ (radians).",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.small-cos",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Leading equivalent of $1-\\cos x$ as $x\\to0$?",
+    "back": "$1-\\cos x\\sim x^2/2$ (radians).",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.small-exp",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Leading equivalent of $e^x-1$ as $x\\to0$?",
+    "back": "$e^x-1\\sim x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  },
+  {
+    "id": "aim.calculus.limits-series.small-log",
+    "type": "theorem",
+    "stage": 20,
+    "topic": "Limits, Taylor series and small-angle behavior",
+    "difficulty": "foundation",
+    "front": "Leading equivalent of $\\ln(1+x)$ as $x\\to0$?",
+    "back": "$\\ln(1+x)\\sim x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "limits-series"
+    ]
+  }
+]

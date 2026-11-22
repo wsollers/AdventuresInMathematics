@@ -1,0 +1,416 @@
+[
+  {
+    "id": "aim.calculus.hyperbolic.sinh",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define $\\sinh x$ using exponentials.",
+    "back": "$\\sinh x=(e^x-e^{-x})/2$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.cosh",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define $\\cosh x$ using exponentials.",
+    "back": "$\\cosh x=(e^x+e^{-x})/2$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.tanh",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define $\\tanh x$ using sinh and cosh.",
+    "back": "$\\tanh x=\\sinh x/\\cosh x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.tanh-exp",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Express $\\tanh x$ using exponentials.",
+    "back": "$\\tanh x=(e^{2x}-1)/(e^{2x}+1)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.sech",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define $\\operatorname{sech}x$.",
+    "back": "$\\operatorname{sech}x=1/\\cosh x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.csch",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define $\\operatorname{csch}x$.",
+    "back": "$\\operatorname{csch}x=1/\\sinh x$, for $x\\ne0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.coth",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define $\\coth x$.",
+    "back": "$\\coth x=\\cosh x/\\sinh x$, for $x\\ne0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.fundamental",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Fundamental hyperbolic identity?",
+    "back": "$\\cosh^2x-\\sinh^2x=1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.tanh-identity",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Hyperbolic identity involving tanh and sech?",
+    "back": "$1-\\tanh^2x=\\operatorname{sech}^2x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.coth-identity",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Hyperbolic identity involving coth and csch?",
+    "back": "$\\coth^2x-1=\\operatorname{csch}^2x$, for $x\\ne0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.sinh-odd",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\sinh(-x)$.",
+    "back": "$-\\sinh x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.cosh-even",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\cosh(-x)$.",
+    "back": "$\\cosh x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.tanh-odd",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\tanh(-x)$.",
+    "back": "$-\\tanh x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.sinh-double",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\sinh(2x)$.",
+    "back": "$\\sinh(2x)=2\\sinh x\\cosh x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.cosh-double",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\cosh(2x)$.",
+    "back": "$\\cosh(2x)=\\cosh^2x+\\sinh^2x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.sinh-square",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Reduce $\\sinh^2x$.",
+    "back": "$\\sinh^2x=(\\cosh2x-1)/2$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.cosh-square",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Reduce $\\cosh^2x$.",
+    "back": "$\\cosh^2x=(\\cosh2x+1)/2$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.exp-plus",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\cosh x+\\sinh x$.",
+    "back": "$e^x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.exp-minus",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\cosh x-\\sinh x$.",
+    "back": "$e^{-x}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.sinh-sum",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\sinh(a+b)$.",
+    "back": "$\\sinh(a+b)=\\sinh a\\cosh b+\\cosh a\\sinh b$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.cosh-sum",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\cosh(a+b)$.",
+    "back": "$\\cosh(a+b)=\\cosh a\\cosh b+\\sinh a\\sinh b$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.sinh-difference",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\sinh(a-b)$.",
+    "back": "$\\sinh(a-b)=\\sinh a\\cosh b-\\cosh a\\sinh b$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic.cosh-difference",
+    "type": "theorem",
+    "stage": 13,
+    "topic": "Hyperbolic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\cosh(a-b)$.",
+    "back": "$\\cosh(a-b)=\\cosh a\\cosh b-\\sinh a\\sinh b$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic"
+    ]
+  }
+]

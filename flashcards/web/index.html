@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#fbfbfa">
-  <meta name="description" content="Ordered-field mathematics flashcards, practice and review.">
-  <title>Foundations flashcards · wsollers.dev</title>
+  <meta name="description" content="Foundations and calculus flashcards: trigonometry, coordinates, hyperbolic functions, logarithms, derivatives and integrals.">
+  <title>Mathematics flashcards · wsollers.dev</title>
   <link rel="canonical" href="https://wsollers.dev/AdventuresInMath/flashcards/">
   <link rel="stylesheet" href="/assets/css/site.css">
   <link rel="stylesheet" href="./flashcards.css">
@@ -27,8 +27,8 @@
 </div></header>
 <main id="main" class="container flashcards-main">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="https://wsollers.dev/AdventuresInMath/">Mathematics</a><span>/</span><span>Flashcards</span></nav>
-  <div class="page-heading"><div><h1>Foundations flashcards</h1>
-    <p>Recall the answer, reveal it, and rate how well you knew it.</p></div>
+  <div class="page-heading"><div><h1>Mathematics flashcards</h1>
+    <p>Explore the curriculum, recall an answer, then reveal and rate it.</p></div>
     <a href="https://wsollers.dev/AdventuresInMath/ordered_field_reference.pdf">Reference PDF ↗</a></div>
   <div id="load-error" role="alert" class="error" hidden></div>
   <div class="stats" aria-label="Progress">
@@ -38,15 +38,24 @@
     <div><strong id="stat-due">—</strong><span>Due</span></div>
     <div><strong id="stat-studied">—</strong><span>Studied</span></div>
   </div>
+  <div class="study-layout">
+  <aside class="study-sidebar" aria-label="Curriculum and study controls">
+  <details id="study-menu" class="study-menu" open>
+  <summary>Choose what to study</summary>
   <section class="settings-area" aria-label="Study controls">
     <div class="filters">
       <label for="mode">Mode<select id="mode">
         <option value="new">New cards</option><option value="due">Due review</option>
         <option value="practice">Practice unlocked</option><option value="browse">Browse all (no grading)</option>
       </select></label>
-      <label for="stage">Stage<select id="stage"><option value="all">All stages</option></select></label>
+      <label for="stage">Subject or topic<select id="stage"><option value="all">All subjects</option></select></label>
       <label for="type">Card type<select id="type"><option value="all">All types</option></select></label>
     </div>
+    <nav id="curriculum-tree" aria-label="Curriculum"></nav>
+    <details class="levels"><summary>Review unlocks <span id="level-count"></span></summary>
+      <p>Browse any card. Scheduled review respects your existing unlocks and prerequisites.</p>
+      <div id="level-list"></div>
+    </details>
     <details class="backup"><summary>Progress and backups</summary>
       <p>Review history stays in this browser. Export it to transfer devices; there is no automatic sync.</p>
       <div class="actions">
@@ -56,12 +65,14 @@
       </div>
     </details>
   </section>
-  <div class="study-layout">
+  </details>
+  </aside>
     <section aria-label="Flashcard" class="study">
       <div class="card-info"><span id="card-position" aria-live="polite">Loading…</span><span id="card-category"></span></div>
-      <article class="flashcard" id="flashcard">
+      <article class="flashcard" id="flashcard" tabindex="-1">
         <div class="side-label">Question</div>
         <div id="card-front" class="card-text">Loading the deck…</div>
+        <figure id="card-diagram" class="card-diagram" hidden></figure>
         <div id="answer-section" class="answer-section" hidden>
           <div class="side-label">Answer</div><div id="card-back" class="card-text"></div>
           <details id="explanation-wrap" class="explanation" hidden>
@@ -109,7 +120,7 @@
             <button type="button" data-grade="easy"><strong>Easy</strong><small>4 days+ · 4</small></button>
           </div>
         </div>
-        <div id="browse-actions" hidden><button type="button" class="primary" id="browse-next">Next card →</button></div>
+        <div id="browse-actions" hidden><button type="button" class="primary" id="browse-next">Next card</button></div>
       </div>
       <p id="study-status" role="status" aria-live="polite"></p>
       <details class="sources" id="source-details" hidden>
@@ -117,10 +128,6 @@
       </details>
       <p class="hint">Space: reveal · 1–4: grade · N: skip</p>
     </section>
-    <aside><details class="levels" open><summary>Study levels <span id="level-count"></span></summary>
-      <p>Unlock levels manually. Browsing works for the whole deck; scheduling uses only unlocked levels.</p>
-      <div id="level-list"></div>
-    </details></aside>
   </div>
   <p class="privacy">Progress stays on this device. A Lean declaration with a proof placeholder is not a formally verified result.</p>
 </main>

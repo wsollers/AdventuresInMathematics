@@ -1,0 +1,496 @@
+[
+  {
+    "id": "aim.geometry.circles.circle",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a circle in a Euclidean plane.",
+    "back": "The set of points at a fixed positive distance from a fixed center.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.disk",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "How does a disk differ from a circle?",
+    "back": "The closed disk includes the interior as well as its boundary circle.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.radius",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a radius of a circle.",
+    "back": "A segment from the center to a point on the circle; its length is also called the radius.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.diameter",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a diameter of a circle.",
+    "back": "A chord through the center; its length is twice the radius.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.chord",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a chord.",
+    "back": "A segment joining two distinct points of a circle.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.secant",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a secant line to a circle.",
+    "back": "A line intersecting the circle at two distinct points.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.tangent",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a tangent line to a circle.",
+    "back": "A coplanar line intersecting the circle at exactly one point, the point of tangency.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.arc",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a circular arc.",
+    "back": "A connected portion of a circle between two endpoints.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.central-angle",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a central angle.",
+    "back": "An angle with vertex at the circle’s center and sides passing through the circle.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.inscribed-angle",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define an inscribed angle.",
+    "back": "An angle with vertex on the circle and sides containing chords.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.intercepted-arc",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Which arc is intercepted by an inscribed angle?",
+    "back": "The arc between the other endpoints of its chords that does not contain the angle’s vertex.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.inscribed",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Relate an inscribed angle to its intercepted arc, both measured in degrees.",
+    "back": "The angle’s measure is half the arc’s measure.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.semicircle",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "What angle does a diameter subtend at another point of its circle?",
+    "back": "A right angle.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.cyclic",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Relation between opposite interior angles of a convex cyclic quadrilateral?",
+    "back": "They are supplementary.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.radius-tangent",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "How does the tangent at $T$ relate to radius $OT$?",
+    "back": "The tangent is perpendicular to $OT$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.tangent-converse",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "A line through circle point $T$ is perpendicular to radius $OT$. What follows?",
+    "back": "The line is tangent to the circle at $T$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.equal-tangents",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "From an exterior point $P$, tangents touch a circle at $A,B$. Relate the lengths.",
+    "back": "$PA=PB$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.equal-chords",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "In the same circle, what follows from two chords having equal lengths?",
+    "back": "Their minor arcs have equal measures.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.chord-distance",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "In the same circle, how do equal chords relate to the center?",
+    "back": "They are equidistant from the center, using perpendicular distance to their lines.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.chord-bisector",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "A line through the center is perpendicular to a chord. What does it do to the chord?",
+    "back": "It bisects the chord.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.intersecting",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Chords $AB$ and $CD$ meet at an interior point $P$. State the product theorem.",
+    "back": "$PA\\cdot PB=PC\\cdot PD$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.secant-product",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Two secants from exterior point $P$ meet a circle at near/far points $A,B$ and $C,D$. State the product theorem.",
+    "back": "$PA\\cdot PB=PC\\cdot PD$; use external segment times whole secant.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.tangent-secant",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "A tangent from $P$ touches at $T$; a secant meets the circle at near/far points $A,B$. Relate the lengths.",
+    "back": "$PT^2=PA\\cdot PB$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.tangent-chord",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "What is the measure of an angle formed by a tangent and a chord at the point of tangency?",
+    "back": "Half the measure of the arc intercepted by that angle; choose the arc corresponding to the chosen tangent ray.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.inside-angle",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Two chords cross inside a circle. How is an angle’s measure related to the intercepted arcs?",
+    "back": "Half the sum of the measures of the arcs intercepted by that angle and its vertical angle.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  },
+  {
+    "id": "aim.geometry.circles.outside-angle",
+    "stage": 35,
+    "topic": "Circle definitions and theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Two secants from an exterior point form an angle. How is its measure related to the intercepted arcs?",
+    "back": "Half the difference between the far arc’s measure and the near arc’s measure.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "circles"
+    ]
+  }
+]

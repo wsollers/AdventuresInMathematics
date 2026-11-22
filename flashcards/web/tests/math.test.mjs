@@ -6,9 +6,11 @@ import path from "node:path";
 import {createRequire} from "node:module";
 const require = createRequire(import.meta.url);
 const katex = require(process.env.KATEX_PATH || "katex");
-const root = path.resolve(import.meta.dirname, "../../content/ordered-fields");
-const manifest = JSON.parse(fs.readFileSync(path.join(root, "manifest.json"), "utf8"));
-const cards = manifest.stages.flatMap(s => JSON.parse(fs.readFileSync(path.join(root, s.file), "utf8")));
+const cards = ["ordered-fields", "calculus", "geometry"].flatMap(deck => {
+  const root = path.resolve(import.meta.dirname, "../../content", deck);
+  const manifest = JSON.parse(fs.readFileSync(path.join(root, "manifest.json"), "utf8"));
+  return manifest.stages.flatMap(s => JSON.parse(fs.readFileSync(path.join(root, s.file), "utf8")));
+});
 test("all card math is KaTeX-compatible", () => {
   const bad = [];
   for (const card of cards) {

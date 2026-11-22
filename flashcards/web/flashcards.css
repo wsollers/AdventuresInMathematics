@@ -55,3 +55,38 @@
 #answer-text{display:block;box-sizing:border-box;width:100%;margin:8px 0 12px;padding:12px;font:inherit;font-size:16px;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:8px;resize:vertical}
 #voice-status,.response-note{font-size:.8rem;margin:10px 0;color:var(--muted)}
 #speak-answer[aria-pressed="true"]{border-color:var(--accent);font-weight:bold}
+
+/* Curriculum is navigation, independent of the review/unlock graph. */
+[hidden]{display:none!important}
+.card-diagram{margin:18px 0;color:var(--text);max-width:360px}
+.card-diagram svg{display:block;width:100%;height:auto}
+.card-diagram svg path{stroke:var(--accent);stroke-width:3;fill:none}
+.card-diagram svg text{fill:currentColor;font-size:16px}
+.card-diagram figcaption{font-size:.875rem;color:var(--muted);line-height:1.5}
+.study-layout{grid-template-columns:minmax(260px,320px) minmax(0,1fr);align-items:start}
+.study-sidebar{min-width:0;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;scrollbar-gutter:stable}
+.study-menu{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:16px}
+.study-menu>summary{font-size:1rem;font-weight:650;cursor:pointer;min-height:28px}
+.settings-area{margin-top:16px}.filters{grid-template-columns:1fr}
+.filters label,.filters select{font-size:.95rem}
+.filters select{appearance:none;padding-right:32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%23677980' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
+#curriculum-tree{margin-top:22px}
+.curriculum-subject{border-top:1px solid var(--line);padding:10px 0}
+.curriculum-subject>summary{font-weight:650;font-size:1rem;cursor:pointer;padding:7px 0;min-height:32px}
+.curriculum-count{font-size:.875rem;font-weight:400;color:var(--muted);margin-left:8px}
+.curriculum-topic{margin:6px 0 6px 8px;border-left:2px solid var(--line);padding-left:10px}
+.curriculum-topic>summary{cursor:pointer;font-size:.95rem;padding:8px 0;line-height:1.5}
+.topic-status{display:block;margin-left:16px;font-size:.875rem;color:var(--muted)}
+.topic-study{min-height:44px;border:1px solid var(--line);border-radius:7px;padding:8px 12px;background:var(--surface);color:var(--accent);font:inherit;font-size:.875rem;cursor:pointer;margin:8px 0}
+.curriculum-cards{list-style:none;padding:0;margin:4px 0 12px}
+.curriculum-cards li+li{border-top:1px solid var(--line)}
+.card-link{display:block;min-height:44px;width:100%;text-align:left;border:0;background:transparent;color:var(--text);font:inherit;font-size:.9rem;padding:12px 6px;cursor:pointer;overflow-wrap:anywhere;border-radius:6px}
+.card-link:hover,.card-link[aria-current]{background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
+.card-question{display:block;line-height:1.65;overflow-x:auto}
+.card-lock{display:block;font-size:.875rem;color:var(--muted);margin-top:6px}
+.empty-topic{font-size:.95rem;color:var(--muted);line-height:1.6}
+.levels{margin-top:14px}.level-row{display:block}.level-row button{min-height:44px;font-size:.875rem}
+.level-row h3,.level-row p,.level-row .unlocked,.backup p,.levels p{font-size:.875rem}
+.stats span,.card-info,.hint,#study-status{font-size:.875rem}
+.flashcard:focus-visible,.card-link:focus-visible,.topic-study:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:999px){.study-layout{grid-template-columns:1fr}.study-sidebar{position:static;max-height:none;overflow:visible}.study-menu{padding:16px}.study-menu>summary{min-height:44px;display:list-item;padding:10px 0}.study-menu[open] .settings-area{max-height:65vh;overflow:auto;padding:3px 5px 8px 0}.card-info{flex-wrap:wrap}}

@@ -1,0 +1,211 @@
+[
+  {
+    "id": "aim.geometry.closest.point-line2",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Distance from $(x_0,y_0)$ to $Ax+By+C=0$?",
+    "back": "$d=|Ax_0+By_0+C|/\\sqrt{A^2+B^2}$, with $(A,B)\\ne(0,0)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  },
+  {
+    "id": "aim.geometry.closest.point-plane",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Distance from point $P$ to plane $n\\cdot X+d=0$?",
+    "back": "$\\delta=|n\\cdot P+d|/\\|n\\|$, with $n\\ne0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  },
+  {
+    "id": "aim.geometry.closest.foot-plane",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Closest point on $n\\cdot X+d=0$ to $P$?",
+    "back": "$H=P-\\dfrac{n\\cdot P+d}{\\|n\\|^2}n$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  },
+  {
+    "id": "aim.geometry.closest.foot-line",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Closest point on line $A+tu$, $u\\ne0$, to point $P$?",
+    "back": "$H=A+\\dfrac{(P-A)\\cdot u}{u\\cdot u}u$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  },
+  {
+    "id": "aim.geometry.closest.point-line3",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Distance from point $P$ to line $A+tu$ in 3D?",
+    "back": "$\\delta=\\|(P-A)\\times u\\|/\\|u\\|$, with $u\\ne0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  },
+  {
+    "id": "aim.geometry.closest.parallel-lines",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Distance between parallel lines $A+tu$ and $B+su$ in 3D?",
+    "back": "$\\delta=\\|(B-A)\\times u\\|/\\|u\\|$, with $u\\ne0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  },
+  {
+    "id": "aim.geometry.closest.skew-lines",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Distance between 3D lines $A+tu$ and $B+sv$ with nonparallel directions?",
+    "back": "$\\delta=\\dfrac{|(B-A)\\cdot(u\\times v)|}{\\|u\\times v\\|}$. It is zero if they intersect.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  },
+  {
+    "id": "aim.geometry.closest.parallel-planes",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Distance between parallel planes $n\\cdot X+d_1=0$ and $n\\cdot X+d_2=0$, written with the same normal?",
+    "back": "$\\delta=|d_2-d_1|/\\|n\\|$, with $n\\ne0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  },
+  {
+    "id": "aim.geometry.closest.line-plane",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Distance between a line $P+tu$ parallel to plane $n\\cdot X+d=0$?",
+    "back": "$\\delta=|n\\cdot P+d|/\\|n\\|$. It is zero if the line lies in the plane.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  },
+  {
+    "id": "aim.geometry.closest.intersecting-distance",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Distance between an infinite line and a plane it intersects?",
+    "back": "Zero. Likewise, two intersecting planes have distance zero.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  },
+  {
+    "id": "aim.geometry.closest.segment",
+    "stage": 39,
+    "topic": "Distances and closest points",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Closest point on segment from $A$ to $B\\ne A$ to point $P$?",
+    "back": "$H=A+t(B-A)$, where $t$ is $(P-A)\\cdot(B-A)/\\|B-A\\|^2$ clamped to $[0,1]$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "closest"
+    ]
+  }
+]

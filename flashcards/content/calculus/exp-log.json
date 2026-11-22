@@ -1,0 +1,416 @@
+[
+  {
+    "id": "aim.calculus.exp-log.ln",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define the natural logarithm by an integral.",
+    "back": "$\\ln x=\\int_1^x dt/t$, for $x>0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.exp",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define the natural exponential using ln.",
+    "back": "$\\exp=\\ln^{-1}$: the inverse function of $\\ln$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.e",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define $e$ using exp.",
+    "back": "$e=\\exp(1)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.exp-notation",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "How are $e^x$ and exp related?",
+    "back": "$e^x=\\exp(x)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.real-power",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define $a^x$ for real $x$ and $a>0$.",
+    "back": "$a^x=e^{x\\ln a}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.log",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Define a logarithm with base $a$.",
+    "back": "$\\log_a x=y\\iff a^y=x$, with $a>0$, $a\\ne1$, $x>0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.ln-exp",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Simplify $\\ln(e^x)$.",
+    "back": "$x$, for every real $x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.exp-ln",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Simplify $e^{\\ln x}$.",
+    "back": "$x$, for $x>0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.power-zero",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Evaluate $a^0$ for $a>0$.",
+    "back": "$1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.power-one",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Evaluate $a^1$ for $a>0$.",
+    "back": "$a$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.log-one",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\log_a1$.",
+    "back": "$0$, for $a>0$, $a\\ne1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.log-base",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\log_a a$.",
+    "back": "$1$, for $a>0$, $a\\ne1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.exp-product",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $a^{u+v}$ for $a>0$.",
+    "back": "$a^{u+v}=a^ua^v$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.exp-quotient",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $a^{u-v}$ for $a>0$.",
+    "back": "$a^{u-v}=a^u/a^v$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.power-power",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Simplify $(a^u)^v$ for $a>0$.",
+    "back": "$(a^u)^v=a^{uv}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.negative-power",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Rewrite $a^{-x}$ for $a>0$.",
+    "back": "$a^{-x}=1/a^x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.root",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Interpret $a^{1/n}$ for $a>0$ and positive integer $n$.",
+    "back": "$a^{1/n}=\\sqrt[n]{a}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.log-product",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\ln(xy)$ for $x,y>0$.",
+    "back": "$\\ln(xy)=\\ln x+\\ln y$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.log-quotient",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\ln(x/y)$ for $x,y>0$.",
+    "back": "$\\ln(x/y)=\\ln x-\\ln y$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.log-power",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\ln(x^r)$ for $x>0$.",
+    "back": "$\\ln(x^r)=r\\ln x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.change-base",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Change $\\log_a x$ to natural logarithms.",
+    "back": "$\\log_a x=\\ln x/\\ln a$, for $x>0$, $a>0$, $a\\ne1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.log-sum",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Is $\\ln(x+y)=\\ln x+\\ln y$ a valid identity?",
+    "back": "No. Logarithms turn products into sums; there is no corresponding general rule for a sum.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log.log-square",
+    "type": "theorem",
+    "stage": 16,
+    "topic": "Exponential and logarithmic definitions and identities",
+    "difficulty": "foundation",
+    "front": "Expand $\\ln(x^2)$ for $x\\ne0$.",
+    "back": "$\\ln(x^2)=2\\ln|x|$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log"
+    ]
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "id": "aim.calculus.exp-log-calculus.d-exp",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Differentiate $e^x$.",
+    "back": "$\\dfrac{d}{dx}e^x=e^x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.d-base",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Differentiate $a^x$ for $a>0$.",
+    "back": "$\\dfrac{d}{dx}a^x=a^x\\ln a$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.d-ln",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\ln x$ for $x>0$.",
+    "back": "$\\dfrac{d}{dx}\\ln x=1/x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.d-ln-abs",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\ln|x|$ for $x\\ne0$.",
+    "back": "$\\dfrac{d}{dx}\\ln|x|=1/x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.d-log",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\log_a x$.",
+    "back": "$\\dfrac{d}{dx}\\log_a x=1/(x\\ln a)$, for $x>0$, $a>0$, $a\\ne1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.chain-exp",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Differentiate $e^{u(x)}$.",
+    "back": "$\\dfrac{d}{dx}e^{u(x)}=u'(x)e^{u(x)}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.chain-ln",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\ln|u(x)|$.",
+    "back": "$\\dfrac{d}{dx}\\ln|u(x)|=u'(x)/u(x)$, where $u(x)\\ne0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.i-exp",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int e^x\\,dx$.",
+    "back": "$e^x+C$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.i-base",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int a^x\\,dx$ for $a>0$, $a\\ne1$.",
+    "back": "$a^x/\\ln a+C$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.i-log-pattern",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int u'(x)/u(x)\\,dx$.",
+    "back": "$\\ln|u(x)|+C$, on an interval where $u\\ne0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.i-ln",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int\\ln x\\,dx$ for $x>0$.",
+    "back": "$x\\ln x-x+C$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.exp-log-calculus.variable-power",
+    "type": "theorem",
+    "stage": 17,
+    "topic": "Exponential and logarithmic calculus",
+    "difficulty": "foundation",
+    "front": "Differentiate $u(x)^{v(x)}$ for $u(x)>0$.",
+    "back": "$\\dfrac{d}{dx}u^v=u^v\\left(v'\\ln u+v\\dfrac{u'}u\\right)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "exp-log-calculus"
+    ]
+  }
+]

@@ -1,0 +1,496 @@
+[
+  {
+    "id": "aim.geometry.measurement.polygon",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a simple polygon.",
+    "back": "A closed chain of straight segments in a plane whose edges meet only at adjacent endpoints.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.regular",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a regular polygon.",
+    "back": "A convex polygon with all sides equal and all interior angles equal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.parallelogram",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a parallelogram.",
+    "back": "A quadrilateral with both pairs of opposite sides parallel.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.rectangle",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a rectangle.",
+    "back": "A quadrilateral with four right angles.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.rhombus",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a rhombus.",
+    "back": "A quadrilateral with four equal side lengths.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.square",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a square.",
+    "back": "A quadrilateral with four equal sides and four right angles.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.trapezoid",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a trapezoid using the inclusive convention.",
+    "back": "A quadrilateral with at least one pair of parallel sides. Some texts use exactly one pair.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.interior",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Interior-angle sum of a simple Euclidean $n$-gon?",
+    "back": "$(n-2)180^\\circ$, where $n\\geq3$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.regular-angle",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Each interior angle of a regular $n$-gon?",
+    "back": "$(n-2)180^\\circ/n$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.exterior",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Sum of one exterior turning angle at each vertex of a convex polygon, traversed in one direction?",
+    "back": "$360^\\circ$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.triangle-area",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Triangle area with base $b$ and perpendicular height $h$?",
+    "back": "$A=bh/2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.rectangle-area",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Rectangle area with length $l$ and width $w$?",
+    "back": "$A=lw$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.square-area",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Square area with side length $s$?",
+    "back": "$A=s^2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.parallelogram-area",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Parallelogram area with base $b$ and perpendicular height $h$?",
+    "back": "$A=bh$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.trapezoid-area",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Trapezoid area with parallel bases $a,b$ and perpendicular height $h$?",
+    "back": "$A=(a+b)h/2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.rhombus-area",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Rhombus area in terms of diagonal lengths $d_1,d_2$?",
+    "back": "$A=d_1d_2/2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.regular-area",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Regular polygon area with perimeter $P$ and apothem $a$?",
+    "back": "$A=Pa/2$; the apothem is the distance from the center to a side.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.circle-area",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Circle area with radius $r$?",
+    "back": "$A=\\pi r^2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.circumference",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Circle circumference with radius $r$?",
+    "back": "$C=2\\pi r$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.arc",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Arc length for radius $r$ and nonnegative central angle $\\theta$ in radians?",
+    "back": "$s=r\\theta$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.sector",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Sector area for radius $r$ and central angle $0\\leq\\theta\\leq2\\pi$ in radians?",
+    "back": "$A=r^2\\theta/2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.box-volume",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Rectangular box volume with edge lengths $l,w,h$?",
+    "back": "$V=lwh$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.cylinder-volume",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Circular cylinder volume with radius $r$ and height $h$?",
+    "back": "$V=\\pi r^2h$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.cone-volume",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Circular cone volume with radius $r$ and perpendicular height $h$?",
+    "back": "$V=\\pi r^2h/3$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.sphere-volume",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Sphere volume with radius $r$?",
+    "back": "$V=4\\pi r^3/3$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  },
+  {
+    "id": "aim.geometry.measurement.sphere-area",
+    "stage": 34,
+    "topic": "Polygons, areas and measurement",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Sphere surface area with radius $r$?",
+    "back": "$A=4\\pi r^2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "measurement"
+    ]
+  }
+]

@@ -1,0 +1,287 @@
+[
+  {
+    "id": "aim.geometry.congruence.congruent",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define congruent figures.",
+    "back": "Figures that can be matched exactly by a distance-preserving motion; corresponding lengths and angles agree.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.similar",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define similar figures.",
+    "back": "Figures related by a uniform scaling and a distance-preserving motion; corresponding angles agree and lengths share one positive scale factor.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.sss",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "State the SSS triangle congruence criterion.",
+    "back": "Three pairs of corresponding side lengths are equal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.sas",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "State the SAS triangle congruence criterion.",
+    "back": "Two pairs of corresponding side lengths and their included angles are equal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.asa",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "State the ASA triangle congruence criterion.",
+    "back": "Two pairs of corresponding angles and the included sides are equal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.aas",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "State the AAS triangle congruence criterion.",
+    "back": "Two pairs of corresponding angles and a corresponding nonincluded side are equal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.hl",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "State the hypotenuse–leg congruence criterion.",
+    "back": "Two right triangles are congruent if their hypotenuses and one pair of corresponding legs are equal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.aaa",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Does AAA establish triangle congruence?",
+    "back": "No. It establishes similarity; the scale may differ.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.ssa",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Does general SSA establish triangle congruence?",
+    "back": "No. Two sides and a nonincluded angle can leave two possible triangles.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.aa-similarity",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "State the AA triangle similarity criterion.",
+    "back": "Two pairs of corresponding angles are equal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.sss-similarity",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "State the SSS triangle similarity criterion.",
+    "back": "All three pairs of corresponding sides are in the same positive ratio.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.sas-similarity",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "State the SAS triangle similarity criterion.",
+    "back": "Two pairs of corresponding sides are proportional and their included angles are equal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.perimeter",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Similar figures have length scale factor $k>0$. How do perimeters scale?",
+    "back": "$P_{\\mathrm{new}}=kP_{\\mathrm{old}}$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.area",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Similar plane figures have length scale factor $k>0$. How do areas scale?",
+    "back": "$A_{\\mathrm{new}}=k^2A_{\\mathrm{old}}$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  },
+  {
+    "id": "aim.geometry.congruence.volume",
+    "stage": 33,
+    "topic": "Congruence and similarity",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Similar solids have length scale factor $k>0$. How do volumes scale?",
+    "back": "$V_{\\mathrm{new}}=k^3V_{\\mathrm{old}}$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "congruence"
+    ]
+  }
+]

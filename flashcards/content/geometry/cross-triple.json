@@ -1,0 +1,268 @@
+[
+  {
+    "id": "aim.geometry.cross-triple.cross",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Component formula for $u\\times v$ in right-handed Cartesian 3D coordinates?",
+    "back": "$u\\times v=(u_2v_3-u_3v_2,\\ u_3v_1-u_1v_3,\\ u_1v_2-u_2v_1)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.right-hand",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Direction of $u\\times v$ for nonparallel vectors?",
+    "back": "Perpendicular to both; curl the right-hand fingers from $u$ toward $v$ through the smaller angle, and the thumb gives the direction.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.magnitude",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Magnitude of $u\\times v$ in terms of their angle $\\theta$?",
+    "back": "$\\|u\\times v\\|=\\|u\\|\\|v\\|\\sin\\theta$, where $0\\leq\\theta\\leq\\pi$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.reverse",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "How does reversing a cross product change it?",
+    "back": "$v\\times u=-(u\\times v)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.parallel",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Cross-product test for parallel nonzero vectors in 3D?",
+    "back": "$u\\times v=0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.area",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Parallelogram area spanned by vectors $u,v$?",
+    "back": "$A=\\|u\\times v\\|$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.triangle",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Triangle area with two edge vectors $u,v$ from a common vertex?",
+    "back": "$A=\\|u\\times v\\|/2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.normal",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Unit normal from two nonparallel vectors $u,v$?",
+    "back": "$n=(u\\times v)/\\|u\\times v\\|$; its negative is the other orientation.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.torque",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Torque of force $F$ applied at displacement $r$ from a pivot?",
+    "back": "$\\tau=r\\times F$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.scalar-triple",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define the scalar triple product of $u,v,w$.",
+    "back": "$u\\cdot(v\\times w)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.volume",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Volume of the parallelepiped spanned by $u,v,w$?",
+    "back": "$V=|u\\cdot(v\\times w)|$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.coplanar",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Scalar-triple-product test for coplanar vectors $u,v,w$ in 3D?",
+    "back": "$u\\cdot(v\\times w)=0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.vector-triple",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Expand $u\\times(v\\times w)$.",
+    "back": "$u\\times(v\\times w)=v(u\\cdot w)-w(u\\cdot v)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  },
+  {
+    "id": "aim.geometry.cross-triple.example",
+    "stage": 43,
+    "topic": "Cross products and triple products",
+    "subject": "vectors",
+    "type": "example",
+    "difficulty": "foundation",
+    "front": "Compute $\\mathbf i\\times\\mathbf j$ in right-handed coordinates.",
+    "back": "$\\mathbf k$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "cross-triple"
+    ]
+  }
+]

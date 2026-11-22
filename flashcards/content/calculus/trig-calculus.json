@@ -1,0 +1,506 @@
+[
+  {
+    "id": "aim.calculus.trig-calculus.d-sin",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\sin x$.",
+    "back": "$\\dfrac{d}{dx}\\sin x=\\cos x$.",
+    "explanation": "Angles are in radians; work on the function’s domain.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.d-cos",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\cos x$.",
+    "back": "$\\dfrac{d}{dx}\\cos x=-\\sin x$.",
+    "explanation": "Angles are in radians; work on the function’s domain.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.d-tan",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\tan x$.",
+    "back": "$\\dfrac{d}{dx}\\tan x=\\sec^2x$.",
+    "explanation": "Angles are in radians; work on the function’s domain.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.d-cot",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\cot x$.",
+    "back": "$\\dfrac{d}{dx}\\cot x=-\\csc^2x$.",
+    "explanation": "Angles are in radians; work on the function’s domain.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.d-sec",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\sec x$.",
+    "back": "$\\dfrac{d}{dx}\\sec x=\\sec x\\tan x$.",
+    "explanation": "Angles are in radians; work on the function’s domain.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.d-csc",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\csc x$.",
+    "back": "$\\dfrac{d}{dx}\\csc x=-\\csc x\\cot x$.",
+    "explanation": "Angles are in radians; work on the function’s domain.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-sin",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int \\sin x\\,dx$.",
+    "back": "$\\int \\sin x\\,dx=-\\cos x+C$.",
+    "explanation": "On an interval where the integrand is defined; angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-cos",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int \\cos x\\,dx$.",
+    "back": "$\\int \\cos x\\,dx=\\sin x+C$.",
+    "explanation": "On an interval where the integrand is defined; angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-sec2",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int \\sec^2x\\,dx$.",
+    "back": "$\\int \\sec^2x\\,dx=\\tan x+C$.",
+    "explanation": "On an interval where the integrand is defined; angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-csc2",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int \\csc^2x\\,dx$.",
+    "back": "$\\int \\csc^2x\\,dx=-\\cot x+C$.",
+    "explanation": "On an interval where the integrand is defined; angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-sectan",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int \\sec x\\tan x\\,dx$.",
+    "back": "$\\int \\sec x\\tan x\\,dx=\\sec x+C$.",
+    "explanation": "On an interval where the integrand is defined; angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-csccot",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int \\csc x\\cot x\\,dx$.",
+    "back": "$\\int \\csc x\\cot x\\,dx=-\\csc x+C$.",
+    "explanation": "On an interval where the integrand is defined; angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-tan",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int \\tan x\\,dx$.",
+    "back": "$\\int \\tan x\\,dx=-\\ln|\\cos x|+C$.",
+    "explanation": "On an interval where the integrand is defined; angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-cot",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int \\cot x\\,dx$.",
+    "back": "$\\int \\cot x\\,dx=\\ln|\\sin x|+C$.",
+    "explanation": "On an interval where the integrand is defined; angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-sec",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int \\sec x\\,dx$.",
+    "back": "$\\int \\sec x\\,dx=\\ln|\\sec x+\\tan x|+C$.",
+    "explanation": "On an interval where the integrand is defined; angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-csc",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int \\csc x\\,dx$.",
+    "back": "$\\int \\csc x\\,dx=\\ln|\\csc x-\\cot x|+C$.",
+    "explanation": "On an interval where the integrand is defined; angles are in radians.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.asin-range",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Domain and principal range of $\\arcsin$?",
+    "back": "$\\arcsin:[-1,1]\\to[-\\pi/2,\\pi/2]$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.acos-range",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Domain and principal range of $\\arccos$?",
+    "back": "$\\arccos:[-1,1]\\to[0,\\pi]$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.atan-range",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Domain and principal range of $\\arctan$?",
+    "back": "$\\arctan:\\mathbb R\\to(-\\pi/2,\\pi/2)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.inverse-reciprocal",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Does $\\sin^{-1}x$ mean a reciprocal?",
+    "back": "Conventionally it means $\\arcsin x$, the principal inverse function. The reciprocal is written $\\csc x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.d-asin",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\arcsin x$.",
+    "back": "$\\dfrac{d}{dx}\\arcsin x=1/\\sqrt{1-x^2}$ for $|x|<1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.d-acos",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\arccos x$.",
+    "back": "$\\dfrac{d}{dx}\\arccos x=-1/\\sqrt{1-x^2}$ for $|x|<1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.d-atan",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\arctan x$.",
+    "back": "$\\dfrac{d}{dx}\\arctan x=1/(1+x^2)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-asin",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int dx/\\sqrt{a^2-x^2}$ for $a>0$.",
+    "back": "$\\arcsin(x/a)+C$, for $|x|<a$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.i-atan",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int dx/(a^2+x^2)$ for $a>0$.",
+    "back": "$\\dfrac1a\\arctan(x/a)+C$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.sub-sin",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Trigonometric substitution for $\\sqrt{a^2-x^2}$, $a>0$?",
+    "back": "$x=a\\sin\\theta$, with $-\\pi/2\\leq\\theta\\leq\\pi/2$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.sub-tan",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Trigonometric substitution for $\\sqrt{a^2+x^2}$, $a>0$?",
+    "back": "$x=a\\tan\\theta$, with $-\\pi/2<\\theta<\\pi/2$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.trig-calculus.sub-sec",
+    "type": "theorem",
+    "stage": 12,
+    "topic": "Trigonometric derivatives and integrals",
+    "difficulty": "foundation",
+    "front": "Trigonometric substitution for $\\sqrt{x^2-a^2}$, $a>0$?",
+    "back": "$x=a\\sec\\theta$. Choose an interval matching the sign of $x$ and retain absolute values when simplifying radicals.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "trig-calculus"
+    ]
+  }
+]

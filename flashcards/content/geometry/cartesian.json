@@ -1,0 +1,211 @@
+[
+  {
+    "id": "aim.geometry.cartesian.coordinates",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "What does $(x,y)$ specify in a Cartesian plane?",
+    "back": "Signed distances along two perpendicular coordinate axes from the origin, using a common unit scale.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  },
+  {
+    "id": "aim.geometry.cartesian.origin",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Coordinates of the origin in three dimensions?",
+    "back": "$(0,0,0)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  },
+  {
+    "id": "aim.geometry.cartesian.quadrants",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Signs of $(x,y)$ in quadrants I, II, III and IV?",
+    "back": "I: $(+,+)$; II: $(-,+)$; III: $(-,-)$; IV: $(+,-)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  },
+  {
+    "id": "aim.geometry.cartesian.octants",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "What are the octants of Cartesian 3D space?",
+    "back": "The eight regions determined by the signs of the three nonzero coordinates. Numbering conventions vary.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  },
+  {
+    "id": "aim.geometry.cartesian.xy-plane",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of the $xy$-coordinate plane?",
+    "back": "$z=0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  },
+  {
+    "id": "aim.geometry.cartesian.xz-plane",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of the $xz$-coordinate plane?",
+    "back": "$y=0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  },
+  {
+    "id": "aim.geometry.cartesian.yz-plane",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of the $yz$-coordinate plane?",
+    "back": "$x=0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  },
+  {
+    "id": "aim.geometry.cartesian.distance2",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Distance between $(x_1,y_1)$ and $(x_2,y_2)$?",
+    "back": "$d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  },
+  {
+    "id": "aim.geometry.cartesian.distance3",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Distance between points $P,Q$ in Cartesian 3D space?",
+    "back": "$d=\\sqrt{(Q_x-P_x)^2+(Q_y-P_y)^2+(Q_z-P_z)^2}$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  },
+  {
+    "id": "aim.geometry.cartesian.midpoint",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Midpoint of position vectors $P,Q$?",
+    "back": "$M=(P+Q)/2$, componentwise.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  },
+  {
+    "id": "aim.geometry.cartesian.division",
+    "stage": 36,
+    "topic": "Cartesian coordinates and distance",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Point $R$ internally divides $PQ$ with $PR:RQ=m:n$, $m,n>0$. Find $R$.",
+    "back": "$R=(nP+mQ)/(m+n)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "cartesian"
+    ]
+  }
+]

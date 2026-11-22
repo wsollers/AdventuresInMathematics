@@ -1,0 +1,218 @@
+[
+  {
+    "id": "aim.calculus.calculus-rules.product",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "State the product rule.",
+    "back": "$(fg)'=f'g+fg'$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.quotient",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "State the quotient rule.",
+    "back": "$(f/g)'=(f'g-fg')/g^2$, where $g\\ne0$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.chain",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "State the chain rule.",
+    "back": "$(f(g(x)))'=f'(g(x))g'(x)$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.power",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "Differentiate $x^n$.",
+    "back": "$\\dfrac{d}{dx}x^n=nx^{n-1}$ on its differentiability domain; for arbitrary real $n$, take $x>0$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.power-integral",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "Integrate $x^n$ when $n\\ne-1$.",
+    "back": "$\\int x^n\\,dx=x^{n+1}/(n+1)+C$ on an appropriate domain; for arbitrary real $n$, take $x>0$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.parts",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "State integration by parts.",
+    "back": "$\\int u\\,dv=uv-\\int v\\,du$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.substitution",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "State the indefinite substitution rule, with $F'=f$.",
+    "back": "$\\int f(g(x))g'(x)\\,dx=F(g(x))+C$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.odd",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "Integral of an integrable odd function over $[-a,a]$?",
+    "back": "$\\int_{-a}^a f(x)\\,dx=0$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.even",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "Integral of an integrable even function over $[-a,a]$?",
+    "back": "$\\int_{-a}^a f(x)\\,dx=2\\int_0^a f(x)\\,dx$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.reflection",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "State the reflection identity for a definite integral.",
+    "back": "$\\int_a^b f(x)\\,dx=\\int_a^b f(a+b-x)\\,dx$, for integrable $f$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.ftc",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "Evaluate a definite integral using an antiderivative $F$ of continuous $f$.",
+    "back": "$\\int_a^b f(x)\\,dx=F(b)-F(a)$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  },
+  {
+    "id": "aim.calculus.calculus-rules.variable-bounds",
+    "type": "theorem",
+    "stage": 18,
+    "topic": "Differentiation and integration rules",
+    "difficulty": "foundation",
+    "front": "Differentiate an integral of continuous $f$ with differentiable bounds $u,v$.",
+    "back": "$\\dfrac{d}{dx}\\int_{u(x)}^{v(x)}f(t)\\,dt=f(v(x))v'(x)-f(u(x))u'(x)$.",
+    "explanation": "Differentiation rules assume the indicated functions are differentiable. Symmetry does not by itself establish convergence of an improper integral; ordinary improper integrals must converge, not merely have a principal value.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "calculus-rules"
+    ]
+  }
+]

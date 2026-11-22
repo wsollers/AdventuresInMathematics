@@ -1,0 +1,287 @@
+[
+  {
+    "id": "aim.geometry.planes.normal",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a normal vector to a plane.",
+    "back": "A nonzero vector perpendicular to every direction lying in that plane.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.point-normal",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of a plane through $P$ with normal $n\\ne0$?",
+    "back": "$n\\cdot(X-P)=0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.cartesian",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "General Cartesian equation of a plane?",
+    "back": "$Ax+By+Cz+D=0$, with $(A,B,C)\\ne(0,0,0)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.coefficients",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "A plane is $Ax+By+Cz+D=0$. Give a normal vector.",
+    "back": "$n=(A,B,C)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.parametric",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Parametric equation of a plane through $P$ with nonparallel directions $u,v$?",
+    "back": "$X=P+su+tv$, for $s,t\\in\\mathbb R$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.three-points",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Find a normal to the plane through noncollinear points $P,Q,R$.",
+    "back": "$n=(Q-P)\\times(R-P)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.parallel",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Test whether two planes have parallel directions.",
+    "back": "Their nonzero normals are scalar multiples. The planes may coincide or be distinct parallel planes.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.perpendicular",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Test whether two planes are perpendicular.",
+    "back": "$n_1\\cdot n_2=0$, for nonzero normals.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.angle",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Acute or right angle between two planes with normals $n_1,n_2$?",
+    "back": "$\\theta=\\arccos\\!\\left(\\dfrac{|n_1\\cdot n_2|}{\\|n_1\\|\\|n_2\\|}\\right)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.line-parallel",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Test whether direction $u$ of a line is parallel to a plane of normal $n$.",
+    "back": "$u\\cdot n=0$; the line is either contained in the plane or disjoint from it.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.line-normal",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Test whether a line is perpendicular to a plane.",
+    "back": "Its nonzero direction is a scalar multiple of the plane’s normal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.line-angle",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Acute or right angle between a line of direction $u$ and a plane of normal $n$?",
+    "back": "$\\alpha=\\arcsin\\!\\left(\\dfrac{|u\\cdot n|}{\\|u\\|\\|n\\|}\\right)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.line-intersection",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Find the parameter where $X=P+tu$ meets $n\\cdot X+d=0$, assuming $n\\cdot u\\ne0$.",
+    "back": "$t=-(n\\cdot P+d)/(n\\cdot u)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.planes-intersection",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Direction of the intersection line of two nonparallel planes?",
+    "back": "$u=n_1\\times n_2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  },
+  {
+    "id": "aim.geometry.planes.perp-line",
+    "stage": 38,
+    "topic": "Planes, normals and intersections",
+    "subject": "analytic",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Equation of the line through $P$ perpendicular to a plane of normal $n$?",
+    "back": "$X=P+tn$, for $t\\in\\mathbb R$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "analytic",
+      "planes"
+    ]
+  }
+]

@@ -4,6 +4,22 @@ The public entry point at https://wsollers.dev/AdventuresInMath/flashcards/ send
 
 The source JSON remains under flashcards/content/ordered-fields. The Sites Worker serves the app and deck behind the platform authorization boundary. Do not publish personal review histories in GitHub.
 
+The calculus supplement in flashcards/content/calculus adds 285 cards in 13 topic groups, available immediately through the Topic selector. Angle conversions have separate cards in both directions; coordinate conversions are split by direction and output coordinate. The app and grading Worker load both collections, preserving existing Foundations IDs and browser review history.
+
+The geometry supplement adds 239 cards. The complete app has 909 cards, with
+navigation defined separately in flashcards/content/curriculum.json. Subjects
+begin with Logic, Euclidean Geometry, Analytic Geometry, Vectors, Sets, Relations,
+and Functions. Derivative and integral rules are separated from standard formulas;
+future calculus theory topics remain empty. Regenerate navigation using
+`python flashcards/content/build_curriculum.py` after editing card collections.
+
+At widths of 1000px and above, controls and the expandable curriculum appear in
+the left sidebar. At smaller widths they collapse above the card. A subject or
+topic filters the queue; clicking an individual card opens Browse mode and never
+unlocks it or records a review. Review unlocks and backups remain separate
+collapsible sections. Existing localStorage keys, card IDs, unlock IDs and backup
+format are retained. No review migration or reset is performed.
+
 Features: KaTeX math rendering, keyboard controls, mobile and tablet responsive layout, manual levels, new/due/practice/browse modes, four ratings with deterministic spaced-review dates, local progress, JSON backup and restore, and ChatGPT-authorized access.
 
 Review and unlock state are kept in localStorage under aim-foundations-review-v1. No account synchronization, analytics, or credentials. Deleting site data deletes review history unless it has been exported.

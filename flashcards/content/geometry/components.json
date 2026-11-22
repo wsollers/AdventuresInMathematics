@@ -1,0 +1,268 @@
+[
+  {
+    "id": "aim.geometry.components.vector",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "What information does a geometric vector describe?",
+    "back": "Magnitude and direction; a free vector can be translated without changing it.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.position",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Position vector of point $P=(x,y,z)$ relative to the origin?",
+    "back": "$\\overrightarrow{OP}=(x,y,z)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.displacement",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Displacement from point $P$ to point $Q$?",
+    "back": "$\\overrightarrow{PQ}=Q-P$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.add",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Add $u=(u_1,u_2,u_3)$ and $v=(v_1,v_2,v_3)$.",
+    "back": "$u+v=(u_1+v_1,u_2+v_2,u_3+v_3)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.subtract",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Subtract $v$ from $u$ componentwise.",
+    "back": "$u-v=(u_1-v_1,u_2-v_2,u_3-v_3)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.scale",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Multiply $u=(u_1,u_2,u_3)$ by scalar $c$.",
+    "back": "$cu=(cu_1,cu_2,cu_3)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.magnitude",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Magnitude of $u=(u_1,u_2,u_3)$?",
+    "back": "$\\|u\\|=\\sqrt{u_1^2+u_2^2+u_3^2}$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.unit",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Unit vector in the direction of $u\\ne0$?",
+    "back": "$\\widehat u=u/\\|u\\|$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.length-direction",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Vector of prescribed length $L>0$ in the direction of $u\\ne0$?",
+    "back": "$v=L u/\\|u\\|$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.zero",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Does the zero vector have a direction or a unit normalization?",
+    "back": "No; its magnitude is zero and division by its magnitude is undefined.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.i",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Standard unit vector in the positive $x$-direction?",
+    "back": "$\\mathbf i=(1,0,0)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.j",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Standard unit vector in the positive $y$-direction?",
+    "back": "$\\mathbf j=(0,1,0)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.k",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Standard unit vector in the positive $z$-direction?",
+    "back": "$\\mathbf k=(0,0,1)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  },
+  {
+    "id": "aim.geometry.components.polar",
+    "stage": 41,
+    "topic": "Vector components and operations",
+    "subject": "vectors",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Components of a planar vector of magnitude $L$ at angle $\\theta$ from the positive $x$-axis?",
+    "back": "$v=(L\\cos\\theta,L\\sin\\theta)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "components"
+    ]
+  }
+]

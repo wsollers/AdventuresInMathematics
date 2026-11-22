@@ -1,0 +1,382 @@
+[
+  {
+    "id": "aim.geometry.foundations.point",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "What does a point represent in elementary geometry?",
+    "back": "An exact position, with no length, area or volume. Point is a primitive notion in an axiomatic treatment.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.line",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "What is a Euclidean line?",
+    "back": "A straight one-dimensional object extending indefinitely in both directions. Line is a primitive notion in an axiomatic treatment.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.plane",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "What is a Euclidean plane?",
+    "back": "A flat two-dimensional object extending indefinitely. Plane is a primitive notion in an axiomatic treatment.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.segment",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define the segment $\\overline{AB}$.",
+    "back": "The points on the line through distinct $A,B$ lying between $A$ and $B$, including the endpoints.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.ray",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a ray from $A$ through $B\\ne A$.",
+    "back": "The part of their line beginning at $A$ and extending indefinitely in the direction of $B$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.angle",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define an angle and its vertex.",
+    "back": "Two rays with a common endpoint form an angle; their common endpoint is the vertex.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.collinear",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define collinear points.",
+    "back": "Points lying on one line.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.coplanar",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define coplanar objects.",
+    "back": "Objects contained in one plane.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.parallel",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define distinct parallel lines in Euclidean space.",
+    "back": "Distinct coplanar lines that never intersect.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.skew",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define skew lines.",
+    "back": "Noncoplanar lines in three-dimensional space; they neither intersect nor are parallel.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.perpendicular",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define perpendicular lines.",
+    "back": "Intersecting lines forming a right angle.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.right",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Measure of a right angle?",
+    "back": "$90^\\circ$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.straight",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Measure of a straight angle?",
+    "back": "$180^\\circ$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.acute",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define an acute angle.",
+    "back": "An angle of measure strictly between $0^\\circ$ and $90^\\circ$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.obtuse",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define an obtuse angle.",
+    "back": "An angle of measure strictly between $90^\\circ$ and $180^\\circ$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.complementary",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define complementary angles.",
+    "back": "Two angles whose measures sum to $90^\\circ$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.supplementary",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define supplementary angles.",
+    "back": "Two angles whose measures sum to $180^\\circ$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.bisector",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define an angle bisector.",
+    "back": "A ray from the vertex dividing an angle into two equal angles.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.midpoint",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define the midpoint of a segment.",
+    "back": "The point on the segment equidistant from its two endpoints.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  },
+  {
+    "id": "aim.geometry.foundations.perp-bisector",
+    "stage": 30,
+    "topic": "Points, lines and angles",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define the perpendicular bisector of a segment in a plane.",
+    "back": "The line through its midpoint perpendicular to the segment.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "foundations"
+    ]
+  }
+]

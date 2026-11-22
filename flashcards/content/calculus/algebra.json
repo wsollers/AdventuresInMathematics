@@ -1,0 +1,146 @@
+[
+  {
+    "id": "aim.calculus.algebra.squares",
+    "type": "theorem",
+    "stage": 19,
+    "topic": "Algebra for calculus",
+    "difficulty": "foundation",
+    "front": "Factor $a^2-b^2$.",
+    "back": "$a^2-b^2=(a-b)(a+b)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "algebra"
+    ]
+  },
+  {
+    "id": "aim.calculus.algebra.cubes-sum",
+    "type": "theorem",
+    "stage": 19,
+    "topic": "Algebra for calculus",
+    "difficulty": "foundation",
+    "front": "Factor $a^3+b^3$.",
+    "back": "$a^3+b^3=(a+b)(a^2-ab+b^2)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "algebra"
+    ]
+  },
+  {
+    "id": "aim.calculus.algebra.cubes-difference",
+    "type": "theorem",
+    "stage": 19,
+    "topic": "Algebra for calculus",
+    "difficulty": "foundation",
+    "front": "Factor $a^3-b^3$.",
+    "back": "$a^3-b^3=(a-b)(a^2+ab+b^2)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "algebra"
+    ]
+  },
+  {
+    "id": "aim.calculus.algebra.complete-square",
+    "type": "theorem",
+    "stage": 19,
+    "topic": "Algebra for calculus",
+    "difficulty": "foundation",
+    "front": "Complete the square in $ax^2+bx+c$, $a\\ne0$.",
+    "back": "$ax^2+bx+c=a\\left(x+\\frac{b}{2a}\\right)^2+c-\\frac{b^2}{4a}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "algebra"
+    ]
+  },
+  {
+    "id": "aim.calculus.algebra.conjugate",
+    "type": "theorem",
+    "stage": 19,
+    "topic": "Algebra for calculus",
+    "difficulty": "foundation",
+    "front": "Simplify $(\\sqrt A-\\sqrt B)(\\sqrt A+\\sqrt B)$ for $A,B\\geq0$.",
+    "back": "$A-B$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "algebra"
+    ]
+  },
+  {
+    "id": "aim.calculus.algebra.sqrt-square",
+    "type": "theorem",
+    "stage": 19,
+    "topic": "Algebra for calculus",
+    "difficulty": "foundation",
+    "front": "Simplify $\\sqrt{x^2}$ for real $x$.",
+    "back": "$|x|$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "algebra"
+    ]
+  },
+  {
+    "id": "aim.calculus.algebra.geometric-finite",
+    "type": "theorem",
+    "stage": 19,
+    "topic": "Algebra for calculus",
+    "difficulty": "foundation",
+    "front": "Sum $\\sum_{k=0}^n r^k$ for $r\\ne1$.",
+    "back": "$\\sum_{k=0}^n r^k=(1-r^{n+1})/(1-r)$, for nonnegative integer $n$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "algebra"
+    ]
+  },
+  {
+    "id": "aim.calculus.algebra.geometric-infinite",
+    "type": "theorem",
+    "stage": 19,
+    "topic": "Algebra for calculus",
+    "difficulty": "foundation",
+    "front": "Sum $\\sum_{k=0}^\\infty r^k$ and state its convergence condition.",
+    "back": "$\\sum_{k=0}^\\infty r^k=1/(1-r)$ for $|r|<1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "algebra"
+    ]
+  }
+]

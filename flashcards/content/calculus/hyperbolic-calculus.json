@@ -1,0 +1,308 @@
+[
+  {
+    "id": "aim.calculus.hyperbolic-calculus.d-sinh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\sinh x$.",
+    "back": "$\\dfrac{d}{dx}\\sinh x=\\cosh x$.",
+    "explanation": "Where the function is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.d-cosh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\cosh x$.",
+    "back": "$\\dfrac{d}{dx}\\cosh x=\\sinh x$.",
+    "explanation": "Where the function is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.d-tanh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\tanh x$.",
+    "back": "$\\dfrac{d}{dx}\\tanh x=\\operatorname{sech}^2x$.",
+    "explanation": "Where the function is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.d-coth",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\coth x$.",
+    "back": "$\\dfrac{d}{dx}\\coth x=-\\operatorname{csch}^2x$.",
+    "explanation": "Where the function is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.d-sech",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\operatorname{sech} x$.",
+    "back": "$\\dfrac{d}{dx}\\operatorname{sech} x=-\\operatorname{sech}x\\tanh x$.",
+    "explanation": "Where the function is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.d-csch",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\operatorname{csch} x$.",
+    "back": "$\\dfrac{d}{dx}\\operatorname{csch} x=-\\operatorname{csch}x\\coth x$.",
+    "explanation": "Where the function is defined.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.i-sinh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int\\sinh x\\,dx$.",
+    "back": "$\\cosh x+C$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.i-cosh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int\\cosh x\\,dx$.",
+    "back": "$\\sinh x+C$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.i-tanh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Evaluate $\\int\\tanh x\\,dx$.",
+    "back": "$\\ln(\\cosh x)+C$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.asinh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Logarithmic formula for $\\operatorname{arsinh}x$?",
+    "back": "$\\operatorname{arsinh}x=\\ln(x+\\sqrt{x^2+1})$, for all real $x$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.acosh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Logarithmic formula for $\\operatorname{arcosh}x$?",
+    "back": "$\\operatorname{arcosh}x=\\ln(x+\\sqrt{x^2-1})$, for $x\\geq1$, with nonnegative output.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.atanh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Logarithmic formula for $\\operatorname{artanh}x$?",
+    "back": "$\\operatorname{artanh}x=\\tfrac12\\ln\\!\\left(\\frac{1+x}{1-x}\\right)$, for $|x|<1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.d-asinh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\operatorname{arsinh}x$.",
+    "back": "$\\dfrac{d}{dx}\\operatorname{arsinh}x=1/\\sqrt{x^2+1}$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.d-acosh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\operatorname{arcosh}x$.",
+    "back": "$\\dfrac{d}{dx}\\operatorname{arcosh}x=1/\\sqrt{x^2-1}$ for $x>1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.d-atanh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Differentiate $\\operatorname{artanh}x$.",
+    "back": "$\\dfrac{d}{dx}\\operatorname{artanh}x=1/(1-x^2)$ for $|x|<1$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.sub-sinh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Hyperbolic substitution for $\\sqrt{x^2+a^2}$, $a>0$?",
+    "back": "$x=a\\sinh u$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  },
+  {
+    "id": "aim.calculus.hyperbolic-calculus.sub-cosh",
+    "type": "theorem",
+    "stage": 14,
+    "topic": "Hyperbolic derivatives, integrals and inverses",
+    "difficulty": "foundation",
+    "front": "Hyperbolic substitution for $\\sqrt{x^2-a^2}$ when $x\\geq a>0$?",
+    "back": "$x=a\\cosh u$, with $u\\geq0$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "hyperbolic-calculus"
+    ]
+  }
+]

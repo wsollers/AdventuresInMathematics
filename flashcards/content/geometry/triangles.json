@@ -1,0 +1,363 @@
+[
+  {
+    "id": "aim.geometry.triangles.triangle",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a triangle.",
+    "back": "Three noncollinear points together with the three segments joining them.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.equilateral",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define an equilateral triangle.",
+    "back": "A triangle with three equal side lengths.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.isosceles",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define an isosceles triangle.",
+    "back": "A triangle with at least two equal side lengths; this convention includes equilateral triangles.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.scalene",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a scalene triangle.",
+    "back": "A triangle with three different side lengths.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.right",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a right triangle.",
+    "back": "A triangle with one right angle; its opposite side is the hypotenuse.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.acute",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define an acute triangle.",
+    "back": "A triangle with all three angles acute.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.obtuse",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define an obtuse triangle.",
+    "back": "A triangle with one obtuse angle.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.altitude",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define an altitude of a triangle.",
+    "back": "A perpendicular segment from a vertex to the line containing the opposite side.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.median",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "definition",
+    "difficulty": "foundation",
+    "front": "Define a median of a triangle.",
+    "back": "A segment from a vertex to the midpoint of the opposite side.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.sum",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Sum of the interior angles of a Euclidean triangle?",
+    "back": "$A+B+C=180^\\circ$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.exterior",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "An exterior angle is formed by extending one side of a triangle. What is its measure?",
+    "back": "The sum of the two nonadjacent interior angles.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.inequality",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "What length condition characterizes a nondegenerate triangle with positive sides $a,b,c$?",
+    "back": "Each side is shorter than the sum of the other two.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.base",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "What follows from two sides of a triangle being equal?",
+    "back": "The angles opposite those sides are equal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.base-converse",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "What follows from two angles of a triangle being equal?",
+    "back": "The sides opposite those angles are equal.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.pythagoras",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "In a right triangle with legs $a,b$ and hypotenuse $c$, relate the side lengths.",
+    "back": "$a^2+b^2=c^2$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.pythagoras-converse",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "A triangle has longest side $c$ and $a^2+b^2=c^2$. What follows?",
+    "back": "The angle opposite $c$ is a right angle.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.midsegment",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "What does the triangle midsegment theorem say?",
+    "back": "The segment joining the midpoints of two sides is parallel to the third side and half its length.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.centroid",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "In what ratio does the centroid divide each median?",
+    "back": "$2:1$, measured from the vertex toward the midpoint of the opposite side.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  },
+  {
+    "id": "aim.geometry.triangles.angle-bisector",
+    "stage": 32,
+    "topic": "Triangles and their theorems",
+    "subject": "geometry",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "In triangle $ABC$, the internal angle bisector from $A$ meets $BC$ at $D$. Relate the lengths.",
+    "back": "$BD/DC=AB/AC$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "geometry",
+      "triangles"
+    ]
+  }
+]

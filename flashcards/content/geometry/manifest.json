@@ -1,0 +1,1801 @@
+{
+  "version": 1,
+  "title": "Geometry and computational vectors",
+  "stages": [
+    {
+      "stage": 30,
+      "subject": "geometry",
+      "title": "Points, lines and angles",
+      "file": "foundations.json",
+      "card_ids": [
+        "aim.geometry.foundations.point",
+        "aim.geometry.foundations.line",
+        "aim.geometry.foundations.plane",
+        "aim.geometry.foundations.segment",
+        "aim.geometry.foundations.ray",
+        "aim.geometry.foundations.angle",
+        "aim.geometry.foundations.collinear",
+        "aim.geometry.foundations.coplanar",
+        "aim.geometry.foundations.parallel",
+        "aim.geometry.foundations.skew",
+        "aim.geometry.foundations.perpendicular",
+        "aim.geometry.foundations.right",
+        "aim.geometry.foundations.straight",
+        "aim.geometry.foundations.acute",
+        "aim.geometry.foundations.obtuse",
+        "aim.geometry.foundations.complementary",
+        "aim.geometry.foundations.supplementary",
+        "aim.geometry.foundations.bisector",
+        "aim.geometry.foundations.midpoint",
+        "aim.geometry.foundations.perp-bisector"
+      ]
+    },
+    {
+      "stage": 31,
+      "subject": "geometry",
+      "title": "Parallel lines and angle theorems",
+      "file": "line-angles.json",
+      "card_ids": [
+        "aim.geometry.line-angles.vertical-def",
+        "aim.geometry.line-angles.vertical",
+        "aim.geometry.line-angles.linear",
+        "aim.geometry.line-angles.transversal",
+        "aim.geometry.line-angles.corresponding",
+        "aim.geometry.line-angles.alternate",
+        "aim.geometry.line-angles.same-side",
+        "aim.geometry.line-angles.converse-corresponding",
+        "aim.geometry.line-angles.converse-alternate",
+        "aim.geometry.line-angles.converse-same-side",
+        "aim.geometry.line-angles.parallel-axiom",
+        "aim.geometry.line-angles.bisector-locus"
+      ]
+    },
+    {
+      "stage": 32,
+      "subject": "geometry",
+      "title": "Triangles and their theorems",
+      "file": "triangles.json",
+      "card_ids": [
+        "aim.geometry.triangles.triangle",
+        "aim.geometry.triangles.equilateral",
+        "aim.geometry.triangles.isosceles",
+        "aim.geometry.triangles.scalene",
+        "aim.geometry.triangles.right",
+        "aim.geometry.triangles.acute",
+        "aim.geometry.triangles.obtuse",
+        "aim.geometry.triangles.altitude",
+        "aim.geometry.triangles.median",
+        "aim.geometry.triangles.sum",
+        "aim.geometry.triangles.exterior",
+        "aim.geometry.triangles.inequality",
+        "aim.geometry.triangles.base",
+        "aim.geometry.triangles.base-converse",
+        "aim.geometry.triangles.pythagoras",
+        "aim.geometry.triangles.pythagoras-converse",
+        "aim.geometry.triangles.midsegment",
+        "aim.geometry.triangles.centroid",
+        "aim.geometry.triangles.angle-bisector"
+      ]
+    },
+    {
+      "stage": 33,
+      "subject": "geometry",
+      "title": "Congruence and similarity",
+      "file": "congruence.json",
+      "card_ids": [
+        "aim.geometry.congruence.congruent",
+        "aim.geometry.congruence.similar",
+        "aim.geometry.congruence.sss",
+        "aim.geometry.congruence.sas",
+        "aim.geometry.congruence.asa",
+        "aim.geometry.congruence.aas",
+        "aim.geometry.congruence.hl",
+        "aim.geometry.congruence.aaa",
+        "aim.geometry.congruence.ssa",
+        "aim.geometry.congruence.aa-similarity",
+        "aim.geometry.congruence.sss-similarity",
+        "aim.geometry.congruence.sas-similarity",
+        "aim.geometry.congruence.perimeter",
+        "aim.geometry.congruence.area",
+        "aim.geometry.congruence.volume"
+      ]
+    },
+    {
+      "stage": 34,
+      "subject": "geometry",
+      "title": "Polygons, areas and measurement",
+      "file": "measurement.json",
+      "card_ids": [
+        "aim.geometry.measurement.polygon",
+        "aim.geometry.measurement.regular",
+        "aim.geometry.measurement.parallelogram",
+        "aim.geometry.measurement.rectangle",
+        "aim.geometry.measurement.rhombus",
+        "aim.geometry.measurement.square",
+        "aim.geometry.measurement.trapezoid",
+        "aim.geometry.measurement.interior",
+        "aim.geometry.measurement.regular-angle",
+        "aim.geometry.measurement.exterior",
+        "aim.geometry.measurement.triangle-area",
+        "aim.geometry.measurement.rectangle-area",
+        "aim.geometry.measurement.square-area",
+        "aim.geometry.measurement.parallelogram-area",
+        "aim.geometry.measurement.trapezoid-area",
+        "aim.geometry.measurement.rhombus-area",
+        "aim.geometry.measurement.regular-area",
+        "aim.geometry.measurement.circle-area",
+        "aim.geometry.measurement.circumference",
+        "aim.geometry.measurement.arc",
+        "aim.geometry.measurement.sector",
+        "aim.geometry.measurement.box-volume",
+        "aim.geometry.measurement.cylinder-volume",
+        "aim.geometry.measurement.cone-volume",
+        "aim.geometry.measurement.sphere-volume",
+        "aim.geometry.measurement.sphere-area"
+      ]
+    },
+    {
+      "stage": 35,
+      "subject": "geometry",
+      "title": "Circle definitions and theorems",
+      "file": "circles.json",
+      "card_ids": [
+        "aim.geometry.circles.circle",
+        "aim.geometry.circles.disk",
+        "aim.geometry.circles.radius",
+        "aim.geometry.circles.diameter",
+        "aim.geometry.circles.chord",
+        "aim.geometry.circles.secant",
+        "aim.geometry.circles.tangent",
+        "aim.geometry.circles.arc",
+        "aim.geometry.circles.central-angle",
+        "aim.geometry.circles.inscribed-angle",
+        "aim.geometry.circles.intercepted-arc",
+        "aim.geometry.circles.inscribed",
+        "aim.geometry.circles.semicircle",
+        "aim.geometry.circles.cyclic",
+        "aim.geometry.circles.radius-tangent",
+        "aim.geometry.circles.tangent-converse",
+        "aim.geometry.circles.equal-tangents",
+        "aim.geometry.circles.equal-chords",
+        "aim.geometry.circles.chord-distance",
+        "aim.geometry.circles.chord-bisector",
+        "aim.geometry.circles.intersecting",
+        "aim.geometry.circles.secant-product",
+        "aim.geometry.circles.tangent-secant",
+        "aim.geometry.circles.tangent-chord",
+        "aim.geometry.circles.inside-angle",
+        "aim.geometry.circles.outside-angle"
+      ]
+    },
+    {
+      "stage": 36,
+      "subject": "analytic",
+      "title": "Cartesian coordinates and distance",
+      "file": "cartesian.json",
+      "card_ids": [
+        "aim.geometry.cartesian.coordinates",
+        "aim.geometry.cartesian.origin",
+        "aim.geometry.cartesian.quadrants",
+        "aim.geometry.cartesian.octants",
+        "aim.geometry.cartesian.xy-plane",
+        "aim.geometry.cartesian.xz-plane",
+        "aim.geometry.cartesian.yz-plane",
+        "aim.geometry.cartesian.distance2",
+        "aim.geometry.cartesian.distance3",
+        "aim.geometry.cartesian.midpoint",
+        "aim.geometry.cartesian.division"
+      ]
+    },
+    {
+      "stage": 37,
+      "subject": "analytic",
+      "title": "Equations and relationships of lines",
+      "file": "lines.json",
+      "card_ids": [
+        "aim.geometry.lines.slope",
+        "aim.geometry.lines.point-slope",
+        "aim.geometry.lines.intercept",
+        "aim.geometry.lines.general",
+        "aim.geometry.lines.vertical",
+        "aim.geometry.lines.parametric",
+        "aim.geometry.lines.two-points",
+        "aim.geometry.lines.symmetric",
+        "aim.geometry.lines.zero-component",
+        "aim.geometry.lines.parallel",
+        "aim.geometry.lines.perpendicular",
+        "aim.geometry.lines.slopes-perp",
+        "aim.geometry.lines.angle",
+        "aim.geometry.lines.intersection"
+      ]
+    },
+    {
+      "stage": 38,
+      "subject": "analytic",
+      "title": "Planes, normals and intersections",
+      "file": "planes.json",
+      "card_ids": [
+        "aim.geometry.planes.normal",
+        "aim.geometry.planes.point-normal",
+        "aim.geometry.planes.cartesian",
+        "aim.geometry.planes.coefficients",
+        "aim.geometry.planes.parametric",
+        "aim.geometry.planes.three-points",
+        "aim.geometry.planes.parallel",
+        "aim.geometry.planes.perpendicular",
+        "aim.geometry.planes.angle",
+        "aim.geometry.planes.line-parallel",
+        "aim.geometry.planes.line-normal",
+        "aim.geometry.planes.line-angle",
+        "aim.geometry.planes.line-intersection",
+        "aim.geometry.planes.planes-intersection",
+        "aim.geometry.planes.perp-line"
+      ]
+    },
+    {
+      "stage": 39,
+      "subject": "analytic",
+      "title": "Distances and closest points",
+      "file": "closest.json",
+      "card_ids": [
+        "aim.geometry.closest.point-line2",
+        "aim.geometry.closest.point-plane",
+        "aim.geometry.closest.foot-plane",
+        "aim.geometry.closest.foot-line",
+        "aim.geometry.closest.point-line3",
+        "aim.geometry.closest.parallel-lines",
+        "aim.geometry.closest.skew-lines",
+        "aim.geometry.closest.parallel-planes",
+        "aim.geometry.closest.line-plane",
+        "aim.geometry.closest.intersecting-distance",
+        "aim.geometry.closest.segment"
+      ]
+    },
+    {
+      "stage": 40,
+      "subject": "analytic",
+      "title": "Conics and standard surfaces",
+      "file": "conics.json",
+      "card_ids": [
+        "aim.geometry.conics.circle",
+        "aim.geometry.conics.ellipse",
+        "aim.geometry.conics.parabola",
+        "aim.geometry.conics.parabola-definition",
+        "aim.geometry.conics.hyperbola",
+        "aim.geometry.conics.hyperbola-asymptotes",
+        "aim.geometry.conics.sphere",
+        "aim.geometry.conics.cylinder",
+        "aim.geometry.conics.cone",
+        "aim.geometry.conics.ellipsoid",
+        "aim.geometry.conics.elliptic-paraboloid",
+        "aim.geometry.conics.hyperbolic-paraboloid",
+        "aim.geometry.conics.one-sheet",
+        "aim.geometry.conics.two-sheets",
+        "aim.geometry.conics.implicit",
+        "aim.geometry.conics.graph",
+        "aim.geometry.conics.parametric",
+        "aim.geometry.conics.translate",
+        "aim.geometry.conics.intercepts",
+        "aim.geometry.conics.sphere-normal",
+        "aim.geometry.conics.sphere-tangent"
+      ]
+    },
+    {
+      "stage": 41,
+      "subject": "vectors",
+      "title": "Vector components and operations",
+      "file": "components.json",
+      "card_ids": [
+        "aim.geometry.components.vector",
+        "aim.geometry.components.position",
+        "aim.geometry.components.displacement",
+        "aim.geometry.components.add",
+        "aim.geometry.components.subtract",
+        "aim.geometry.components.scale",
+        "aim.geometry.components.magnitude",
+        "aim.geometry.components.unit",
+        "aim.geometry.components.length-direction",
+        "aim.geometry.components.zero",
+        "aim.geometry.components.i",
+        "aim.geometry.components.j",
+        "aim.geometry.components.k",
+        "aim.geometry.components.polar"
+      ]
+    },
+    {
+      "stage": 42,
+      "subject": "vectors",
+      "title": "Dot products and projection",
+      "file": "dot-projection.json",
+      "card_ids": [
+        "aim.geometry.dot-projection.dot",
+        "aim.geometry.dot-projection.angle",
+        "aim.geometry.dot-projection.perp",
+        "aim.geometry.dot-projection.scalar",
+        "aim.geometry.dot-projection.projection",
+        "aim.geometry.dot-projection.perpendicular",
+        "aim.geometry.dot-projection.decompose",
+        "aim.geometry.dot-projection.work",
+        "aim.geometry.dot-projection.example",
+        "aim.geometry.dot-projection.projection-example"
+      ]
+    },
+    {
+      "stage": 43,
+      "subject": "vectors",
+      "title": "Cross products and triple products",
+      "file": "cross-triple.json",
+      "card_ids": [
+        "aim.geometry.cross-triple.cross",
+        "aim.geometry.cross-triple.right-hand",
+        "aim.geometry.cross-triple.magnitude",
+        "aim.geometry.cross-triple.reverse",
+        "aim.geometry.cross-triple.parallel",
+        "aim.geometry.cross-triple.area",
+        "aim.geometry.cross-triple.triangle",
+        "aim.geometry.cross-triple.normal",
+        "aim.geometry.cross-triple.torque",
+        "aim.geometry.cross-triple.scalar-triple",
+        "aim.geometry.cross-triple.volume",
+        "aim.geometry.cross-triple.coplanar",
+        "aim.geometry.cross-triple.vector-triple",
+        "aim.geometry.cross-triple.example"
+      ]
+    },
+    {
+      "stage": 44,
+      "subject": "vectors",
+      "title": "Vector-valued computations and applications",
+      "file": "vector-functions.json",
+      "card_ids": [
+        "aim.geometry.vector-functions.function",
+        "aim.geometry.vector-functions.evaluate",
+        "aim.geometry.vector-functions.domain",
+        "aim.geometry.vector-functions.sum",
+        "aim.geometry.vector-functions.dot-function",
+        "aim.geometry.vector-functions.cross-function",
+        "aim.geometry.vector-functions.vector-input",
+        "aim.geometry.vector-functions.resultant",
+        "aim.geometry.vector-functions.relative",
+        "aim.geometry.vector-functions.line-direction",
+        "aim.geometry.vector-functions.plane-normal"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "aim.geometry.foundations.point",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.line",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.plane",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.segment",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.ray",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.angle",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.collinear",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.coplanar",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.parallel",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.skew",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.perpendicular",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.right",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.straight",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.acute",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.obtuse",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.complementary",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.supplementary",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.bisector",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.midpoint",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.foundations.perp-bisector",
+      "stage": 30,
+      "topic": "Points, lines and angles",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.line-angles.vertical-def",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.line-angles.vertical",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.line-angles.linear",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.line-angles.transversal",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.line-angles.corresponding",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.line-angles.alternate",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.line-angles.same-side",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.line-angles.converse-corresponding",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.line-angles.converse-alternate",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.line-angles.converse-same-side",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.line-angles.parallel-axiom",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.line-angles.bisector-locus",
+      "stage": 31,
+      "topic": "Parallel lines and angle theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.triangles.triangle",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.triangles.equilateral",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.triangles.isosceles",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.triangles.scalene",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.triangles.right",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.triangles.acute",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.triangles.obtuse",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.triangles.altitude",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.triangles.median",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.triangles.sum",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.triangles.exterior",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.triangles.inequality",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.triangles.base",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.triangles.base-converse",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.triangles.pythagoras",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.triangles.pythagoras-converse",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.triangles.midsegment",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.triangles.centroid",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.triangles.angle-bisector",
+      "stage": 32,
+      "topic": "Triangles and their theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.congruent",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.congruence.similar",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.congruence.sss",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.sas",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.asa",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.aas",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.hl",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.aaa",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.ssa",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.aa-similarity",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.sss-similarity",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.sas-similarity",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.perimeter",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.area",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.congruence.volume",
+      "stage": 33,
+      "topic": "Congruence and similarity",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.polygon",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.measurement.regular",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.measurement.parallelogram",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.measurement.rectangle",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.measurement.rhombus",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.measurement.square",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.measurement.trapezoid",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.measurement.interior",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.regular-angle",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.exterior",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.triangle-area",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.rectangle-area",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.square-area",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.parallelogram-area",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.trapezoid-area",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.rhombus-area",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.regular-area",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.circle-area",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.circumference",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.arc",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.sector",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.box-volume",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.cylinder-volume",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.cone-volume",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.sphere-volume",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.measurement.sphere-area",
+      "stage": 34,
+      "topic": "Polygons, areas and measurement",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.circle",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.circles.disk",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.radius",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.circles.diameter",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.circles.chord",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.circles.secant",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.circles.tangent",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.circles.arc",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.circles.central-angle",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.circles.inscribed-angle",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.circles.intercepted-arc",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.inscribed",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.semicircle",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.cyclic",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.radius-tangent",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.tangent-converse",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.equal-tangents",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.equal-chords",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.chord-distance",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.chord-bisector",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.intersecting",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.secant-product",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.tangent-secant",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.tangent-chord",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.inside-angle",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.circles.outside-angle",
+      "stage": 35,
+      "topic": "Circle definitions and theorems",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.coordinates",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.origin",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.quadrants",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.octants",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.xy-plane",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.xz-plane",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.yz-plane",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.distance2",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.distance3",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.midpoint",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cartesian.division",
+      "stage": 36,
+      "topic": "Cartesian coordinates and distance",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.slope",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.point-slope",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.intercept",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.general",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.vertical",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.parametric",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.two-points",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.symmetric",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.zero-component",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.parallel",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.perpendicular",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.slopes-perp",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.angle",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.lines.intersection",
+      "stage": 37,
+      "topic": "Equations and relationships of lines",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.normal",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.planes.point-normal",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.cartesian",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.coefficients",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.parametric",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.three-points",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.parallel",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.perpendicular",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.angle",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.line-parallel",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.line-normal",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.line-angle",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.line-intersection",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.planes-intersection",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.planes.perp-line",
+      "stage": 38,
+      "topic": "Planes, normals and intersections",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.point-line2",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.point-plane",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.foot-plane",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.foot-line",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.point-line3",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.parallel-lines",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.skew-lines",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.parallel-planes",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.line-plane",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.intersecting-distance",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.closest.segment",
+      "stage": 39,
+      "topic": "Distances and closest points",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.circle",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.ellipse",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.parabola",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.parabola-definition",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.conics.hyperbola",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.hyperbola-asymptotes",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.sphere",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.cylinder",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.cone",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.ellipsoid",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.elliptic-paraboloid",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.hyperbolic-paraboloid",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.one-sheet",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.two-sheets",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.implicit",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.graph",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.parametric",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.translate",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.intercepts",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.sphere-normal",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.conics.sphere-tangent",
+      "stage": 40,
+      "topic": "Conics and standard surfaces",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.components.vector",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.position",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.displacement",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.add",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.subtract",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.scale",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.magnitude",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.unit",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.length-direction",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.zero",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.i",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.j",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.k",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.components.polar",
+      "stage": 41,
+      "topic": "Vector components and operations",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.dot-projection.dot",
+      "stage": 42,
+      "topic": "Dot products and projection",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.dot-projection.angle",
+      "stage": 42,
+      "topic": "Dot products and projection",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.dot-projection.perp",
+      "stage": 42,
+      "topic": "Dot products and projection",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.dot-projection.scalar",
+      "stage": 42,
+      "topic": "Dot products and projection",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.dot-projection.projection",
+      "stage": 42,
+      "topic": "Dot products and projection",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.dot-projection.perpendicular",
+      "stage": 42,
+      "topic": "Dot products and projection",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.dot-projection.decompose",
+      "stage": 42,
+      "topic": "Dot products and projection",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.dot-projection.work",
+      "stage": 42,
+      "topic": "Dot products and projection",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.dot-projection.example",
+      "stage": 42,
+      "topic": "Dot products and projection",
+      "type": "example"
+    },
+    {
+      "id": "aim.geometry.dot-projection.projection-example",
+      "stage": 42,
+      "topic": "Dot products and projection",
+      "type": "example"
+    },
+    {
+      "id": "aim.geometry.cross-triple.cross",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.right-hand",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.magnitude",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.reverse",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.parallel",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.area",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.triangle",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.normal",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.torque",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.scalar-triple",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "definition"
+    },
+    {
+      "id": "aim.geometry.cross-triple.volume",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.coplanar",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.vector-triple",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.cross-triple.example",
+      "stage": 43,
+      "topic": "Cross products and triple products",
+      "type": "example"
+    },
+    {
+      "id": "aim.geometry.vector-functions.function",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.vector-functions.evaluate",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "example"
+    },
+    {
+      "id": "aim.geometry.vector-functions.domain",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "example"
+    },
+    {
+      "id": "aim.geometry.vector-functions.sum",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.vector-functions.dot-function",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.vector-functions.cross-function",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.vector-functions.vector-input",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.vector-functions.resultant",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.vector-functions.relative",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.vector-functions.line-direction",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "theorem"
+    },
+    {
+      "id": "aim.geometry.vector-functions.plane-normal",
+      "stage": 44,
+      "topic": "Vector-valued computations and applications",
+      "type": "theorem"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "aim.geometry.dot-projection.dot",
+    "stage": 42,
+    "topic": "Dot products and projection",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Component formula for $u\\cdot v$ in 3D?",
+    "back": "$u\\cdot v=u_1v_1+u_2v_2+u_3v_3$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "dot-projection"
+    ]
+  },
+  {
+    "id": "aim.geometry.dot-projection.angle",
+    "stage": 42,
+    "topic": "Dot products and projection",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Angle between nonzero vectors $u,v$?",
+    "back": "$\\theta=\\arccos\\!\\left(\\dfrac{u\\cdot v}{\\|u\\|\\|v\\|}\\right)$, in $[0,\\pi]$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "dot-projection"
+    ]
+  },
+  {
+    "id": "aim.geometry.dot-projection.perp",
+    "stage": 42,
+    "topic": "Dot products and projection",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Dot-product test for perpendicular nonzero vectors?",
+    "back": "$u\\cdot v=0$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "dot-projection"
+    ]
+  },
+  {
+    "id": "aim.geometry.dot-projection.scalar",
+    "stage": 42,
+    "topic": "Dot products and projection",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Signed scalar component of $u$ in the direction of $v\\ne0$?",
+    "back": "$\\operatorname{comp}_v u=(u\\cdot v)/\\|v\\|$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "dot-projection"
+    ]
+  },
+  {
+    "id": "aim.geometry.dot-projection.projection",
+    "stage": 42,
+    "topic": "Dot products and projection",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Vector projection of $u$ onto $v\\ne0$?",
+    "back": "$\\operatorname{proj}_v u=\\dfrac{u\\cdot v}{v\\cdot v}v$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "dot-projection"
+    ]
+  },
+  {
+    "id": "aim.geometry.dot-projection.perpendicular",
+    "stage": 42,
+    "topic": "Dot products and projection",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Component of $u$ perpendicular to $v\\ne0$?",
+    "back": "$u_\\perp=u-\\operatorname{proj}_v u$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "dot-projection"
+    ]
+  },
+  {
+    "id": "aim.geometry.dot-projection.decompose",
+    "stage": 42,
+    "topic": "Dot products and projection",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Decompose $u$ into components parallel and perpendicular to $v\\ne0$.",
+    "back": "$u=\\operatorname{proj}_v u+(u-\\operatorname{proj}_v u)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "dot-projection"
+    ]
+  },
+  {
+    "id": "aim.geometry.dot-projection.work",
+    "stage": 42,
+    "topic": "Dot products and projection",
+    "subject": "vectors",
+    "type": "theorem",
+    "difficulty": "foundation",
+    "front": "Work done by a constant force $F$ through displacement $d$?",
+    "back": "$W=F\\cdot d$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "dot-projection"
+    ]
+  },
+  {
+    "id": "aim.geometry.dot-projection.example",
+    "stage": 42,
+    "topic": "Dot products and projection",
+    "subject": "vectors",
+    "type": "example",
+    "difficulty": "foundation",
+    "front": "Compute $(1,2,3)\\cdot(4,-1,2)$.",
+    "back": "$8$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "dot-projection"
+    ]
+  },
+  {
+    "id": "aim.geometry.dot-projection.projection-example",
+    "stage": 42,
+    "topic": "Dot products and projection",
+    "subject": "vectors",
+    "type": "example",
+    "difficulty": "foundation",
+    "front": "Project $u=(3,4)$ onto $v=(1,0)$.",
+    "back": "$\\operatorname{proj}_v u=(3,0)$.",
+    "explanation": "Assume ordinary Euclidean geometry; lengths and radii are nonnegative. Include the stated hypotheses when recalling the result.",
+    "source": {
+      "note": "Elementary reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "vectors",
+      "dot-projection"
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "aim.calculus.complex-exponentials.euler",
+    "type": "theorem",
+    "stage": 21,
+    "topic": "Euler’s formula and complex exponentials",
+    "difficulty": "foundation",
+    "front": "State Euler’s formula for real $x$.",
+    "back": "$e^{ix}=\\cos x+i\\sin x$, where $i^2=-1$ and $x$ is in radians.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "complex-exponentials"
+    ]
+  },
+  {
+    "id": "aim.calculus.complex-exponentials.cos",
+    "type": "theorem",
+    "stage": 21,
+    "topic": "Euler’s formula and complex exponentials",
+    "difficulty": "foundation",
+    "front": "Express $\\cos x$ using complex exponentials.",
+    "back": "$\\cos x=(e^{ix}+e^{-ix})/2$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "complex-exponentials"
+    ]
+  },
+  {
+    "id": "aim.calculus.complex-exponentials.sin",
+    "type": "theorem",
+    "stage": 21,
+    "topic": "Euler’s formula and complex exponentials",
+    "difficulty": "foundation",
+    "front": "Express $\\sin x$ using complex exponentials.",
+    "back": "$\\sin x=(e^{ix}-e^{-ix})/(2i)$.",
+    "explanation": "Recall this single fact, including its domain restrictions.",
+    "source": {
+      "note": "Calculus reference card; not a claim of formal Lean verification."
+    },
+    "prerequisites": [],
+    "tags": [
+      "calculus",
+      "complex-exponentials"
+    ]
+  }
+]

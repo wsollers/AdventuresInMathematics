@@ -71,6 +71,7 @@ export function levelCardIds(levels, unlocked) {
 export function selectCards(cards, reviews, options = {}) {
   const { mode = "new", stage = "all", type = "all", available = new Set(), seen = new Set(), now = Date.now() } = options;
   return cards.filter(card => {
+    if (options.selection && !options.selection.has(card.id)) return false;
     if (stage !== "all" && card.stage !== Number(stage)) return false;
     if (type !== "all" && card.type !== type) return false;
     if (seen.has(card.id)) return false;
