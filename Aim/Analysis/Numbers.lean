@@ -950,12 +950,29 @@ lemma not_lt {F : Type u} [TotalOrder F] (a b : F) : ¬ a < b ↔ b ≤ a := by
 /-- Strict order is non-strict order between unequal elements. -/
 lemma lt_iff_le_and_ne {F : Type u} [TotalOrder F] (a b : F) :
     a < b ↔ a ≤ b ∧ a ≠ b := by
-  sorry
+  constructor
+  . --
+    intro h
+    constructor
+    . exact le_of_lt h
+    . exact ne_of_lt h
+  . --
+    intro h
+    exact lt_of_le_of_ne a b h.1 h.2
 
 /-- Equality is equivalent to non-strict comparison in both directions. -/
 lemma le_antisymm_iff {F : Type u} [TotalOrder F] (a b : F) :
     a = b ↔ a ≤ b ∧ b ≤ a := by
-  sorry
+  constructor
+  . -- ->
+    intro he
+    rw [he]
+    constructor
+    . exact le_refl b
+    . exact le_refl b
+  . -- <-
+    intro h
+    exact le_antisymm h.1 h.2
 
 -- 3. Ordered fields and order with addition/subtraction
 
@@ -988,8 +1005,9 @@ def RNonneg (R : Type u) [Zero R] [LE R] : Type u :=
 
 /-- Adding the same element on the right preserves `≤`. -/
 corollary add_le_add_right {F : Type u} [OrderedField F] {a b : F}
-    (hab : a ≤ b) (c : F) : a + c ≤ b + c :=
-  by sorry
+    (hab : a ≤ b) (c : F) : a + c ≤ b + c := by
+
+  sorry
 
 /-- Adding the same element on the left preserves `≤`. -/
 corollary add_le_add_left {F : Type u} [OrderedField F] {a b : F}
