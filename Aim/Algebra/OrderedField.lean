@@ -73,7 +73,13 @@ lemma le_of_add_le_add_right {F : Type u} [OrderedField F] {a b c : F}
 /-- Adding the same element on the left reflects `≤`. -/
 lemma le_of_add_le_add_left {F : Type u} [OrderedField F] {a b c : F}
     (h : c + a ≤ c + b) : a ≤ b := by
-  sorry
+  have hadd : -c + (c + a) ≤ -c + (c + b) :=
+    add_le_add_left h (-c)
+  rw [<-IsAddAssoc.add_assoc (-c) c a] at hadd
+  rw [<-IsAddAssoc.add_assoc (-c) c b] at hadd
+  rw [neg_add c] at hadd
+  rw [IsZeroAdd.zero_add, IsZeroAdd.zero_add]  at hadd -- do two add_zero rw on current
+  exact hadd
 
 /-- Adding two non-strict inequalities preserves `≤`. -/
 proposition add_le_add {F : Type u} [OrderedField F] {a b c d : F}

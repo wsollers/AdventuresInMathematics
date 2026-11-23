@@ -14,7 +14,3 @@ import Aim.Logic.Choice
 Exports the foundational logic layer: syntax, truth-functional valuations,
 sentential logic, predicate logic, equality axioms, and choice.
 -/
-
-namespace Aim.Logic
-
-end Aim.Logic

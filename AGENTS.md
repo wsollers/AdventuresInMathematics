@@ -39,3 +39,11 @@ number-system constructions, and foundational theorem library.
 - Subtraction and division on a field are the derived operations `a + -b`
   and `a * b⁻¹`. A construction of a number system supplies `+`, `*`, `-x`
   and `x⁻¹` and never its own `Sub` or `Div` instance.
+- Variable names: a set is an uppercase letter (`S`, `T`), and so is a
+  collection or family of sets (`C`, `D`, `F`, `G`). An element of a set is a
+  lowercase letter (`x`, `a`, `b`). This holds in Lean code and in the
+  English statements written in comments.
+- `Aim/Common/conventions.json` is the single source for notation and
+  conventions. After changing it, run `python scripts/build_notation.py` to
+  regenerate `Aim/Common/Notation.tex`. Run `python scripts/check_conventions.py`
+  before finishing any change to the Lean sources; CI runs both.

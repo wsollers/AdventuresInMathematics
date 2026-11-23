@@ -85,6 +85,15 @@ Every module builds from the ground up along a linear axiomatic progression:
    - [`Aim/Analysis/Integral.lean`](Aim/Analysis/Integral.lean) — Darboux/Riemann integration and the Fundamental Theorem of Calculus.
    - [`Aim/Analysis/AnalysisAggregator.lean`](Aim/Analysis/AnalysisAggregator.lean) — Aggregator.
 
+## Notation and conventions
+
+[`Aim/Common/conventions.json`](Aim/Common/conventions.json) is the single source for how letters are used, where the Lean departs from standard notation, and the project's conventions. [`Aim/Common/Notation.tex`](Aim/Common/Notation.tex) is generated from it.
+
+```bash
+python scripts/build_notation.py      # regenerate the notation page
+python scripts/check_conventions.py   # check the Lean sources against the conventions
+```
+
 ## Building
 
 ```bash

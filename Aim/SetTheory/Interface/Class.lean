@@ -83,8 +83,8 @@ def iInter {I : Type v} {X : Type u} (C : I → Class X) : Class X :=
   fun x => ∀ i, x ∈ C i
 
 /-- Regard a typed set as a class with the same members. -/
-def ofSet {X : Type u} (s : Aim.Set X) : Class X :=
-  s
+def ofSet {X : Type u} (S : Aim.Set X) : Class X :=
+  S
 
 /-- The class of members of a foundational object. -/
 def extension {V : Type u} [Membership V V] (a : V) : Class V :=

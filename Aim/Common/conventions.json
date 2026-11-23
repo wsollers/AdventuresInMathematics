@@ -1,0 +1,221 @@
+{
+  "title": "Notation and Conventions",
+  "about": "The single source for the project's notation and conventions. scripts/build_notation.py generates Aim/Common/Notation.tex from this file, and scripts/check_conventions.py enforces the rules marked enforced. Standard mathematical notation is not listed. The deviations table holds only the places where the Lean is written differently from standard mathematics; add a row when a Lean file first needs one.",
+  "variables": [
+    {
+      "letters": "X, Y",
+      "stands_for": "a type",
+      "note": "the ambient type of a set, or the target of a function"
+    },
+    {
+      "letters": "F",
+      "stands_for": "a field or an ordered field",
+      "note": "also used for a family of sets in the set-theory files, never in the same file"
+    },
+    {
+      "letters": "R",
+      "stands_for": "a complete ordered field",
+      "note": "the real numbers, taken abstractly"
+    },
+    {
+      "letters": "N",
+      "stands_for": "a system of natural numbers",
+      "note": "any type satisfying the natural-number interface"
+    },
+    {
+      "letters": "I",
+      "stands_for": "an index type",
+      "note": ""
+    },
+    {
+      "letters": "S, T",
+      "stands_for": "a set",
+      "note": "sets are uppercase"
+    },
+    {
+      "letters": "C, D",
+      "stands_for": "a collection: a set of sets",
+      "note": ""
+    },
+    {
+      "letters": "F, G",
+      "stands_for": "an indexed family of sets",
+      "note": ""
+    },
+    {
+      "letters": "x, y, z, a, b, c",
+      "stands_for": "an element",
+      "note": "elements are lowercase"
+    },
+    {
+      "letters": "m, n, k",
+      "stands_for": "a natural number",
+      "note": ""
+    },
+    {
+      "letters": "ε",
+      "stands_for": "a positive element of an ordered field",
+      "note": ""
+    },
+    {
+      "letters": "p",
+      "stands_for": "a property of elements",
+      "note": "a function into propositions"
+    },
+    {
+      "letters": "f, g",
+      "stands_for": "a function",
+      "note": ""
+    },
+    {
+      "letters": "h, hab, hx",
+      "stands_for": "a hypothesis",
+      "note": "names of proofs begin with h"
+    }
+  ],
+  "deviations": [
+    {
+      "standard": "S^{c}",
+      "lean": "Set.compl S",
+      "why": "no complement notation yet",
+      "source": "Aim/SetTheory/Interface/Set.lean"
+    },
+    {
+      "standard": "\\bigcup_{i} S_i",
+      "lean": "Set.iUnion S",
+      "why": "no big-union notation yet",
+      "source": "Aim/SetTheory/Interface/Set.lean"
+    },
+    {
+      "standard": "\\bigcap_{i} S_i",
+      "lean": "Set.iInter S",
+      "why": "no big-intersection notation yet",
+      "source": "Aim/SetTheory/Interface/Set.lean"
+    },
+    {
+      "standard": "\\bigcup C",
+      "lean": "Set.sUnion C",
+      "why": "no notation yet for the union of a collection",
+      "source": "Aim/SetTheory/Interface/Set.lean"
+    },
+    {
+      "standard": "X \\text{ (as a set)}",
+      "lean": "Set.univ",
+      "why": "a type is not a set; the set of all its elements has a name",
+      "source": "Aim/SetTheory/Interface/Set.lean"
+    },
+    {
+      "standard": "|x|",
+      "lean": "abs x",
+      "why": "no bar notation yet",
+      "source": "Aim/Algebra/OrderedField.lean"
+    },
+    {
+      "standard": "a = \\sup S",
+      "lean": "IsLeastUpperBound S a",
+      "why": "the supremum is a relation until a function is defined",
+      "source": "Aim/OrderTheory/Completeness.lean"
+    },
+    {
+      "standard": "0^{-1} \\text{ undefined}",
+      "lean": "0⁻¹",
+      "why": "the inverse is a total function; its value at 0 is unspecified, so inverse lemmas assume a nonzero element",
+      "source": "Aim/Algebra/Field.lean"
+    },
+    {
+      "standard": "n \\in \\mathbb{N} \\subseteq \\mathbb{R}",
+      "lean": "natCast n",
+      "why": "a natural number is sent into a field by an explicit map",
+      "source": "Aim/Algebra/Archimedean.lean"
+    },
+    {
+      "standard": "n + 1",
+      "lean": "succ n",
+      "why": "successor is primitive; addition is defined from it",
+      "source": "Aim/PeanoSystem/Interface/PeanoSystem.lean"
+    },
+    {
+      "standard": "\\mathbb{N} = \\{1, 2, 3, \\dots\\}",
+      "lean": "0",
+      "why": "the natural numbers here start at 0; Landau's and Feferman's start at 1",
+      "source": "Aim/NumberSystems/NaturalNumbers/Interface/NaturalNumbers.lean"
+    }
+  ],
+  "rules": [
+    {
+      "id": "tactic-proofs",
+      "statement": "Every theorem, lemma, corollary, proposition and example is proved with a `by` tactic block, so that the proof can be stepped through in the InfoView.",
+      "enforced": true,
+      "exceptions": []
+    },
+    {
+      "id": "aggregator-naming",
+      "statement": "A file that only re-exports its folder is named <Folder>Aggregator.lean and contains imports and a module docstring, no declarations.",
+      "enforced": true,
+      "exceptions": []
+    },
+    {
+      "id": "flat-namespace",
+      "statement": "Mathematics is declared in `namespace Aim`. A sub-namespace exists only when it is the name of a type and holds that type's own operations.",
+      "enforced": true,
+      "exceptions": [
+        {
+          "path": "Aim/Common/Common.lean",
+          "reason": "syntax macros, declared at the root"
+        },
+        {
+          "path": "Aim/Common/Tactics.lean",
+          "reason": "tactic macros"
+        },
+        {
+          "path": "Aim/Logic/Syntax.lean",
+          "reason": "to be rewritten under Logic/Propositional; see Aim/Logic/logic-todo.md"
+        },
+        {
+          "path": "Aim/MetaLanguage/Eq.lean",
+          "reason": "compatibility names, to be removed"
+        },
+        {
+          "path": "Aim/IdentityAndEquality/Constructions/",
+          "reason": "not yet flattened"
+        }
+      ]
+    },
+    {
+      "id": "no-root-import",
+      "statement": "A file under Aim/ imports the interface files it needs, never the root module `Aim`, which also brings in every construction.",
+      "enforced": true,
+      "exceptions": []
+    },
+    {
+      "id": "no-mathlib",
+      "statement": "Nothing under Aim/ or tests/ imports Mathlib. Mathlib appears only in validation/mathlib.",
+      "enforced": true,
+      "exceptions": []
+    },
+    {
+      "id": "set-variable-case",
+      "statement": "A variable that is a set, a collection or a family of sets is an uppercase letter. An element of a set is a lowercase letter.",
+      "enforced": true,
+      "exceptions": []
+    },
+    {
+      "id": "derived-sub-div",
+      "statement": "Subtraction and division on a field are the derived operations. A construction of a number system never defines its own.",
+      "enforced": false,
+      "exceptions": []
+    },
+    {
+      "id": "cite-do-not-unfold",
+      "statement": "A proof cites the lemmas of an interface (membership lemmas for sets, the two equations for `recurse`) and does not unfold its definitions.",
+      "enforced": false,
+      "exceptions": []
+    },
+    {
+      "id": "sorry-is-allowed",
+      "statement": "A `sorry` marks a proof still to be written by the learner. It is never a defect.",
+      "enforced": false,
+      "exceptions": []
+    }
+  ]
+}

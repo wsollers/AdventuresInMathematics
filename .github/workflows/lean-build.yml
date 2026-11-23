@@ -1,0 +1,55 @@
+name: Lean build and conventions
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Aim/**"
+      - "Aim.lean"
+      - "AdventuresInMathematics.lean"
+      - "tests/**"
+      - "lakefile.lean"
+      - "lake-manifest.json"
+      - "lean-toolchain"
+      - "scripts/check_conventions.py"
+      - "scripts/build_notation.py"
+      - ".github/workflows/lean-build.yml"
+  pull_request:
+    paths:
+      - "Aim/**"
+      - "Aim.lean"
+      - "AdventuresInMathematics.lean"
+      - "tests/**"
+      - "lakefile.lean"
+      - "lake-manifest.json"
+      - "lean-toolchain"
+      - "scripts/check_conventions.py"
+      - "scripts/build_notation.py"
+      - ".github/workflows/lean-build.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  conventions:
+    name: Conventions and notation page
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check the Lean sources against Aim/Common/conventions.json
+        run: python scripts/check_conventions.py
+      - name: Check that Aim/Common/Notation.tex is up to date
+        run: python scripts/build_notation.py --check
+
+  build:
+    name: lake build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Installs the toolchain named in lean-toolchain and runs `lake build`.
+      # The Mathlib validation package under validation/mathlib is a separate
+      # Lake package and is not built here.
+      - uses: leanprover/lean-action@v1

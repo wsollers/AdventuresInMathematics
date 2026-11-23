@@ -20,30 +20,30 @@ class CompleteOrderedField (F : Type u)
 
 -- ## Statements to translate and prove
 --
--- Throughout, `F` is an ordered field, `s` is a set of elements of `F`, and
+-- Throughout, `F` is an ordered field, `S` is a set of elements of `F`, and
 -- `a`, `ε` are elements of `F`.
 
 /-
 `exists_mem_gt_sub_of_isLeastUpperBound`  (approximation property)
 
 Elements of a set come arbitrarily close to its least upper bound: if `a`
-is the least upper bound of `s`, then for every positive `ε` some element
-of `s` is greater than `a - ε`.
+is the least upper bound of `S`, then for every positive `ε` some element
+of `S` is greater than `a - ε`.
 
-  ∀ s : Set F, ∀ a : F, IsLeastUpperBound s a →
-    ∀ ε : F, 0 < ε → ∃ x : F, x ∈ s ∧ a - ε < x
+  ∀ S : Set F, ∀ a : F, IsLeastUpperBound S a →
+    ∀ ε : F, 0 < ε → ∃ x : F, x ∈ S ∧ a - ε < x
 -/
 
 /-
 `isLeastUpperBound_iff_forall_pos`  (ε-characterization of the supremum)
 
-`a` is the least upper bound of `s` if and only if `a` is an upper bound of
-`s` and, for every positive `ε`, some element of `s` is greater than
+`a` is the least upper bound of `S` if and only if `a` is an upper bound of
+`S` and, for every positive `ε`, some element of `S` is greater than
 `a - ε`.
 
-  ∀ s : Set F, ∀ a : F,
-    IsLeastUpperBound s a ↔
-      IsUpperBound s a ∧ ∀ ε : F, 0 < ε → ∃ x : F, x ∈ s ∧ a - ε < x
+  ∀ S : Set F, ∀ a : F,
+    IsLeastUpperBound S a ↔
+      IsUpperBound S a ∧ ∀ ε : F, 0 < ε → ∃ x : F, x ∈ S ∧ a - ε < x
 -/
 
 end Aim

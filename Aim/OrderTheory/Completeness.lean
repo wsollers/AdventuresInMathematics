@@ -14,25 +14,25 @@ namespace Aim
 
 universe u
 
-/-- `a` is an upper bound for `s`. -/
-def IsUpperBound {F : Type u} [LE F] (s : Set F) (a : F) : Prop :=
-  ∀ x : F, x ∈ s → x ≤ a
+/-- `a` is an upper bound for `S`. -/
+def IsUpperBound {F : Type u} [LE F] (S : Set F) (a : F) : Prop :=
+  ∀ x : F, x ∈ S → x ≤ a
 
-/-- `a` is the least upper bound for `s`. -/
-def IsLeastUpperBound {F : Type u} [LE F] (s : Set F) (a : F) : Prop :=
-  IsUpperBound s a ∧ ∀ b : F, IsUpperBound s b → a ≤ b
+/-- `a` is the least upper bound for `S`. -/
+def IsLeastUpperBound {F : Type u} [LE F] (S : Set F) (a : F) : Prop :=
+  IsUpperBound S a ∧ ∀ b : F, IsUpperBound S b → a ≤ b
 
 /-- Every nonempty set bounded above has a least upper bound. -/
 class IsOrderComplete (F : Type u) [LE F] : Prop where
   exists_isLeastUpperBound :
-    ∀ s : Set F,
-      (∃ x : F, x ∈ s) →
-      (∃ b : F, IsUpperBound s b) →
-      ∃ a : F, IsLeastUpperBound s a
+    ∀ S : Set F,
+      (∃ x : F, x ∈ S) →
+      (∃ b : F, IsUpperBound S b) →
+      ∃ a : F, IsLeastUpperBound S a
 
 -- ## Statements to translate and prove
 --
--- Throughout, `F` is a type with an order `≤`, `s` is a set of elements of
+-- Throughout, `F` is a type with an order `≤`, `S` is a set of elements of
 -- `F`, and `a`, `b` are elements of `F`. Where a statement needs more than
 -- `≤`, it says so.
 
@@ -41,43 +41,44 @@ class IsOrderComplete (F : Type u) [LE F] : Prop where
 /-
 `IsLowerBound`  (definition)
 
-`a` is a lower bound for `s` when `a` is at most every element of `s`.
+`a` is a lower bound for `S` when `a` is at most every element of `S`.
 
-  IsLowerBound s a  :⟺  ∀ x : F, x ∈ s → a ≤ x
+  IsLowerBound S a  :⟺  ∀ x : F, x ∈ S → a ≤ x
 -/
-
+def IsLowerBound {F : Type u}[LE F] (S : Set F) (a : F) : Prop :=
+  ∀ x : F, x ∈ S → a ≤ x
 /-
 `IsGreatestLowerBound`  (definition)
 
-`a` is the greatest lower bound (infimum) of `s` when `a` is a lower bound
-for `s` and every lower bound for `s` is at most `a`.
+`a` is the greatest lower bound (infimum) of `S` when `a` is a lower bound
+for `S` and every lower bound for `S` is at most `a`.
 
-  IsGreatestLowerBound s a  :⟺
-    IsLowerBound s a ∧ ∀ b : F, IsLowerBound s b → b ≤ a
+  IsGreatestLowerBound S a  :⟺
+    IsLowerBound S a ∧ ∀ b : F, IsLowerBound S b → b ≤ a
 -/
 
 /-
 `BoundedAbove`  (definition)
 
-`s` is bounded above when it has at least one upper bound.
+`S` is bounded above when it has at least one upper bound.
 
-  BoundedAbove s  :⟺  ∃ b : F, IsUpperBound s b
+  BoundedAbove S  :⟺  ∃ b : F, IsUpperBound S b
 -/
 
 /-
 `BoundedBelow`  (definition)
 
-`s` is bounded below when it has at least one lower bound.
+`S` is bounded below when it has at least one lower bound.
 
-  BoundedBelow s  :⟺  ∃ b : F, IsLowerBound s b
+  BoundedBelow S  :⟺  ∃ b : F, IsLowerBound S b
 -/
 
 /-
 `Set.Nonempty`  (definition; belongs with the set interface)
 
-`s` is nonempty when it has at least one element.
+`S` is nonempty when it has at least one element.
 
-  s.Nonempty  :⟺  ∃ x : F, x ∈ s
+  S.Nonempty  :⟺  ∃ x : F, x ∈ S
 
 `IsOrderComplete` currently spells out nonemptiness and boundedness. Once
 these three definitions exist it can be restated with them.
@@ -92,8 +93,8 @@ these three definitions exist it can be restated with them.
 
 A set has at most one least upper bound.
 
-  ∀ s : Set F, ∀ a b : F,
-    IsLeastUpperBound s a → IsLeastUpperBound s b → a = b
+  ∀ S : Set F, ∀ a b : F,
+    IsLeastUpperBound S a → IsLeastUpperBound S b → a = b
 -/
 
 /-
@@ -101,8 +102,8 @@ A set has at most one least upper bound.
 
 A set has at most one greatest lower bound.
 
-  ∀ s : Set F, ∀ a b : F,
-    IsGreatestLowerBound s a → IsGreatestLowerBound s b → a = b
+  ∀ S : Set F, ∀ a b : F,
+    IsGreatestLowerBound S a → IsGreatestLowerBound S b → a = b
 -/
 
 -- ### Consequences of completeness
@@ -114,23 +115,23 @@ A set has at most one greatest lower bound.
 
 Every nonempty set that is bounded below has a greatest lower bound.
 
-  ∀ s : Set F,
-    (∃ x : F, x ∈ s) → (∃ b : F, IsLowerBound s b) →
-    ∃ a : F, IsGreatestLowerBound s a
+  ∀ S : Set F,
+    (∃ x : F, x ∈ S) → (∃ b : F, IsLowerBound S b) →
+    ∃ a : F, IsGreatestLowerBound S a
 
 This is a theorem, not an axiom: it follows from the least-upper-bound
-property applied to the set of lower bounds of `s`.
+property applied to the set of lower bounds of `S`.
 -/
 
 /-
 `exists_mem_gt_of_lt_isLeastUpperBound`
 
 Nothing smaller than the least upper bound is an upper bound: if `a` is the
-least upper bound of `s` and `b` is less than `a`, then some element of `s`
+least upper bound of `S` and `b` is less than `a`, then some element of `S`
 is greater than `b`.
 
-  ∀ s : Set F, ∀ a b : F,
-    IsLeastUpperBound s a → b < a → ∃ x : F, x ∈ s ∧ b < x
+  ∀ S : Set F, ∀ a b : F,
+    IsLeastUpperBound S a → b < a → ∃ x : F, x ∈ S ∧ b < x
 
 This needs only a total order, not completeness.
 -/

@@ -68,7 +68,7 @@ def compl {I : Type v} {X : Type u} (F : Family I X) : Family I X :=
 /-- Forget the indices and retain the sets occurring in a family. -/
 def range {I : Type v} {X : Type u}
     (F : Family I X) : Aim.Collection X :=
-  fun s => ∃ i, F i = s
+  fun S => ∃ i, F i = S
 
 /-- The union of all sets in an indexed family. -/
 def unionAll {I : Type v} {X : Type u} (F : Family I X) : Aim.Set X :=

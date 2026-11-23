@@ -13,19 +13,19 @@ namespace AimMathlibValidation.Set
 universe u
 
 /-- Regard a project set as a Mathlib set. -/
-def toMathlib {X : Type u} (s : Aim.Set X) : _root_.Set X :=
-  s
+def toMathlib {X : Type u} (S : Aim.Set X) : _root_.Set X :=
+  S
 
 /-- Regard a Mathlib set as a project set. -/
-def fromMathlib {X : Type u} (s : _root_.Set X) : Aim.Set X :=
-  s
+def fromMathlib {X : Type u} (S : _root_.Set X) : Aim.Set X :=
+  S
 
-theorem fromMathlib_toMathlib {X : Type u} (s : Aim.Set X) :
-    fromMathlib (toMathlib s) = s := by
+theorem fromMathlib_toMathlib {X : Type u} (S : Aim.Set X) :
+    fromMathlib (toMathlib S) = S := by
   rfl
 
-theorem toMathlib_fromMathlib {X : Type u} (s : _root_.Set X) :
-    toMathlib (fromMathlib s) = s := by
+theorem toMathlib_fromMathlib {X : Type u} (S : _root_.Set X) :
+    toMathlib (fromMathlib S) = S := by
   rfl
 
 end AimMathlibValidation.Set

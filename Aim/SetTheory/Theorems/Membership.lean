@@ -10,7 +10,7 @@ lemmas never needs to know that a set is represented as a predicate.
 Each statement below is given in English and in quantified form. The Lean
 statement and proof are to be written beneath it.
 
-Throughout, `X` is a type, `s` and `t` are sets of elements of `X`, and `x`
+Throughout, `X` is a type, `S` and `T` are sets of elements of `X`, and `x`
 and `a` are elements of `X`.
 -/
 
@@ -50,10 +50,10 @@ theorem mem_setOf_iff {X : Type u} {p : X->Prop}
 /-
 `subset_def`
 
-`s` is a subset of `t` if and only if every element of `s` is an element
-of `t`.
+`S` is a subset of `T` if and only if every element of `S` is an element
+of `T`.
 
-  ∀ s t : Set X,  s ⊆ t ↔ ∀ x : X, x ∈ s → x ∈ t
+  ∀ S T : Set X,  S ⊆ T ↔ ∀ x : X, x ∈ S → x ∈ T
 -/
 
 -- ## The empty set and the universal set
@@ -87,10 +87,10 @@ An element `x` belongs to the singleton `{a}` if and only if `x` equals `a`.
 /-
 `mem_insert_iff`
 
-An element `x` belongs to the set obtained by inserting `a` into `s` if and
-only if `x` equals `a` or `x` belongs to `s`.
+An element `x` belongs to the set obtained by inserting `a` into `S` if and
+only if `x` equals `a` or `x` belongs to `S`.
 
-  ∀ a x : X, ∀ s : Set X,  x ∈ insert a s ↔ x = a ∨ x ∈ s
+  ∀ a x : X, ∀ S : Set X,  x ∈ insert a S ↔ x = a ∨ x ∈ S
 -/
 
 -- ## Binary operations
@@ -98,39 +98,39 @@ only if `x` equals `a` or `x` belongs to `s`.
 /-
 `mem_union_iff`
 
-An element belongs to the union of `s` and `t` if and only if it belongs to
-`s` or it belongs to `t`.
+An element belongs to the union of `S` and `T` if and only if it belongs to
+`S` or it belongs to `T`.
 
-  ∀ s t : Set X, ∀ x : X,  x ∈ s ∪ t ↔ x ∈ s ∨ x ∈ t
+  ∀ S T : Set X, ∀ x : X,  x ∈ S ∪ T ↔ x ∈ S ∨ x ∈ T
 -/
 
 /-
 `mem_inter_iff`
 
-An element belongs to the intersection of `s` and `t` if and only if it
-belongs to `s` and it belongs to `t`.
+An element belongs to the intersection of `S` and `T` if and only if it
+belongs to `S` and it belongs to `T`.
 
-  ∀ s t : Set X, ∀ x : X,  x ∈ s ∩ t ↔ x ∈ s ∧ x ∈ t
+  ∀ S T : Set X, ∀ x : X,  x ∈ S ∩ T ↔ x ∈ S ∧ x ∈ T
 -/
 
 /-
 `mem_diff_iff`
 
-An element belongs to the difference `s \ t` if and only if it belongs to
-`s` and does not belong to `t`.
+An element belongs to the difference `S \ T` if and only if it belongs to
+`S` and does not belong to `T`.
 
-  ∀ s t : Set X, ∀ x : X,  x ∈ s \ t ↔ x ∈ s ∧ x ∉ t
+  ∀ S T : Set X, ∀ x : X,  x ∈ S \ T ↔ x ∈ S ∧ x ∉ T
 -/
 
 /-
 `mem_compl_iff`
 
-An element belongs to the complement of `s` if and only if it does not
-belong to `s`.
+An element belongs to the complement of `S` if and only if it does not
+belong to `S`.
 
-  ∀ s : Set X, ∀ x : X,  x ∈ sᶜ ↔ x ∉ s
+  ∀ S : Set X, ∀ x : X,  x ∈ Sᶜ ↔ x ∉ S
 
-There is no `ᶜ` notation yet; the complement is written `Set.compl s`.
+There is no `ᶜ` notation yet; the complement is written `Set.compl S`.
 -/
 
 -- ## Indexed and unindexed families
@@ -138,25 +138,25 @@ There is no `ᶜ` notation yet; the complement is written `Set.compl s`.
 /-
 `mem_iUnion_iff`
 
-Let `(s i)` be a family of sets of elements of `X`, indexed by `i : I`. An
+Let `(S i)` be a family of sets of elements of `X`, indexed by `i : I`. An
 element belongs to the union of the family if and only if it belongs to
-`s i` for at least one index `i`.
+`S i` for at least one index `i`.
 
-  ∀ s : I → Set X, ∀ x : X,  x ∈ ⋃ i, s i ↔ ∃ i : I, x ∈ s i
+  ∀ S : I → Set X, ∀ x : X,  x ∈ ⋃ i, S i ↔ ∃ i : I, x ∈ S i
 
-There is no `⋃` notation yet; the union is written `Set.iUnion s`.
+There is no `⋃` notation yet; the union is written `Set.iUnion S`.
 -/
 
 /-
 `mem_iInter_iff`
 
-Let `(s i)` be a family of sets of elements of `X`, indexed by `i : I`. An
+Let `(S i)` be a family of sets of elements of `X`, indexed by `i : I`. An
 element belongs to the intersection of the family if and only if it belongs
-to `s i` for every index `i`.
+to `S i` for every index `i`.
 
-  ∀ s : I → Set X, ∀ x : X,  x ∈ ⋂ i, s i ↔ ∀ i : I, x ∈ s i
+  ∀ S : I → Set X, ∀ x : X,  x ∈ ⋂ i, S i ↔ ∀ i : I, x ∈ S i
 
-There is no `⋂` notation yet; the intersection is written `Set.iInter s`.
+There is no `⋂` notation yet; the intersection is written `Set.iInter S`.
 -/
 
 /-
@@ -165,7 +165,7 @@ There is no `⋂` notation yet; the intersection is written `Set.iInter s`.
 Let `C` be a set of sets of elements of `X`. An element belongs to the union
 of `C` if and only if it belongs to at least one member of `C`.
 
-  ∀ C : Set (Set X), ∀ x : X,  x ∈ ⋃₀ C ↔ ∃ s : Set X, s ∈ C ∧ x ∈ s
+  ∀ C : Set (Set X), ∀ x : X,  x ∈ ⋃₀ C ↔ ∃ S : Set X, S ∈ C ∧ x ∈ S
 
 There is no `⋃₀` notation yet; the union is written `Set.sUnion C`.
 -/

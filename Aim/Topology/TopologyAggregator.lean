@@ -12,8 +12,3 @@ import Aim.Topology.Connectedness
 
 Exports metric spaces, topological spaces, continuity, compactness, and connectedness.
 -/
-
-namespace Aim.Topology
-
-end Aim.Topology
-
