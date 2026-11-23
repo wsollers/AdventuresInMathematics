@@ -68,6 +68,7 @@ lemma le_of_add_le_add_right {F : Type u} [OrderedField F] {a b c : F}
   rw [IsAddAssoc.add_assoc b c (-c)] at hadd
   rw [IsAddNeg.add_neg] at hadd
   rw [add_zero, add_zero]  at hadd -- do two add_zero rw on current
+  exact hadd
 
 /-- Adding the same element on the left reflects `≤`. -/
 lemma le_of_add_le_add_left {F : Type u} [OrderedField F] {a b c : F}
