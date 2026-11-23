@@ -141,7 +141,21 @@
       "source": "Aim/NumberSystems/NaturalNumbers/Interface/NaturalNumbers.lean"
     }
   ],
+  "names": [
+    {"lean": "IsLeast", "readable": "IsMinimum", "meaning": "the least element of a set"},
+    {"lean": "IsGreatest", "readable": "IsMaximum", "meaning": "the greatest element of a set"},
+    {"lean": "IsLUB", "readable": "IsLeastUpperBound", "meaning": "the least upper bound (supremum) of a set"},
+    {"lean": "IsGLB", "readable": "IsGreatestLowerBound", "meaning": "the greatest lower bound (infimum) of a set"},
+    {"lean": "BddAbove", "readable": "BoundedAbove", "meaning": "a set that has an upper bound"},
+    {"lean": "BddBelow", "readable": "BoundedBelow", "meaning": "a set that has a lower bound"}
+  ],
   "rules": [
+    {
+      "id": "readable-names",
+      "statement": "A major concept has a readable full name. Where its Lean name is abbreviated, the Lean name is the definition and the full name is an `abbrev` for it. Lemmas have one name, after the Lean name.",
+      "enforced": true,
+      "exceptions": []
+    },
     {
       "id": "tactic-proofs",
       "statement": "Every theorem, lemma, corollary, proposition and example is proved with a `by` tactic block, so that the proof can be stepped through in the InfoView.",

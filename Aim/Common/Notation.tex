@@ -63,8 +63,26 @@ $\mathbb{N} = \{1, 2, 3, \dots\}$ & \texttt{0} & the natural numbers here start 
 \bottomrule
 \end{longtable}
 
+\section*{Names}
+\noindent A concept whose Lean name is abbreviated also has a readable full
+name. The Lean name is the definition; the full name stands for it.
+\begin{longtable}{@{}>{\raggedright}p{0.20\linewidth}>{\raggedright}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.40\linewidth}@{}}
+\toprule
+Lean name & Readable name & Meaning \\
+\midrule
+\endhead
+\texttt{IsLeast} & \texttt{IsMinimum} & the least element of a set \\
+\texttt{IsGreatest} & \texttt{IsMaximum} & the greatest element of a set \\
+\texttt{IsLUB} & \texttt{IsLeastUpperBound} & the least upper bound (supremum) of a set \\
+\texttt{IsGLB} & \texttt{IsGreatestLowerBound} & the greatest lower bound (infimum) of a set \\
+\texttt{BddAbove} & \texttt{BoundedAbove} & a set that has an upper bound \\
+\texttt{BddBelow} & \texttt{BoundedBelow} & a set that has a lower bound \\
+\bottomrule
+\end{longtable}
+
 \section*{Conventions}
 \begin{enumerate}
+\item A major concept has a readable full name. Where its Lean name is abbreviated, the Lean name is the definition and the full name is an \texttt{abbrev} for it. Lemmas have one name, after the Lean name. \emph{(checked automatically)}
 \item Every theorem, lemma, corollary, proposition and example is proved with a \texttt{by} tactic block, so that the proof can be stepped through in the InfoView. \emph{(checked automatically)}
 \item A file that only re-exports its folder is named \textless{}Folder\textgreater{}Aggregator.lean and contains imports and a module docstring, no declarations. \emph{(checked automatically)}
 \item Mathematics is declared in \texttt{namespace Aim}. A sub-namespace exists only when it is the name of a type and holds that type's own operations. \emph{(checked automatically)}

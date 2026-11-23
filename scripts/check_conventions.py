@@ -174,7 +174,24 @@ def check_set_variable_case(rule, sources):
     return problems
 
 
+def check_readable_names(rule, sources, names):
+    """Once a concept's Lean name is defined, its readable name must be an
+    `abbrev`. A pair with neither name defined yet is planned, not wrong."""
+    def declared(name, keywords):
+        pattern = re.compile(r"^\s*" + ATTRIBUTE + MODIFIERS + r"(?:" + keywords + r")\s+" + re.escape(name) + r"\b", re.M)
+        return next((path for path, code in sources.items()
+                     if path.startswith("Aim/") and pattern.search(code)), None)
+    problems = []
+    for pair in names:
+        where = declared(pair["lean"], "def|abbrev|class|structure|inductive")
+        if where and not declared(pair["readable"], "abbrev"):
+            problems.append(f"{where}: `{pair['lean']}` is defined, so `{pair['readable']}` "
+                            f"must be an `abbrev` for it")
+    return problems
+
+
 CHECKS = {
+    "readable-names": check_readable_names,
     "tactic-proofs": check_tactic_proofs,
     "aggregator-naming": check_aggregator_naming,
     "flat-namespace": check_flat_namespace,
@@ -208,7 +225,10 @@ def main():
     sources = {p: strip_comments((REPO / p).read_text(encoding="utf-8")) for p in paths}
     counts = {}
     for rid in sorted(enforced & CHECKS.keys()):
-        found = CHECKS[rid](rules[rid], sources)
+        if rid == "readable-names":
+            found = CHECKS[rid](rules[rid], sources, data["names"])
+        else:
+            found = CHECKS[rid](rules[rid], sources)
         counts[rid] = len(found)
         problems.extend(f"[{rid}] {line}" for line in found)
 

@@ -109,6 +109,22 @@ def render(data):
         lines.append(f"${row['standard']}$ & {lean} & {prose(row['why'])} \\\\")
     lines += [r"\bottomrule", r"\end{longtable}", ""]
 
+    lines += [
+        r"\section*{Names}",
+        r"\noindent A concept whose Lean name is abbreviated also has a readable full",
+        r"name. The Lean name is the definition; the full name stands for it.",
+        r"\begin{longtable}{@{}>{\raggedright}p{0.20\linewidth}>{\raggedright}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.40\linewidth}@{}}",
+        r"\toprule",
+        r"Lean name & Readable name & Meaning \\",
+        r"\midrule",
+        r"\endhead",
+    ]
+    for row in data["names"]:
+        lean = r"\texttt{" + escape(row["lean"]) + "}"
+        readable = r"\texttt{" + escape(row["readable"]) + "}"
+        lines.append(f"{lean} & {readable} & {prose(row['meaning'])} \\\\")
+    lines += [r"\bottomrule", r"\end{longtable}", ""]
+
     lines += [r"\section*{Conventions}", r"\begin{enumerate}"]
     for rule in data["rules"]:
         mark = "checked automatically" if rule["enforced"] else "not checked automatically"
