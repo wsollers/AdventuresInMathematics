@@ -1269,7 +1269,7 @@
   ],
   "discrepancies": [
     "The TeX describes the Archimedean property as following from completeness; the Lean file only declares a separate mixin without proving this implication.",
-    "Subtraction and division are defined operations in Numbers.lean, although the TeX puts their defining laws among the axiom tables.",
+    "Subtraction and division are defined operations in Aim/Algebra/Field.lean, although the TeX puts their defining laws among the axiom tables.",
     "Lean contains sorry placeholders; a declaration is not proof certification.",
     "The TeX table's nested braces around a^{-1} required a separate recovery step to capture the inverse axiom."
   ],

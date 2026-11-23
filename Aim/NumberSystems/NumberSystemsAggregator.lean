@@ -1,11 +1,7 @@
-import Aim.NumberSystems.NaturalNumbers.NaturalNumbers
+import Aim.NumberSystems.NaturalNumbers.NaturalNumbersAggregator
 
 /-!
 # Number Systems
 
 Exports the project-owned number-system interfaces and constructions.
 -/
-
-namespace Aim.NumberSystems
-
-end Aim.NumberSystems

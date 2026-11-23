@@ -1,7 +1,6 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Common.Common
 import Aim.MetaLanguage.Eq
 
 /-!
@@ -63,7 +62,3 @@ Lazily: an item is added when a proof first needs it.
 * Helpers over `List` that the logic layers need, e.g. counting occurrences
   and its behaviour under `++` (used for Enderton's parenthesis count).
 -/
-
-namespace Aim.Meta
-
-end Aim.Meta

@@ -5,7 +5,7 @@ Typed sets, modeled as predicates in the same way as Lean's standard mathematica
 set libraries.
 -/
 
-namespace Aim.Set
+namespace Aim
 
 universe u v
 
@@ -16,6 +16,26 @@ def Set (X : Type u) : Type u :=
 /-- Turn a predicate into a set. -/
 def setOf {X : Type u} (predicate : X → Prop) : Set X :=
   predicate
+
+/-- Set-builder notation: `{x | p x}` is the set of all `x` satisfying `p`.
+
+The notation is scoped: it is available inside `namespace Aim` and after
+`open Aim`, so it does not collide with other libraries' set notation. -/
+scoped syntax "{" ident " | " term "}" : term
+
+/-- Set-builder notation with the type of the variable written out:
+`{x : X | p x}`. -/
+scoped syntax "{" ident " : " term " | " term "}" : term
+
+scoped macro_rules
+  | `({ $x:ident | $p }) => `(setOf fun $x:ident => $p)
+  | `({ $x:ident : $t | $p }) => `(setOf fun ($x:ident : $t) => $p)
+
+/-- Display `setOf fun x => p x` as `{x | p x}` in the InfoView. -/
+@[app_unexpander setOf] def setOf.unexpander : Lean.PrettyPrinter.Unexpander
+  | `($_ fun $x:ident => $p) => `({ $x:ident | $p })
+  | `($_ fun ($x:ident : $t) => $p) => `({ $x:ident : $t | $p })
+  | _ => throw ()
 
 namespace Set
 
@@ -99,4 +119,4 @@ def sUnion {X : Type u} (collection : Set (Set X)) : Set X :=
 
 end Set
 
-end Aim.Set
+end Aim

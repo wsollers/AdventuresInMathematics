@@ -9,7 +9,7 @@
     "back": "For every $x\\in F$, $x+0=x$. (Derived from additive commutativity and the left identity axiom.)",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_zero"
     },
     "prerequisites": [],
@@ -30,7 +30,7 @@
     "back": "For every $z\\in F$, if $(\\forall x\\in F,\\ z+x=x)$, then $z=0$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "zero_unique"
     },
     "prerequisites": [],
@@ -51,7 +51,7 @@
     "back": "For all $x \\in F,\\; -x + x = 0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_add"
     },
     "prerequisites": [],
@@ -70,7 +70,7 @@
     "back": "For all $x,y\\in F$, if $x+y=0$, then $y=-x$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_unique"
     },
     "prerequisites": [],
@@ -91,7 +91,7 @@
     "back": "For all $x,y,z\\in F$, $x+y=x+z\\Rightarrow y=z$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_left_cancel"
     },
     "prerequisites": [],
@@ -112,7 +112,7 @@
     "back": "For all $x,a,b\\in F$, $x+a=b\\iff x=b-a$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_eq_iff_eq_sub"
     },
     "prerequisites": [],
@@ -133,7 +133,7 @@
     "back": "For all $x \\in F,\\; -(-x) = x$ \\; and \\; $-(0 : F) = 0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_neg"
     },
     "prerequisites": [],
@@ -152,7 +152,7 @@
     "back": "For all $x, y \\in F,\\; -x = y \\leftrightarrow x = -y$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_eq_iff_eq_neg"
     },
     "prerequisites": [],
@@ -171,7 +171,7 @@
     "back": "For all $x, y \\in F,\\; x - x = 0$ \\; and \\; $x - y = 0 \\leftrightarrow x = y$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_self"
     },
     "prerequisites": [],
@@ -190,7 +190,7 @@
     "back": "For all $x, y \\in F,\\; -(x + y) = -y + -x$ \\; and \\; $-(x - y) = y - x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_add_rev"
     },
     "prerequisites": [],
@@ -209,7 +209,7 @@
     "back": "For all $x, y \\in F,\\; (x + y) - y = x,\\;\\; (y + x) - y = x,\\;\\; (x - y) + y = x,\\;\\; y + (x - y) = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_sub_cancel_*"
     },
     "prerequisites": [],
@@ -228,7 +228,7 @@
     "back": "For all $x, y, z \\in F,\\; (x - y) - z = x - (y + z)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_sub"
     },
     "prerequisites": [],
@@ -247,7 +247,7 @@
     "back": "For all $x \\in F,\\; x \\cdot 1 = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_one"
     },
     "prerequisites": [],
@@ -266,7 +266,7 @@
     "back": "For all $e \\in F,\\; (\\forall x, x \\cdot e = x) \\to e = 1$ \\; and \\; $(\\forall x, e \\cdot x = x) \\to e = 1$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "one_unique"
     },
     "prerequisites": [],
@@ -285,7 +285,7 @@
     "back": "For all $x \\in F,\\; x \\neq 0 \\to x^{-1} \\cdot x = 1$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "inv_mul_cancel"
     },
     "prerequisites": [],
@@ -304,7 +304,7 @@
     "back": "For all $x, y \\in F,\\; x \\neq 0 \\to x \\cdot y = 1 \\to y = x^{-1}$ \\; and \\; $y \\cdot x = 1 \\to y = x^{-1}$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "inv_unique"
     },
     "prerequisites": [],
@@ -323,7 +323,7 @@
     "back": "For all $x, y, z \\in F,\\; x \\neq 0 \\to x \\cdot y = x \\cdot z \\to y = z$ \\; and \\; $y \\cdot x = z \\cdot x \\to y = z$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_left_cancel"
     },
     "prerequisites": [],
@@ -342,7 +342,7 @@
     "back": "For all $x, y \\in F,\\; y \\neq 0 \\to (x \\cdot y)/y = x,\\;\\; (y \\cdot x)/y = x,\\;\\; (x/y)\\cdot y = x,\\;\\; y \\cdot (x/y) = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_div_cancel_*"
     },
     "prerequisites": [],
@@ -361,7 +361,7 @@
     "back": "For all $a, x, b \\in F,\\; a \\neq 0 \\to (a \\cdot x = b \\leftrightarrow x = b / a)$ \\; and \\; $(x \\cdot a = b \\leftrightarrow x = b / a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_eq_iff_eq_div"
     },
     "prerequisites": [],
@@ -380,7 +380,7 @@
     "back": "For all $a, b, c \\in F,\\; (a + b) \\cdot c = a \\cdot c + b \\cdot c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_mul"
     },
     "prerequisites": [],
@@ -399,7 +399,7 @@
     "back": "For all $a \\in F,\\; a \\cdot 0 = 0$ \\; and \\; $0 \\cdot a = 0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_zero"
     },
     "prerequisites": [],
@@ -418,7 +418,7 @@
     "back": "For all $a, b \\in F,\\; (-a) \\cdot b = -(a \\cdot b)$ \\; and \\; $a \\cdot (-b) = -(a \\cdot b)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_mul"
     },
     "prerequisites": [],
@@ -437,7 +437,7 @@
     "back": "For all $a, b, c \\in F,\\; a \\cdot (b - c) = a \\cdot b - a \\cdot c$ \\; and \\; $(a - b) \\cdot c = a \\cdot c - b \\cdot c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_sub"
     },
     "prerequisites": [],
@@ -456,7 +456,7 @@
     "back": "$a - b = a + -b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_eq_add_neg"
     },
     "prerequisites": [],
@@ -476,7 +476,7 @@
     "back": "$a + -b = a - b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_neg_eq_sub"
     },
     "prerequisites": [],
@@ -496,7 +496,7 @@
     "back": "$a / b = a * b^{-1}$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "div_eq_mul_inv"
     },
     "prerequisites": [],
@@ -516,7 +516,7 @@
     "back": "$a * b^{-1} = a / b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_inv_eq_div"
     },
     "prerequisites": [],
@@ -536,7 +536,7 @@
     "back": "$x + 0 = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_zero"
     },
     "prerequisites": [],
@@ -555,7 +555,7 @@
     "back": "$0 + x = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "zero_add"
     },
     "prerequisites": [],
@@ -574,7 +574,7 @@
     "back": "$(\\forall  x, z + x = x) \\Rightarrow  z = 0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "zero_unique"
     },
     "prerequisites": [],
@@ -593,7 +593,7 @@
     "back": "$(\\forall  x, x + z = x) \\Rightarrow  z = 0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "zero_unique_right"
     },
     "prerequisites": [],
@@ -612,7 +612,7 @@
     "back": "$-x+x=0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_add"
     },
     "prerequisites": [],
@@ -631,7 +631,7 @@
     "back": "$x + y = 0 \\Rightarrow  y = -x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_unique"
     },
     "prerequisites": [],
@@ -650,7 +650,7 @@
     "back": "$y + x = 0 \\Rightarrow  y = -x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_unique_left"
     },
     "prerequisites": [],
@@ -669,7 +669,7 @@
     "back": "$x + y = x + z \\Rightarrow  y = z$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_left_cancel"
     },
     "prerequisites": [],
@@ -688,7 +688,7 @@
     "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_left_cancel"
     },
     "prerequisites": [
@@ -710,7 +710,7 @@
     "back": "$y + x = z + x \\Rightarrow  y = z$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_right_cancel"
     },
     "prerequisites": [],
@@ -729,7 +729,7 @@
     "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_right_cancel"
     },
     "prerequisites": [
@@ -751,7 +751,7 @@
     "back": "$x + a = b \\Leftrightarrow  x = b - a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_eq_iff_eq_sub"
     },
     "prerequisites": [],
@@ -770,7 +770,7 @@
     "back": "$a + x = b \\Leftrightarrow  x = b - a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_eq_iff_eq_sub_left"
     },
     "prerequisites": [],
@@ -789,7 +789,7 @@
     "back": "$-(-x) = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_neg"
     },
     "prerequisites": [],
@@ -808,7 +808,7 @@
     "back": "$-0=0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_zero"
     },
     "prerequisites": [],
@@ -827,7 +827,7 @@
     "back": "$-x = y \\Leftrightarrow  x = -y$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_eq_iff_eq_neg"
     },
     "prerequisites": [],
@@ -846,7 +846,7 @@
     "back": "$x - x = (0:R)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_self"
     },
     "prerequisites": [],
@@ -865,7 +865,7 @@
     "back": "$x - y = 0 \\Leftrightarrow  x = y$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_eq_zero_iff"
     },
     "prerequisites": [],
@@ -884,7 +884,7 @@
     "back": "$-(x + y) = -y + -x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_add_rev"
     },
     "prerequisites": [],
@@ -903,7 +903,7 @@
     "back": "$-(x - y) = y - x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_sub"
     },
     "prerequisites": [],
@@ -922,7 +922,7 @@
     "back": "$x + y - y = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_sub_cancel_right"
     },
     "prerequisites": [],
@@ -941,7 +941,7 @@
     "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_sub_cancel_right"
     },
     "prerequisites": [
@@ -963,7 +963,7 @@
     "back": "$y + x - y = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_sub_cancel_left"
     },
     "prerequisites": [],
@@ -982,7 +982,7 @@
     "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_sub_cancel_left"
     },
     "prerequisites": [
@@ -1004,7 +1004,7 @@
     "back": "$x - y + y = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_add_cancel_right"
     },
     "prerequisites": [],
@@ -1023,7 +1023,7 @@
     "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_add_cancel_right"
     },
     "prerequisites": [
@@ -1045,7 +1045,7 @@
     "back": "$y + (x - y) = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_add_cancel_left"
     },
     "prerequisites": [],
@@ -1064,7 +1064,7 @@
     "back": "No. This additive identity or cancellation law holds for every element of an additive group.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_add_cancel_left"
     },
     "prerequisites": [
@@ -1086,7 +1086,7 @@
     "back": "$x - y - z = x - (y + z)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_sub"
     },
     "prerequisites": [],
@@ -1105,7 +1105,7 @@
     "back": "$x * 1 = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_one"
     },
     "prerequisites": [],
@@ -1124,7 +1124,7 @@
     "back": "$(\\forall  x, x * e = x) \\Rightarrow  e = 1$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "one_unique"
     },
     "prerequisites": [],
@@ -1143,7 +1143,7 @@
     "back": "$(\\forall  x, e * x = x) \\Rightarrow  e = 1$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "one_unique_left"
     },
     "prerequisites": [],
@@ -1162,7 +1162,7 @@
     "back": "$x \\ne  0 \\Rightarrow  x^{-1} * x = 1$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "inv_mul_cancel"
     },
     "prerequisites": [],
@@ -1181,7 +1181,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "inv_mul_cancel"
     },
     "prerequisites": [
@@ -1202,7 +1202,7 @@
     "back": "$x \\ne  0 \\Rightarrow  x * y = 1 \\Rightarrow  y = x^{-1}$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "inv_unique"
     },
     "prerequisites": [],
@@ -1221,7 +1221,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "inv_unique"
     },
     "prerequisites": [
@@ -1242,7 +1242,7 @@
     "back": "$x \\ne  0 \\Rightarrow  y * x = 1 \\Rightarrow  y = x^{-1}$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "inv_unique_left"
     },
     "prerequisites": [],
@@ -1261,7 +1261,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "inv_unique_left"
     },
     "prerequisites": [
@@ -1282,7 +1282,7 @@
     "back": "$x \\ne  0 \\Rightarrow  x * y = x * z \\Rightarrow  y = z$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_left_cancel"
     },
     "prerequisites": [],
@@ -1301,7 +1301,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_left_cancel"
     },
     "prerequisites": [
@@ -1322,7 +1322,7 @@
     "back": "$x \\ne  0 \\Rightarrow  y * x = z * x \\Rightarrow  y = z$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_right_cancel"
     },
     "prerequisites": [],
@@ -1341,7 +1341,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_right_cancel"
     },
     "prerequisites": [
@@ -1362,7 +1362,7 @@
     "back": "$y\\ne0\\Rightarrow (xy)/y=x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_div_cancel_right"
     },
     "prerequisites": [],
@@ -1381,7 +1381,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_div_cancel_right"
     },
     "prerequisites": [
@@ -1402,7 +1402,7 @@
     "back": "$y\\ne0\\Rightarrow (yx)/y=x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_div_cancel_left"
     },
     "prerequisites": [],
@@ -1421,7 +1421,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_div_cancel_left"
     },
     "prerequisites": [
@@ -1442,7 +1442,7 @@
     "back": "$y\\ne0\\Rightarrow (x/y)y=x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "div_mul_cancel_right"
     },
     "prerequisites": [],
@@ -1461,7 +1461,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "div_mul_cancel_right"
     },
     "prerequisites": [
@@ -1482,7 +1482,7 @@
     "back": "$y\\ne0\\Rightarrow y(x/y)=x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "div_mul_cancel_left"
     },
     "prerequisites": [],
@@ -1501,7 +1501,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "div_mul_cancel_left"
     },
     "prerequisites": [
@@ -1522,7 +1522,7 @@
     "back": "$a \\ne  0 \\Rightarrow  (a * x = b \\Leftrightarrow  x = b / a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_eq_iff_eq_div"
     },
     "prerequisites": [],
@@ -1541,7 +1541,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_eq_iff_eq_div"
     },
     "prerequisites": [
@@ -1562,7 +1562,7 @@
     "back": "$a \\ne  0 \\Rightarrow  (x * a = b \\Leftrightarrow  x = b / a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_eq_iff_eq_div_right"
     },
     "prerequisites": [],
@@ -1581,7 +1581,7 @@
     "back": "The canceled or inverted factor must be nonzero.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_eq_iff_eq_div_right"
     },
     "prerequisites": [
@@ -1602,7 +1602,7 @@
     "back": "$(a + b) * c = a * c + b * c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_mul"
     },
     "prerequisites": [],
@@ -1621,7 +1621,7 @@
     "back": "$a * 0 = 0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_zero"
     },
     "prerequisites": [],
@@ -1640,7 +1640,7 @@
     "back": "$0 * a = 0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "zero_mul"
     },
     "prerequisites": [],
@@ -1659,7 +1659,7 @@
     "back": "$(-a) * b = -(a * b)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_mul"
     },
     "prerequisites": [],
@@ -1678,7 +1678,7 @@
     "back": "$a * (-b) = -(a * b)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_neg"
     },
     "prerequisites": [],
@@ -1697,7 +1697,7 @@
     "back": "$a * (b - c) = a * b - a * c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "mul_sub"
     },
     "prerequisites": [],
@@ -1716,7 +1716,7 @@
     "back": "$(a - b) * c = a * c - b * c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "sub_mul"
     },
     "prerequisites": [],
@@ -1735,7 +1735,7 @@
     "back": "For every $z\\in F$, if $(\\forall x\\in F,\\ x+z=x)$, then $z=0$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "zero_unique_right"
     },
     "prerequisites": [],
@@ -1756,7 +1756,7 @@
     "back": "For all $x,y\\in F$, if $y+x=0$, then $y=-x$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "neg_unique_left"
     },
     "prerequisites": [],
@@ -1777,7 +1777,7 @@
     "back": "For all $x,y,z\\in F$, $y+x=z+x\\Rightarrow y=z$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_right_cancel"
     },
     "prerequisites": [],
@@ -1798,7 +1798,7 @@
     "back": "For all $a,x,b\\in F$, $a+x=b\\iff x=b-a$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "add_eq_iff_eq_sub_left"
     },
     "prerequisites": [],

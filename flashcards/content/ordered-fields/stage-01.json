@@ -9,7 +9,7 @@
     "back": "$\\forall x\\,(x\\in A\\Rightarrow x\\in B)$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -28,7 +28,7 @@
     "back": "$x$ belongs to $A$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -47,7 +47,7 @@
     "back": "$s:F\\to\\mathrm{Prop}$; $s(x)$ means membership.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -66,7 +66,7 @@
     "back": "A predicate $R:F\\times F\\to\\mathrm{Prop}$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -85,7 +85,7 @@
     "back": "Each input in $A$ has exactly one output in $B$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -104,7 +104,7 @@
     "back": "A function $F\\times F\\to F$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -123,7 +123,7 @@
     "back": "For all $a,b\\in F$, $a\\star b\\in F$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -142,7 +142,7 @@
     "back": "$\\forall a\\in F,\\ aRa$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -161,7 +161,7 @@
     "back": "$aRb\\land bRa\\Rightarrow a=b$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -180,7 +180,7 @@
     "back": "$aRb\\land bRc\\Rightarrow aRc$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -199,7 +199,7 @@
     "back": "$aRb\\lor bRa$ for every $a,b\\in F$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -218,7 +218,7 @@
     "back": "Yes: equality.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],

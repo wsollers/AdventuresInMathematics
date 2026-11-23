@@ -18,17 +18,18 @@ theorem subst {P : X → Prop} (h : MetaEq x y) (hx : P x) : P y := by
   cases h
   exact hx
 
-theorem symm (h : MetaEq x y) : MetaEq y x :=
-  match h with
-    | .refl _ => .refl x
+theorem symm (h : MetaEq x y) : MetaEq y x := by
+  cases h
+  exact MetaEq.refl x
 
-theorem trans (hxy : MetaEq x y) (hyz : MetaEq y z) : MetaEq x z :=
-  match hxy, hyz with
-    | .refl _, .refl _ => .refl x
+theorem trans (hxy : MetaEq x y) (hyz : MetaEq y z) : MetaEq x z := by
+  cases hxy
+  cases hyz
+  exact MetaEq.refl x
 
-theorem congrArg (f : X → Y) (h : MetaEq x y) : MetaEq (f x) (f y) :=
-  match h with
-    | .refl _ => .refl (f x)
+theorem congrArg (f : X → Y) (h : MetaEq x y) : MetaEq (f x) (f y) := by
+  cases h
+  exact MetaEq.refl (f x)
 
 end MetaEq
 

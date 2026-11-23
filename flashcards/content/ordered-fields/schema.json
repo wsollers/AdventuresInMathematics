@@ -56,7 +56,14 @@
             "const": "output/pdf/ordered_field_reference.tex"
           },
           "lean": {
-            "const": "Aim/Analysis/Numbers.lean"
+            "enum": [
+              "Aim/Algebra/Field.lean",
+              "Aim/OrderTheory/TotalOrder.lean",
+              "Aim/OrderTheory/Completeness.lean",
+              "Aim/Algebra/OrderedField.lean",
+              "Aim/Algebra/CompleteOrderedField.lean",
+              "Aim/Algebra/Archimedean.lean"
+            ]
           },
           "declaration": {
             "type": [

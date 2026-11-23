@@ -1,4 +1,4 @@
-import Aim.Set.Interface.Set
+import Aim.SetTheory.Interface.Set
 
 /-!
 # Collections
@@ -6,22 +6,22 @@ import Aim.Set.Interface.Set
 Unindexed collections of subsets of a type.
 -/
 
-namespace Aim.Collection
+namespace Aim
 
 universe u
 
 /-- A collection on `X` is a set of subsets of `X`. -/
 def Collection (X : Type u) : Type u :=
-  Aim.Set.Set (Aim.Set.Set X)
+  Aim.Set (Aim.Set X)
 
 namespace Collection
 
 /-- Membership of a set in a collection. -/
 protected def Mem {X : Type u}
-    (C : Collection X) (s : Aim.Set.Set X) : Prop :=
+    (C : Collection X) (s : Aim.Set X) : Prop :=
   C s
 
-instance {X : Type u} : Membership (Aim.Set.Set X) (Collection X) :=
+instance {X : Type u} : Membership (Aim.Set X) (Collection X) :=
   ⟨Collection.Mem⟩
 
 /-- Two collections are equal when they contain exactly the same sets. -/
@@ -43,16 +43,16 @@ def univ {X : Type u} : Collection X :=
   fun _ => True
 
 protected def insert {X : Type u}
-    (s : Aim.Set.Set X) (C : Collection X) : Collection X :=
+    (s : Aim.Set X) (C : Collection X) : Collection X :=
   fun t => t = s ∨ t ∈ C
 
-instance {X : Type u} : Insert (Aim.Set.Set X) (Collection X) :=
+instance {X : Type u} : Insert (Aim.Set X) (Collection X) :=
   ⟨Collection.insert⟩
 
-protected def singleton {X : Type u} (s : Aim.Set.Set X) : Collection X :=
+protected def singleton {X : Type u} (s : Aim.Set X) : Collection X :=
   fun t => t = s
 
-instance {X : Type u} : Singleton (Aim.Set.Set X) (Collection X) :=
+instance {X : Type u} : Singleton (Aim.Set X) (Collection X) :=
   ⟨Collection.singleton⟩
 
 protected def union {X : Type u} (C D : Collection X) : Collection X :=
@@ -77,13 +77,13 @@ protected def compl {X : Type u} (C : Collection X) : Collection X :=
   fun s => s ∉ C
 
 /-- The union of all sets in a collection. -/
-def unionAll {X : Type u} (C : Collection X) : Aim.Set.Set X :=
+def unionAll {X : Type u} (C : Collection X) : Aim.Set X :=
   fun x => ∃ s, s ∈ C ∧ x ∈ s
 
 /-- The intersection of all sets in a collection. -/
-def interAll {X : Type u} (C : Collection X) : Aim.Set.Set X :=
+def interAll {X : Type u} (C : Collection X) : Aim.Set X :=
   fun x => ∀ s, s ∈ C → x ∈ s
 
 end Collection
 
-end Aim.Collection
+end Aim

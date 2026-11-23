@@ -9,7 +9,7 @@
     "back": "$\\forall x\\in S,\\ \\ell\\le x$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -28,7 +28,7 @@
     "back": "$i$ is a lower bound and every lower bound $b$ satisfies $b\\le i$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -47,7 +47,7 @@
     "back": "No; $\\mathbb Q$ is Archimedean but not complete.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -66,7 +66,7 @@
     "back": "The rational positives with $q^2<2$ have no rational supremum.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -85,7 +85,7 @@
     "back": "$1$, although $1\\notin(0,1)$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -104,7 +104,7 @@
     "back": "For $s : F \\to Prop$ and $a \\in F,\\; \\forall x \\in F,\\; s(x) \\to x \\le a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/Completeness.lean",
       "declaration": "IsUpperBound"
     },
     "prerequisites": [],
@@ -123,7 +123,7 @@
     "back": "$IsUpperBound  s\\; a \\;\\land\\; \\forall b \\in F,\\; IsUpperBound  s\\; b \\to a \\le b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/Completeness.lean",
       "declaration": "IsLeastUpperBound"
     },
     "prerequisites": [],
@@ -142,7 +142,7 @@
     "back": "Every nonempty $s : F \\to Prop$ bounded above has a least upper bound $a \\in F$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/Completeness.lean",
       "declaration": "IsOrderComplete"
     },
     "prerequisites": [],
@@ -161,7 +161,7 @@
     "back": "It is a separate Lean mixin; mathematically it follows from least-upper-bound completeness.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Archimedean.lean",
       "declaration": "ArchimedeanProperty.archimedean"
     },
     "prerequisites": [],
@@ -180,7 +180,7 @@
     "back": "For all $x, y \\in F,\\; x = x$ \\; and \\; $x = y \\to y = x$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "rfl"
     },
     "prerequisites": [],
@@ -199,7 +199,7 @@
     "back": "For all $x, y \\in F,\\; x = y \\to f(x) = f(y)$ \\; (e.g.\\ add $-a$ to both sides)",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "congrArg (· + -a) h"
     },
     "prerequisites": [],
@@ -218,7 +218,7 @@
     "back": "Replace left-hand side of $=$ or $\\leftrightarrow$ with right-hand side (or reverse with $\\leftarrow$)",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "rw [thm]"
     },
     "prerequisites": [],

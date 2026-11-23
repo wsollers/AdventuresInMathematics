@@ -15,7 +15,7 @@
         "aim.orderedfields.03.tex-003",
         "aim.orderedfields.03.tex-004"
       ],
-      "notes": "Begin with the four primitive axioms in Numbers.lean. Written recall is required; left/right are distinguished."
+      "notes": "Begin with the four primitive axioms in Aim/Algebra/Field.lean. Written recall is required; left/right are distinguished."
     },
     {
       "id": "addition-derived",

@@ -1,4 +1,4 @@
-import Aim.IdentityAndEquality.IdentityAndEquality
+import Aim.IdentityAndEquality.IdentityAndEqualityAggregator
 
 /-!
 # Metalanguage Equality Compatibility
@@ -18,17 +18,17 @@ namespace MetaEq
 
 variable {X Y : Sort u} {x y z : X}
 
-theorem subst {P : X → Prop} (h : MetaEq x y) (hx : P x) : P y :=
-  Aim.IdentityAndEquality.Constructions.InductiveEquality.MetaEq.subst h hx
+theorem subst {P : X → Prop} (h : MetaEq x y) (hx : P x) : P y := by
+  exact Aim.IdentityAndEquality.Constructions.InductiveEquality.MetaEq.subst h hx
 
-theorem symm (h : MetaEq x y) : MetaEq y x :=
-  Aim.IdentityAndEquality.Constructions.InductiveEquality.MetaEq.symm h
+theorem symm (h : MetaEq x y) : MetaEq y x := by
+  exact Aim.IdentityAndEquality.Constructions.InductiveEquality.MetaEq.symm h
 
-theorem trans (hxy : MetaEq x y) (hyz : MetaEq y z) : MetaEq x z :=
-  Aim.IdentityAndEquality.Constructions.InductiveEquality.MetaEq.trans hxy hyz
+theorem trans (hxy : MetaEq x y) (hyz : MetaEq y z) : MetaEq x z := by
+  exact Aim.IdentityAndEquality.Constructions.InductiveEquality.MetaEq.trans hxy hyz
 
-theorem congrArg (f : X → Y) (h : MetaEq x y) : MetaEq (f x) (f y) :=
-  Aim.IdentityAndEquality.Constructions.InductiveEquality.MetaEq.congrArg f h
+theorem congrArg (f : X → Y) (h : MetaEq x y) : MetaEq (f x) (f y) := by
+  exact Aim.IdentityAndEquality.Constructions.InductiveEquality.MetaEq.congrArg f h
 
 end MetaEq
 

@@ -2,21 +2,18 @@
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
 import Aim.Common.Common
-import Aim.IdentityAndEquality.IdentityAndEquality
-import Aim.MetaLanguage
-import Aim.Logic.Logic
-import Aim.Set.Interface.Set
-import Aim.Set.Interface.Class
-import Aim.Set.Interface.Collection
-import Aim.Set.Interface.Family
-import Aim.Set.Interface.Universe
-import Aim.Algebra.Algebra
-import Aim.NumberSystems.NumberSystems
-import Aim.Number.Number
-import Aim.ProofTheory.ProofTheory
-import Aim.ModelTheory.ModelTheory
-import Aim.Topology.Topology
-import Aim.Analysis.Analysis
+import Aim.IdentityAndEquality.IdentityAndEqualityAggregator
+import Aim.MetaLanguage.MetaLanguageAggregator
+import Aim.Logic.LogicAggregator
+import Aim.SetTheory.SetTheoryAggregator
+import Aim.OrderTheory.OrderTheoryAggregator
+import Aim.Algebra.AlgebraAggregator
+import Aim.PeanoSystem.PeanoSystemAggregator
+import Aim.NumberSystems.NumberSystemsAggregator
+import Aim.ProofTheory.ProofTheoryAggregator
+import Aim.ModelTheory.ModelTheoryAggregator
+import Aim.Topology.TopologyAggregator
+import Aim.Analysis.AnalysisAggregator
 
 /-!
 # Adventures in Mathematics (`aim`)

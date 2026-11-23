@@ -1,4 +1,4 @@
-import Aim.Set.Interface.Collection
+import Aim.SetTheory.Interface.Collection
 
 /-!
 # Families
@@ -6,13 +6,13 @@ import Aim.Set.Interface.Collection
 Indexed families of subsets of a type.
 -/
 
-namespace Aim.Family
+namespace Aim
 
 universe u v
 
 /-- An `I`-indexed family of subsets of `X`. -/
 def Family (I : Type v) (X : Type u) : Type (max u v) :=
-  I → Aim.Set.Set X
+  I → Aim.Set X
 
 namespace Family
 
@@ -59,25 +59,25 @@ instance {I : Type v} {X : Type u} : SDiff (Family I X) :=
 
 /-- The family containing the universal set at every index. -/
 def univ {I : Type v} {X : Type u} : Family I X :=
-  fun _ => Aim.Set.Set.univ
+  fun _ => Aim.Set.univ
 
 /-- Pointwise complement of an indexed family. -/
 def compl {I : Type v} {X : Type u} (F : Family I X) : Family I X :=
-  fun i => Aim.Set.Set.compl (F i)
+  fun i => Aim.Set.compl (F i)
 
 /-- Forget the indices and retain the sets occurring in a family. -/
 def range {I : Type v} {X : Type u}
-    (F : Family I X) : Aim.Collection.Collection X :=
+    (F : Family I X) : Aim.Collection X :=
   fun s => ∃ i, F i = s
 
 /-- The union of all sets in an indexed family. -/
-def unionAll {I : Type v} {X : Type u} (F : Family I X) : Aim.Set.Set X :=
+def unionAll {I : Type v} {X : Type u} (F : Family I X) : Aim.Set X :=
   fun x => ∃ i, x ∈ F i
 
 /-- The intersection of all sets in an indexed family. -/
-def interAll {I : Type v} {X : Type u} (F : Family I X) : Aim.Set.Set X :=
+def interAll {I : Type v} {X : Type u} (F : Family I X) : Aim.Set X :=
   fun x => ∀ i, x ∈ F i
 
 end Family
 
-end Aim.Family
+end Aim

@@ -5,16 +5,14 @@ import Aim.NumberSystems.NaturalNumbers.Constructions.LeanNat.LeanNat
 # Lean Natural Numbers Satisfy the Interface
 -/
 
-namespace Aim.NumberSystems.NaturalNumbers.Constructions.LeanNat.Satisfies
-
-open Aim.NumberSystems.NaturalNumbers.Constructions
+namespace Aim
 
 /-- Lean's `Nat` construction satisfies the project natural-number interface. -/
-instance : Aim.NumberSystems.NaturalNumbers LeanNat where
-  ofNat := Nat.zero
+instance : NaturalNumbers LeanNat where
+  base := Nat.zero
   succ := Nat.succ
 
-  zero_not_succ := by
+  base_not_succ := by
     sorry
 
   succ_injective := by
@@ -23,4 +21,4 @@ instance : Aim.NumberSystems.NaturalNumbers LeanNat where
   induction := by
     sorry
 
-end Aim.NumberSystems.NaturalNumbers.Constructions.LeanNat.Satisfies
+end Aim

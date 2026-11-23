@@ -11,7 +11,7 @@ This is a fresh, source-linked mathematics curriculum. No cards were copied from
 
 ## Mathematical authority
 
-The source scope is output/pdf/ordered_field_reference.tex, with comparisons to Aim/Analysis/Numbers.lean. Subtraction and division are defined operations; the Archimedean property is a separate Lean mixin even though it follows mathematically from ordered-field completeness.
+The source scope is output/pdf/ordered_field_reference.tex, with comparisons to the Lean sources under Aim/Algebra and Aim/OrderTheory. Subtraction and division are defined operations; the Archimedean property is a separate Lean mixin even though it follows mathematically from ordered-field completeness.
 
 A declaration containing sorry is NOT formally verified. The coverage report distinguishes its statement from completed proof status. No flashcard should be taken as proof of Lean compilation or of full formal correctness.
 

@@ -9,7 +9,7 @@
     "back": "Every element $x$ of $F$ satisfies $P(x)$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -28,7 +28,7 @@
     "back": "At least one $x$ in $F$ satisfies $P(x)$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -47,7 +47,7 @@
     "back": "If $P$ then $Q$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -66,7 +66,7 @@
     "back": "Both $P\\Rightarrow Q$ and $Q\\Rightarrow P$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -85,7 +85,7 @@
     "back": "$\\exists x\\,\\neg P(x)$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -104,7 +104,7 @@
     "back": "$\\forall x\\,\\neg P(x)$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -123,7 +123,7 @@
     "back": "$P\\land\\neg Q$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -142,7 +142,7 @@
     "back": "An assertion that is true or false.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -161,7 +161,7 @@
     "back": "An assumed condition needed for a conclusion.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -180,7 +180,7 @@
     "back": "What a theorem asserts under its hypotheses.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -199,7 +199,7 @@
     "back": "If $a=b$, then $f(a)=f(b)$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -218,7 +218,7 @@
     "back": "$\\neg Q\\Rightarrow\\neg P$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -237,7 +237,7 @@
     "back": "Assume the desired conclusion is false and derive a contradiction.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -256,7 +256,7 @@
     "back": "A carrier with specified operations, relations, and axioms.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],

@@ -1,4 +1,4 @@
-import Aim.Set.Interface.Set
+import Aim.SetTheory.Interface.Set
 
 /-!
 # Classes
@@ -7,7 +7,7 @@ Classes of objects from an ambient type. In a one-sorted foundational set
 theory, the ambient type will be the type of all foundational sets.
 -/
 
-namespace Aim.Class
+namespace Aim
 
 universe u v
 
@@ -83,7 +83,7 @@ def iInter {I : Type v} {X : Type u} (C : I → Class X) : Class X :=
   fun x => ∀ i, x ∈ C i
 
 /-- Regard a typed set as a class with the same members. -/
-def ofSet {X : Type u} (s : Aim.Set.Set X) : Class X :=
+def ofSet {X : Type u} (s : Aim.Set X) : Class X :=
   s
 
 /-- The class of members of a foundational object. -/
@@ -100,4 +100,4 @@ def IsProper {V : Type u} [Membership V V] (C : Class V) : Prop :=
 
 end Class
 
-end Aim.Class
+end Aim

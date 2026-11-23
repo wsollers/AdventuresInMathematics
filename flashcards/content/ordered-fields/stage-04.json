@@ -9,7 +9,7 @@
     "back": "For all $a \\in F,\\; a \\le a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "IsLERefl.le_refl"
     },
     "prerequisites": [],
@@ -28,7 +28,7 @@
     "back": "For all $a, b, c \\in F,\\; a \\le b \\to b \\le c \\to a \\le c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "IsLETrans.le_trans"
     },
     "prerequisites": [],
@@ -47,7 +47,7 @@
     "back": "For all $a, b \\in F,\\; a \\le b \\to b \\le a \\to a = b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "IsLEAntisymm.le_antisymm"
     },
     "prerequisites": [],
@@ -66,7 +66,7 @@
     "back": "For all $a, b \\in F,\\; a \\le b \\lor b \\le a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "IsLETotal.le_total"
     },
     "prerequisites": [],
@@ -85,7 +85,7 @@
     "back": "A procedure to decide the comparison, needed for computational branching; it is not a mathematical order axiom.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "LEDecidable.decLE"
     },
     "prerequisites": [],
@@ -104,7 +104,7 @@
     "back": "For all $a, b \\in F,\\; a < b \\leftrightarrow (a \\le b \\land \\lnot(b \\le a))$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "IsLTIffLENotLE.lt_iff_le_not_le"
     },
     "prerequisites": [],
@@ -123,7 +123,7 @@
     "back": "For all $a, b \\in F,\\; a \\le b \\to \\forall c \\in F,\\; a + c \\le b + c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "IsAddLEAddRight.add_le_add_right"
     },
     "prerequisites": [],
@@ -142,7 +142,7 @@
     "back": "For all $a, b \\in F,\\; 0 < a \\to 0 < b \\to 0 < a \\cdot b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "IsMulPos.mul_pos"
     },
     "prerequisites": [],
@@ -161,7 +161,7 @@
     "back": "Trichotomy leaves exactly three cases: $A<B$, $A=B$, or $B<A$. Negating one comparison selects its exact complement among those cases.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_trichotomy"
     },
     "prerequisites": [
@@ -185,7 +185,7 @@
     "back": "$A\\ne B$, equivalently $A<B\\lor B<A$. In Mathlib: `ne_iff_lt_or_gt`.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "ne_iff_lt_or_gt"
     },
     "prerequisites": [
@@ -210,7 +210,7 @@
     "back": "$A=B$. In Mathlib: `not_ne_iff` (classically, double-negation elimination).",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "not_ne_iff"
     },
     "prerequisites": [
@@ -235,7 +235,7 @@
     "back": "$B\\le A$. The direction swaps and equality is added. In Mathlib: `not_lt`.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "not_lt"
     },
     "prerequisites": [
@@ -260,7 +260,7 @@
     "back": "$A\\le B$. Since $A>B$ means $B<A$, this is `not_lt` with $A$ and $B$ swapped.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "not_lt"
     },
     "prerequisites": [
@@ -284,7 +284,7 @@
     "back": "$B<A$. The direction swaps and equality is dropped. In Mathlib: `not_le`.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "not_le"
     },
     "prerequisites": [
@@ -309,7 +309,7 @@
     "back": "$A<B$. Since $A\\ge B$ means $B\\le A$, this is `not_le` with $A$ and $B$ swapped.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "not_le"
     },
     "prerequisites": [
@@ -333,7 +333,7 @@
     "back": "A partial order can contain incomparable elements. For sets, $A\\nsubseteq B$ does not imply $B\\subseteq A$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "IsLETotal.le_total"
     },
     "prerequisites": [
@@ -358,7 +358,7 @@
     "back": "It rewrites them into positive complements: for example, $\\lnot(a\\le b)$ becomes $b<a$, $\\lnot(a<b)$ becomes $b\\le a$, and $\\lnot(a\\ne b)$ becomes $a=b$. Use `push_neg at h` to rewrite a hypothesis.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [
@@ -386,7 +386,7 @@
     "back": "`linarith` understands linear equalities and inequalities and can close contradictions involving their negations, often without manually rewriting each negation first.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [

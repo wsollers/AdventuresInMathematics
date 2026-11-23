@@ -1,4 +1,4 @@
-import Aim.IdentityAndEquality.IdentityAndEquality
+import Aim.IdentityAndEquality.IdentityAndEqualityAggregator
 
 /-!
 # Identity and Equality Validation

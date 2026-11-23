@@ -9,7 +9,7 @@
     "back": "For all $a \\in F,\\; \\lnot(a < a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_irrefl"
     },
     "prerequisites": [],
@@ -28,7 +28,7 @@
     "back": "For all $a, b \\in F,\\; a < b \\to a \\le b$ \\; (Unpacker 1: extracts positive half of $a < b$)",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "le_of_lt"
     },
     "prerequisites": [],
@@ -47,7 +47,7 @@
     "back": "For all $a, b \\in F,\\; a < b \\to \\lnot(b \\le a)$ \\; (Unpacker 2: extracts roadblock of $a < b$)",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "not_le_of_lt"
     },
     "prerequisites": [],
@@ -66,7 +66,7 @@
     "back": "For all $a, b \\in F,\\; a < b \\to \\lnot(b < a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_asymm"
     },
     "prerequisites": [],
@@ -85,7 +85,7 @@
     "back": "For all $a, b, c \\in F,\\; a < b \\to b < c \\to a < c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_trans"
     },
     "prerequisites": [],
@@ -104,7 +104,7 @@
     "back": "For all $a, b, c \\in F,\\; (a < b \\to b \\le c \\to a < c)$ \\; and \\; $(a \\le b \\to b < c \\to a < c)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_of_lt_of_le"
     },
     "prerequisites": [],
@@ -123,7 +123,7 @@
     "back": "For all $a, b \\in F,\\; a \\le b \\leftrightarrow (a < b \\lor a = b)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "le_iff_lt_or_eq"
     },
     "prerequisites": [],
@@ -142,7 +142,7 @@
     "back": "For all $a, b \\in F,\\; a < b \\lor a = b \\lor b < a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_trichotomy"
     },
     "prerequisites": [],
@@ -161,7 +161,7 @@
     "back": "For all $a, b, c \\in F,\\; a \\le b \\to a + c \\le b + c$ \\; and \\; $a \\le b \\to c + a \\le c + b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "add_le_add_right"
     },
     "prerequisites": [],
@@ -180,7 +180,7 @@
     "back": "For all $a, b, c \\in F,\\; a + c \\le b + c \\to a \\le b$ \\; and \\; $c + a \\le c + b \\to a \\le b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "le_of_add_le_add_right"
     },
     "prerequisites": [],
@@ -199,7 +199,7 @@
     "back": "For all $a, b, c, d \\in F,\\; a \\le b \\to c \\le d \\to a + c \\le b + d$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "add_le_add"
     },
     "prerequisites": [],
@@ -218,7 +218,7 @@
     "back": "For all $a, b, c \\in F,\\; a < b \\to a + c < b + c$ \\; and \\; $a < b \\to c + a < c + b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "add_lt_add_right"
     },
     "prerequisites": [],
@@ -237,7 +237,7 @@
     "back": "For all $a, b, c \\in F,\\; a + c < b + c \\to a < b$ \\; and \\; $c + a < c + b \\to a < b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "lt_of_add_lt_add_right"
     },
     "prerequisites": [],
@@ -256,7 +256,7 @@
     "back": "For all $a, b, c, d \\in F,\\; a < b \\to c < d \\to a + c < b + d$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "add_lt_add"
     },
     "prerequisites": [],
@@ -275,7 +275,7 @@
     "back": "For all $a, b \\in F,\\; (0 \\le a - b \\leftrightarrow b \\le a)$ \\; and \\; $(0 < a - b \\leftrightarrow b < a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "sub_nonneg"
     },
     "prerequisites": [],
@@ -294,7 +294,7 @@
     "back": "For all $a, b \\in F,\\; (-a \\le -b \\leftrightarrow b \\le a),\\;\\; (-a < -b \\leftrightarrow b < a),\\;\\; (a < 0 \\to 0 < -a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "neg_le_neg_iff"
     },
     "prerequisites": [],
@@ -313,7 +313,7 @@
     "back": "For all $a, b \\in F,\\; 0 \\le a \\to 0 \\le b \\to 0 \\le a \\cdot b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_nonneg"
     },
     "prerequisites": [],
@@ -332,7 +332,7 @@
     "back": "For all $a, b, c \\in F,\\; (a < b \\to 0 < c \\to a c < b c,\\; c a < c b)$ and $(a \\le b \\to 0 \\le c \\to a c \\le b c,\\; c a \\le c b)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_lt_mul_of_pos_*"
     },
     "prerequisites": [],
@@ -351,7 +351,7 @@
     "back": "For all $a, b, c \\in F,\\; (a < b \\to c < 0 \\to b c < a c,\\; c b < c a)$ and $(a \\le b \\to c \\le 0 \\to b c \\le a c,\\; c b \\le c a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_lt_mul_of_neg_*"
     },
     "prerequisites": [],
@@ -370,7 +370,7 @@
     "back": "For all $x, y \\in F,\\; \\max(x, y) = \\max(y, x)$ \\; and \\; $|x + y| \\le |x| + |y|$ \\; where $|x| := \\max(x, -x)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "max_comm"
     },
     "prerequisites": [],
@@ -389,7 +389,7 @@
     "back": "$\\neg(a<a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_irrefl"
     },
     "prerequisites": [],
@@ -408,7 +408,7 @@
     "back": "$a<b\\Rightarrow a\\le b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "le_of_lt"
     },
     "prerequisites": [],
@@ -427,7 +427,7 @@
     "back": "$a<b\\Rightarrow\\neg(b\\le a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "not_le_of_lt"
     },
     "prerequisites": [],
@@ -446,7 +446,7 @@
     "back": "$a<b\\Rightarrow\\neg(b<a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_asymm"
     },
     "prerequisites": [],
@@ -465,7 +465,7 @@
     "back": "$a<b\\land b<c\\Rightarrow a<c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_trans"
     },
     "prerequisites": [],
@@ -484,7 +484,7 @@
     "back": "$a<b\\land b\\le c\\Rightarrow a<c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_of_lt_of_le"
     },
     "prerequisites": [],
@@ -503,7 +503,7 @@
     "back": "$a\\le b\\land b<c\\Rightarrow a<c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_of_le_of_lt"
     },
     "prerequisites": [],
@@ -522,7 +522,7 @@
     "back": "$a\\le b\\Leftrightarrow(a<b\\lor a=b)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "le_iff_lt_or_eq"
     },
     "prerequisites": [],
@@ -541,7 +541,7 @@
     "back": "$a<b\\lor a=b\\lor b<a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "lt_trichotomy"
     },
     "prerequisites": [],
@@ -560,7 +560,7 @@
     "back": "$a\\le b\\Rightarrow a+c\\le b+c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "add_le_add_right"
     },
     "prerequisites": [],
@@ -579,7 +579,7 @@
     "back": "$a\\le b\\Rightarrow c+a\\le c+b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "add_le_add_left"
     },
     "prerequisites": [],
@@ -598,7 +598,7 @@
     "back": "$a+c\\le b+c\\Rightarrow a\\le b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "le_of_add_le_add_right"
     },
     "prerequisites": [],
@@ -617,7 +617,7 @@
     "back": "$c+a\\le c+b\\Rightarrow a\\le b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "le_of_add_le_add_left"
     },
     "prerequisites": [],
@@ -636,7 +636,7 @@
     "back": "$a\\le b\\land c\\le d\\Rightarrow a+c\\le b+d$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "add_le_add"
     },
     "prerequisites": [],
@@ -655,7 +655,7 @@
     "back": "$a<b\\Rightarrow a+c<b+c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "add_lt_add_right"
     },
     "prerequisites": [],
@@ -674,7 +674,7 @@
     "back": "$a<b\\Rightarrow c+a<c+b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "add_lt_add_left"
     },
     "prerequisites": [],
@@ -693,7 +693,7 @@
     "back": "$a+c<b+c\\Rightarrow a<b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "lt_of_add_lt_add_right"
     },
     "prerequisites": [],
@@ -712,7 +712,7 @@
     "back": "$c+a<c+b\\Rightarrow a<b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "lt_of_add_lt_add_left"
     },
     "prerequisites": [],
@@ -731,7 +731,7 @@
     "back": "$a<b\\land c<d\\Rightarrow a+c<b+d$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "add_lt_add"
     },
     "prerequisites": [],
@@ -750,7 +750,7 @@
     "back": "$0\\le a-b\\Leftrightarrow b\\le a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "sub_nonneg"
     },
     "prerequisites": [],
@@ -769,7 +769,7 @@
     "back": "$0<a-b\\Leftrightarrow b<a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "sub_pos"
     },
     "prerequisites": [],
@@ -788,7 +788,7 @@
     "back": "$-a\\le-b\\Leftrightarrow b\\le a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "neg_le_neg_iff"
     },
     "prerequisites": [],
@@ -807,7 +807,7 @@
     "back": "$-a<-b\\Leftrightarrow b<a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "neg_lt_neg_iff"
     },
     "prerequisites": [],
@@ -826,7 +826,7 @@
     "back": "$a<0\\Rightarrow 0<-a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "neg_pos_of_neg"
     },
     "prerequisites": [],
@@ -845,7 +845,7 @@
     "back": "$0\\le a\\land0\\le b\\Rightarrow0\\le ab$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_nonneg"
     },
     "prerequisites": [],
@@ -864,7 +864,7 @@
     "back": "$a<b\\land0<c\\Rightarrow ac<bc$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_lt_mul_of_pos_right"
     },
     "prerequisites": [],
@@ -883,7 +883,7 @@
     "back": "$a<b\\land0<c\\Rightarrow ca<cb$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_lt_mul_of_pos_left"
     },
     "prerequisites": [],
@@ -902,7 +902,7 @@
     "back": "$a\\le b\\land0\\le c\\Rightarrow ac\\le bc$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_le_mul_of_nonneg_right"
     },
     "prerequisites": [],
@@ -921,7 +921,7 @@
     "back": "$a\\le b\\land0\\le c\\Rightarrow ca\\le cb$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_le_mul_of_nonneg_left"
     },
     "prerequisites": [],
@@ -940,7 +940,7 @@
     "back": "$a<b\\land c<0\\Rightarrow bc<ac$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_lt_mul_of_neg_right"
     },
     "prerequisites": [],
@@ -959,7 +959,7 @@
     "back": "$a<b\\land c<0\\Rightarrow cb<ca$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_lt_mul_of_neg_left"
     },
     "prerequisites": [],
@@ -978,7 +978,7 @@
     "back": "$a\\le b\\land c\\le0\\Rightarrow bc\\le ac$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_le_mul_of_nonpos_right"
     },
     "prerequisites": [],
@@ -997,7 +997,7 @@
     "back": "$a\\le b\\land c\\le0\\Rightarrow cb\\le ca$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "mul_le_mul_of_nonpos_left"
     },
     "prerequisites": [],
@@ -1016,7 +1016,7 @@
     "back": "$\\max(a,b)=\\max(b,a)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/OrderTheory/TotalOrder.lean",
       "declaration": "max_comm"
     },
     "prerequisites": [],
@@ -1035,7 +1035,7 @@
     "back": "$|x+y|\\le|x|+|y|$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": "abs_add_le"
     },
     "prerequisites": [],

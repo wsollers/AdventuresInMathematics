@@ -1,16 +1,15 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Algebra.Order
-import Aim.Algebra.Structures
+import Aim.Algebra.Field
+import Aim.Algebra.Numerals
+import Aim.Algebra.OrderedField
+import Aim.Algebra.AbsoluteValue
+import Aim.Algebra.CompleteOrderedField
+import Aim.Algebra.Archimedean
 
 /-!
 # Algebra Module Aggregator
 
-Exports order structures and algebraic axioms (Groups, Rings, Fields, Ordered Fields).
+Exports fields, numerals, ordered fields, absolute value, complete ordered fields, and the Archimedean property.
 -/
-
-namespace Aim.Algebra
-
-end Aim.Algebra
-

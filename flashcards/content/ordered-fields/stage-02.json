@@ -9,7 +9,7 @@
     "back": "Its underlying set $F$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -28,7 +28,7 @@
     "back": "$(a\\star b)\\star c=a\\star(b\\star c)$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -47,7 +47,7 @@
     "back": "$a\\star b=b\\star a$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -66,7 +66,7 @@
     "back": "$e\\star a=a=a\\star e$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -85,7 +85,7 @@
     "back": "$a\\star b=e=b\\star a$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -104,7 +104,7 @@
     "back": "An associative operation with an identity and inverses.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -123,7 +123,7 @@
     "back": "A group whose operation is commutative.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -142,7 +142,7 @@
     "back": "An additive abelian group with associative unital multiplication distributing over addition.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -161,7 +161,7 @@
     "back": "A commutative unital ring with $0\\ne1$ and inverses for nonzero elements.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -180,7 +180,7 @@
     "back": "An axiom is assumed; a theorem is derived.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -199,7 +199,7 @@
     "back": "$2$ has no reciprocal in $\\mathbb Z$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],
@@ -218,7 +218,7 @@
     "back": "$\\mathbb Q$ with usual operations.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/OrderedField.lean",
       "declaration": null
     },
     "prerequisites": [],

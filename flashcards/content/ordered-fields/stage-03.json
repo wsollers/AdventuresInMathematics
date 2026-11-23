@@ -9,7 +9,7 @@
     "back": "For all $a, b, c \\in F,\\; (a + b) + c = a + (b + c)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsAddAssoc.add_assoc"
     },
     "prerequisites": [],
@@ -29,7 +29,7 @@
     "back": "For all $a, b \\in F,\\; a + b = b + a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsAddComm.add_comm"
     },
     "prerequisites": [],
@@ -49,7 +49,7 @@
     "back": "For all $a \\in F,\\; 0 + a = a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsZeroAdd.zero_add"
     },
     "prerequisites": [],
@@ -69,7 +69,7 @@
     "back": "For all $a \\in F,\\; a + (-a) = 0$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsAddNeg.add_neg"
     },
     "prerequisites": [],
@@ -89,7 +89,7 @@
     "back": "For all $a, b \\in F,\\; a - b = a + (-b)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsSubEqAddNeg.sub_eq_add_neg"
     },
     "prerequisites": [],
@@ -109,7 +109,7 @@
     "back": "For all $a, b, c \\in F,\\; (a \\cdot b) \\cdot c = a \\cdot (b \\cdot c)$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsMulAssoc.mul_assoc"
     },
     "prerequisites": [],
@@ -128,7 +128,7 @@
     "back": "For all $a, b \\in F,\\; a \\cdot b = b \\cdot a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsMulComm.mul_comm"
     },
     "prerequisites": [],
@@ -147,7 +147,7 @@
     "back": "For all $a \\in F,\\; 1 \\cdot a = a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsOneMul.one_mul"
     },
     "prerequisites": [],
@@ -166,7 +166,7 @@
     "back": "For all $a\\in F$, if $a\\ne0$, then $a\\cdot a^{-1}=1$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsMulInvCancel.mul_inv_cancel"
     },
     "prerequisites": [],
@@ -185,7 +185,7 @@
     "back": "The additive and multiplicative identities are distinct: $(0 : F) \\neq 1$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsZeroNeOne.zero_ne_one"
     },
     "prerequisites": [],
@@ -204,7 +204,7 @@
     "back": "For all $a,b\\in F$, $a/b=a\\cdot b^{-1}$.",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsDivEqMulInv.div_eq_mul_inv"
     },
     "prerequisites": [],
@@ -224,7 +224,7 @@
     "back": "For all $a, b, c \\in F,\\; a \\cdot (b + c) = a \\cdot b + a \\cdot c$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/Analysis/Numbers.lean",
+      "lean": "Aim/Algebra/Field.lean",
       "declaration": "IsMulAdd.mul_add"
     },
     "prerequisites": [],

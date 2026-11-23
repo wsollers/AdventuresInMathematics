@@ -27,50 +27,63 @@ Every module builds from the ground up along a linear axiomatic progression:
    - [`Aim/Logic/Predicate.lean`](Aim/Logic/Predicate.lean) — Universal ($\forall$) and existential ($\exists, \exists!$) quantifiers.
    - [`Aim/Logic/Equality.lean`](Aim/Logic/Equality.lean) — Identity and Leibniz substitution axioms ($x = y \to P(x) \to P(y)$).
    - [`Aim/Logic/Choice.lean`](Aim/Logic/Choice.lean) — Axiom of Choice and definite description.
-   - [`Aim/Logic/Logic.lean`](Aim/Logic/Logic.lean) — Aggregator.
+   - [`Aim/Logic/LogicAggregator.lean`](Aim/Logic/LogicAggregator.lean) — Aggregator.
    - [`Aim/Logic/READINGS.MD`](Aim/Logic/READINGS.MD) — Reading-first study guide (source-linked Enderton, Tarski, Buss, Mileti, and other Logic sources; exercises, notes, and mastery checkpoints).
-3. **Set Theory** (`namespace Aim.Set`)
-   - [`Aim/Set/Axioms.lean`](Aim/Set/Axioms.lean) — Extensionality, Empty Set, Pairing, Comprehension, Union, Power Set, Infinity.
-   - [`Aim/Set/Operations.lean`](Aim/Set/Operations.lean) — $\subseteq, \cup, \cap, \setminus$, complement, indexed families.
-   - [`Aim/Set/Relation.lean`](Aim/Set/Relation.lean) — Ordered pairs, relations, equivalence relations, partitions, quotients.
-   - [`Aim/Set/Function.lean`](Aim/Set/Function.lean) — Functions, injective/surjective/bijective maps, inverses, images/preimages.
-   - [`Aim/Set/Set.lean`](Aim/Set/Set.lean) — Aggregator.
-4. **Order & Algebraic Axioms** (`namespace Aim.Algebra`)
-   - [`Aim/Algebra/Order.lean`](Aim/Algebra/Order.lean) — Partial orders, linear orders, bounds, Supremum/Infimum, completeness axioms.
-   - [`Aim/Algebra/Structures.lean`](Aim/Algebra/Structures.lean) — Semigroups, Monoids, Groups, Rings, Integral Domains, Fields, Ordered Fields.
-   - [`Aim/Algebra/Algebra.lean`](Aim/Algebra/Algebra.lean) — Aggregator.
-5. **Number Systems** (`namespace Aim.Number`)
-   - [`Aim/Number/Peano.lean`](Aim/Number/Peano.lean) — Peano Axioms, natural numbers ($\mathbb{N}$), induction, arithmetic, order.
-   - [`Aim/Number/Int.lean`](Aim/Number/Int.lean) — Integers ($\mathbb{Z}$) via equivalence classes on $\mathbb{N} \times \mathbb{N}$; Ordered Integral Domain.
-   - [`Aim/Number/Rat.lean`](Aim/Number/Rat.lean) — Rationals ($\mathbb{Q}$) as field of fractions of $\mathbb{Z}$; Ordered Field.
-   - [`Aim/Number/Real.lean`](Aim/Number/Real.lean) — Reals ($\mathbb{R}$) and the Axiom of Completeness; Complete Ordered Field.
-   - [`Aim/Number/Number.lean`](Aim/Number/Number.lean) — Aggregator.
-6. **Proof Theory** (`namespace Aim.ProofTheory`)
+3. **Set Theory** (types `Aim.Set`, `Aim.Class`, `Aim.Collection`, `Aim.Family`)
+   - [`Aim/SetTheory/Interface/Set.lean`](Aim/SetTheory/Interface/Set.lean) — Typed sets as predicates; $\in, \subseteq, \cup, \cap, \setminus$, complement, indexed unions and intersections.
+   - [`Aim/SetTheory/Interface/Class.lean`](Aim/SetTheory/Interface/Class.lean) — Classes; represented and proper classes.
+   - [`Aim/SetTheory/Interface/Collection.lean`](Aim/SetTheory/Interface/Collection.lean) — Unindexed collections of sets.
+   - [`Aim/SetTheory/Interface/Family.lean`](Aim/SetTheory/Interface/Family.lean) — Indexed families of sets.
+   - [`Aim/SetTheory/Interface/Universe.lean`](Aim/SetTheory/Interface/Universe.lean) — Placeholder for a foundational universe.
+   - [`Aim/SetTheory/SetTheoryAggregator.lean`](Aim/SetTheory/SetTheoryAggregator.lean) — Aggregator.
+   - Design: [`architecture/set-interfaces.md`](architecture/set-interfaces.md).
+4. **Order Theory** (declarations directly in `namespace Aim`)
+   - [`Aim/OrderTheory/TotalOrder.lean`](Aim/OrderTheory/TotalOrder.lean) — Order axioms, `TotalOrder`, strict and non-strict comparison, maximum and minimum.
+   - [`Aim/OrderTheory/Completeness.lean`](Aim/OrderTheory/Completeness.lean) — Upper bounds, least upper bounds, the least-upper-bound property.
+   - [`Aim/OrderTheory/OrderTheoryAggregator.lean`](Aim/OrderTheory/OrderTheoryAggregator.lean) — Aggregator.
+5. **Algebra** (declarations directly in `namespace Aim`)
+   - [`Aim/Algebra/Field.lean`](Aim/Algebra/Field.lean) — Field axioms as mixins, `Field`, and the derived arithmetic lemmas.
+   - [`Aim/Algebra/OrderedField.lean`](Aim/Algebra/OrderedField.lean) — `OrderedField`, order with arithmetic, absolute value.
+   - [`Aim/Algebra/CompleteOrderedField.lean`](Aim/Algebra/CompleteOrderedField.lean) — The axiomatic interface for the real numbers.
+   - [`Aim/Algebra/Archimedean.lean`](Aim/Algebra/Archimedean.lean) — The cast from the natural numbers and the Archimedean property.
+   - [`Aim/Algebra/OrderedField_Lemmas.md`](Aim/Algebra/OrderedField_Lemmas.md) — Statement-only worklist of derived lemmas.
+   - [`Aim/Algebra/AlgebraAggregator.lean`](Aim/Algebra/AlgebraAggregator.lean) — Aggregator.
+6. **Peano Systems** (class `Aim.PeanoSystem`)
+   - [`Aim/PeanoSystem/Interface/PeanoSystem.lean`](Aim/PeanoSystem/Interface/PeanoSystem.lean) — Base element, successor, and the three Peano axioms; the base is not named.
+   - [`Aim/PeanoSystem/Theorems/Recursion.lean`](Aim/PeanoSystem/Theorems/Recursion.lean) — The recursion theorem and `recurse`.
+   - [`Aim/PeanoSystem/PeanoSystemAggregator.lean`](Aim/PeanoSystem/PeanoSystemAggregator.lean) — Aggregator.
+7. **Number Systems** (class `Aim.NaturalNumbers`, construction `Aim.LeanNat`)
+   - [`Aim/NumberSystems/NaturalNumbers/Interface/NaturalNumbers.lean`](Aim/NumberSystems/NaturalNumbers/Interface/NaturalNumbers.lean) — A Peano system whose base element is written `0`.
+   - [`Aim/NumberSystems/NaturalNumbers/Constructions/LeanNat/`](Aim/NumberSystems/NaturalNumbers/Constructions/LeanNat/) — Lean's `Nat` as the first construction, with its `Satisfies` certificate.
+   - [`Aim/NumberSystems/NumberSystemsAggregator.lean`](Aim/NumberSystems/NumberSystemsAggregator.lean) — Aggregator.
+   - [`Aim/NumberSystems/READINGS.MD`](Aim/NumberSystems/READINGS.MD) — Reading guide: Landau for the natural numbers, Feferman for the number systems.
+   - Design: [`architecture/natural-numbers.md`](architecture/natural-numbers.md). $\mathbb{Z}$, $\mathbb{Q}$ and $\mathbb{R}$ are not started.
+8. **Proof Theory** (`namespace Aim.ProofTheory`)
    - [`Aim/ProofTheory/Syntax.lean`](Aim/ProofTheory/Syntax.lean) — First-order terms, formulas, and capture-avoiding substitution.
    - [`Aim/ProofTheory/Hilbert.lean`](Aim/ProofTheory/Hilbert.lean) — Hilbert-style axiomatic calculus and the Deduction Theorem.
    - [`Aim/ProofTheory/NaturalDeduction.lean`](Aim/ProofTheory/NaturalDeduction.lean) — Gentzen's Natural Deduction ($\mathsf{NJ} / \mathsf{NK}$).
    - [`Aim/ProofTheory/SequentCalculus.lean`](Aim/ProofTheory/SequentCalculus.lean) — Gentzen's Sequent Calculus ($\mathsf{LJ} / \mathsf{LK}$) and Cut-Elimination.
-   - [`Aim/ProofTheory/ProofTheory.lean`](Aim/ProofTheory/ProofTheory.lean) — Aggregator.
-7. **Model Theory** (`namespace Aim.ModelTheory`)
+   - [`Aim/ProofTheory/ProofTheoryAggregator.lean`](Aim/ProofTheory/ProofTheoryAggregator.lean) — Aggregator.
+9. **Model Theory** (`namespace Aim.ModelTheory`)
    - [`Aim/ModelTheory/Language.lean`](Aim/ModelTheory/Language.lean) — First-order signatures and languages $\mathcal{L}$.
    - [`Aim/ModelTheory/Structure.lean`](Aim/ModelTheory/Structure.lean) — $\mathcal{L}$-structures $\mathfrak{M}$, embeddings, and isomorphisms.
    - [`Aim/ModelTheory/Satisfaction.lean`](Aim/ModelTheory/Satisfaction.lean) — Tarski's truth definition ($\mathfrak{M} \models \varphi$) and Soundness.
    - [`Aim/ModelTheory/Completeness.lean`](Aim/ModelTheory/Completeness.lean) — Henkin construction, Gödel's Completeness Theorem, and Compactness.
-   - [`Aim/ModelTheory/ModelTheory.lean`](Aim/ModelTheory/ModelTheory.lean) — Aggregator.
-8. **Topology & Metric Spaces** (`namespace Aim.Topology`)
+   - [`Aim/ModelTheory/ModelTheoryAggregator.lean`](Aim/ModelTheory/ModelTheoryAggregator.lean) — Aggregator.
+10. **Topology & Metric Spaces** (`namespace Aim.Topology`)
    - [`Aim/Topology/MetricSpace.lean`](Aim/Topology/MetricSpace.lean) — Metric axioms, open balls, Cauchy sequences, complete metric spaces.
    - [`Aim/Topology/TopologicalSpace.lean`](Aim/Topology/TopologicalSpace.lean) — Open/closed sets, bases, interior, closure, Hausdorff spaces.
    - [`Aim/Topology/Continuity.lean`](Aim/Topology/Continuity.lean) — Continuous maps, homeomorphisms, subspaces, products.
    - [`Aim/Topology/Compactness.lean`](Aim/Topology/Compactness.lean) — Open covers, sequential compactness, Heine-Borel Theorem.
    - [`Aim/Topology/Connectedness.lean`](Aim/Topology/Connectedness.lean) — Connected and path-connected spaces.
-   - [`Aim/Topology/Topology.lean`](Aim/Topology/Topology.lean) — Aggregator.
-9. **Real Analysis** (`namespace Aim.Analysis`)
+   - [`Aim/Topology/TopologyAggregator.lean`](Aim/Topology/TopologyAggregator.lean) — Aggregator.
+11. **Real Analysis** (stubs)
    - [`Aim/Analysis/Sequences.lean`](Aim/Analysis/Sequences.lean) — Real sequences, Monotone Convergence, Bolzano-Weierstrass.
    - [`Aim/Analysis/Series.lean`](Aim/Analysis/Series.lean) — Infinite series, Root/Ratio/Comparison tests.
    - [`Aim/Analysis/Limits.lean`](Aim/Analysis/Limits.lean) — $\varepsilon$-$\delta$ functional limits, continuity, IVT, EVT.
    - [`Aim/Analysis/Derivative.lean`](Aim/Analysis/Derivative.lean) — Differentiation, Rolle's Theorem, Mean Value Theorem, Taylor's Theorem.
    - [`Aim/Analysis/Integral.lean`](Aim/Analysis/Integral.lean) — Darboux/Riemann integration and the Fundamental Theorem of Calculus.
-   - [`Aim/Analysis/Analysis.lean`](Aim/Analysis/Analysis.lean) — Aggregator.
+   - [`Aim/Analysis/AnalysisAggregator.lean`](Aim/Analysis/AnalysisAggregator.lean) — Aggregator.
 
 ## Building
 

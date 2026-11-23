@@ -16,6 +16,7 @@ coverage = read("coverage.json")
 unlocks = read("unlock-levels.json")
 Draft202012Validator.check_schema(schema)
 validator = Draft202012Validator(schema)
+lean_sources = schema["items"]["properties"]["source"]["properties"]["lean"]["enum"]
 
 cards = []
 for stage in manifest["stages"]:
@@ -40,7 +41,7 @@ for c in cards:
         assert body.count("{") == body.count("}"), (c["id"], field, "unbalanced braces")
         assert "<script" not in body.lower(), c["id"]
     assert c["source"]["tex"] == "output/pdf/ordered_field_reference.tex"
-    assert c["source"]["lean"] == "Aim/Analysis/Numbers.lean"
+    assert c["source"]["lean"] in lean_sources, (c["id"], c["source"]["lean"])
     assert all(p in byid and byid[p]["stage"] <= c["stage"] for p in c["prerequisites"])
 
 visited, active = set(), set()
@@ -91,7 +92,7 @@ for entry in coverage["lean_declarations"]:
     else:
         assert entry["declaration"] in excluded, "unexplained missing Lean mapping: " + entry["declaration"]
 
-for rel in ("output/pdf/ordered_field_reference.tex", "Aim/Analysis/Numbers.lean"):
+for rel in ("output/pdf/ordered_field_reference.tex", *lean_sources):
     assert (repo / rel).is_file(), rel + " not found in checked out repository"
 print(
     f"PASS: {len(cards)} cards, {len(manifest['stages'])} stages, "

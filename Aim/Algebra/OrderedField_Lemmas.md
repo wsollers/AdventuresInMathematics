@@ -1,7 +1,7 @@
-# Numbers — derived lemmas up to `OrderedField`
+# Derived lemmas up to `OrderedField`
 
-Statement-only worklist for `Aim.Analysis`. Each row is a declaration to be proved from the
-axiom mixins in `Numbers.lean`; nothing here needs `IsOrderComplete` or `ArchimedeanProperty`.
+Statement-only worklist for `Field.lean`, `OrderedField.lean` and `OrderTheory/TotalOrder.lean`. Each row is a declaration to be proved from the
+axiom mixins in those files; nothing here needs `IsOrderComplete` or `ArchimedeanProperty`.
 
 Conventions
 - Variables `x y z w a b c : F`, `n m : Nat`. Sections 1–3 assume `[Field F]`; sections 4–8 assume `[OrderedField F]`.
