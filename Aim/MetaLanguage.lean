@@ -54,8 +54,9 @@ and choice are allowed when stated.
 
 Lazily: an item is added when a proof first needs it.
 
-* `MetaLanguage/Eq.lean` (present): metalanguage equality as an exercise;
-  `MetaEq`, substitution, Leibniz equality, bridges to Lean's `=`.
+* `IdentityAndEquality/` contains the equality and identity interfaces,
+  constructions, and satisfaction certificates. `MetaLanguage/Eq.lean`
+  preserves the former names as compatibility aliases.
 
 * `MetaLanguage/Pred.lean`: sets as predicates `α → Prop`; membership, `⊆`,
   set equality, closure under one- and two-place operations (Enderton p. 18).

@@ -1,5 +1,6 @@
 # --- Lean / Lake build output ---
 /.lake/
+/validation/mathlib/.lake/
 /build/
 *.olean
 *.ilean
