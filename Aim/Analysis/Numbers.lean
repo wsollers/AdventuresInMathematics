@@ -909,19 +909,43 @@ lemma le_iff_lt_or_eq {F : Type u} [TotalOrder F] (a b : F) :
       rw [heq]
       exact le_refl b
 
+/-- A non-strict inequality is either strict or equality. -/
+corollary lt_or_eq_of_le {F : Type u} [TotalOrder F] {a b : F}
+    (h : a ≤ b) : a < b ∨ a = b := by
+  exact (le_iff_lt_or_eq a b).mp h
+
 /-- Exactly one of `a < b`, `a = b`, and `b < a` can hold. -/
 theorem lt_trichotomy {F : Type u} [TotalOrder F] (a b : F) :
     a < b ∨ a = b ∨ b < a := by
-
-  sorry
+  rcases IsLETotal.le_total a b with hab | hba
+  · rcases lt_or_eq_of_le hab with hlt | heq
+    · exact Or.inl hlt
+    · exact Or.inr (Or.inl heq)
+  · rcases lt_or_eq_of_le hba with hlt | heq
+    · exact Or.inr (Or.inr hlt)
+    · exact Or.inr (Or.inl heq.symm)
 
 /-- Failure of a non-strict comparison is the reverse strict comparison. -/
 lemma not_le {F : Type u} [TotalOrder F] (a b : F) : ¬ a ≤ b ↔ b < a := by
-  sorry
+  constructor
+  . --
+    intro h
+    exact lt_of_not_ge h
+  . --
+    intro h
+    have hlt := le_of_lt h
+    exact  not_le_of_lt h
 
 /-- Failure of a strict comparison is the reverse non-strict comparison. -/
 lemma not_lt {F : Type u} [TotalOrder F] (a b : F) : ¬ a < b ↔ b ≤ a := by
-  sorry
+  constructor
+  . --
+    intro h
+    exact le_of_not_gt h
+  . --
+    intro h
+    have hle := not_lt_of_le h
+    exact hle
 
 /-- Strict order is non-strict order between unequal elements. -/
 lemma lt_iff_le_and_ne {F : Type u} [TotalOrder F] (a b : F) :
