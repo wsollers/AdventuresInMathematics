@@ -35,13 +35,11 @@ of all elements satisfying `p` if and only if `x` satisfies `p`.
 theorem mem_setOf_iff {X : Type u} {p : X->Prop}
   (x : X) : -- Everything before the : is implicitly for all
   x ∈ { y | p y } ↔ p x := by
-
   constructor
   . --
     intro h
     --show p x
     exact h
-
   . --
     intro hpx
     show p x
@@ -55,6 +53,17 @@ of `T`.
 
   ∀ S T : Set X,  S ⊆ T ↔ ∀ x : X, x ∈ S → x ∈ T
 -/
+theorem subset_def {X : Type u}
+  {S T : Set X}: S ⊆ T ↔ ∀ x : X, x ∈ S → x ∈ T := by
+  constructor
+  . --
+    intro hST
+    intro x hxS
+    show x ∈ T
+    exact hST hxS
+  . --
+    intro hxins
+    exact hxins
 
 -- ## The empty set and the universal set
 
@@ -65,6 +74,11 @@ No element belongs to the empty set.
 
   ∀ x : X,  x ∉ ∅
 -/
+theorem not_mem_empty {X : Type u}
+  {x : X} : x ∉ (∅ : Set X) := by
+  intro hn
+  change False at hn
+  exact hn
 
 /-
 `mem_univ`
@@ -73,6 +87,10 @@ Every element belongs to the universal set.
 
   ∀ x : X,  x ∈ univ
 -/
+theorem mem_univ {X : Type u}
+  {x : X} : x ∈ univ := by
+  unfold univ
+  trivial
 
 -- ## Singleton and insertion
 
@@ -83,6 +101,18 @@ An element `x` belongs to the singleton `{a}` if and only if `x` equals `a`.
 
   ∀ a x : X,  x ∈ {a} ↔ x = a
 -/
+theorem mem_singleton_iff {X : Type u}
+  {a x : X} : x ∈ ({a} : Set X) ↔ x = a := by
+  constructor
+  . --
+    intro hxa
+    conv at hxa => whnf -- unfolds everything till it reaches a plain logical statement
+    change x = a at hxa
+    exact hxa
+  . --
+    intro hxa
+    change x = a at hxa
+    exact hxa
 
 /-
 `mem_insert_iff`
