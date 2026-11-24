@@ -49,7 +49,8 @@ instance {X : Type u} : Membership X (Set X) :=
 /-- Two sets are equal when they have exactly the same elements. -/
 theorem ext {X : Type u} {S T : Set X}
     (h : ∀ x, x ∈ S ↔ x ∈ T) : S = T := by
-  sorry
+  funext x
+  exact propext (h x)
 
 /-- Every element of a subset belongs to its superset. -/
 protected def Subset {X : Type u} (S T : Set X) : Prop :=

@@ -6,6 +6,7 @@
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs,longtable,array}
+\usepackage{url}
 \renewcommand{\arraystretch}{1.25}
 \title{Notation and Conventions}
 \author{Adventures in Mathematics}
@@ -80,8 +81,139 @@ Lean name & Readable name & Meaning \\
 \bottomrule
 \end{longtable}
 
+\section*{Naming}
+\noindent How declarations are named. This is a summary, in this project's words and with this project's examples where it has one, of the Lean standard library and Mathlib naming conventions, kept here so they can be read without leaving the repository. The two documents under References are the authority. Checked against them on 2026-11-24.
+
+\subsection*{References}
+\begin{itemize}
+\item Mathlib naming conventions: \url{https://mathlib.org/contribute/naming.html}. Covers capitalisation, the dictionary of symbol names, how a theorem name is built, structural lemmas.
+\item Lean standard library naming conventions: \url{https://github.com/leanprover/lean4/blob/master/doc/std/naming.md}. Covers namespaces, the naming algorithm for theorems, the table of special keywords, left and right.
+\item Mathlib style guide: \url{https://mathlib.org/contribute/style.html}. Covers layout and formatting of Lean source.
+\end{itemize}
+
+\subsection*{Capitalisation}
+\begin{longtable}{@{}>{\raggedright}p{0.46\linewidth}>{\raggedright}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.30\linewidth}@{}}
+\toprule
+What is named & Written in & Example \\
+\midrule
+\endhead
+a theorem, or any proof & snake\_case & \texttt{mem\_union\_iff} \\
+a type, a statement, a structure or a class & UpperCamelCase & \texttt{TotalOrder, IsUpperBound} \\
+a function or any other object that is not a type or a statement & lowerCamelCase & \texttt{upperBounds, natCast} \\
+a function is named as its result is: one that returns a statement is UpperCamelCase, one that returns a set or a number is lowerCamelCase & as the result & \texttt{IsLUB S a is a statement; upperBounds S is a set} \\
+an UpperCamelCase name used inside a theorem name & lowerCamelCase & \texttt{IsLUB becomes isLUB in IsGreatest.isLUB} \\
+an acronym keeps one case throughout & as a group & \texttt{LE and le, LUB, never Le or Lub} \\
+a file & UpperCamelCase & \texttt{TotalOrder.lean} \\
+\bottomrule
+\end{longtable}
+
+\subsection*{Names of symbols}
+\noindent A theorem name is its statement read aloud with these words.
+\begin{longtable}{@{}>{\raggedright}p{0.18\linewidth}>{\raggedright}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.54\linewidth}@{}}
+\toprule
+Symbol & Name & Note \\
+\midrule
+\endhead
+\emph{Logic} &  &  \\
+\texttt{$\lor$} & \texttt{or} &  \\
+\texttt{$\land$} & \texttt{and} &  \\
+\texttt{$\to$} & \texttt{of, imp} & the conclusion is named first, then \texttt{of} and the hypotheses \\
+\texttt{$\leftrightarrow$} & \texttt{iff} &  \\
+\texttt{$\lnot$} & \texttt{not} &  \\
+\texttt{$\exists$} & \texttt{exists} &  \\
+\texttt{$\forall$} & \texttt{forall, all} &  \\
+\texttt{=} & \texttt{eq} & often left out \\
+\texttt{$\ne$} & \texttt{ne} &  \\
+\texttt{$\circ$} & \texttt{comp} &  \\
+\emph{Sets} &  &  \\
+\texttt{$\in$} & \texttt{mem} &  \\
+\texttt{$\notin$} & \texttt{notMem} &  \\
+\texttt{$\subseteq$} & \texttt{subset} &  \\
+\texttt{$\cup$} & \texttt{union} &  \\
+\texttt{$\cap$} & \texttt{inter} &  \\
+\texttt{$\bigcup$} & \texttt{iUnion} & \texttt{i} for indexed \\
+\texttt{$\bigcap$} & \texttt{iInter} & \texttt{i} for indexed \\
+\texttt{$\bigcup_0$} & \texttt{sUnion} & \texttt{s} for a set of sets \\
+\texttt{$\bigcap_0$} & \texttt{sInter} & \texttt{s} for a set of sets \\
+\texttt{\textbackslash{}} & \texttt{sdiff} &  \\
+\texttt{$^{c}$} & \texttt{compl} &  \\
+\texttt{\{x \textbar{} p x\}} & \texttt{setOf} &  \\
+\texttt{\{x\}} & \texttt{singleton} &  \\
+\texttt{\{x, y\}} & \texttt{pair} &  \\
+\emph{Algebra} &  &  \\
+\texttt{0} & \texttt{zero} &  \\
+\texttt{1} & \texttt{one} &  \\
+\texttt{+} & \texttt{add} &  \\
+\texttt{-} & \texttt{neg, sub} & \texttt{neg} for the negative of one element, \texttt{sub} for subtraction \\
+\texttt{*} & \texttt{mul} &  \\
+\texttt{$^{-1}$} & \texttt{inv} &  \\
+\texttt{/} & \texttt{div} &  \\
+\texttt{\^{}} & \texttt{pow} &  \\
+\texttt{$\mid$} & \texttt{dvd} & divides \\
+\emph{Order} &  &  \\
+\texttt{\textless{}} & \texttt{lt, gt} & \texttt{gt} only when the two sides are swapped; see Patterns \\
+\texttt{$\le$} & \texttt{le, ge} & \texttt{ge} only when the two sides are swapped; see Patterns \\
+\texttt{$\sqcup$} & \texttt{sup} & the least upper bound of two elements \\
+\texttt{$\sqcap$} & \texttt{inf} & the greatest lower bound of two elements \\
+\texttt{$\bigsqcup$} & \texttt{iSup} & of an indexed family; \texttt{sSup} of a set \\
+\texttt{{\large$\sqcap$}} & \texttt{iInf} & of an indexed family; \texttt{sInf} of a set \\
+\texttt{$\bot$} & \texttt{bot} & the least element \\
+\texttt{$\top$} & \texttt{top} & the greatest element \\
+\bottomrule
+\end{longtable}
+
+\subsection*{Patterns in names}
+\begin{longtable}{@{}>{\raggedright}p{0.20\linewidth}>{\raggedright}p{0.46\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}@{}}
+\toprule
+Pattern & Meaning & Example \\
+\midrule
+\endhead
+\texttt{the conclusion} & A name spells out the conclusion of the theorem, reading its symbols left to right with the dictionary above. & \texttt{mul\_zero} is a * 0 = 0; \texttt{zero\_mul} is 0 * a = 0 \\
+\texttt{\_of\_} & Hypotheses follow the conclusion, each introduced by \texttt{of}, in the order they appear. A $\to$ B $\to$ C is named \texttt{C\_of\_A\_of\_B}. A hypothesis that is obvious from the conclusion is left out. & \texttt{le\_of\_add\_le\_add\_right} concludes a $\le$ b from a + c $\le$ b + c \\
+\texttt{\_iff} & The statement is an \texttt{$\leftrightarrow$}. A longer form \texttt{A\_iff\_B} names both sides. & \texttt{mem\_union\_iff} \\
+\texttt{\_def} & Restates a definition so that it can be unfolded by name. & \texttt{subset\_def} \\
+\texttt{refl, rfl, irrefl} & a R a, with \texttt{a} given explicitly for \texttt{refl} and found by Lean for \texttt{rfl}; \texttt{irrefl} is $\lnot$ a R a. & \texttt{le\_refl} \\
+\texttt{symm, trans, antisymm} & a R b $\to$ b R a; a R b $\to$ b R c $\to$ a R c; a R b $\to$ b R a $\to$ a = b. & \texttt{le\_trans}, \texttt{le\_antisymm} \\
+\texttt{comm, assoc} & f a b = f b a; f (f a b) c = f a (f b c). Compare \texttt{symm}, which is about a relation, not an operation. & \texttt{add\_comm}, \texttt{mul\_assoc}, \texttt{max\_comm} \\
+\texttt{left\_distrib, right\_distrib} & a * (b + c) = a * b + a * c; (a + b) * c = a * c + b * c. & \texttt{left\_distrib} \\
+\texttt{\_left, \_right} & Tells apart the two symmetric versions of a theorem. It usually names the side that varies. & \texttt{add\_le\_add\_left}, \texttt{add\_le\_add\_right} \\
+\texttt{cancel, inj} & \texttt{cancel} is f a = f b $\to$ a = b, or g (f a) = a. \texttt{inj} is the two-way form f a = f b $\leftrightarrow$ a = b. & \texttt{add\_left\_cancel} \\
+\texttt{mono} & a $\le$ b $\to$ f a $\le$ f b. &  \\
+\texttt{ext, ext\_iff} & \texttt{T.ext}: two objects of type \texttt{T} that agree on every element, or every argument, are equal. \texttt{T.ext\_iff} is the two-way form. & \texttt{Set.ext} \\
+\texttt{self} & A variable appears more than once in the conclusion. & \texttt{add\_sub\_self} \\
+\texttt{pos, neg, nonneg, nonpos} & Used in place of \texttt{zero\_lt}, \texttt{lt\_zero}, \texttt{zero\_le}, \texttt{le\_zero}. A nonzero element is \texttt{ne\_zero}, never \texttt{nonzero}. & \texttt{mul\_pos}, \texttt{two\_pos}, \texttt{natCast\_nonneg} \\
+\texttt{le and lt, ge and gt} & Statements are written with $\le$ and \textless{}, never $\ge$ and \textgreater{}. A name uses \texttt{le} and \texttt{lt} for the first such relation; \texttt{ge} and \texttt{gt} appear only to say that a later relation has its two sides the other way round. & \texttt{lt\_iff\_le\_not\_ge} is a \textless{} b $\leftrightarrow$ a $\le$ b $\land$ $\lnot$ b $\le$ a \\
+\texttt{infix order} & A name follows the order in which the statement is written. & \texttt{neg\_mul\_neg} is -a * -b \\
+\texttt{Type.name} & A theorem whose main hypothesis is a statement \texttt{P \dots{}} is placed in the namespace \texttt{P}, so that from \texttt{h : P \dots{}} it can be written \texttt{h.name}. & \texttt{IsLUB.unique}: from \texttt{h : IsLUB S a} write \texttt{h.unique} \\
+\texttt{Is and Has} & A property named by a noun begins with \texttt{Is}. A property named by an adjective need not. \texttt{Has} is used when the property says that something else exists. & \texttt{IsUpperBound}, \texttt{IsLeast}; \texttt{BddAbove} \\
+\texttt{a property inside a name} & The property comes first, in lowerCamelCase, then what it is about. & \texttt{isLUB\_iff}, not \texttt{iff\_isLUB} \\
+\texttt{induction, rec} & A principle that proves a statement for every element is named \texttt{induction}. One that builds an object for every element is named \texttt{rec}. & \texttt{PeanoSystem.induction} \\
+\texttt{no primes} & Two versions of a theorem are told apart by a describing word, not by a trailing \texttt{'}. &  \\
+\texttt{spelling} & Names use American spelling. Comments and prose may use any standard spelling. & \texttt{factorization} \\
+\bottomrule
+\end{longtable}
+
+\subsection*{Where this project differs}
+\paragraph{\texttt{$\leftrightarrow$} lemmas}
+Lean: the standard library recommends \texttt{\_iff}; Mathlib drops it when the short name is free (\texttt{mem\_union}). Here: every \texttt{$\leftrightarrow$} lemma has \texttt{iff} in its name. Reason: one rule, and the short name stays free for the one-way fact.
+
+\paragraph{set variables}
+Lean: \texttt{s}, \texttt{t}. Here: \texttt{S}, \texttt{T}; \texttt{C}, \texttt{D} for a set of sets. Reason: as in written mathematics.
+
+\paragraph{type variables}
+Lean: \texttt{$\alpha$}, \texttt{$\beta$} for a general type; a mathematical letter where the type has a role. Here: \texttt{X}, \texttt{Y} for a general type; \texttt{F}, \texttt{R}, \texttt{N} by role. Reason: as in written mathematics.
+
+\paragraph{readable names}
+Lean: one name for each concept. Here: a major concept with an abbreviated Lean name also has a full name; see Names. Reason: the statements should read as mathematics.
+
+\paragraph{type arguments}
+Lean: usually supplied by a \texttt{variable} line. Here: every theorem states its type arguments itself, first. Reason: each statement can be read on its own.
+
 \section*{Conventions}
 \begin{enumerate}
+\item Declarations are named by the Lean and Mathlib naming conventions, as summarised under Naming, with the local differences listed there. \emph{(not checked automatically)}
+\item A theorem whose statement is an \texttt{$\leftrightarrow$} has \texttt{iff} in its name. \emph{(not checked automatically)}
+\item A theorem states its type arguments itself, first, as in \texttt{theorem name \{X : Type u\}}, and does not rely on a \texttt{variable} line for them. \emph{(not checked automatically)}
 \item A major concept has a readable full name. Where its Lean name is abbreviated, the Lean name is the definition and the full name is an \texttt{abbrev} for it. Lemmas have one name, after the Lean name. \emph{(checked automatically)}
 \item Every theorem, lemma, corollary, proposition and example is proved with a \texttt{by} tactic block, so that the proof can be stepped through in the InfoView. \emph{(checked automatically)}
 \item A file that only re-exports its folder is named \textless{}Folder\textgreater{}Aggregator.lean and contains imports and a module docstring, no declarations. \emph{(checked automatically)}

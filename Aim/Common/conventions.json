@@ -114,7 +114,7 @@
       "standard": "a = \\sup S",
       "lean": "IsLeastUpperBound S a",
       "why": "the supremum is a relation until a function is defined",
-      "source": "Aim/OrderTheory/Completeness.lean"
+      "source": "Aim/OrderTheory/Bounds.lean"
     },
     {
       "standard": "0^{-1} \\text{ undefined}",
@@ -149,7 +149,269 @@
     {"lean": "BddAbove", "readable": "BoundedAbove", "meaning": "a set that has an upper bound"},
     {"lean": "BddBelow", "readable": "BoundedBelow", "meaning": "a set that has a lower bound"}
   ],
+  "naming": {
+    "about": "How declarations are named. This is a summary, in this project's words and with this project's examples where it has one, of the Lean standard library and Mathlib naming conventions, kept here so they can be read without leaving the repository. The two documents under References are the authority. Checked against them on 2026-11-24.",
+    "references": [
+      {
+        "title": "Mathlib naming conventions",
+        "url": "https://mathlib.org/contribute/naming.html",
+        "covers": "capitalisation, the dictionary of symbol names, how a theorem name is built, structural lemmas"
+      },
+      {
+        "title": "Lean standard library naming conventions",
+        "url": "https://github.com/leanprover/lean4/blob/master/doc/std/naming.md",
+        "covers": "namespaces, the naming algorithm for theorems, the table of special keywords, left and right"
+      },
+      {
+        "title": "Mathlib style guide",
+        "url": "https://mathlib.org/contribute/style.html",
+        "covers": "layout and formatting of Lean source"
+      }
+    ],
+    "capitalisation": [
+      {
+        "kind": "a theorem, or any proof",
+        "case": "snake_case",
+        "example": "mem_union_iff"
+      },
+      {
+        "kind": "a type, a statement, a structure or a class",
+        "case": "UpperCamelCase",
+        "example": "TotalOrder, IsUpperBound"
+      },
+      {
+        "kind": "a function or any other object that is not a type or a statement",
+        "case": "lowerCamelCase",
+        "example": "upperBounds, natCast"
+      },
+      {
+        "kind": "a function is named as its result is: one that returns a statement is UpperCamelCase, one that returns a set or a number is lowerCamelCase",
+        "case": "as the result",
+        "example": "IsLUB S a is a statement; upperBounds S is a set"
+      },
+      {
+        "kind": "an UpperCamelCase name used inside a theorem name",
+        "case": "lowerCamelCase",
+        "example": "IsLUB becomes isLUB in IsGreatest.isLUB"
+      },
+      {
+        "kind": "an acronym keeps one case throughout",
+        "case": "as a group",
+        "example": "LE and le, LUB, never Le or Lub"
+      },
+      {
+        "kind": "a file",
+        "case": "UpperCamelCase",
+        "example": "TotalOrder.lean"
+      }
+    ],
+    "symbols": [
+      {"group": "Logic", "symbol": "∨", "name": "or", "note": ""},
+      {"group": "Logic", "symbol": "∧", "name": "and", "note": ""},
+      {"group": "Logic", "symbol": "→", "name": "of, imp", "note": "the conclusion is named first, then `of` and the hypotheses"},
+      {"group": "Logic", "symbol": "↔", "name": "iff", "note": ""},
+      {"group": "Logic", "symbol": "¬", "name": "not", "note": ""},
+      {"group": "Logic", "symbol": "∃", "name": "exists", "note": ""},
+      {"group": "Logic", "symbol": "∀", "name": "forall, all", "note": ""},
+      {"group": "Logic", "symbol": "=", "name": "eq", "note": "often left out"},
+      {"group": "Logic", "symbol": "≠", "name": "ne", "note": ""},
+      {"group": "Logic", "symbol": "∘", "name": "comp", "note": ""},
+      {"group": "Sets", "symbol": "∈", "name": "mem", "note": ""},
+      {"group": "Sets", "symbol": "∉", "name": "notMem", "note": ""},
+      {"group": "Sets", "symbol": "⊆", "name": "subset", "note": ""},
+      {"group": "Sets", "symbol": "∪", "name": "union", "note": ""},
+      {"group": "Sets", "symbol": "∩", "name": "inter", "note": ""},
+      {"group": "Sets", "symbol": "⋃", "name": "iUnion", "note": "`i` for indexed"},
+      {"group": "Sets", "symbol": "⋂", "name": "iInter", "note": "`i` for indexed"},
+      {"group": "Sets", "symbol": "⋃₀", "name": "sUnion", "note": "`s` for a set of sets"},
+      {"group": "Sets", "symbol": "⋂₀", "name": "sInter", "note": "`s` for a set of sets"},
+      {"group": "Sets", "symbol": "\\", "name": "sdiff", "note": ""},
+      {"group": "Sets", "symbol": "ᶜ", "name": "compl", "note": ""},
+      {"group": "Sets", "symbol": "{x | p x}", "name": "setOf", "note": ""},
+      {"group": "Sets", "symbol": "{x}", "name": "singleton", "note": ""},
+      {"group": "Sets", "symbol": "{x, y}", "name": "pair", "note": ""},
+      {"group": "Algebra", "symbol": "0", "name": "zero", "note": ""},
+      {"group": "Algebra", "symbol": "1", "name": "one", "note": ""},
+      {"group": "Algebra", "symbol": "+", "name": "add", "note": ""},
+      {"group": "Algebra", "symbol": "-", "name": "neg, sub", "note": "`neg` for the negative of one element, `sub` for subtraction"},
+      {"group": "Algebra", "symbol": "*", "name": "mul", "note": ""},
+      {"group": "Algebra", "symbol": "⁻¹", "name": "inv", "note": ""},
+      {"group": "Algebra", "symbol": "/", "name": "div", "note": ""},
+      {"group": "Algebra", "symbol": "^", "name": "pow", "note": ""},
+      {"group": "Algebra", "symbol": "∣", "name": "dvd", "note": "divides"},
+      {"group": "Order", "symbol": "<", "name": "lt, gt", "note": "`gt` only when the two sides are swapped; see Patterns"},
+      {"group": "Order", "symbol": "≤", "name": "le, ge", "note": "`ge` only when the two sides are swapped; see Patterns"},
+      {"group": "Order", "symbol": "⊔", "name": "sup", "note": "the least upper bound of two elements"},
+      {"group": "Order", "symbol": "⊓", "name": "inf", "note": "the greatest lower bound of two elements"},
+      {"group": "Order", "symbol": "⨆", "name": "iSup", "note": "of an indexed family; `sSup` of a set"},
+      {"group": "Order", "symbol": "⨅", "name": "iInf", "note": "of an indexed family; `sInf` of a set"},
+      {"group": "Order", "symbol": "⊥", "name": "bot", "note": "the least element"},
+      {"group": "Order", "symbol": "⊤", "name": "top", "note": "the greatest element"}
+    ],
+    "patterns": [
+      {
+        "pattern": "the conclusion",
+        "meaning": "A name spells out the conclusion of the theorem, reading its symbols left to right with the dictionary above.",
+        "example": "`mul_zero` is a * 0 = 0; `zero_mul` is 0 * a = 0"
+      },
+      {
+        "pattern": "_of_",
+        "meaning": "Hypotheses follow the conclusion, each introduced by `of`, in the order they appear. A → B → C is named `C_of_A_of_B`. A hypothesis that is obvious from the conclusion is left out.",
+        "example": "`le_of_add_le_add_right` concludes a ≤ b from a + c ≤ b + c"
+      },
+      {
+        "pattern": "_iff",
+        "meaning": "The statement is an `↔`. A longer form `A_iff_B` names both sides.",
+        "example": "`mem_union_iff`"
+      },
+      {
+        "pattern": "_def",
+        "meaning": "Restates a definition so that it can be unfolded by name.",
+        "example": "`subset_def`"
+      },
+      {
+        "pattern": "refl, rfl, irrefl",
+        "meaning": "a R a, with `a` given explicitly for `refl` and found by Lean for `rfl`; `irrefl` is ¬ a R a.",
+        "example": "`le_refl`"
+      },
+      {
+        "pattern": "symm, trans, antisymm",
+        "meaning": "a R b → b R a; a R b → b R c → a R c; a R b → b R a → a = b.",
+        "example": "`le_trans`, `le_antisymm`"
+      },
+      {
+        "pattern": "comm, assoc",
+        "meaning": "f a b = f b a; f (f a b) c = f a (f b c). Compare `symm`, which is about a relation, not an operation.",
+        "example": "`add_comm`, `mul_assoc`, `max_comm`"
+      },
+      {
+        "pattern": "left_distrib, right_distrib",
+        "meaning": "a * (b + c) = a * b + a * c; (a + b) * c = a * c + b * c.",
+        "example": "`left_distrib`"
+      },
+      {
+        "pattern": "_left, _right",
+        "meaning": "Tells apart the two symmetric versions of a theorem. It usually names the side that varies.",
+        "example": "`add_le_add_left`, `add_le_add_right`"
+      },
+      {
+        "pattern": "cancel, inj",
+        "meaning": "`cancel` is f a = f b → a = b, or g (f a) = a. `inj` is the two-way form f a = f b ↔ a = b.",
+        "example": "`add_left_cancel`"
+      },
+      {
+        "pattern": "mono",
+        "meaning": "a ≤ b → f a ≤ f b.",
+        "example": ""
+      },
+      {
+        "pattern": "ext, ext_iff",
+        "meaning": "`T.ext`: two objects of type `T` that agree on every element, or every argument, are equal. `T.ext_iff` is the two-way form.",
+        "example": "`Set.ext`"
+      },
+      {
+        "pattern": "self",
+        "meaning": "A variable appears more than once in the conclusion.",
+        "example": "`add_sub_self`"
+      },
+      {
+        "pattern": "pos, neg, nonneg, nonpos",
+        "meaning": "Used in place of `zero_lt`, `lt_zero`, `zero_le`, `le_zero`. A nonzero element is `ne_zero`, never `nonzero`.",
+        "example": "`mul_pos`, `two_pos`, `natCast_nonneg`"
+      },
+      {
+        "pattern": "le and lt, ge and gt",
+        "meaning": "Statements are written with ≤ and <, never ≥ and >. A name uses `le` and `lt` for the first such relation; `ge` and `gt` appear only to say that a later relation has its two sides the other way round.",
+        "example": "`lt_iff_le_not_ge` is a < b ↔ a ≤ b ∧ ¬ b ≤ a"
+      },
+      {
+        "pattern": "infix order",
+        "meaning": "A name follows the order in which the statement is written.",
+        "example": "`neg_mul_neg` is -a * -b"
+      },
+      {
+        "pattern": "Type.name",
+        "meaning": "A theorem whose main hypothesis is a statement `P …` is placed in the namespace `P`, so that from `h : P …` it can be written `h.name`.",
+        "example": "`IsLUB.unique`: from `h : IsLUB S a` write `h.unique`"
+      },
+      {
+        "pattern": "Is and Has",
+        "meaning": "A property named by a noun begins with `Is`. A property named by an adjective need not. `Has` is used when the property says that something else exists.",
+        "example": "`IsUpperBound`, `IsLeast`; `BddAbove`"
+      },
+      {
+        "pattern": "a property inside a name",
+        "meaning": "The property comes first, in lowerCamelCase, then what it is about.",
+        "example": "`isLUB_iff`, not `iff_isLUB`"
+      },
+      {
+        "pattern": "induction, rec",
+        "meaning": "A principle that proves a statement for every element is named `induction`. One that builds an object for every element is named `rec`.",
+        "example": "`PeanoSystem.induction`"
+      },
+      {
+        "pattern": "no primes",
+        "meaning": "Two versions of a theorem are told apart by a describing word, not by a trailing `'`.",
+        "example": ""
+      },
+      {
+        "pattern": "spelling",
+        "meaning": "Names use American spelling. Comments and prose may use any standard spelling.",
+        "example": "`factorization`"
+      }
+    ],
+    "local": [
+      {
+        "topic": "`↔` lemmas",
+        "lean": "the standard library recommends `_iff`; Mathlib drops it when the short name is free (`mem_union`)",
+        "here": "every `↔` lemma has `iff` in its name",
+        "why": "one rule, and the short name stays free for the one-way fact"
+      },
+      {
+        "topic": "set variables",
+        "lean": "`s`, `t`",
+        "here": "`S`, `T`; `C`, `D` for a set of sets",
+        "why": "as in written mathematics"
+      },
+      {
+        "topic": "type variables",
+        "lean": "`α`, `β` for a general type; a mathematical letter where the type has a role",
+        "here": "`X`, `Y` for a general type; `F`, `R`, `N` by role",
+        "why": "as in written mathematics"
+      },
+      {
+        "topic": "readable names",
+        "lean": "one name for each concept",
+        "here": "a major concept with an abbreviated Lean name also has a full name; see Names",
+        "why": "the statements should read as mathematics"
+      },
+      {
+        "topic": "type arguments",
+        "lean": "usually supplied by a `variable` line",
+        "here": "every theorem states its type arguments itself, first",
+        "why": "each statement can be read on its own"
+      }
+    ]
+  },
   "rules": [
+    {
+      "id": "lean-naming",
+      "statement": "Declarations are named by the Lean and Mathlib naming conventions, as summarised under Naming, with the local differences listed there.",
+      "enforced": false,
+      "exceptions": []
+    },
+    {
+      "id": "iff-in-name",
+      "statement": "A theorem whose statement is an `↔` has `iff` in its name.",
+      "enforced": false,
+      "exceptions": []
+    },
+    {
+      "id": "explicit-type-arguments",
+      "statement": "A theorem states its type arguments itself, first, as in `theorem name {X : Type u}`, and does not rely on a `variable` line for them.",
+      "enforced": false,
+      "exceptions": []
+    },
     {
       "id": "readable-names",
       "statement": "A major concept has a readable full name. Where its Lean name is abbreviated, the Lean name is the definition and the full name is an `abbrev` for it. Lemmas have one name, after the Lean name.",

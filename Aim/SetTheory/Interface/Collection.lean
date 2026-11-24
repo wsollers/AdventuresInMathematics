@@ -27,7 +27,8 @@ instance {X : Type u} : Membership (Aim.Set X) (Collection X) :=
 /-- Two collections are equal when they contain exactly the same sets. -/
 theorem ext {X : Type u} {C D : Collection X}
     (h : ∀ S, S ∈ C ↔ S ∈ D) : C = D := by
-  sorry
+  funext x
+  exact propext (h x)
 
 protected def Subset {X : Type u} (C D : Collection X) : Prop :=
   ∀ ⦃S⦄, S ∈ C → S ∈ D

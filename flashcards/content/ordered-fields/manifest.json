@@ -1433,7 +1433,7 @@
       "type": "definition",
       "source": {
         "tex": "output/pdf/ordered_field_reference.tex",
-        "lean": "Aim/OrderTheory/Completeness.lean",
+        "lean": "Aim/OrderTheory/Bounds.lean",
         "declaration": "IsUpperBound"
       },
       "prerequisites": []
@@ -1446,7 +1446,7 @@
       "type": "definition",
       "source": {
         "tex": "output/pdf/ordered_field_reference.tex",
-        "lean": "Aim/OrderTheory/Completeness.lean",
+        "lean": "Aim/OrderTheory/Bounds.lean",
         "declaration": "IsLeastUpperBound"
       },
       "prerequisites": []

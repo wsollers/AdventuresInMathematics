@@ -19,7 +19,8 @@ namespace Family
 /-- Two families are equal when they agree at every index. -/
 theorem ext {I : Type v} {X : Type u} {F G : Family I X}
     (h : ∀ i, F i = G i) : F = G := by
-  sorry
+  funext i
+  exact h i
 
 /-- The family containing the empty set at every index. -/
 instance {I : Type v} {X : Type u} : EmptyCollection (Family I X) :=

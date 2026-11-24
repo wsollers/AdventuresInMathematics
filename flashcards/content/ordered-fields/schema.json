@@ -59,6 +59,7 @@
             "enum": [
               "Aim/Algebra/Field.lean",
               "Aim/OrderTheory/TotalOrder.lean",
+              "Aim/OrderTheory/Bounds.lean",
               "Aim/OrderTheory/Completeness.lean",
               "Aim/Algebra/OrderedField.lean",
               "Aim/Algebra/CompleteOrderedField.lean",

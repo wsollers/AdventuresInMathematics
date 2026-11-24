@@ -21,7 +21,10 @@ UNICODE = {
     "∪": r"$\cup$", "∩": r"$\cap$", "≤": r"$\le$", "≥": r"$\ge$", "≠": r"$\ne$",
     "⁻¹": r"$^{-1}$", "ε": r"$\varepsilon$", "→": r"$\to$", "∀": r"$\forall$",
     "∃": r"$\exists$", "↔": r"$\leftrightarrow$", "∧": r"$\land$", "∨": r"$\lor$",
-    "¬": r"$\lnot$",
+    "¬": r"$\lnot$", "∘": r"$\circ$", "⋃₀": r"$\bigcup_0$", "⋂₀": r"$\bigcap_0$",
+    "⋃": r"$\bigcup$", "⋂": r"$\bigcap$", "ᶜ": r"$^{c}$", "∣": r"$\mid$",
+    "⊔": r"$\sqcup$", "⊓": r"$\sqcap$", "⨆": r"$\bigsqcup$", "⨅": r"{\large$\sqcap$}",
+    "⊥": r"$\bot$", "⊤": r"$\top$", "α": r"$\alpha$", "β": r"$\beta$", "…": r"\dots{}",
 }
 SPECIAL = {
     "\\": r"\textbackslash{}", "{": r"\{", "}": r"\}", "_": r"\_", "&": r"\&",
@@ -61,6 +64,52 @@ def prose(text):
     return "".join(out)
 
 
+def table(columns, header, rows):
+    """A three-column longtable. `columns` are the widths as fractions of the line."""
+    spec = "".join(r">{\raggedright" + (r"\arraybackslash" if i == len(columns) - 1 else "")
+                   + "}p{" + f"{width:.2f}" + r"\linewidth}" for i, width in enumerate(columns))
+    lines = [r"\begin{longtable}{@{}" + spec + "@{}}", r"\toprule",
+             " & ".join(header) + r" \\", r"\midrule", r"\endhead"]
+    lines += [" & ".join(row) + r" \\" for row in rows]
+    return lines + [r"\bottomrule", r"\end{longtable}", ""]
+
+
+def render_naming(naming):
+    lines = [r"\section*{Naming}", r"\noindent " + prose(naming["about"]), "",
+             r"\subsection*{References}", r"\begin{itemize}"]
+    for ref in naming["references"]:
+        lines.append(r"\item " + escape(ref["title"]) + r": \url{" + ref["url"] + "}. Covers "
+                     + prose(ref["covers"]) + ".")
+    lines += [r"\end{itemize}", "", r"\subsection*{Capitalisation}"]
+    lines += table([0.46, 0.18, 0.30], ["What is named", "Written in", "Example"],
+                   [[prose(row["kind"]), escape(row["case"]), r"\texttt{" + escape(row["example"]) + "}"]
+                    for row in naming["capitalisation"]])
+
+    lines += [r"\subsection*{Names of symbols}",
+              r"\noindent A theorem name is its statement read aloud with these words."]
+    group = None
+    rows = []
+    for row in naming["symbols"]:
+        if row["group"] != group:
+            group = row["group"]
+            rows.append([r"\emph{" + escape(group) + "}", "", ""])
+        rows.append([r"\texttt{" + escape(row["symbol"]) + "}", r"\texttt{" + escape(row["name"]) + "}",
+                     prose(row["note"])])
+    lines += table([0.18, 0.22, 0.54], ["Symbol", "Name", "Note"], rows)
+
+    lines += [r"\subsection*{Patterns in names}"]
+    lines += table([0.20, 0.46, 0.28], ["Pattern", "Meaning", "Example"],
+                   [[r"\texttt{" + escape(row["pattern"]) + "}", prose(row["meaning"]), prose(row["example"])]
+                    for row in naming["patterns"]])
+
+    lines += [r"\subsection*{Where this project differs}"]
+    for row in naming["local"]:
+        lines += [r"\paragraph{" + prose(row["topic"]) + "}",
+                  "Lean: " + prose(row["lean"]) + ". Here: " + prose(row["here"]) + ". Reason: "
+                  + prose(row["why"]) + ".", ""]
+    return lines
+
+
 def render(data):
     lines = [
         "% GENERATED from Aim/Common/conventions.json by scripts/build_notation.py.",
@@ -71,6 +120,7 @@ def render(data):
         r"\usepackage{lmodern}",
         r"\usepackage{amsmath,amssymb}",
         r"\usepackage{booktabs,longtable,array}",
+        r"\usepackage{url}",
         r"\renewcommand{\arraystretch}{1.25}",
         r"\title{" + escape(data["title"]) + "}",
         r"\author{Adventures in Mathematics}",
@@ -124,6 +174,8 @@ def render(data):
         readable = r"\texttt{" + escape(row["readable"]) + "}"
         lines.append(f"{lean} & {readable} & {prose(row['meaning'])} \\\\")
     lines += [r"\bottomrule", r"\end{longtable}", ""]
+
+    lines += render_naming(data["naming"])
 
     lines += [r"\section*{Conventions}", r"\begin{enumerate}"]
     for rule in data["rules"]:

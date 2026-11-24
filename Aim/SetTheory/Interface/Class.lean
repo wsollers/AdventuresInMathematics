@@ -27,7 +27,8 @@ instance {X : Type u} : Membership X (Class X) :=
 /-- Two classes are equal when they have exactly the same members. -/
 theorem ext {X : Type u} {C D : Class X}
     (h : ∀ x, x ∈ C ↔ x ∈ D) : C = D := by
-  sorry
+  funext x -- Classes are actually functions of type X -> Prop
+  exact propext (h x)
 
 /-- Every member of a subclass belongs to its superclass. -/
 protected def Subset {X : Type u} (C D : Class X) : Prop :=

@@ -39,7 +39,8 @@ Every module builds from the ground up along a linear axiomatic progression:
    - Design: [`architecture/set-interfaces.md`](architecture/set-interfaces.md).
 4. **Order Theory** (declarations directly in `namespace Aim`)
    - [`Aim/OrderTheory/TotalOrder.lean`](Aim/OrderTheory/TotalOrder.lean) — Order axioms, `TotalOrder`, strict and non-strict comparison, maximum and minimum.
-   - [`Aim/OrderTheory/Completeness.lean`](Aim/OrderTheory/Completeness.lean) — Upper bounds, least upper bounds, the least-upper-bound property.
+   - [`Aim/OrderTheory/Bounds.lean`](Aim/OrderTheory/Bounds.lean) — Upper and lower bounds, boundedness, greatest and least elements, least upper and greatest lower bounds.
+   - [`Aim/OrderTheory/Completeness.lean`](Aim/OrderTheory/Completeness.lean) — The least-upper-bound property and its consequences; dense orders.
    - [`Aim/OrderTheory/OrderTheoryAggregator.lean`](Aim/OrderTheory/OrderTheoryAggregator.lean) — Aggregator.
 5. **Algebra** (declarations directly in `namespace Aim`)
    - [`Aim/Algebra/Field.lean`](Aim/Algebra/Field.lean) — Field axioms as mixins, `Field`, and the derived arithmetic lemmas.

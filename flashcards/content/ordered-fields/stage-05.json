@@ -104,7 +104,7 @@
     "back": "For $s : F \\to Prop$ and $a \\in F,\\; \\forall x \\in F,\\; s(x) \\to x \\le a$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/OrderTheory/Completeness.lean",
+      "lean": "Aim/OrderTheory/Bounds.lean",
       "declaration": "IsUpperBound"
     },
     "prerequisites": [],
@@ -123,7 +123,7 @@
     "back": "$IsUpperBound  s\\; a \\;\\land\\; \\forall b \\in F,\\; IsUpperBound  s\\; b \\to a \\le b$",
     "source": {
       "tex": "output/pdf/ordered_field_reference.tex",
-      "lean": "Aim/OrderTheory/Completeness.lean",
+      "lean": "Aim/OrderTheory/Bounds.lean",
       "declaration": "IsLeastUpperBound"
     },
     "prerequisites": [],
