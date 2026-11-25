@@ -148,4 +148,20 @@ the elements.
   ∀ x y : F,  | |x| - |y| | ≤ |x - y|
 -/
 
+-- ## The ε-principle for equality
+--
+-- The companion of `le_of_forall_pos_le_add` in `OrderedField.lean`. That
+-- one removes an `ε` from an inequality; this one removes it from a
+-- distance. It is the last step in proving that a limit is unique.
+
+/-- Two elements that are closer together than every positive `ε` are equal.
+
+  ∀ x y : F,  (∀ ε : F, 0 < ε → |x - y| < ε) → x = y
+
+Proof idea: by `le_of_forall_pos_le_add` twice, `x ≤ y` and `y ≤ x`; then
+antisymmetry. Each use needs one half of `abs_sub_lt_iff`. -/
+theorem eq_of_forall_pos_abs_sub_lt {F : Type u} [OrderedField F]
+  {x y : F} (h : ∀ ε : F, 0 < ε → abs (x - y) < ε) : x = y := by
+  sorry
+
 end Aim

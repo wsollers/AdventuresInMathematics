@@ -6,6 +6,9 @@ import Aim.IdentityAndEquality.IdentityAndEqualityAggregator
 import Aim.MetaLanguage.MetaLanguageAggregator
 import Aim.Logic.LogicAggregator
 import Aim.SetTheory.SetTheoryAggregator
+import Aim.Induction.InductionAggregator
+import Aim.TypeTheory.TypeTheoryAggregator
+import Aim.LambdaCalculus.LambdaCalculusAggregator
 import Aim.OrderTheory.OrderTheoryAggregator
 import Aim.Algebra.AlgebraAggregator
 import Aim.PeanoSystem.PeanoSystemAggregator

@@ -2,6 +2,10 @@
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
 import Aim.MetaLanguage.Eq
+import Aim.MetaLanguage.Set
+import Aim.MetaLanguage.Satisfies.SetInterface
+import Aim.MetaLanguage.Collections.CollectionsAggregator
+import Aim.MetaLanguage.Algorithms.AlgorithmsAggregator
 
 /-!
 # The Metalanguage
@@ -35,8 +39,10 @@ never grows; one implementation is then proved to satisfy them.
 
 ## Import rule
 
-* Only `Aim.Logic`, `Aim.ProofTheory` and `Aim.ModelTheory` (and the root
-  aggregator `Aim`) may import `Aim.MetaLanguage`.
+* `Aim.Logic`, `Aim.ProofTheory`, `Aim.ModelTheory`, `Aim.TypeTheory`, and
+  `Aim.LambdaCalculus` (and the root aggregator `Aim`) may import these tools.
+* General `Aim.Induction` proofs depend on the shared set interface, not on
+  this module or its certificates.
 * The object-level layers must not import it, and must not use `Nat`, `List`
   or a library `Set`, except in one **bridge file** per subject, which proves
   the construction agrees with the built-in (e.g. Peano ℕ ≅ `Nat`).
@@ -57,8 +63,11 @@ Lazily: an item is added when a proof first needs it.
   constructions, and satisfaction certificates. `MetaLanguage/Eq.lean`
   preserves the former names as compatibility aliases.
 
-* `MetaLanguage/Pred.lean`: sets as predicates `α → Prop`; membership, `⊆`,
-  set equality, closure under one- and two-place operations (Enderton p. 18).
-* Helpers over `List` that the logic layers need, e.g. counting occurrences
-  and its behaviour under `++` (used for Enderton's parenthesis count).
+* `Set.lean` supplies `MetaSet`, a thin predicate wrapper; its separate
+  `Satisfies/SetInterface.lean` certificate supplies the common set contract.
+* `Collections/` supplies `MetaList`, `MetaTree`, and `MetaMultiset`. Lists
+  reuse Lean directly; trees use a host inductive type; multisets use host
+  lists modulo permutation because Lean core has no multiset container.
+* `Algorithms/` reserves generic symbol-sequence operations. Binding-aware
+  substitution stays with the syntax whose binding rules it implements.
 -/

@@ -16,7 +16,21 @@ variable {X : Sort u} {I : X → X → Prop} [Aim.Identity I]
 /-- Two objects are identical exactly when they have every property in common. -/
 theorem iff_forall_iff (x y : X) :
     I x y ↔ ∀ P : X → Prop, (P x ↔ P y) := by
-  sorry
+  constructor
+  . --
+    intro hi
+    intro g
+    constructor
+    . --
+      intro gx
+
+      sorry
+    . --
+      intro gy
+      sorry
+  . --
+
+    sorry
 
 /-- Identical objects may replace one another in any property. -/
 theorem replace {x y : X} (hxy : I x y) (P : X → Prop) :
