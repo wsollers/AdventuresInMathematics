@@ -85,25 +85,39 @@ theorem symm {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
 theorem trans {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
   {x y z : X} (hxy : I x y) (hyz : I y z) : I x z := by
   have hyx := symm hxy
-  have ha := (fun a => I a z)
-  have hreplace := replace hyx ha
+  --let ha := (fun a => I a z)
+  have hreplace := replace hyx (fun a => I a z) -- can use the ha above but info view is not as clean
   have hh := hreplace.mp hyz
-  sorry
+  exact hh
 
 /-- Objects identical to the same object are identical to each other. -/
 theorem euclid {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
   {x y z : X} (hxz : I x z) (hyz : I y z) : I x y := by
-  sorry
+  have hzx := symm hxz
+  have hzy := symm hyz
+  have hreplace := replace hzy (fun a => I x a) -- can use the ha above but info view is not as clean
+  have hh := hreplace.mp hxz
+  exact hh
 
 /-- Difference is symmetric. -/
 theorem different_symm {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
   {x y : X} (hxy : Different I x y) : Different I y x := by
-  sorry
+  unfold Different
+  unfold Different at hxy
+  intro hiyx
+  have hixy := symm hiyx
+  exact hxy hixy
 
 /-- Any relation satisfying Leibniz's law agrees with Lean's identity. -/
 theorem iff_eq {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
   (x y : X) : I x y ↔ x = y := by
-  sorry
+  constructor
+  . --
+    intro hxy
+    sorry
+  . --
+    intro hxy
+    sorry
 
 /-- Functions preserve identity between types carrying identity relations. -/
 theorem congrArg {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
