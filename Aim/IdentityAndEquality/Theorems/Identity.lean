@@ -85,14 +85,9 @@ theorem symm {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
 theorem trans {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
   {x y z : X} (hxy : I x y) (hyz : I y z) : I x z := by
   have hyx := symm hxy
-  have a := iff_forall_iff x y
-  have hixy := (hI.leibniz x y)
-  obtain ⟨t1, t2⟩ := hixy
-  have t3 := t1 hxy
-  obtain ⟨t4, t5⟩ := t3
-  --have t6 := t4 (I y)
-  have hreplace := replace
-  have hreplace2 := hyx
+  have ha := (fun a => I a z)
+  have hreplace := replace hyx ha
+  have hh := hreplace.mp hyz
   sorry
 
 /-- Objects identical to the same object are identical to each other. -/
