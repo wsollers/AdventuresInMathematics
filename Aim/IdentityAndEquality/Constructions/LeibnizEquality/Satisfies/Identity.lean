@@ -19,22 +19,27 @@ instance {X : Sort u} : Aim.Identity (@LeibEq X) where
     intro hleib
     constructor
     . --
-      intro p
-      have hhh := hleib p
+      intro P
+      have hhh := hleib P
       intro hpy
-
-      sorry
+      have hImp : P y → P x :=
+        hleib (fun z => P z → P x) (fun hPx => hPx)
+      have hpx := hImp hpy
+      exact hpx
     . --
-      intro p px
-      sorry
+      intro P px
+      have hpp := hleib P
+      have hImp : P y → P x :=
+        hleib (fun z => P z → P x) (fun hPx => hPx)
+      have hpx := hpp px
+      exact hpx
    . --
     intro hm
-    intro p
+    intro P
     intro px
     obtain ⟨j,k⟩ := hm
-    have hpy := k p
+    have hpy := k P
     have py := hpy px
     exact py
-
 
 end Aim.IdentityAndEquality.Constructions.LeibnizEquality
