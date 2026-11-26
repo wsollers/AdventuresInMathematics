@@ -1,0 +1,649 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.85in,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\Pow}{\mathcal P}
+\newcommand{\N}{\mathbb N}
+\newcommand{\R}{\mathbb R}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\id}{\operatorname{id}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Sets, Functions, and Cardinality}
+\fancyhead[R]{\small Statements for Formalization}
+\fancyfoot[C]{\thepage}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+\hypersetup{pdftitle={Sets, Functions, and Cardinality: Definitions and Theorems}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Sets, Functions, and Cardinality}\\[5pt]
+{\large Definitions and Theorems}\\[4pt]
+Adventures in Mathematics
+\end{center}
+All statements are in classical mathematics. Unless otherwise specified,
+$X,Y,Z$ are ambient sets; $S,T,V$ denote subsets of a common ambient set.
+Complements are relative to that ambient set. Index sets may be empty.
+The natural numbers include $0$. Statements are given without proofs.
+
+\section{Membership, inclusion, and existence}
+\begin{definition}[Subsets and extensional equality]
+For $S,T\subseteq X$, write $S\subseteq T$ if
+$\forall x\in X\,(x\in S\Rightarrow x\in T)$.
+The sets are equal if and only if they have the same elements.
+Write $S\subsetneq T$ if $S\subseteq T$ and $S\ne T$.
+\end{definition}
+\begin{definition}[Empty and universal sets; comprehension]
+The empty set $\varnothing$ has no elements. The universal set relative
+to $X$ is $X$ itself. If $P$ is a property of elements of $X$, then
+$\{x\in X:P(x)\}$ is the subset with membership condition $P(x)$.
+A subset $S$ is nonempty if $\exists x\in X\,(x\in S)$.
+\end{definition}
+\begin{proposition}[Inclusion laws]
+For subsets $S,T,V$ of $X$:
+\begin{gather*}
+S\subseteq S,\qquad
+(S\subseteq T\ \land\ T\subseteq V)\Rightarrow S\subseteq V,\\
+S=T\iff(S\subseteq T\ \land\ T\subseteq S),\qquad
+\varnothing\subseteq S\subseteq X.
+\end{gather*}
+\end{proposition}
+\begin{lemma}[Emptiness and witnesses]
+For $S,T\subseteq X$:
+\begin{align*}
+S=\varnothing&\iff\forall x\in X\,(x\notin S),\\
+S\ne\varnothing&\iff\exists x\in X\,(x\in S),\\
+S\nsubseteq T&\iff\exists x\in X\,(x\in S\land x\notin T),\\
+S\subsetneq T&\iff S\subseteq T\land\exists x\in X\,(x\in T\land x\notin S).
+\end{align*}
+\end{lemma}
+\begin{definition}[Power set]
+The power set of $S$ is $\Pow(S)=\{T:T\subseteq S\}$.
+\end{definition}
+\begin{proposition}[Power-set inclusion]
+$S\subseteq T$ if and only if $\Pow(S)\subseteq\Pow(T)$.
+Moreover, $\Pow(\varnothing)=\{\varnothing\}$.
+\end{proposition}
+
+\newpage
+\section{Union and intersection}
+\begin{definition}[Binary union and intersection]
+For $S,T\subseteq X$, define
+\[
+S\cup T=\{x\in X:x\in S\lor x\in T\},\qquad
+S\cap T=\{x\in X:x\in S\land x\in T\}.
+\]
+\end{definition}
+\begin{lemma}[Inclusions and universal properties]
+For $S,T,V\subseteq X$:
+\begin{gather*}
+S\subseteq S\cup T,\qquad T\subseteq S\cup T,\qquad
+S\cap T\subseteq S,\qquad S\cap T\subseteq T,\\
+S\cup T\subseteq V\iff(S\subseteq V\land T\subseteq V),\\
+V\subseteq S\cap T\iff(V\subseteq S\land V\subseteq T).
+\end{gather*}
+\end{lemma}
+\begin{theorem}[Elementary union and intersection laws]
+For $S,T,V\subseteq X$:
+\begin{align*}
+S\cup T&=T\cup S,&S\cap T&=T\cap S,\\
+(S\cup T)\cup V&=S\cup(T\cup V),&
+(S\cap T)\cap V&=S\cap(T\cap V),\\
+S\cup S&=S,&S\cap S&=S,\\
+S\cup\varnothing&=S,&S\cap X&=S,\\
+S\cup X&=X,&S\cap\varnothing&=\varnothing,\\
+S\cup(S\cap T)&=S,&S\cap(S\cup T)&=S.
+\end{align*}
+Both distributive laws hold:
+\begin{align*}
+S\cap(T\cup V)&=(S\cap T)\cup(S\cap V),\\
+S\cup(T\cap V)&=(S\cup T)\cap(S\cup V).
+\end{align*}
+\end{theorem}
+\begin{proposition}[Monotonicity]
+If $S\subseteq S'$ and $T\subseteq T'$, then
+\[
+S\cup T\subseteq S'\cup T',\qquad S\cap T\subseteq S'\cap T'.
+\]
+\end{proposition}
+\begin{corollary}[Inclusion characterized by the operations]
+For $S,T\subseteq X$,
+\[
+S\subseteq T\iff S\cup T=T\iff S\cap T=S.
+\]
+\end{corollary}
+
+\newpage
+\section{Complements and differences}
+\begin{definition}[Complement and difference]
+For $S,T\subseteq X$, define
+\[
+S^c=\{x\in X:x\notin S\},\qquad
+S\setminus T=\{x\in X:x\in S\land x\notin T\}.
+\]
+\end{definition}
+\begin{theorem}[Complement laws]
+For $S,T\subseteq X$:
+\begin{gather*}
+(S^c)^c=S,\qquad \varnothing^c=X,\qquad X^c=\varnothing,\\
+S\cup S^c=X,\qquad S\cap S^c=\varnothing,\\
+S\subseteq T\iff T^c\subseteq S^c.
+\end{gather*}
+\end{theorem}
+\begin{theorem}[De Morgan's laws]
+For $S,T\subseteq X$,
+\[
+(S\cup T)^c=S^c\cap T^c,\qquad
+(S\cap T)^c=S^c\cup T^c.
+\]
+\end{theorem}
+\begin{proposition}[Difference laws]
+For $S,T,V\subseteq X$:
+\begin{gather*}
+S\setminus T=S\cap T^c,\qquad
+S\setminus\varnothing=S,\qquad \varnothing\setminus S=\varnothing,\\
+S\setminus S=\varnothing,\qquad S\setminus X=\varnothing,\qquad
+X\setminus S=S^c,\\
+S\setminus T=\varnothing\iff S\subseteq T,\\
+S\setminus(T\cup V)=(S\setminus T)\cap(S\setminus V),\\
+S\setminus(T\cap V)=(S\setminus T)\cup(S\setminus V),\\
+(S\cup T)\setminus V=(S\setminus V)\cup(T\setminus V),\\
+(S\cap T)\setminus V=(S\setminus V)\cap(T\setminus V),\\
+(S\setminus T)\setminus V=S\setminus(T\cup V),\\
+S\setminus(T\setminus V)=(S\setminus T)\cup(S\cap V).
+\end{gather*}
+\end{proposition}
+\begin{lemma}[Variance of difference]
+If $S\subseteq S'$ and $T'\subseteq T$, then
+$S\setminus T\subseteq S'\setminus T'$.
+\end{lemma}
+\begin{corollary}[Decomposition relative to a subset]
+For $S,T\subseteq X$,
+\[
+S=(S\cap T)\cup(S\setminus T),\qquad
+(S\cap T)\cap(S\setminus T)=\varnothing.
+\]
+\end{corollary}
+
+\newpage
+\section{Symmetric difference, insertion, and disjointness}
+\begin{definition}[Symmetric difference]
+For $S,T\subseteq X$, define
+$S\mathbin{\triangle}T=(S\setminus T)\cup(T\setminus S)$.
+\end{definition}
+\begin{proposition}[Symmetric difference laws]
+For $S,T,V\subseteq X$,
+\begin{gather*}
+S\mathbin{\triangle}T=T\mathbin{\triangle}S,\qquad
+(S\mathbin{\triangle}T)\mathbin{\triangle}V
+=S\mathbin{\triangle}(T\mathbin{\triangle}V),\\
+S\mathbin{\triangle}\varnothing=S,\qquad S\mathbin{\triangle}S=\varnothing,\qquad
+S\mathbin{\triangle}T=\varnothing\iff S=T,\\
+S\cap(T\mathbin{\triangle}V)
+=(S\cap T)\mathbin{\triangle}(S\cap V).
+\end{gather*}
+\end{proposition}
+\begin{definition}[Singleton and insertion]
+For $x\in X$ and $S\subseteq X$, the singleton is
+$\{x\}=\{y\in X:y=x\}$, and insertion is $S\cup\{x\}$.
+\end{definition}
+\begin{proposition}[Singleton and insertion laws]
+For $x,y\in X$ and $S,T\subseteq X$:
+\begin{gather*}
+\{x\}\subseteq S\iff x\in S,\qquad
+\{x\}=\{y\}\iff x=y,\qquad \{x\}\ne\varnothing,\\
+y\in S\cup\{x\}\iff(y\in S\lor y=x),\\
+S\cup\{x\}=S\iff x\in S,\\
+S\cup\{x\}\subseteq T\iff(S\subseteq T\land x\in T),\\
+(S\cup\{x\})\cup\{x\}=S\cup\{x\},\\
+(S\cup\{x\})\cup\{y\}=(S\cup\{y\})\cup\{x\}.
+\end{gather*}
+\end{proposition}
+\begin{definition}[Disjoint sets]
+Subsets $S,T$ of $X$ are disjoint if $S\cap T=\varnothing$.
+\end{definition}
+\begin{lemma}[Membership characterization]
+The sets $S,T$ are disjoint if and only if
+$\forall x\in X\,(x\in S\Rightarrow x\notin T)$.
+Equivalently, $S\subseteq T^c$.
+\end{lemma}
+\begin{proposition}[Disjointness laws]
+Disjointness is symmetric. Every set is disjoint from $\varnothing$.
+If $S$ and $T$ are disjoint, $S'\subseteq S$, and $T'\subseteq T$,
+then $S'$ and $T'$ are disjoint. Moreover,
+\[
+S\cap(T\cup V)=\varnothing
+\iff S\cap T=\varnothing\ \land\ S\cap V=\varnothing.
+\]
+\end{proposition}
+\begin{corollary}[Non-disjointness]
+The sets $S,T$ are not disjoint if and only if
+$\exists x\in X\,(x\in S\land x\in T)$.
+\end{corollary}
+\begin{definition}[Pairwise disjoint family]
+A family $(F_i)_{i\in I}$ is pairwise disjoint if
+$F_i\cap F_j=\varnothing$ whenever $i,j\in I$ and $i\ne j$.
+\end{definition}
+\begin{lemma}[Unique membership in a disjoint family]
+If $(F_i)_{i\in I}$ is pairwise disjoint, each element of
+$\bigcup_{i\in I}F_i$ belongs to exactly one member indexed by $I$.
+\end{lemma}
+
+\newpage
+\section{Indexed families}
+\begin{definition}[Family, union, and intersection]
+A family of subsets of $X$ indexed by $I$ is a function
+$F:I\to\Pow(X)$, written $(F_i)_{i\in I}$. Define
+\begin{align*}
+\bigcup_{i\in I}F_i&=\{x\in X:\exists i\in I,\ x\in F_i\},\\
+\bigcap_{i\in I}F_i&=\{x\in X:\forall i\in I,\ x\in F_i\}.
+\end{align*}
+For $J\subseteq I$, restricted unions and intersections use the same
+definitions with indices in $J$.
+\end{definition}
+\begin{theorem}[Universal properties]
+For every $j\in I$, $F_j\subseteq\bigcup_{i\in I}F_i$ and
+$\bigcap_{i\in I}F_i\subseteq F_j$. For $S\subseteq X$,
+\begin{align*}
+\bigcup_{i\in I}F_i\subseteq S&\iff\forall i\in I,\ F_i\subseteq S,\\
+S\subseteq\bigcap_{i\in I}F_i&\iff\forall i\in I,\ S\subseteq F_i.
+\end{align*}
+\end{theorem}
+\begin{proposition}[Monotonicity and congruence]
+If $F_i\subseteq G_i$ for every $i\in I$, then
+\[
+\bigcup_{i\in I}F_i\subseteq\bigcup_{i\in I}G_i,
+\qquad \bigcap_{i\in I}F_i\subseteq\bigcap_{i\in I}G_i.
+\]
+Pointwise equality implies equality of both unions and intersections.
+If $J\subseteq K\subseteq I$, then
+\[
+\bigcup_{j\in J}F_j\subseteq\bigcup_{k\in K}F_k,
+\qquad \bigcap_{k\in K}F_k\subseteq\bigcap_{j\in J}F_j.
+\]
+\end{proposition}
+\begin{proposition}[Empty, singleton, and constant families]
+For the empty index set, union is $\varnothing$ and intersection is $X$.
+Over the singleton index set $\{j\}$, both operations give $F_j$.
+If $I\ne\varnothing$ and $F_i=S$ for every $i\in I$, both operations give $S$.
+\end{proposition}
+\begin{theorem}[Indexed De Morgan laws]
+\[
+\left(\bigcup_{i\in I}F_i\right)^c=\bigcap_{i\in I}F_i^c,
+\qquad
+\left(\bigcap_{i\in I}F_i\right)^c=\bigcup_{i\in I}F_i^c.
+\]
+\end{theorem}
+\begin{theorem}[Distribution]
+For $S\subseteq X$,
+\[
+S\cap\bigcup_{i\in I}F_i=\bigcup_{i\in I}(S\cap F_i),
+\qquad
+S\cup\bigcap_{i\in I}F_i=\bigcap_{i\in I}(S\cup F_i).
+\]
+\end{theorem}
+
+\newpage
+\section{Collections and changes of index}
+\begin{definition}[Collection and its union and intersection]
+A collection of subsets of $X$ is a set $C\subseteq\Pow(X)$. Define
+\[
+\bigcup C=\{x\in X:\exists S\in C,\ x\in S\},\qquad
+\bigcap C=\{x\in X:\forall S\in C,\ x\in S\}.
+\]
+In particular, the intersection of the empty collection is taken relative to $X$.
+\end{definition}
+\begin{proposition}[Universal properties and monotonicity]
+For $T\subseteq X$ and $C,D\subseteq\Pow(X)$,
+\begin{gather*}
+\bigcup C\subseteq T\iff\forall S\in C,\ S\subseteq T,\qquad
+T\subseteq\bigcap C\iff\forall S\in C,\ T\subseteq S,\\
+C\subseteq D\Rightarrow\bigcup C\subseteq\bigcup D,\qquad
+C\subseteq D\Rightarrow\bigcap D\subseteq\bigcap C.
+\end{gather*}
+\end{proposition}
+\begin{proposition}[Elementary collection laws]
+For $C,D\subseteq\Pow(X)$ and $S\subseteq X$,
+\begin{gather*}
+\bigcup\varnothing=\varnothing,\qquad\bigcap\varnothing=X,\qquad
+\bigcup\{S\}=S=\bigcap\{S\},\\
+\bigcup(C\cup\{S\})=(\bigcup C)\cup S,\qquad
+\bigcap(C\cup\{S\})=(\bigcap C)\cap S,\\
+\bigcup(C\cup D)=(\bigcup C)\cup(\bigcup D),\qquad
+\bigcap(C\cup D)=(\bigcap C)\cap(\bigcap D).
+\end{gather*}
+\end{proposition}
+\begin{definition}[Range of a family]
+For $F:I\to\Pow(X)$, define $\operatorname{ran}(F)=\{S\subseteq X:\exists i\in I,\ F_i=S\}$.
+\end{definition}
+\begin{theorem}[Family--collection correspondence]
+For $F:I\to\Pow(X)$,
+\[
+\bigcup_{i\in I}F_i=\bigcup\operatorname{ran}(F),\qquad
+\bigcap_{i\in I}F_i=\bigcap\operatorname{ran}(F).
+\]
+Conversely, indexing a collection $C$ by its own members, with $F_S=S$,
+recovers $\bigcup C$ and $\bigcap C$.
+\end{theorem}
+\begin{theorem}[Surjective reindexing]
+If $r:J\to I$ is surjective, then
+\[
+\bigcup_{j\in J}F_{r(j)}=\bigcup_{i\in I}F_i,\qquad
+\bigcap_{j\in J}F_{r(j)}=\bigcap_{i\in I}F_i.
+\]
+\end{theorem}
+\begin{proposition}[Interchange of like operations]
+For sets $F_{i,j}\subseteq X$ indexed by $(i,j)\in I\times J$,
+\[
+\bigcup_{i\in I}\bigcup_{j\in J}F_{i,j}
+=\bigcup_{j\in J}\bigcup_{i\in I}F_{i,j},\qquad
+\bigcap_{i\in I}\bigcap_{j\in J}F_{i,j}
+=\bigcap_{j\in J}\bigcap_{i\in I}F_{i,j}.
+\]
+\end{proposition}
+\begin{proposition}[Complements of collection unions and intersections]
+For $C\subseteq\Pow(X)$, put $D=\{S^c:S\in C\}$. Then
+\[
+(\bigcup C)^c=\bigcap D,\qquad (\bigcap C)^c=\bigcup D.
+\]
+\end{proposition}
+
+\newpage
+\section{Classes and pointwise operations}
+\begin{definition}[Classes relative to a domain]
+Let $V$ be an ambient domain. A class $C$ on $V$ is specified by a
+predicate $P$ on $V$, with $x\in C$ meaning $P(x)$.
+Classes are extensionally equal when they have the same members.
+Subclass inclusion means implication of membership predicates.
+\end{definition}
+\begin{definition}[Class operations]
+For classes $C,D$ on $V$, define union, intersection, difference, and
+complement by the membership conditions
+\begin{align*}
+x\in C\cup D&\iff x\in C\lor x\in D,\\
+x\in C\cap D&\iff x\in C\land x\in D,\\
+x\in C\setminus D&\iff x\in C\land x\notin D,\\
+x\in C^c&\iff x\notin C.
+\end{align*}
+The empty class has no members; the universal class contains every object of $V$.
+For a set-indexed family of classes, union and intersection are defined
+by existential and universal quantification over the indices.
+\end{definition}
+\begin{proposition}[Extensional class laws]
+The inclusion, binary-operation, complement, difference, and indexed
+union/intersection laws of Sections 1--6 hold for classes whenever
+the operations in the statement are defined as above. The ambient
+universal set is replaced by the universal class.
+\end{proposition}
+\begin{definition}[Represented and proper classes]
+Suppose the domain $V$ consists of foundational set objects equipped
+with a membership relation. The extension of $S\in V$ is the class
+$\{x\in V:x\in S\}$. A class is represented if it is the extension of
+some $S\in V$; otherwise it is proper.
+\end{definition}
+\begin{proposition}[Uniqueness of representation]
+If membership on $V$ satisfies extensionality, a represented class
+has a unique representing set object.
+\end{proposition}
+\begin{definition}[Pointwise operations on families]
+For $F,G:I\to\Pow(X)$, define
+\[
+(F\cup G)_i=F_i\cup G_i,\quad (F\cap G)_i=F_i\cap G_i,
+\quad (F\setminus G)_i=F_i\setminus G_i,\quad (F^c)_i=F_i^c.
+\]
+Write $F\subseteq G$ if $F_i\subseteq G_i$ for every $i\in I$.
+The empty and universal families have values $\varnothing$ and $X$,
+respectively, at every index.
+\end{definition}
+\begin{proposition}[Pointwise inheritance]
+Two families are equal if and only if their values agree at each index.
+The binary-operation and complement identities of Sections 2--3
+hold pointwise for families. The corresponding identities for collections
+hold by viewing a collection as a subset of $\Pow(X)$.
+\end{proposition}
+
+\newpage
+\section{Functions, restrictions, and inverses}
+\begin{definition}[Functions and composition]
+A function $f:X\to Y$ assigns to each $x\in X$ exactly one value $f(x)\in Y$.
+For $g:Y\to Z$, define $(g\circ f)(x)=g(f(x))$.
+The identity function is $\id_X(x)=x$.
+Two functions with the same domain and codomain are equal if their values agree everywhere.
+\end{definition}
+\begin{definition}[Injectivity, surjectivity, and bijectivity]
+A function $f:X\to Y$ is injective if
+$f(x)=f(x')\Rightarrow x=x'$ for all $x,x'\in X$.
+It is surjective if every $y\in Y$ equals $f(x)$ for some $x\in X$.
+It is bijective if it is both injective and surjective.
+\end{definition}
+\begin{proposition}[Composition laws]
+Function composition is associative and identity functions are two-sided
+identities. Compositions of injective functions are injective;
+compositions of surjective functions are surjective. Consequently,
+compositions of bijections are bijections.
+\end{proposition}
+\begin{definition}[Restriction]
+For $S\subseteq X$, the restriction $f|_S:S\to Y$ sends $x$ to $f(x)$.
+If $T\subseteq Y$ contains every value $f(x)$ with $x\in S$, the same
+assignment defines a function $S\to T$.
+\end{definition}
+\begin{definition}[Left and right inverses]
+For $f:X\to Y$ and $g:Y\to X$, $g$ is a left inverse of $f$ if
+$g\circ f=\id_X$ and a right inverse if $f\circ g=\id_Y$.
+It is an inverse if both identities hold.
+\end{definition}
+\begin{lemma}[One-sided inverses]
+A function having a left inverse is injective. A function having a
+right inverse is surjective.
+\end{lemma}
+\begin{theorem}[Inverse characterization]
+A function is bijective if and only if it has an inverse. Its inverse
+is unique. If $f:X\to Y$ is injective, then
+$f:X\to f[X]$ is bijective and thus has an inverse defined on $f[X]$.
+\end{theorem}
+\begin{proposition}[Bijections on disjoint pieces]
+Suppose $X=X_0\cup X_1$ and $Y=Y_0\cup Y_1$, with both unions disjoint.
+If $f_0:X_0\to Y_0$ and $f_1:X_1\to Y_1$ are bijections, then
+\[
+f(x)=\begin{cases}f_0(x),&x\in X_0,\\f_1(x),&x\in X_1\end{cases}
+\]
+is a bijection from $X$ to $Y$.
+\end{proposition}
+
+\newpage
+\section{Images, preimages, and products}
+\begin{definition}[Image, preimage, and range]
+For $f:X\to Y$, $S\subseteq X$, and $T\subseteq Y$, define
+\[
+f[S]=\{y\in Y:\exists x\in S,\ f(x)=y\},\qquad
+f^{-1}[T]=\{x\in X:f(x)\in T\}.
+\]
+The range is $f[X]$. The preimage notation is defined for every function
+and does not assert the existence of an inverse function.
+\end{definition}
+\begin{theorem}[Image--preimage correspondence]
+For $S\subseteq X$ and $T\subseteq Y$,
+\[
+f[S]\subseteq T\iff S\subseteq f^{-1}[T].
+\]
+Images and preimages preserve inclusion. Moreover,
+\[
+S\subseteq f^{-1}[f[S]],\qquad f[f^{-1}[T]]=T\cap f[X].
+\]
+The first inclusion is equality if $f$ is injective. The last expression
+equals $T$ if $f$ is surjective.
+\end{theorem}
+\begin{theorem}[Preimage laws]
+For $T,V\subseteq Y$ and a family $(G_i)_{i\in I}$ of subsets of $Y$,
+\begin{gather*}
+f^{-1}[\varnothing]=\varnothing,\qquad f^{-1}[Y]=X,\\
+f^{-1}[Y\setminus T]=X\setminus f^{-1}[T],\qquad
+f^{-1}[T\setminus V]=f^{-1}[T]\setminus f^{-1}[V],\\
+f^{-1}\!\left[\bigcup_{i\in I}G_i\right]=\bigcup_{i\in I}f^{-1}[G_i],\qquad
+f^{-1}\!\left[\bigcap_{i\in I}G_i\right]=\bigcap_{i\in I}f^{-1}[G_i].
+\end{gather*}
+For $g:Y\to Z$ and $W\subseteq Z$,
+$(g\circ f)^{-1}[W]=f^{-1}[g^{-1}[W]]$.
+\end{theorem}
+\begin{proposition}[Image laws]
+For $S,T\subseteq X$ and a family $(F_i)_{i\in I}$ of subsets of $X$,
+\begin{gather*}
+f[\varnothing]=\varnothing,\qquad
+f\!\left[\bigcup_{i\in I}F_i\right]=\bigcup_{i\in I}f[F_i],\\
+f[S\cap T]\subseteq f[S]\cap f[T],\qquad
+f[S]\setminus f[T]\subseteq f[S\setminus T].
+\end{gather*}
+Both inclusions are equalities if $f$ is injective.
+For $g:Y\to Z$, $(g\circ f)[S]=g[f[S]]$.
+\end{proposition}
+\begin{definition}[Cartesian product]
+For $S\subseteq X$ and $T\subseteq Y$,
+$S\times T=\{(x,y)\in X\times Y:x\in S\land y\in T\}$.
+\end{definition}
+\begin{proposition}[Product laws]
+For $S,S'\subseteq X$ and $T,T'\subseteq Y$,
+\begin{gather*}
+S\times T=\varnothing\iff S=\varnothing\lor T=\varnothing,\\
+(S\times T)\cap(S'\times T')=(S\cap S')\times(T\cap T'),\\
+S\times(T\cup T')=(S\times T)\cup(S\times T').
+\end{gather*}
+If $S\subseteq S'$ and $T\subseteq T'$, then $S\times T\subseteq S'\times T'$.
+\end{proposition}
+
+\newpage
+\section{Finite sets and countability}
+\begin{definition}[Equinumerosity and cardinal comparison]
+Write $X\sim Y$ if a bijection $X\to Y$ exists, and $X\preccurlyeq Y$
+if an injection $X\to Y$ exists. Equinumerous sets are said to have
+the same cardinality.
+\end{definition}
+\begin{proposition}[Elementary comparison laws]
+Equinumerosity is reflexive, symmetric, and transitive.
+The relation $\preccurlyeq$ is reflexive and transitive.
+If $X\subseteq Y$, then $X\preccurlyeq Y$.
+\end{proposition}
+\begin{definition}[Finite and infinite sets]
+For $n\in\N$, let $[n]=\{k\in\N:k<n\}$.
+A set $X$ has $n$ elements if $X\sim[n]$. It is finite if it has
+$n$ elements for some $n\in\N$, and infinite if it is not finite.
+\end{definition}
+\begin{theorem}[Uniqueness of finite cardinality]
+If $[m]\sim[n]$, then $m=n$. Thus a finite set has a unique number of elements.
+\end{theorem}
+\begin{proposition}[Closure of finiteness]
+The empty set and every singleton are finite. Subsets and function images
+of finite sets are finite. The union and Cartesian product of two finite
+sets are finite. If $I$ is finite and each $F_i$ is finite, then
+$\bigcup_{i\in I}F_i$ is finite.
+\end{proposition}
+\begin{definition}[Countability]
+A set is at most countable if it admits an injection into $\N$.
+It is countably infinite if it is equinumerous with $\N$.
+It is uncountable if it is not at most countable.
+\end{definition}
+\begin{theorem}[Characterization of at most countable sets]
+A set is at most countable if and only if it is finite or countably infinite.
+\end{theorem}
+\begin{proposition}[Matching enumerations]
+If $a:\N\to X$ and $b:\N\to Y$ are bijections, the function
+$b\circ a^{-1}:X\to Y$ is a bijection. Equivalently, it sends $a(n)$
+to $b(n)$ for every $n\in\N$.
+\end{proposition}
+\begin{definition}[Cover and subcover]
+A family $(F_i)_{i\in I}$ of subsets of $X$ covers $S\subseteq X$ if
+$S\subseteq\bigcup_{i\in I}F_i$. A subcover is a restriction to
+$J\subseteq I$ that still covers $S$. It is finite when $J$ is finite.
+\end{definition}
+
+\newpage
+\section{Bijections and infinite cardinality}
+\begin{theorem}[Cantor--Schr\"oder--Bernstein]
+If $X\preccurlyeq Y$ and $Y\preccurlyeq X$, then $X\sim Y$.
+\end{theorem}
+\begin{proposition}[A construction of the CSB bijection]
+Let $f:X\to Y$ and $g:Y\to X$ be injective. Define
+\[
+S_0=X\setminus g[Y],\qquad S_{n+1}=g[f[S_n]],\qquad
+C=\bigcup_{n\in\N}S_n.
+\]
+Then $g^{-1}[C]=f[C]$. Every $x\in X\setminus C$ has a unique
+preimage under $g$, and the function
+\[
+h(x)=\begin{cases}
+f(x),&x\in C,\\
+\text{the unique }y\in Y\text{ with }g(y)=x,&x\notin C
+\end{cases}
+\]
+is a bijection $X\to Y$.
+\end{proposition}
+\begin{theorem}[Cantor]
+For every set $X$, there is no surjection $X\to\Pow(X)$.
+In particular, $X\not\sim\Pow(X)$, although $X\preccurlyeq\Pow(X)$.
+\end{theorem}
+\begin{theorem}[Uncountability of the real numbers]
+There is no surjection $\N\to\R$. The set $\R$ is uncountable.
+\end{theorem}
+\begin{proposition}[An explicit interval bijection]
+The function $f:\R\to(0,1)$ given by
+\[
+f(x)=\frac12+\frac{x}{2(1+|x|)}
+\]
+is bijective. Its inverse is
+\[
+f^{-1}(y)=\frac{2y-1}{1-|2y-1|}\qquad(0<y<1).
+\]
+\end{proposition}
+\begin{corollary}[Cardinality of intervals]
+For real numbers $a<b$, each of $(a,b)$, $[a,b]$, $[a,b)$,
+and $(a,b]$ is equinumerous with $\R$.
+\end{corollary}
+
+\newpage
+\section{Choice, well-ordering, and maximality}
+\begin{definition}[Choice function and the axiom of choice]
+For a family $(F_i)_{i\in I}$ of nonempty sets, a choice function is
+a function $c:I\to\bigcup_{i\in I}F_i$ such that $c(i)\in F_i$
+for every $i\in I$. The axiom of choice asserts that every such
+family has a choice function.
+\end{definition}
+\begin{definition}[Partial order, chain, and maximal element]
+A partial order on $X$ is a reflexive, antisymmetric, transitive relation
+$\leq$. A subset $C\subseteq X$ is a chain if any two of its elements
+are comparable. An upper bound of $C$ is an element $u\in X$ such
+that $x\leq u$ for all $x\in C$. An element $m\in X$ is maximal if
+$m\leq x$ implies $x=m$. It is greatest if $x\leq m$ for every $x\in X$.
+\end{definition}
+\begin{definition}[Well-order and the well-ordering principle]
+A well-order is a total order in which every nonempty subset has a
+least element. The well-ordering principle asserts that every set
+admits a well-order.
+\end{definition}
+\begin{definition}[Zorn's principle]
+Zorn's principle asserts that every nonempty partially ordered set
+in which every chain has an upper bound has a maximal element.
+\end{definition}
+\begin{theorem}[Equivalence over ZF]
+Over Zermelo--Fraenkel set theory without the axiom of choice, the
+following statements are equivalent: the axiom of choice, the
+well-ordering principle, and Zorn's principle.
+\end{theorem}
+\begin{theorem}[Unique choice in ZF]
+Let $R\subseteq X\times Y$ be a relation such that for every $x\in X$
+there exists exactly one $y\in Y$ with $(x,y)\in R$. There exists a unique
+function $f:X\to Y$ such that $(x,f(x))\in R$ for every $x\in X$.
+This statement is a theorem of ZF and requires no axiom of choice.
+\end{theorem}
+\begin{proposition}[Choice strength of CSB]
+The Cantor--Schr\"oder--Bernstein theorem is provable in ZF without
+the axiom of choice.
+\end{proposition}
+\end{document}

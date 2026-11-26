@@ -100,6 +100,8 @@ The modules are listed in the order `Aim.lean` imports them. They are not one li
    - [`Aim/Analysis/Limits.lean`](Aim/Analysis/Limits.lean) — $\varepsilon$-$\delta$ functional limits, continuity, IVT, EVT.
    - [`Aim/Analysis/Derivative.lean`](Aim/Analysis/Derivative.lean) — Differentiation, Rolle's Theorem, Mean Value Theorem, Taylor's Theorem.
    - [`Aim/Analysis/Integral.lean`](Aim/Analysis/Integral.lean) — Darboux/Riemann integration and the Fundamental Theorem of Calculus.
+   - [`Aim/Analysis/Discrete/Discrete.lean`](Aim/Analysis/Discrete/Discrete.lean) — Discrete analysis scaffold.
+   - [`Aim/Analysis/Discrete/DiscreteAggregator.lean`](Aim/Analysis/Discrete/DiscreteAggregator.lean) — Discrete analysis aggregator.
    - [`Aim/Analysis/AnalysisAggregator.lean`](Aim/Analysis/AnalysisAggregator.lean) — Aggregator.
 
 ## Notation and conventions
