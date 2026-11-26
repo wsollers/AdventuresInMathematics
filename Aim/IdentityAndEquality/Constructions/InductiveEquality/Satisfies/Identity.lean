@@ -36,6 +36,14 @@ end MetaEq
 /-- Inductive equality satisfies the project identity interface. -/
 instance {X : Sort u} : Aim.Identity (@MetaEq X) where
   leibniz := by
-    sorry
+    intro x y
+    constructor
+    · --
+      intro h
+      cases h
+      constructor <;> intro P hP <;> exact hP
+    · --
+      rintro ⟨hyx, hxy⟩
+      exact hxy (fun z => MetaEq x z) (MetaEq.refl x)
 
 end Aim.IdentityAndEquality.Constructions.InductiveEquality

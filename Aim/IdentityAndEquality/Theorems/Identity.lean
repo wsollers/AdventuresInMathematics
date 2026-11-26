@@ -60,7 +60,6 @@ theorem replace {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
 theorem refl {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
   (x : X) : I x x := by
   have hixx := (hI.leibniz x x)
-
   have ⟨hii, hr⟩ := hixx
   apply hr
   constructor
@@ -75,13 +74,25 @@ theorem refl {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
 theorem symm {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
   {x y : X} (hxy : I x y) : I y x := by
   have hixy := (hI.leibniz x y)
-  obntaiu
-
-  sorry
+  obtain ⟨hi, hp⟩ := hixy
+  have r := hi hxy
+  obtain ⟨h1, h2⟩ := r
+  have hiyx := h1 (I y)
+  have hyy := hI.refl y
+  exact hiyx hyy
 
 /-- Identity is transitive. -/
 theorem trans {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
   {x y z : X} (hxy : I x y) (hyz : I y z) : I x z := by
+  have hyx := symm hxy
+  have a := iff_forall_iff x y
+  have hixy := (hI.leibniz x y)
+  obtain ⟨t1, t2⟩ := hixy
+  have t3 := t1 hxy
+  obtain ⟨t4, t5⟩ := t3
+  --have t6 := t4 (I y)
+  have hreplace := replace
+  have hreplace2 := hyx
   sorry
 
 /-- Objects identical to the same object are identical to each other. -/
