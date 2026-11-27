@@ -114,6 +114,11 @@ theorem iff_eq {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
   constructor
   . --
     intro hxy
+    have hreplace := replace hxy (fun a => x = a)
+    have hyx := hI.symm hxy
+    have hreplace2 := replace hyx (fun a => x = a)
+    have hxx := hI.refl x
+
     sorry
   . --
     intro hxy
