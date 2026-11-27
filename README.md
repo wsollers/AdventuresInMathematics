@@ -104,6 +104,25 @@ The modules are listed in the order `Aim.lean` imports them. They are not one li
    - [`Aim/Analysis/Discrete/DiscreteAggregator.lean`](Aim/Analysis/Discrete/DiscreteAggregator.lean) — Discrete analysis aggregator.
    - [`Aim/Analysis/AnalysisAggregator.lean`](Aim/Analysis/AnalysisAggregator.lean) — Aggregator.
 
+## Calculus, linear algebra, and computational vectors
+
+- [`Aim/Analysis/Calculus/Calculus.lean`](Aim/Analysis/Calculus/Calculus.lean)
+  is the scaffold for calculus definitions, theorem statements, and computational
+  techniques. Proofs can be deferred; definitions and results are shared with the
+  surrounding analysis development.
+- [`Aim/Algebra/FiniteVectorSpaces/FiniteVectorSpaces.lean`](Aim/Algebra/FiniteVectorSpaces/FiniteVectorSpaces.lean)
+  is the scaffold for linear algebra theory: vector spaces, subspaces, span,
+  independence, bases, dimension, and linear maps. "Finite" means finite-dimensional,
+  not a finite underlying set.
+- [`Aim/Vectors/Vectors.lean`](Aim/Vectors/Vectors.lean) is a temporary top-level
+  subject for computational vectors, separate from algebra. Its eventual home is
+  undecided: possibly analytic geometry within a Euclid/Hilbert/analytic geometry
+  development, or Euclidean space after constructing the real numbers.
+
+These are organizational scaffolds, not implemented mathematical theories. Existing
+calculus and geometry flashcards retain their current locations. Source-book notes
+continue to live under `notes/<source>/`.
+
 ## Notation and conventions
 
 [`Aim/Common/conventions.json`](Aim/Common/conventions.json) is the single source for how letters are used, where the Lean departs from standard notation, how declarations are named (a local summary of the Lean and Mathlib naming conventions, with links to both), and the project's conventions. [`Aim/Common/Notation.tex`](Aim/Common/Notation.tex) is generated from it.

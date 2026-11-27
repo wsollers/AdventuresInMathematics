@@ -17,6 +17,7 @@ import Aim.ProofTheory.ProofTheoryAggregator
 import Aim.ModelTheory.ModelTheoryAggregator
 import Aim.Topology.TopologyAggregator
 import Aim.Analysis.AnalysisAggregator
+import Aim.Vectors.VectorsAggregator
 
 /-!
 # Adventures in Mathematics (`aim`)

@@ -2,6 +2,7 @@
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
 import Aim.OrderTheory.Bounds
+import Aim.OrderTheory.Between
 
 /-!
 # Order Completeness and Density

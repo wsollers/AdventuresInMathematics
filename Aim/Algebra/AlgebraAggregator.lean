@@ -7,9 +7,11 @@ import Aim.Algebra.OrderedField
 import Aim.Algebra.AbsoluteValue
 import Aim.Algebra.CompleteOrderedField
 import Aim.Algebra.Archimedean
+import Aim.Algebra.FiniteVectorSpaces.FiniteVectorSpacesAggregator
 
 /-!
 # Algebra Module Aggregator
 
 Exports fields, numerals, ordered fields, absolute value, complete ordered fields, and the Archimedean property.
+Also exports the finite-dimensional vector-space theory scaffold.
 -/

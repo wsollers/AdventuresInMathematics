@@ -7,10 +7,11 @@ import Aim.Analysis.Limits
 import Aim.Analysis.Derivative
 import Aim.Analysis.Integral
 import Aim.Analysis.Discrete.DiscreteAggregator
+import Aim.Analysis.Calculus.CalculusAggregator
 
 /-!
 # Real Analysis Module Aggregator
 
 Exports sequences, series, functional limits, continuity, differentiation, integration,
-and discrete analysis.
+discrete analysis, and the calculus scaffold.
 -/

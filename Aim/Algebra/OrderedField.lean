@@ -4,6 +4,7 @@ Copyright (c) 2026 William Sollers. All rights reserved.
 import Aim.Algebra.Field
 import Aim.Algebra.Numerals
 import Aim.OrderTheory.TotalOrder
+import Aim.OrderTheory.MinMax
 
 /-!
 # Ordered Fields

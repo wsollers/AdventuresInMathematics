@@ -37,6 +37,7 @@ __pycache__/
 *.swp
 *~
 .idea/
+.codex-attachments/
 
 # --- OS clutter ---
 .DS_Store
