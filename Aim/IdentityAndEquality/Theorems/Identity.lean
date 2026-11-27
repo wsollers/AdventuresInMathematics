@@ -116,7 +116,8 @@ theorem iff_eq {X : Sort u} {I : X → X → Prop} [hI : Aim.Identity I]
     intro hxy
     have hreplace := replace hxy (fun a => x = a)
     have hyx := hI.symm hxy
-    have hreplace2 := replace hyx (fun a => x = a)
+    have hreplace2 := replace hyx (fun a => y = a)
+
     have hxx := hI.refl x
 
     sorry
