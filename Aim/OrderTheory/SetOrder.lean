@@ -57,6 +57,7 @@ def StrictlyMinorizes {P : Type u} [LE P] (A B : Set P) : Prop :=
 /-- Set separation is equivalently a family of upper bounds. -/
 theorem setBelow_iff_upperBounds {P : Type u} [LE P] (A B : Set P) :
     SetBelow A B ↔ B ⊆ upperBounds A := by
+  sorry
 
 /-- Set separation is equivalently a family of lower bounds. -/
 theorem setBelow_iff_lowerBounds {P : Type u} [LE P] (A B : Set P) :
