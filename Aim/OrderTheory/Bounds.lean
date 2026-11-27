@@ -2,7 +2,7 @@
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
 import Aim.SetTheory.Interface.Set
-import Aim.OrderTheory.TotalOrder
+import Aim.OrderTheory.PartialOrder
 
 /-!
 # Bounds

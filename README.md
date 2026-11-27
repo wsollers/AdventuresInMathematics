@@ -52,7 +52,10 @@ The modules are listed in the order `Aim.lean` imports them. They are not one li
    - [`Aim/SetTheory/SetTheoryAggregator.lean`](Aim/SetTheory/SetTheoryAggregator.lean) — Aggregator.
    - Design: [`architecture/set-interfaces.md`](architecture/set-interfaces.md).
 6. **Order Theory** (declarations directly in `namespace Aim`)
-   - [`Aim/OrderTheory/TotalOrder.lean`](Aim/OrderTheory/TotalOrder.lean) — Order axioms, `TotalOrder`, strict and non-strict comparison, maximum and minimum, betweenness.
+   - [`Aim/OrderTheory/PartialOrder.lean`](Aim/OrderTheory/PartialOrder.lean) — Individual non-strict order laws, the slim `PartialOrder` bundle, and basic comparison lemmas.
+   - [`Aim/OrderTheory/TotalOrder.lean`](Aim/OrderTheory/TotalOrder.lean) — `TotalOrder` extends `PartialOrder` with totality and linked strict comparison; decidability is separate.
+   - [`Aim/OrderTheory/MinMax.lean`](Aim/OrderTheory/MinMax.lean) — Maximum and minimum from decidable comparison.
+   - [`Aim/OrderTheory/Between.lean`](Aim/OrderTheory/Between.lean) — Inclusive and strict betweenness.
    - [`Aim/OrderTheory/Bounds.lean`](Aim/OrderTheory/Bounds.lean) — Upper and lower bounds, boundedness, greatest and least elements, least upper and greatest lower bounds.
    - [`Aim/OrderTheory/Completeness.lean`](Aim/OrderTheory/Completeness.lean) — The least-upper-bound property and its consequences; dense orders.
    - [`Aim/OrderTheory/OrderTheoryAggregator.lean`](Aim/OrderTheory/OrderTheoryAggregator.lean) — Aggregator.
@@ -75,6 +78,7 @@ The modules are listed in the order `Aim.lean` imports them. They are not one li
    - [`Aim/NumberSystems/NaturalNumbers/NaturalNumbersAggregator.lean`](Aim/NumberSystems/NaturalNumbers/NaturalNumbersAggregator.lean) and [`Aim/NumberSystems/NumberSystemsAggregator.lean`](Aim/NumberSystems/NumberSystemsAggregator.lean) — Aggregators.
    - [`Aim/NumberSystems/READINGS.MD`](Aim/NumberSystems/READINGS.MD) — Reading guide: Landau for the natural numbers, Feferman for the number systems.
    - Design: [`architecture/natural-numbers.md`](architecture/natural-numbers.md). $\mathbb{Z}$, $\mathbb{Q}$ and $\mathbb{R}$ are not started.
+   - Planned real-number developments: Dedekind cuts, interval arithmetic, Cauchy sequences, Cantor nested intervals, and dyads. These are deferred; their precise representations and comparison isomorphisms will be developed later against the shared complete-ordered-field interface.
 10. **Proof Theory** (`namespace Aim.ProofTheory`)
    - [`Aim/ProofTheory/Syntax.lean`](Aim/ProofTheory/Syntax.lean) — First-order terms, formulas, and capture-avoiding substitution.
    - [`Aim/ProofTheory/Hilbert.lean`](Aim/ProofTheory/Hilbert.lean) — Hilbert-style axiomatic calculus and the Deduction Theorem.
