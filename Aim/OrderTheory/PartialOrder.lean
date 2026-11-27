@@ -1,49 +1,23 @@
 /-
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
-import Aim.Common.Common
+import Aim.OrderTheory.Preorder
 
 /-!
 # Partial Orders
 
-A partial order bundles a non-strict comparison with reflexivity, transitivity,
-and antisymmetry. It requires neither totality, strict comparison, decidability,
-nor existence of bounds. Named lemmas use only the individual laws they need.
+A partial order extends a preorder with antisymmetry. Strict comparison is
+inherited from Preorder. It requires neither totality, decidability, nor
+existence of bounds. Named lemmas use only the individual laws they need.
 -/
 
 namespace Aim
 
 universe u
 
-/-- Reflexivity of the non-strict order. -/
-class IsLERefl (X : Type u) [LE X] : Prop where
-  le_refl : ∀ a : X, a ≤ a
-
-/-- Transitivity of the non-strict order. -/
-class IsLETrans (X : Type u) [LE X] : Prop where
-  le_trans : ∀ a b c : X, a ≤ b → b ≤ c → a ≤ c
-
-/-- Antisymmetry of the non-strict order. -/
-class IsLEAntisymm (X : Type u) [LE X] : Prop where
-  le_antisymm : ∀ a b : X, a ≤ b → b ≤ a → a = b
-
 /-- A reflexive, transitive, antisymmetric non-strict order. -/
 class PartialOrder (X : Type u)
-    extends LE X, IsLERefl X, IsLETrans X, IsLEAntisymm X
-
-/-- Every element is less than or equal to itself. -/
-lemma le_refl {F : Type u} [LE F] [IsLERefl F] (a : F) : a ≤ a := by
-  exact IsLERefl.le_refl a
-
-/-- Non-strict order is transitive. -/
-lemma le_trans {F : Type u} [LE F] [IsLETrans F] {a b c : F}
-    (hab : a ≤ b) (hbc : b ≤ c) : a ≤ c := by
-  exact IsLETrans.le_trans a b c  hab hbc
-
-/-- Two elements below each other are equal. -/
-lemma le_antisymm {F : Type u} [LE F] [IsLEAntisymm F] {a b : F}
-    (hab : a ≤ b) (hba : b ≤ a) : a = b := by
-  exact IsLEAntisymm.le_antisymm a b hab hba
+    extends Preorder X, IsLEAntisymm X
 
 /-- Equality is equivalent to non-strict comparison in both directions. -/
 lemma le_antisymm_iff {F : Type u} [LE F] [IsLERefl F] [IsLEAntisymm F] (a b : F) :
@@ -58,5 +32,58 @@ lemma le_antisymm_iff {F : Type u} [LE F] [IsLERefl F] [IsLEAntisymm F] (a b : F
   . -- <-
     intro h
     exact le_antisymm h.1 h.2
+
+-- Strict comparison and inequality of elements
+
+/-- A non-strict inequality between unequal elements is strict. -/
+lemma lt_of_le_of_ne {F : Type u} [PartialOrder F] (a b : F) :
+  a ≤ b → a ≠ b → a < b := by
+  rw [IsLTIffLENotLE.lt_iff_le_not_le]
+  intro hlte
+  intro hne
+  constructor
+  . --
+    exact hlte
+  . --
+    intro htemp
+    have he := le_antisymm hlte htemp
+    exact hne he
+
+/-- Non-strict order is strict order or equality. -/
+lemma le_iff_lt_or_eq {F : Type u} [PartialOrder F] (a b : F) :
+    a ≤ b ↔ a < b ∨ a = b := by
+  classical
+  constructor
+  · intro h
+    by_cases heq : a = b
+    · right
+      exact heq
+    · left
+      exact lt_of_le_of_ne a b h heq
+  · intro h
+    cases h with
+    | inl hlt =>
+      exact le_of_lt hlt
+    | inr heq =>
+      rw [heq]
+      exact le_refl b
+
+/-- A non-strict inequality is either strict or equality. -/
+corollary lt_or_eq_of_le {F : Type u} [PartialOrder F] {a b : F}
+    (h : a ≤ b) : a < b ∨ a = b := by
+  exact (le_iff_lt_or_eq a b).mp h
+
+/-- Strict order is non-strict order between unequal elements. -/
+lemma lt_iff_le_and_ne {F : Type u} [PartialOrder F] (a b : F) :
+    a < b ↔ a ≤ b ∧ a ≠ b := by
+  constructor
+  . --
+    intro h
+    constructor
+    . exact le_of_lt h
+    . exact ne_of_lt h
+  . --
+    intro h
+    exact lt_of_le_of_ne a b h.1 h.2
 
 end Aim

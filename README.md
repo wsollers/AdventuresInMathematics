@@ -44,6 +44,7 @@ The modules are listed in the order `Aim.lean` imports them. They are not one li
    - [`Aim/Logic/logic-todo.md`](Aim/Logic/logic-todo.md) — Plan for the propositional, first-order, second-order, modal and temporal logics; their folders exist and are empty.
 5. **Set Theory** (types `Aim.Set`, `Aim.Class`, `Aim.Collection`, `Aim.Family`)
    - [`Aim/SetTheory/Interface/Set.lean`](Aim/SetTheory/Interface/Set.lean) — Typed sets as predicates; $\in, \subseteq, \cup, \cap, \setminus$, complement, indexed unions and intersections.
+   - [`Aim/SetTheory/Interface/Relations.lean`](Aim/SetTheory/Interface/Relations.lean) — Nonemptiness, disjointness, overlap, and partial overlap without order assumptions. Learner lemmas are in [`Theorems/Relations.lean`](Aim/SetTheory/Theorems/Relations.lean).
    - [`Aim/SetTheory/Interface/Class.lean`](Aim/SetTheory/Interface/Class.lean) — Classes; represented and proper classes.
    - [`Aim/SetTheory/Interface/Collection.lean`](Aim/SetTheory/Interface/Collection.lean) — Unindexed collections of sets.
    - [`Aim/SetTheory/Interface/Family.lean`](Aim/SetTheory/Interface/Family.lean) — Indexed families of sets.
@@ -52,11 +53,16 @@ The modules are listed in the order `Aim.lean` imports them. They are not one li
    - [`Aim/SetTheory/SetTheoryAggregator.lean`](Aim/SetTheory/SetTheoryAggregator.lean) — Aggregator.
    - Design: [`architecture/set-interfaces.md`](architecture/set-interfaces.md).
 6. **Order Theory** (declarations directly in `namespace Aim`)
-   - [`Aim/OrderTheory/PartialOrder.lean`](Aim/OrderTheory/PartialOrder.lean) — Individual non-strict order laws, the slim `PartialOrder` bundle, and basic comparison lemmas.
-   - [`Aim/OrderTheory/TotalOrder.lean`](Aim/OrderTheory/TotalOrder.lean) — `TotalOrder` extends `PartialOrder` with totality and linked strict comparison; decidability is separate.
+   - [`Aim/OrderTheory/OrderRelations.lean`](Aim/OrderTheory/OrderRelations.lean) — Individual comparison laws, optional decidability, and simple law wrappers.
+   - [`Aim/OrderTheory/READINGS.MD`](Aim/OrderTheory/READINGS.MD) — Reading sequence: Davey and Priestley, then Grätzer, then Schröder.
+   - [`Aim/OrderTheory/Preorder.lean`](Aim/OrderTheory/Preorder.lean) — Bundles reflexivity, transitivity, and linked strict comparison; derives strict and mixed comparison lemmas.
+   - [`Aim/OrderTheory/PartialOrder.lean`](Aim/OrderTheory/PartialOrder.lean) — `PartialOrder` extends `Preorder` with antisymmetry and its comparison lemmas.
+   - [`Aim/OrderTheory/TotalOrder.lean`](Aim/OrderTheory/TotalOrder.lean) — `TotalOrder` extends `PartialOrder` with totality; strict comparison is inherited and decidability is separate.
    - [`Aim/OrderTheory/MinMax.lean`](Aim/OrderTheory/MinMax.lean) — Maximum and minimum from decidable comparison.
    - [`Aim/OrderTheory/Between.lean`](Aim/OrderTheory/Between.lean) — Inclusive and strict betweenness.
    - [`Aim/OrderTheory/Bounds.lean`](Aim/OrderTheory/Bounds.lean) — Upper and lower bounds, boundedness, greatest and least elements, least upper and greatest lower bounds.
+   - [`Aim/OrderTheory/SetOrder.lean`](Aim/OrderTheory/SetOrder.lean) — Separation and Egli–Milner comparisons of sets; learner theorem stubs.
+   - [`Aim/OrderTheory/Intervals.lean`](Aim/OrderTheory/Intervals.lean) — Intervals and rays as sets, with membership and endpoint theorem stubs over the required order interfaces.
    - [`Aim/OrderTheory/Completeness.lean`](Aim/OrderTheory/Completeness.lean) — The least-upper-bound property and its consequences; dense orders.
    - [`Aim/OrderTheory/OrderTheoryAggregator.lean`](Aim/OrderTheory/OrderTheoryAggregator.lean) — Aggregator.
 7. **Algebra** (declarations directly in `namespace Aim`)

@@ -2,7 +2,7 @@
 Copyright (c) 2026 William Sollers. All rights reserved.
 -/
 import Aim.SetTheory.Interface.Set
-import Aim.OrderTheory.PartialOrder
+import Aim.OrderTheory.OrderRelations
 
 /-!
 # Bounds
@@ -51,6 +51,14 @@ def IsUpperBound {X : Type u} [LE X]
 def IsLowerBound {X : Type u} [LE X]
   (S : Set X) (a : X) : Prop :=
   ∀ x : X, x ∈ S → a ≤ x
+
+/-- Dieudonné's majorant: an upper bound of a set. -/
+abbrev IsMajorant {X : Type u} [LE X] (S : Set X) (a : X) : Prop :=
+  IsUpperBound S a
+
+/-- Dieudonné's minorant: a lower bound of a set. -/
+abbrev IsMinorant {X : Type u} [LE X] (S : Set X) (a : X) : Prop :=
+  IsLowerBound S a
 
 -- ## 2. The sets of bounds
 
@@ -173,7 +181,13 @@ an upper bound of `S`.
   ∀ S : Set X, ∀ a : X,  a ∈ upperBounds S ↔ IsUpperBound S a -/
 lemma mem_upperBounds_iff {X : Type u} [LE X]
   {S : Set X} {a : X} : a ∈ upperBounds S ↔ IsUpperBound S a := by
-  sorry
+  constructor
+  . --
+    intro haub
+    exact haub
+  . --
+    intro hub
+    exact hub
 
 /-- An element belongs to the set of lower bounds of `S` if and only if it is
 a lower bound of `S`.

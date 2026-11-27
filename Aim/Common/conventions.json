@@ -147,7 +147,15 @@
     {"lean": "IsLUB", "readable": "IsLeastUpperBound", "meaning": "the least upper bound (supremum) of a set"},
     {"lean": "IsGLB", "readable": "IsGreatestLowerBound", "meaning": "the greatest lower bound (infimum) of a set"},
     {"lean": "BddAbove", "readable": "BoundedAbove", "meaning": "a set that has an upper bound"},
-    {"lean": "BddBelow", "readable": "BoundedBelow", "meaning": "a set that has a lower bound"}
+    {"lean": "BddBelow", "readable": "BoundedBelow", "meaning": "a set that has a lower bound"},
+    {"lean": "Icc", "readable": "closedInterval", "meaning": "The closed interval from `a` to `b`"},
+    {"lean": "Ico", "readable": "closedOpenInterval", "meaning": "The interval including `a` and excluding `b`"},
+    {"lean": "Ioc", "readable": "openClosedInterval", "meaning": "The interval excluding `a` and including `b`"},
+    {"lean": "Ioo", "readable": "openInterval", "meaning": "The open interval from `a` to `b`"},
+    {"lean": "Ici", "readable": "closedUpperRay", "meaning": "The upper ray including `a`"},
+    {"lean": "Ioi", "readable": "openUpperRay", "meaning": "The upper ray excluding `a`"},
+    {"lean": "Iic", "readable": "closedLowerRay", "meaning": "The lower ray including `b`"},
+    {"lean": "Iio", "readable": "openLowerRay", "meaning": "The lower ray excluding `b`"}
   ],
   "naming": {
     "about": "How declarations are named. This is a summary, in this project's words and with this project's examples where it has one, of the Lean standard library and Mathlib naming conventions, kept here so they can be read without leaving the repository. The two documents under References are the authority. Checked against them on 2026-11-24.",
