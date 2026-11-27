@@ -6,15 +6,28 @@ namespace Aim.Set
 
 universe u
 
+/-- The chosen element of a nonempty set belongs to that set. -/
+theorem Nonempty.some_mem {X : Type u} {S : Set X}
+    (hS : S.Nonempty) : hS.some ∈ S := by
+  sorry
+
 /-- Disjointness is symmetric. -/
 theorem Disjoint.symm {X : Type u} {S T : Set X}
     (h : Disjoint S T) : Disjoint T S := by
-  sorry
+  --unfold Disjoint
+  --unfold Disjoint at h
+  intro x
+  intro hit
+  intro his
+  exact (h x his) hit
 
 /-- Overlap is symmetric. -/
 theorem Overlaps.symm {X : Type u} {S T : Set X}
     (h : Overlaps S T) : Overlaps T S := by
-  sorry
+  unfold Overlaps
+  unfold Overlaps at h
+  obtain ⟨x, hs, ht⟩ := h
+  exact ⟨x, ht, hs⟩
 
 /-- Partial overlap is symmetric. -/
 theorem PartiallyOverlaps.symm {X : Type u} {S T : Set X}

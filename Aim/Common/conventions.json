@@ -99,6 +99,12 @@
       "source": "Aim/SetTheory/Interface/Set.lean"
     },
     {
+      "standard": "\\bigcap C",
+      "lean": "Set.sInter C",
+      "why": "no notation yet for the intersection of a collection",
+      "source": "Aim/SetTheory/Interface/Set.lean"
+    },
+    {
       "standard": "X \\text{ (as a set)}",
       "lean": "Set.univ",
       "why": "a type is not a set; the set of all its elements has a name",

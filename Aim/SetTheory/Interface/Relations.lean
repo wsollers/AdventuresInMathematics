@@ -16,6 +16,11 @@ universe u
 def Nonempty {X : Type u} (S : Set X) : Prop :=
   ∃ x, x ∈ S
 
+/-- Choose an element of a nonempty set using classical choice. -/
+noncomputable def Nonempty.some {X : Type u} {S : Set X}
+    (hS : S.Nonempty) : X :=
+  Classical.choose hS
+
 /-- Disjoint sets have no common element. -/
 def Disjoint {X : Type u} (S T : Set X) : Prop :=
   ∀ x, x ∈ S → x ∈ T → False

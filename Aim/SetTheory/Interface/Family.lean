@@ -73,11 +73,11 @@ def range {I : Type v} {X : Type u}
 
 /-- The union of all sets in an indexed family. -/
 def unionAll {I : Type v} {X : Type u} (F : Family I X) : Aim.Set X :=
-  fun x => ∃ i, x ∈ F i
+  Aim.Set.iUnion F
 
 /-- The intersection of all sets in an indexed family. -/
 def interAll {I : Type v} {X : Type u} (F : Family I X) : Aim.Set X :=
-  fun x => ∀ i, x ∈ F i
+  Aim.Set.iInter F
 
 end Family
 

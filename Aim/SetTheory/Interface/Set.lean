@@ -118,6 +118,10 @@ def iInter {I : Type v} {X : Type u} (S : I → Set X) : Set X :=
 def sUnion {X : Type u} (C : Set (Set X)) : Set X :=
   fun x => ∃ S, S ∈ C ∧ x ∈ S
 
+/-- The intersection of a set of sets; the empty collection gives `univ`. -/
+def sInter {X : Type u} (C : Set (Set X)) : Set X :=
+  fun x => ∀ S, S ∈ C → x ∈ S
+
 end Set
 
 end Aim

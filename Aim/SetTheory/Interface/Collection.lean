@@ -79,11 +79,11 @@ protected def compl {X : Type u} (C : Collection X) : Collection X :=
 
 /-- The union of all sets in a C. -/
 def unionAll {X : Type u} (C : Collection X) : Aim.Set X :=
-  fun x => ∃ S, S ∈ C ∧ x ∈ S
+  Aim.Set.sUnion C
 
 /-- The intersection of all sets in a C. -/
 def interAll {X : Type u} (C : Collection X) : Aim.Set X :=
-  fun x => ∀ S, S ∈ C → x ∈ S
+  Aim.Set.sInter C
 
 end Collection
 
