@@ -159,7 +159,24 @@ theorem subset_inter_iff {X : Type u} {S T U : Set X} :
 /-- Union preserves inclusion in both arguments. -/
 theorem union_mono {X : Type u} {S T U V : Set X} (hSU : S ⊆ U) (hTV : T ⊆ V) :
     S ∪ T ⊆ U ∪ V := by
-  sorry
+  rw [subset_def]
+  intro x hxinST
+  rw [mem_union_iff] at hxinST
+  rw [subset_def] at hSU
+  rw [subset_def] at hTV
+  have hxSU := hSU x
+  have hxTU := hTV x
+  rcases hxinST with xs | xt
+  . --
+    have xU := hxSU xs
+    rw [mem_union_iff]
+    left
+    exact xU
+  . --
+    have xU := hxTU xt
+    rw [mem_union_iff]
+    right
+    exact xU
 
 /-- Intersection preserves inclusion in both arguments. -/
 theorem inter_mono {X : Type u} {S T U V : Set X} (hSU : S ⊆ U) (hTV : T ⊆ V) :
