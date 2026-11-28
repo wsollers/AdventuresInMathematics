@@ -14,8 +14,31 @@ universe u v
 /-- Union is commutative. -/
 theorem union_comm {X : Type u} (S T : Set X) :
     S ∪ T = T ∪ S := by
-
-  sorry
+  apply Set.ext
+  intro x
+  constructor
+  . --
+    intro hxsut
+    rw [mem_union_iff]
+    rw [mem_union_iff] at hxsut
+    rcases hxsut with xS | xT
+    . --
+      right
+      exact xS
+    . --
+      left
+      exact xT
+  . --
+    intro hxtus
+    rw [mem_union_iff]
+    rw [mem_union_iff] at hxtus
+    rcases hxtus with xT | xS
+    . --
+      right
+      exact xT
+    . --
+      left
+      exact xS
 
 /-- Union is associative. -/
 theorem union_assoc {X : Type u} (S T U : Set X) :
@@ -45,12 +68,46 @@ theorem union_self {X : Type u} (S : Set X) :
 /-- Inter is commutative. -/
 theorem inter_comm {X : Type u} (S T : Set X) :
     S ∩ T = T ∩ S := by
-  sorry
+  apply Set.ext
+  intro x
+  constructor
+  . --
+    intro hxst
+    rw [mem_inter_iff]
+    rw [mem_inter_iff] at hxst
+    obtain ⟨hxS, hxT⟩ := hxst
+    have hans := And.intro hxT hxS
+    exact hans
+  . --
+    intro hxst
+    rw [mem_inter_iff]
+    rw [mem_inter_iff] at hxst
+    obtain ⟨hxT, hxS⟩ := hxst
+    have hans := And.intro hxS hxT
+    exact hans
 
 /-- Inter is associative. -/
 theorem inter_assoc {X : Type u} (S T U : Set X) :
     (S ∩ T) ∩ U = S ∩ (T ∩ U) := by
-  sorry
+  apply Set.ext
+  intro x
+  rw [mem_inter_iff]
+  rw [mem_inter_iff]
+  rw [mem_inter_iff]
+  rw [mem_inter_iff]
+  constructor
+  . --
+    intro lhs
+    obtain ⟨llhs, lrhs⟩ := lhs
+    obtain ⟨hxS, hxT⟩ := llhs
+    have hans := And.intro hxS ( And.intro hxT lrhs )
+    exact hans
+  . --
+    intro rhs
+    obtain ⟨lrhs, rrhs⟩ := rhs
+    obtain ⟨hxT, hxU⟩ := rrhs
+    have hans := And.intro ( And.intro lrhs hxT ) hxU
+    exact hans
 
 /-- Inter is idempotent. -/
 theorem inter_self {X : Type u} (S : Set X) :
@@ -75,27 +132,95 @@ theorem inter_self {X : Type u} (S : Set X) :
 /-- Empty is a right identity for union. -/
 theorem union_empty {X : Type u} (S : Set X) :
     S ∪ ∅ = S := by
-  sorry
+  apply Set.ext
+  intro x
+  constructor
+  . --
+    intro hU
+    rw [mem_union_iff] at hU
+    rcases hU with hxs | hx0
+    . --
+      exact hxs
+    . --
+      contradiction
+  . --
+    intro hxS
+    rewrite [mem_union_iff]
+    left
+    exact hxS
 
 /-- Empty is a left identity for union. -/
 theorem empty_union {X : Type u} (S : Set X) :
     ∅ ∪ S = S := by
-  sorry
+  apply Set.ext
+  intro x
+  constructor
+  . --
+    intro hU
+    rw [mem_union_iff] at hU
+    rcases hU with hx0 | hxS
+    . --
+      contradiction
+    . --
+      exact hxS
+  . --
+    intro hxS
+    rewrite [mem_union_iff]
+    right
+    exact hxS
 
 /-- Universal is a right identity for intersection. -/
 theorem inter_univ {X : Type u} (S : Set X) :
     S ∩ univ = S := by
-  sorry
+  apply Set.ext
+  intro x
+  constructor
+  . --
+    intro hinter
+    obtain ⟨hxs, hxu⟩ := hinter
+    exact hxs
+  . --
+    intro hxs
+    have hxu := subset_univ S
+    rw [mem_inter_iff]
+    constructor
+    . --
+      exact hxs
+    . --
+      apply mem_univ
 
 /-- Universal is a left identity for intersection. -/
 theorem univ_inter {X : Type u} (S : Set X) :
     univ ∩ S = S := by
-  sorry
+  apply Set.ext
+  intro x
+  constructor
+  . --
+    intro hxuinters
+    rw [mem_inter_iff] at hxuinters
+    obtain ⟨hxu, hxs⟩ := hxuinters
+    exact hxs
+  . --
+    intro hxs
+    rw [mem_inter_iff]
+    have hxu : x ∈ univ := trivial
+    have hans := And.intro hxu hxs
+    exact hans
 
 /-- Union with universal is universal. -/
 theorem union_univ {X : Type u} (S : Set X) :
     S ∪ univ = univ := by
-  sorry
+  apply Set.ext
+  intro x
+  constructor
+  . --
+    intro hxinsu
+    trivial
+  . --
+    intro hxu
+    rw [mem_union_iff]
+    right
+    exact hxu
 
 /-- Universal union a set is universal. -/
 theorem univ_union {X : Type u} (S : Set X) :
