@@ -14,6 +14,7 @@ universe u v
 /-- Union is commutative. -/
 theorem union_comm {X : Type u} (S T : Set X) :
     S ∪ T = T ∪ S := by
+
   sorry
 
 /-- Union is associative. -/
@@ -24,7 +25,22 @@ theorem union_assoc {X : Type u} (S T U : Set X) :
 /-- Union is idempotent. -/
 theorem union_self {X : Type u} (S : Set X) :
     S ∪ S = S := by
-  sorry
+  apply Set.ext
+  intro x
+  constructor
+  . --
+    intro hxUnion
+    rw [mem_union_iff] at hxUnion
+    rcases hxUnion with hl | hr
+    . --
+      exact hl
+    . --
+      exact hr
+  . --
+    intro hxins
+    rw [mem_union_iff]
+    left
+    exact hxins
 
 /-- Inter is commutative. -/
 theorem inter_comm {X : Type u} (S T : Set X) :
@@ -39,7 +55,22 @@ theorem inter_assoc {X : Type u} (S T U : Set X) :
 /-- Inter is idempotent. -/
 theorem inter_self {X : Type u} (S : Set X) :
     S ∩ S = S := by
-  sorry
+  apply Set.ext
+  intro x
+  constructor
+  . --
+    intro hinter
+    rw [mem_inter_iff] at hinter
+    have hxs := hinter.1
+    exact hxs
+  . --
+    intro hxins
+    rw [mem_inter_iff]
+    constructor
+    . --
+      exact hxins
+    . --
+      exact hxins
 
 /-- Empty is a right identity for union. -/
 theorem union_empty {X : Type u} (S : Set X) :

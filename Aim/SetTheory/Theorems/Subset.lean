@@ -144,17 +144,35 @@ theorem union_subset_iff {X : Type u} {S T U : Set X} :
 /-- An intersection lies in its first set. -/
 theorem inter_subset_left {X : Type u} (S T : Set X) :
     S ∩ T ⊆ S := by
-  sorry
+  rw [subset_def]
+  intro x hx
+  rw [mem_inter_iff] at hx
+  obtain ⟨hxS, hxT⟩ := hx
+  exact hxS
 
 /-- An intersection lies in its second set. -/
 theorem inter_subset_right {X : Type u} (S T : Set X) :
     S ∩ T ⊆ T := by
-  sorry
+  rw [subset_def]
+  intro x hx
+  rw [mem_inter_iff] at hx
+  obtain ⟨hxS, hxT⟩ := hx
+  exact hxT
 
 /-- A set lies in an intersection exactly when it lies in both sets. -/
 theorem subset_inter_iff {X : Type u} {S T U : Set X} :
     S ⊆ T ∩ U ↔ S ⊆ T ∧ S ⊆ U := by
-  sorry
+  constructor
+  · intro h
+    constructor
+    · exact subset_trans h (inter_subset_left T U)
+    · exact subset_trans h (inter_subset_right T U)
+  · intro h
+    obtain ⟨hST, hSU⟩ := h
+    rw [subset_def]
+    intro x hxS
+    rw [mem_inter_iff]
+    exact ⟨hST hxS, hSU hxS⟩
 
 /-- Union preserves inclusion in both arguments. -/
 theorem union_mono {X : Type u} {S T U V : Set X} (hSU : S ⊆ U) (hTV : T ⊆ V) :
@@ -181,7 +199,12 @@ theorem union_mono {X : Type u} {S T U V : Set X} (hSU : S ⊆ U) (hTV : T ⊆ V
 /-- Intersection preserves inclusion in both arguments. -/
 theorem inter_mono {X : Type u} {S T U V : Set X} (hSU : S ⊆ U) (hTV : T ⊆ V) :
     S ∩ T ⊆ U ∩ V := by
-  sorry
+  rw [subset_def]
+  intro x hx
+  rw [mem_inter_iff] at hx
+  obtain ⟨hxS, hxT⟩ := hx
+  rw [mem_inter_iff]
+  exact ⟨hSU hxS, hTV hxT⟩
 
 end Set
 end Aim
