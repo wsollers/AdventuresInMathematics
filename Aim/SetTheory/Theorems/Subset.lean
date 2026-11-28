@@ -48,38 +48,98 @@ theorem eq_iff_subset_and_subset {X : Type u} {S T : Set X} :
     intro hset
     constructor
     . --
-
-      sorry
+      rw [subset_def]
+      intro x hxinS
+      rw [← hset]
+      exact hxinS
     . --
-      sorry
-    sorry
+      rw [subset_def]
+      intro x hxinT
+      rw [← hset.symm]
+      exact hxinT
   . --
-    sorry
+    --rw [subset_def]
+    intro he
+    obtain ⟨hxx, hx⟩ := he
+    have heq := subset_antisymm hxx hx
+    exact heq
 
 /-- The empty set is a subset of every set. -/
 theorem empty_subset {X : Type u} (S : Set X) :
     (∅ : Set X) ⊆ S := by
-  sorry
+  rw [subset_def]
+  intro x hxin0
+  change False at hxin0
+  contradiction
 
 /-- Every set is a subset of the universal set. -/
 theorem subset_univ {X : Type u} (S : Set X) :
     S ⊆ univ := by
-  sorry
+  rw [subset_def]
+  intro x hinS
+  apply mem_univ
 
 /-- The first set lies in the union. -/
 theorem subset_union_left {X : Type u} (S T : Set X) :
     S ⊆ S ∪ T := by
-  sorry
+  rw [subset_def]
+  intro x hxinS
+  rw [mem_union_iff]
+  left
+  exact hxinS
+
 
 /-- The second set lies in the union. -/
 theorem subset_union_right {X : Type u} (S T : Set X) :
     T ⊆ S ∪ T := by
-  sorry
+  rw [subset_def]
+  intro x hxinT
+  rw [mem_union_iff]
+  right
+  exact hxinT
 
 /-- A union lies in a set exactly when both members do. -/
 theorem union_subset_iff {X : Type u} {S T U : Set X} :
     S ∪ T ⊆ U ↔ S ⊆ U ∧ T ⊆ U := by
-  sorry
+  rw [subset_def]
+  constructor
+  . --
+    intro hxinunion
+    constructor
+    . --
+      rw [subset_def]
+      intro x hx
+      have hans := hxinunion x
+      apply hans
+      rw [mem_union_iff]
+      left
+      exact hx
+    . --
+      rw [subset_def]
+      intro x hx
+      have hans := hxinunion x
+      apply hans
+      rw [mem_union_iff]
+      right
+      exact hx
+  . --
+    rw [subset_def]
+    rw [subset_def]
+    intro hinU
+    intro x
+    intro hinS
+    obtain ⟨hh, hx⟩ := hinU
+    have gg := hh x
+    have ht := hx x
+    rw [mem_union_iff] at hinS
+    rcases hinS with hxS | hxT
+    ·
+      have dd := gg hxS
+      exact dd
+    · -- Here you have hxT : x ∈ T.
+      -- Goal: x ∈ U. Which implication accepts hxT?
+      have dd := ht hxT
+      exact dd
 
 /-- An intersection lies in its first set. -/
 theorem inter_subset_left {X : Type u} (S T : Set X) :
